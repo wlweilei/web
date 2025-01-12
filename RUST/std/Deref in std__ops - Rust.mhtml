@@ -1,0 +1,3091 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://doc.rust-lang.org/std/ops/trait.Deref.html
+Subject: Deref in std::ops - Rust
+Date: Thu, 7 Nov 2024 15:53:09 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--uTiFA317ARjEiC3ZWRqh8WEiKSLQxQdNkZIRp5GSdu----"
+
+
+------MultipartBoundary--uTiFA317ARjEiC3ZWRqh8WEiKSLQxQdNkZIRp5GSdu----
+Content-Type: text/html
+Content-ID: <frame-7B29CDA25A8BC4E425AAE2C0963B42B1@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://doc.rust-lang.org/std/ops/trait.Deref.html
+
+<!DOCTYPE html><html lang=3D"en" data-theme=3D"light"><head><meta http-equi=
+v=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><meta name=3D"vie=
+wport" content=3D"width=3Ddevice-width, initial-scale=3D1.0"><meta name=3D"=
+generator" content=3D"rustdoc"><meta name=3D"description" content=3D"Used f=
+or immutable dereferencing operations, like `*v`."><title>Deref in std::ops=
+ - Rust</title><link rel=3D"preload" as=3D"font" type=3D"font/woff2" crosso=
+rigin=3D"" href=3D"https://doc.rust-lang.org/static.files/SourceSerif4-Regu=
+lar-46f98efaafac5295.ttf.woff2"><link rel=3D"preload" as=3D"font" type=3D"f=
+ont/woff2" crossorigin=3D"" href=3D"https://doc.rust-lang.org/static.files/=
+FiraSans-Regular-018c141bf0843ffd.woff2"><link rel=3D"preload" as=3D"font" =
+type=3D"font/woff2" crossorigin=3D"" href=3D"https://doc.rust-lang.org/stat=
+ic.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel=3D"preload" as=
+=3D"font" type=3D"font/woff2" crossorigin=3D"" href=3D"https://doc.rust-lan=
+g.org/static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link =
+rel=3D"preload" as=3D"font" type=3D"font/woff2" crossorigin=3D"" href=3D"ht=
+tps://doc.rust-lang.org/static.files/SourceCodePro-Semibold-d899c5a5c4aeb14=
+a.ttf.woff2"><link rel=3D"stylesheet" href=3D"https://doc.rust-lang.org/sta=
+tic.files/normalize-76eba96aa4d2e634.css"><link rel=3D"stylesheet" href=3D"=
+https://doc.rust-lang.org/static.files/rustdoc-492a78a4a87dcc01.css"><meta =
+name=3D"rustdoc-vars" data-root-path=3D"../../" data-static-root-path=3D"..=
+/../static.files/" data-current-crate=3D"std" data-themes=3D"" data-resourc=
+e-suffix=3D"1.82.0" data-rustdoc-version=3D"1.82.0 (f6e511eec 2024-10-15)" =
+data-channel=3D"1.82.0" data-search-js=3D"search-a99f1315e7cc5121.js" data-=
+settings-js=3D"settings-4313503d2e1961c2.js"><link rel=3D"alternate icon" t=
+ype=3D"image/png" href=3D"https://doc.rust-lang.org/static.files/favicon-32=
+x32-422f7d1d52889060.png"><link rel=3D"icon" type=3D"image/svg+xml" href=3D=
+"https://doc.rust-lang.org/static.files/favicon-2c020d218678b618.svg"></hea=
+d><body class=3D"rustdoc trait"><!--[if lte IE 11]><div class=3D"warning">T=
+his old browser is unsupported and will most likely display funky things.</=
+div><![endif]--><nav class=3D"mobile-topbar"><button class=3D"sidebar-menu-=
+toggle" title=3D"show sidebar"></button><a class=3D"logo-container" href=3D=
+"https://doc.rust-lang.org/std/index.html"><img class=3D"rust-logo" src=3D"=
+https://doc.rust-lang.org/static.files/rust-logo-151179464ae7ed46.svg" alt=
+=3D""></a><h2 class=3D"location"><a href=3D"https://doc.rust-lang.org/std/o=
+ps/trait.Deref.html#">Deref</a></h2></nav><nav class=3D"sidebar"><div class=
+=3D"sidebar-crate"><a class=3D"logo-container" href=3D"https://doc.rust-lan=
+g.org/std/index.html"><img class=3D"rust-logo" src=3D"https://doc.rust-lang=
+.org/static.files/rust-logo-151179464ae7ed46.svg" alt=3D"logo"></a><h2><a h=
+ref=3D"https://doc.rust-lang.org/std/index.html">std</a><span class=3D"vers=
+ion">1.82.0</span></h2></div><div class=3D"version">(f6e511eec	2024-10-15)<=
+/div><h2 class=3D"location"><a href=3D"https://doc.rust-lang.org/std/ops/tr=
+ait.Deref.html#">Deref</a></h2><div class=3D"sidebar-elems"><section><h3><a=
+ href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#required-associ=
+ated-types">Required Associated Types</a></h3><ul class=3D"block"><li><a hr=
+ef=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Tar=
+get">Target</a></li></ul><h3><a href=3D"https://doc.rust-lang.org/std/ops/t=
+rait.Deref.html#required-methods">Required Methods</a></h3><ul class=3D"blo=
+ck"><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#tymet=
+hod.deref">deref</a></li></ul><h3><a href=3D"https://doc.rust-lang.org/std/=
+ops/trait.Deref.html#implementors">Implementors</a></h3></section><h2><a hr=
+ef=3D"https://doc.rust-lang.org/std/ops/index.html">In std::<wbr>ops</a></h=
+2><h3><a href=3D"https://doc.rust-lang.org/std/ops/index.html#structs">Stru=
+cts</a></h3><ul class=3D"block struct"><li><a href=3D"https://doc.rust-lang=
+.org/std/ops/struct.Range.html">Range</a></li><li><a href=3D"https://doc.ru=
+st-lang.org/std/ops/struct.RangeFrom.html">RangeFrom</a></li><li><a href=3D=
+"https://doc.rust-lang.org/std/ops/struct.RangeFull.html">RangeFull</a></li=
+><li><a href=3D"https://doc.rust-lang.org/std/ops/struct.RangeInclusive.htm=
+l">RangeInclusive</a></li><li><a href=3D"https://doc.rust-lang.org/std/ops/=
+struct.RangeTo.html">RangeTo</a></li><li><a href=3D"https://doc.rust-lang.o=
+rg/std/ops/struct.RangeToInclusive.html">RangeToInclusive</a></li><li><a hr=
+ef=3D"https://doc.rust-lang.org/std/ops/struct.Yeet.html">Yeet</a></li></ul=
+><h3><a href=3D"https://doc.rust-lang.org/std/ops/index.html#enums">Enums</=
+a></h3><ul class=3D"block enum"><li><a href=3D"https://doc.rust-lang.org/st=
+d/ops/enum.Bound.html">Bound</a></li><li><a href=3D"https://doc.rust-lang.o=
+rg/std/ops/enum.ControlFlow.html">ControlFlow</a></li><li><a href=3D"https:=
+//doc.rust-lang.org/std/ops/enum.CoroutineState.html">CoroutineState</a></l=
+i></ul><h3><a href=3D"https://doc.rust-lang.org/std/ops/index.html#traits">=
+Traits</a></h3><ul class=3D"block trait"><li><a href=3D"https://doc.rust-la=
+ng.org/std/ops/trait.Add.html">Add</a></li><li><a href=3D"https://doc.rust-=
+lang.org/std/ops/trait.AddAssign.html">AddAssign</a></li><li><a href=3D"htt=
+ps://doc.rust-lang.org/std/ops/trait.AsyncFn.html">AsyncFn</a></li><li><a h=
+ref=3D"https://doc.rust-lang.org/std/ops/trait.AsyncFnMut.html">AsyncFnMut<=
+/a></li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.AsyncFnOnce.=
+html">AsyncFnOnce</a></li><li><a href=3D"https://doc.rust-lang.org/std/ops/=
+trait.BitAnd.html">BitAnd</a></li><li><a href=3D"https://doc.rust-lang.org/=
+std/ops/trait.BitAndAssign.html">BitAndAssign</a></li><li><a href=3D"https:=
+//doc.rust-lang.org/std/ops/trait.BitOr.html">BitOr</a></li><li><a href=3D"=
+https://doc.rust-lang.org/std/ops/trait.BitOrAssign.html">BitOrAssign</a></=
+li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.BitXor.html">BitX=
+or</a></li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.BitXorAss=
+ign.html">BitXorAssign</a></li><li><a href=3D"https://doc.rust-lang.org/std=
+/ops/trait.CoerceUnsized.html">CoerceUnsized</a></li><li><a href=3D"https:/=
+/doc.rust-lang.org/std/ops/trait.Coroutine.html">Coroutine</a></li><li clas=
+s=3D"current"><a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html=
+">Deref</a></li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.Dere=
+fMut.html">DerefMut</a></li><li><a href=3D"https://doc.rust-lang.org/std/op=
+s/trait.DerefPure.html">DerefPure</a></li><li><a href=3D"https://doc.rust-l=
+ang.org/std/ops/trait.DispatchFromDyn.html">DispatchFromDyn</a></li><li><a =
+href=3D"https://doc.rust-lang.org/std/ops/trait.Div.html">Div</a></li><li><=
+a href=3D"https://doc.rust-lang.org/std/ops/trait.DivAssign.html">DivAssign=
+</a></li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.Drop.html">=
+Drop</a></li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.Fn.html=
+">Fn</a></li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.FnMut.h=
+tml">FnMut</a></li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.F=
+nOnce.html">FnOnce</a></li><li><a href=3D"https://doc.rust-lang.org/std/ops=
+/trait.FromResidual.html">FromResidual</a></li><li><a href=3D"https://doc.r=
+ust-lang.org/std/ops/trait.Index.html">Index</a></li><li><a href=3D"https:/=
+/doc.rust-lang.org/std/ops/trait.IndexMut.html">IndexMut</a></li><li><a hre=
+f=3D"https://doc.rust-lang.org/std/ops/trait.Mul.html">Mul</a></li><li><a h=
+ref=3D"https://doc.rust-lang.org/std/ops/trait.MulAssign.html">MulAssign</a=
+></li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.Neg.html">Neg<=
+/a></li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.Not.html">No=
+t</a></li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.OneSidedRa=
+nge.html">OneSidedRange</a></li><li><a href=3D"https://doc.rust-lang.org/st=
+d/ops/trait.RangeBounds.html">RangeBounds</a></li><li><a href=3D"https://do=
+c.rust-lang.org/std/ops/trait.Rem.html">Rem</a></li><li><a href=3D"https://=
+doc.rust-lang.org/std/ops/trait.RemAssign.html">RemAssign</a></li><li><a hr=
+ef=3D"https://doc.rust-lang.org/std/ops/trait.Residual.html">Residual</a></=
+li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.Shl.html">Shl</a>=
+</li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.ShlAssign.html"=
+>ShlAssign</a></li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait.S=
+hr.html">Shr</a></li><li><a href=3D"https://doc.rust-lang.org/std/ops/trait=
+.ShrAssign.html">ShrAssign</a></li><li><a href=3D"https://doc.rust-lang.org=
+/std/ops/trait.Sub.html">Sub</a></li><li><a href=3D"https://doc.rust-lang.o=
+rg/std/ops/trait.SubAssign.html">SubAssign</a></li><li><a href=3D"https://d=
+oc.rust-lang.org/std/ops/trait.Try.html">Try</a></li></ul></div></nav><div =
+class=3D"sidebar-resizer"></div><main><div class=3D"width-limiter"><rustdoc=
+-search><nav class=3D"sub">
+            <form class=3D"search-form">
+                <span></span> <!-- This empty span is a hacky fix for Safar=
+i - See #93184 -->
+                <div id=3D"sidebar-button" tabindex=3D"-1">
+                    <a href=3D"https://doc.rust-lang.org/std/all.html" titl=
+e=3D"show sidebar"></a>
+                </div>
+                <input class=3D"search-input" name=3D"search" aria-label=3D=
+"Run search in the documentation" autocomplete=3D"off" spellcheck=3D"false"=
+ placeholder=3D"Type =E2=80=98S=E2=80=99 or =E2=80=98/=E2=80=99 to search, =
+=E2=80=98?=E2=80=99 for more options=E2=80=A6" type=3D"search">
+                <div id=3D"help-button" tabindex=3D"-1">
+                    <a href=3D"https://doc.rust-lang.org/help.html" title=
+=3D"help">?</a>
+                </div>
+                <div id=3D"settings-menu" tabindex=3D"-1">
+                    <a href=3D"https://doc.rust-lang.org/settings.html" tit=
+le=3D"settings">
+                        Settings
+                    </a>
+                </div>
+            </form>
+        </nav></rustdoc-search><section id=3D"main-content" class=3D"conten=
+t"><div class=3D"main-heading"><h1>Trait <a href=3D"https://doc.rust-lang.o=
+rg/std/index.html">std</a>::<wbr><a href=3D"https://doc.rust-lang.org/std/o=
+ps/index.html">ops</a>::<wbr><a class=3D"trait" href=3D"https://doc.rust-la=
+ng.org/std/ops/trait.Deref.html#">Deref</a><button id=3D"copy-path" title=
+=3D"Copy item path to clipboard">Copy item path</button></h1><span class=3D=
+"out-of-band"><span class=3D"since" title=3D"Stable since Rust version 1.0.=
+0">1.0.0</span> =C2=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/s=
+rc/core/ops/deref.rs.html#136">source</a> =C2=B7 <button id=3D"toggle-all-d=
+ocs" title=3D"collapse all docs">[<span>=E2=88=92</span>]</button></span></=
+div><pre class=3D"rust item-decl"><code>pub trait Deref {
+    type <a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#asso=
+ciatedtype.Target" class=3D"associatedtype">Target</a>: ?<a class=3D"trait"=
+ href=3D"https://doc.rust-lang.org/std/marker/trait.Sized.html" title=3D"tr=
+ait std::marker::Sized">Sized</a>;
+
+    // Required method
+    fn <a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#tymeth=
+od.deref" class=3D"fn">deref</a>(&amp;self) -&gt; &amp;Self::<a class=3D"as=
+sociatedtype" href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#as=
+sociatedtype.Target" title=3D"type std::ops::Deref::Target">Target</a>;
+}</code></pre><details class=3D"toggle top-doc" open=3D""><summary class=3D=
+"hideme"><span>Expand description</span></summary><div class=3D"docblock"><=
+p>Used for immutable dereferencing operations, like <code>*v</code>.</p>
+<p>In addition to being used for explicit dereferencing operations with the
+(unary) <code>*</code> operator in immutable contexts, <code>Deref</code> i=
+s also used implicitly
+by the compiler in many circumstances. This mechanism is called
+<a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#deref-coercio=
+n">=E2=80=9C<code>Deref</code> coercion=E2=80=9D</a>. In mutable contexts, =
+<a href=3D"https://doc.rust-lang.org/std/ops/trait.DerefMut.html" title=3D"=
+trait std::ops::DerefMut"><code>DerefMut</code></a> is used and
+mutable deref coercion similarly occurs.</p>
+<p><strong>Warning:</strong> Deref coercion is a powerful language feature =
+which has
+far-reaching implications for every type that implements <code>Deref</code>=
+. The
+compiler will silently insert calls to <code>Deref::deref</code>. For this =
+reason, one
+should be careful about implementing <code>Deref</code> and only do so when=
+ deref
+coercion is desirable. See <a href=3D"https://doc.rust-lang.org/std/ops/tra=
+it.Deref.html#when-to-implement-deref-or-derefmut">below</a> for advice on =
+when this is
+typically desirable or undesirable.</p>
+<p>Types that implement <code>Deref</code> or <code>DerefMut</code> are oft=
+en called =E2=80=9Csmart
+pointers=E2=80=9D and the mechanism of deref coercion has been specifically=
+ designed
+to facilitate the pointer-like behaviour that name suggests. Often, the
+purpose of a =E2=80=9Csmart pointer=E2=80=9D type is to change the ownershi=
+p semantics
+of a contained value (for example, <a href=3D"https://doc.rust-lang.org/all=
+oc/rc/struct.Rc.html"><code>Rc</code></a> or <a href=3D"https://doc.rust-la=
+ng.org/alloc/borrow/enum.Cow.html"><code>Cow</code></a>) or the
+storage semantics of a contained value (for example, <a href=3D"https://doc=
+.rust-lang.org/alloc/boxed/struct.Box.html"><code>Box</code></a>).</p>
+<h2 id=3D"deref-coercion"><a class=3D"doc-anchor" href=3D"https://doc.rust-=
+lang.org/std/ops/trait.Deref.html#deref-coercion">=C2=A7</a>Deref coercion<=
+/h2>
+<p>If <code>T</code> implements <code>Deref&lt;Target =3D U&gt;</code>, and=
+ <code>v</code> is a value of type <code>T</code>, then:</p>
+<ul>
+<li>In immutable contexts, <code>*v</code> (where <code>T</code> is neither=
+ a reference nor a raw
+pointer) is equivalent to <code>*Deref::deref(&amp;v)</code>.</li>
+<li>Values of type <code>&amp;T</code> are coerced to values of type <code>=
+&amp;U</code></li>
+<li><code>T</code> implicitly implements all the methods of the type <code>=
+U</code> which take the
+<code>&amp;self</code> receiver.</li>
+</ul>
+<p>For more details, visit <a href=3D"https://doc.rust-lang.org/book/ch15-0=
+2-deref.html">the chapter in <em>The Rust Programming Language</em></a>
+as well as the reference sections on <a href=3D"https://doc.rust-lang.org/r=
+eference/expressions/operator-expr.html#the-dereference-operator">the deref=
+erence operator</a>,
+<a href=3D"https://doc.rust-lang.org/reference/expressions/method-call-expr=
+.html">method resolution</a>, and <a href=3D"https://doc.rust-lang.org/refe=
+rence/type-coercions.html">type coercions</a>.</p>
+<h2 id=3D"when-to-implement-deref-or-derefmut"><a class=3D"doc-anchor" href=
+=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#when-to-implement-de=
+ref-or-derefmut">=C2=A7</a>When to implement <code>Deref</code> or <code>De=
+refMut</code></h2>
+<p>The same advice applies to both deref traits. In general, deref traits
+<strong>should</strong> be implemented if:</p>
+<ol>
+<li>a value of the type transparently behaves like a value of the target
+type;</li>
+<li>the implementation of the deref function is cheap; and</li>
+<li>users of the type will not be surprised by any deref coercion behaviour=
+.</li>
+</ol>
+<p>In general, deref traits <strong>should not</strong> be implemented if:<=
+/p>
+<ol>
+<li>the deref implementations could fail unexpectedly; or</li>
+<li>the type has methods that are likely to collide with methods on the
+target type; or</li>
+<li>committing to deref coercion as part of the public API is not desirable=
+.</li>
+</ol>
+<p>Note that there=E2=80=99s a large difference between implementing deref =
+traits
+generically over many target types, and doing so only for specific target
+types.</p>
+<p>Generic implementations, such as for <a href=3D"https://doc.rust-lang.or=
+g/alloc/boxed/struct.Box.html"><code>Box&lt;T&gt;</code></a> (which is gene=
+ric over
+every type and dereferences to <code>T</code>) should be careful to provide=
+ few or no
+methods, since the target type is unknown and therefore every method could
+collide with one on the target type, causing confusion for users.
+<code>impl&lt;T&gt; Box&lt;T&gt;</code> has no methods (though several asso=
+ciated functions),
+partly for this reason.</p>
+<p>Specific implementations, such as for <a href=3D"https://doc.rust-lang.o=
+rg/alloc/string/struct.String.html"><code>String</code></a> (whose <code>De=
+ref</code>
+implementation has <code>Target =3D str</code>) can have many methods, sinc=
+e avoiding
+collision is much easier. <code>String</code> and <code>str</code> both hav=
+e many methods, and
+<code>String</code> additionally behaves as if it has every method of <code=
+>str</code> because of
+deref coercion. The implementing type may also be generic while the
+implementation is still specific in this sense; for example, <a href=3D"htt=
+ps://doc.rust-lang.org/alloc/vec/struct.Vec.html"><code>Vec&lt;T&gt;</code>=
+</a>
+dereferences to <code>[T]</code>, so methods of <code>T</code> are not appl=
+icable.</p>
+<p>Consider also that deref coercion means that deref traits are a much lar=
+ger
+part of a type=E2=80=99s public API than any other trait as it is implicitl=
+y called
+by the compiler. Therefore, it is advisable to consider whether this is
+something you are comfortable supporting as a public API.</p>
+<p>The <a href=3D"https://doc.rust-lang.org/std/convert/trait.AsRef.html" t=
+itle=3D"trait std::convert::AsRef"><code>AsRef</code></a> and <a href=3D"ht=
+tps://doc.rust-lang.org/std/borrow/trait.Borrow.html" title=3D"trait std::b=
+orrow::Borrow"><code>Borrow</code></a> traits have very similar
+signatures to <code>Deref</code>. It may be desirable to implement either o=
+r both of
+these, whether in addition to or rather than deref traits. See their
+documentation for details.</p>
+<h2 id=3D"fallibility"><a class=3D"doc-anchor" href=3D"https://doc.rust-lan=
+g.org/std/ops/trait.Deref.html#fallibility">=C2=A7</a>Fallibility</h2>
+<p><strong>This trait=E2=80=99s method should never unexpectedly fail</stro=
+ng>. Deref coercion means
+the compiler will often insert calls to <code>Deref::deref</code> implicitl=
+y. Failure
+during dereferencing can be extremely confusing when <code>Deref</code> is =
+invoked
+implicitly. In the majority of uses it should be infallible, though it may
+be acceptable to panic if the type is misused through programmer error, for
+example.</p>
+<p>However, infallibility is not enforced and therefore not guaranteed.
+As such, <code>unsafe</code> code should not rely on infallibility in gener=
+al for
+soundness.</p>
+<h2 id=3D"examples"><a class=3D"doc-anchor" href=3D"https://doc.rust-lang.o=
+rg/std/ops/trait.Deref.html#examples">=C2=A7</a>Examples</h2>
+<p>A struct with a single field which is accessible by dereferencing the
+struct.</p>
+
+<div class=3D"example-wrap"><pre class=3D"rust rust-example-rendered"><code=
+><span class=3D"kw">use </span>std::ops::Deref;
+
+<span class=3D"kw">struct </span>DerefExample&lt;T&gt; {
+    value: T
+}
+
+<span class=3D"kw">impl</span>&lt;T&gt; Deref <span class=3D"kw">for </span=
+>DerefExample&lt;T&gt; {
+    <span class=3D"kw">type </span>Target =3D T;
+
+    <span class=3D"kw">fn </span>deref(<span class=3D"kw-2">&amp;</span><sp=
+an class=3D"self">self</span>) -&gt; <span class=3D"kw-2">&amp;</span><span=
+ class=3D"self">Self</span>::Target {
+        <span class=3D"kw-2">&amp;</span><span class=3D"self">self</span>.v=
+alue
+    }
+}
+
+<span class=3D"kw">let </span>x =3D DerefExample { value: <span class=3D"st=
+ring">'a' </span>};
+<span class=3D"macro">assert_eq!</span>(<span class=3D"string">'a'</span>, =
+<span class=3D"kw-2">*</span>x);</code></pre><a class=3D"test-arrow" target=
+=3D"_blank" title=3D"Run code" href=3D"https://play.rust-lang.org/?code=3D%=
+23!%5Ballow(unused)%5D%0Afn+main()+%7B%0A++++use+std::ops::Deref;%0A++++%0A=
+++++struct+DerefExample%3CT%3E+%7B%0A++++++++value:+T%0A++++%7D%0A++++%0A++=
+++impl%3CT%3E+Deref+for+DerefExample%3CT%3E+%7B%0A++++++++type+Target+=3D+T=
+;%0A++++%0A++++++++fn+deref(%26self)+-%3E+%26Self::Target+%7B%0A+++++++++++=
++%26self.value%0A++++++++%7D%0A++++%7D%0A++++%0A++++let+x+=3D+DerefExample+=
+%7B+value:+%27a%27+%7D;%0A++++assert_eq!(%27a%27,+*x);%0A%7D&amp;edition=3D=
+2021"></a></div>
+</div></details><h2 id=3D"required-associated-types" class=3D"section-heade=
+r">Required Associated Types<a href=3D"https://doc.rust-lang.org/std/ops/tr=
+ait.Deref.html#required-associated-types" class=3D"anchor">=C2=A7</a></h2><=
+div class=3D"methods"><details class=3D"toggle" open=3D""><summary><section=
+ id=3D"associatedtype.Target" class=3D"method"><span class=3D"rightside"><s=
+pan class=3D"since" title=3D"Stable since Rust version 1.0.0">1.0.0</span> =
+=C2=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/src/core/ops/dere=
+f.rs.html#141">source</a></span><h4 class=3D"code-header">type <a href=3D"h=
+ttps://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Target" cl=
+ass=3D"associatedtype">Target</a>: ?<a class=3D"trait" href=3D"https://doc.=
+rust-lang.org/std/marker/trait.Sized.html" title=3D"trait std::marker::Size=
+d">Sized</a></h4></section></summary><div class=3D"docblock"><p>The resulti=
+ng type after dereferencing.</p>
+</div></details></div><h2 id=3D"required-methods" class=3D"section-header">=
+Required Methods<a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.ht=
+ml#required-methods" class=3D"anchor">=C2=A7</a></h2><div class=3D"methods"=
+><details class=3D"toggle method-toggle" open=3D""><summary><section id=3D"=
+tymethod.deref" class=3D"method"><span class=3D"rightside"><span class=3D"s=
+ince" title=3D"Stable since Rust version 1.0.0">1.0.0</span> =C2=B7 <a clas=
+s=3D"src" href=3D"https://doc.rust-lang.org/src/core/ops/deref.rs.html#147"=
+>source</a></span><h4 class=3D"code-header">fn <a href=3D"https://doc.rust-=
+lang.org/std/ops/trait.Deref.html#tymethod.deref" class=3D"fn">deref</a>(&a=
+mp;self) -&gt; &amp;Self::<a class=3D"associatedtype" href=3D"https://doc.r=
+ust-lang.org/std/ops/trait.Deref.html#associatedtype.Target" title=3D"type =
+std::ops::Deref::Target">Target</a></h4></section></summary><div class=3D"d=
+ocblock"><p>Dereferences the value.</p>
+</div></details></div><h2 id=3D"implementors" class=3D"section-header">Impl=
+ementors<a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#imple=
+mentors" class=3D"anchor">=C2=A7</a></h2><div id=3D"implementors-list"><det=
+ails class=3D"toggle implementors-toggle"><summary><section id=3D"impl-Dere=
+f-for-CString" class=3D"impl"><span class=3D"rightside"><span class=3D"sinc=
+e" title=3D"Stable since Rust version 1.0.0">1.0.0</span> =C2=B7 <a class=
+=3D"src" href=3D"https://doc.rust-lang.org/src/alloc/ffi/c_str.rs.html#708"=
+>source</a></span><a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.=
+html#impl-Deref-for-CString" class=3D"anchor">=C2=A7</a><h3 class=3D"code-h=
+eader">impl <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/ops/tr=
+ait.Deref.html" title=3D"trait std::ops::Deref">Deref</a> for <a class=3D"s=
+truct" href=3D"https://doc.rust-lang.org/std/ffi/struct.CString.html" title=
+=3D"struct std::ffi::CString">CString</a></h3></section></summary><div clas=
+s=3D"impl-items"><section id=3D"associatedtype.Target-1" class=3D"associate=
+dtype trait-impl"><a class=3D"src rightside" href=3D"https://doc.rust-lang.=
+org/src/alloc/ffi/c_str.rs.html#709">source</a><a href=3D"https://doc.rust-=
+lang.org/std/ops/trait.Deref.html#associatedtype.Target-1" class=3D"anchor"=
+>=C2=A7</a><h4 class=3D"code-header">type <a href=3D"https://doc.rust-lang.=
+org/std/ops/trait.Deref.html#associatedtype.Target" class=3D"associatedtype=
+">Target</a> =3D <a class=3D"struct" href=3D"https://doc.rust-lang.org/std/=
+ffi/struct.CStr.html" title=3D"struct std::ffi::CStr">CStr</a></h4></sectio=
+n></div></details><details class=3D"toggle implementors-toggle"><summary><s=
+ection id=3D"impl-Deref-for-OsString" class=3D"impl"><span class=3D"rightsi=
+de"><span class=3D"since" title=3D"Stable since Rust version 1.0.0">1.0.0</=
+span> =C2=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/src/std/ffi=
+/os_str.rs.html#609-616">source</a></span><a href=3D"https://doc.rust-lang.=
+org/std/ops/trait.Deref.html#impl-Deref-for-OsString" class=3D"anchor">=C2=
+=A7</a><h3 class=3D"code-header">impl <a class=3D"trait" href=3D"https://do=
+c.rust-lang.org/std/ops/trait.Deref.html" title=3D"trait std::ops::Deref">D=
+eref</a> for <a class=3D"struct" href=3D"https://doc.rust-lang.org/std/ffi/=
+struct.OsString.html" title=3D"struct std::ffi::OsString">OsString</a></h3>=
+</section></summary><div class=3D"impl-items"><section id=3D"associatedtype=
+.Target-2" class=3D"associatedtype trait-impl"><a class=3D"src rightside" h=
+ref=3D"https://doc.rust-lang.org/src/std/ffi/os_str.rs.html#610">source</a>=
+<a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtyp=
+e.Target-2" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a hr=
+ef=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Tar=
+get" class=3D"associatedtype">Target</a> =3D <a class=3D"struct" href=3D"ht=
+tps://doc.rust-lang.org/std/ffi/struct.OsStr.html" title=3D"struct std::ffi=
+::OsStr">OsStr</a></h4></section></div></details><details class=3D"toggle i=
+mplementors-toggle"><summary><section id=3D"impl-Deref-for-PathBuf" class=
+=3D"impl"><span class=3D"rightside"><span class=3D"since" title=3D"Stable s=
+ince Rust version 1.0.0">1.0.0</span> =C2=B7 <a class=3D"src" href=3D"https=
+://doc.rust-lang.org/src/std/path.rs.html#1867-1873">source</a></span><a hr=
+ef=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#impl-Deref-for-Pat=
+hBuf" class=3D"anchor">=C2=A7</a><h3 class=3D"code-header">impl <a class=3D=
+"trait" href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html" title=
+=3D"trait std::ops::Deref">Deref</a> for <a class=3D"struct" href=3D"https:=
+//doc.rust-lang.org/std/path/struct.PathBuf.html" title=3D"struct std::path=
+::PathBuf">PathBuf</a></h3></section></summary><div class=3D"impl-items"><s=
+ection id=3D"associatedtype.Target-3" class=3D"associatedtype trait-impl"><=
+a class=3D"src rightside" href=3D"https://doc.rust-lang.org/src/std/path.rs=
+.html#1868">source</a><a href=3D"https://doc.rust-lang.org/std/ops/trait.De=
+ref.html#associatedtype.Target-3" class=3D"anchor">=C2=A7</a><h4 class=3D"c=
+ode-header">type <a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.h=
+tml#associatedtype.Target" class=3D"associatedtype">Target</a> =3D <a class=
+=3D"struct" href=3D"https://doc.rust-lang.org/std/path/struct.Path.html" ti=
+tle=3D"struct std::path::Path">Path</a></h4></section></div></details><deta=
+ils class=3D"toggle implementors-toggle"><summary><section id=3D"impl-Deref=
+-for-String" class=3D"impl"><span class=3D"rightside"><span class=3D"since"=
+ title=3D"Stable since Rust version 1.0.0">1.0.0</span> =C2=B7 <a class=3D"=
+src" href=3D"https://doc.rust-lang.org/src/alloc/string.rs.html#2482">sourc=
+e</a></span><a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#i=
+mpl-Deref-for-String" class=3D"anchor">=C2=A7</a><h3 class=3D"code-header">=
+impl <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/ops/trait.Der=
+ef.html" title=3D"trait std::ops::Deref">Deref</a> for <a class=3D"struct" =
+href=3D"https://doc.rust-lang.org/std/string/struct.String.html" title=3D"s=
+truct std::string::String">String</a></h3></section></summary><div class=3D=
+"impl-items"><section id=3D"associatedtype.Target-4" class=3D"associatedtyp=
+e trait-impl"><a class=3D"src rightside" href=3D"https://doc.rust-lang.org/=
+src/alloc/string.rs.html#2483">source</a><a href=3D"https://doc.rust-lang.o=
+rg/std/ops/trait.Deref.html#associatedtype.Target-4" class=3D"anchor">=C2=
+=A7</a><h4 class=3D"code-header">type <a href=3D"https://doc.rust-lang.org/=
+std/ops/trait.Deref.html#associatedtype.Target" class=3D"associatedtype">Ta=
+rget</a> =3D <a class=3D"primitive" href=3D"https://doc.rust-lang.org/std/p=
+rimitive.str.html">str</a></h4></section></div></details><details class=3D"=
+toggle implementors-toggle"><summary><section id=3D"impl-Deref-for-IoSlice%=
+3C'a%3E" class=3D"impl"><span class=3D"rightside"><span class=3D"since" tit=
+le=3D"Stable since Rust version 1.36.0">1.36.0</span> =C2=B7 <a class=3D"sr=
+c" href=3D"https://doc.rust-lang.org/src/std/io/mod.rs.html#1472-1479">sour=
+ce</a></span><a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#=
+impl-Deref-for-IoSlice%3C'a%3E" class=3D"anchor">=C2=A7</a><h3 class=3D"cod=
+e-header">impl&lt;'a&gt; <a class=3D"trait" href=3D"https://doc.rust-lang.o=
+rg/std/ops/trait.Deref.html" title=3D"trait std::ops::Deref">Deref</a> for =
+<a class=3D"struct" href=3D"https://doc.rust-lang.org/std/io/struct.IoSlice=
+.html" title=3D"struct std::io::IoSlice">IoSlice</a>&lt;'a&gt;</h3></sectio=
+n></summary><div class=3D"impl-items"><section id=3D"associatedtype.Target-=
+5" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=3D"h=
+ttps://doc.rust-lang.org/src/std/io/mod.rs.html#1473">source</a><a href=3D"=
+https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Target-5"=
+ class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a href=3D"https=
+://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Target" class=
+=3D"associatedtype">Target</a> =3D [<a class=3D"primitive" href=3D"https://=
+doc.rust-lang.org/std/primitive.u8.html">u8</a>]</h4></section></div></deta=
+ils><details class=3D"toggle implementors-toggle"><summary><section id=3D"i=
+mpl-Deref-for-IoSliceMut%3C'a%3E" class=3D"impl"><span class=3D"rightside">=
+<span class=3D"since" title=3D"Stable since Rust version 1.36.0">1.36.0</sp=
+an> =C2=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/src/std/io/mo=
+d.rs.html#1330-1337">source</a></span><a href=3D"https://doc.rust-lang.org/=
+std/ops/trait.Deref.html#impl-Deref-for-IoSliceMut%3C'a%3E" class=3D"anchor=
+">=C2=A7</a><h3 class=3D"code-header">impl&lt;'a&gt; <a class=3D"trait" hre=
+f=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html" title=3D"trait std=
+::ops::Deref">Deref</a> for <a class=3D"struct" href=3D"https://doc.rust-la=
+ng.org/std/io/struct.IoSliceMut.html" title=3D"struct std::io::IoSliceMut">=
+IoSliceMut</a>&lt;'a&gt;</h3></section></summary><div class=3D"impl-items">=
+<section id=3D"associatedtype.Target-6" class=3D"associatedtype trait-impl"=
+><a class=3D"src rightside" href=3D"https://doc.rust-lang.org/src/std/io/mo=
+d.rs.html#1331">source</a><a href=3D"https://doc.rust-lang.org/std/ops/trai=
+t.Deref.html#associatedtype.Target-6" class=3D"anchor">=C2=A7</a><h4 class=
+=3D"code-header">type <a href=3D"https://doc.rust-lang.org/std/ops/trait.De=
+ref.html#associatedtype.Target" class=3D"associatedtype">Target</a> =3D [<a=
+ class=3D"primitive" href=3D"https://doc.rust-lang.org/std/primitive.u8.htm=
+l">u8</a>]</h4></section></div></details><details class=3D"toggle implement=
+ors-toggle"><summary><section id=3D"impl-Deref-for-VaList%3C'a,+'f%3E" clas=
+s=3D"impl"><a class=3D"src rightside" href=3D"https://doc.rust-lang.org/src=
+/core/ffi/va_list.rs.html#191">source</a><a href=3D"https://doc.rust-lang.o=
+rg/std/ops/trait.Deref.html#impl-Deref-for-VaList%3C'a,+'f%3E" class=3D"anc=
+hor">=C2=A7</a><h3 class=3D"code-header">impl&lt;'a, 'f&gt; <a class=3D"tra=
+it" href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html" title=3D"tr=
+ait std::ops::Deref">Deref</a> for <a class=3D"struct" href=3D"https://doc.=
+rust-lang.org/std/ffi/struct.VaList.html" title=3D"struct std::ffi::VaList"=
+>VaList</a>&lt;'a, 'f&gt;<div class=3D"where">where
+    'f: 'a,</div></h3></section></summary><div class=3D"impl-items"><sectio=
+n id=3D"associatedtype.Target-7" class=3D"associatedtype trait-impl"><a cla=
+ss=3D"src rightside" href=3D"https://doc.rust-lang.org/src/core/ffi/va_list=
+.rs.html#192">source</a><a href=3D"https://doc.rust-lang.org/std/ops/trait.=
+Deref.html#associatedtype.Target-7" class=3D"anchor">=C2=A7</a><h4 class=3D=
+"code-header">type <a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref=
+.html#associatedtype.Target" class=3D"associatedtype">Target</a> =3D <a cla=
+ss=3D"struct" href=3D"https://doc.rust-lang.org/std/ffi/struct.VaListImpl.h=
+tml" title=3D"struct std::ffi::VaListImpl">VaListImpl</a>&lt;'f&gt;</h4></s=
+ection></div></details><details class=3D"toggle implementors-toggle"><summa=
+ry><section id=3D"impl-Deref-for-Cow%3C'_,+B%3E" class=3D"impl"><span class=
+=3D"rightside"><span class=3D"since" title=3D"Stable since Rust version 1.0=
+.0">1.0.0</span> =C2=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/=
+src/alloc/borrow.rs.html#331-333">source</a></span><a href=3D"https://doc.r=
+ust-lang.org/std/ops/trait.Deref.html#impl-Deref-for-Cow%3C'_,+B%3E" class=
+=3D"anchor">=C2=A7</a><h3 class=3D"code-header">impl&lt;B&gt; <a class=3D"t=
+rait" href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html" title=3D"=
+trait std::ops::Deref">Deref</a> for <a class=3D"enum" href=3D"https://doc.=
+rust-lang.org/std/borrow/enum.Cow.html" title=3D"enum std::borrow::Cow">Cow=
+</a>&lt;'_, B&gt;<div class=3D"where">where
+    B: <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/borrow/trai=
+t.ToOwned.html" title=3D"trait std::borrow::ToOwned">ToOwned</a> + ?<a clas=
+s=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/trait.Sized.html" =
+title=3D"trait std::marker::Sized">Sized</a>,
+    &lt;B as <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/borro=
+w/trait.ToOwned.html" title=3D"trait std::borrow::ToOwned">ToOwned</a>&gt;:=
+:<a class=3D"associatedtype" href=3D"https://doc.rust-lang.org/std/borrow/t=
+rait.ToOwned.html#associatedtype.Owned" title=3D"type std::borrow::ToOwned:=
+:Owned">Owned</a>: <a class=3D"trait" href=3D"https://doc.rust-lang.org/std=
+/borrow/trait.Borrow.html" title=3D"trait std::borrow::Borrow">Borrow</a>&l=
+t;B&gt;,</div></h3></section></summary><div class=3D"impl-items"><section i=
+d=3D"associatedtype.Target-8" class=3D"associatedtype trait-impl"><a class=
+=3D"src rightside" href=3D"https://doc.rust-lang.org/src/alloc/borrow.rs.ht=
+ml#335">source</a><a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.=
+html#associatedtype.Target-8" class=3D"anchor">=C2=A7</a><h4 class=3D"code-=
+header">type <a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#=
+associatedtype.Target" class=3D"associatedtype">Target</a> =3D B</h4></sect=
+ion></div></details><details class=3D"toggle implementors-toggle"><summary>=
+<section id=3D"impl-Deref-for-Pin%3CPtr%3E" class=3D"impl"><span class=3D"r=
+ightside"><span class=3D"since" title=3D"Stable since Rust version 1.33.0">=
+1.33.0</span> =C2=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/src=
+/core/pin.rs.html#1678">source</a></span><a href=3D"https://doc.rust-lang.o=
+rg/std/ops/trait.Deref.html#impl-Deref-for-Pin%3CPtr%3E" class=3D"anchor">=
+=C2=A7</a><h3 class=3D"code-header">impl&lt;Ptr&gt; <a class=3D"trait" href=
+=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html" title=3D"trait std:=
+:ops::Deref">Deref</a> for <a class=3D"struct" href=3D"https://doc.rust-lan=
+g.org/std/pin/struct.Pin.html" title=3D"struct std::pin::Pin">Pin</a>&lt;Pt=
+r&gt;<div class=3D"where">where
+    Ptr: <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/ops/trait=
+.Deref.html" title=3D"trait std::ops::Deref">Deref</a>,</div></h3></section=
+></summary><div class=3D"impl-items"><section id=3D"associatedtype.Target-9=
+" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=3D"ht=
+tps://doc.rust-lang.org/src/core/pin.rs.html#1679">source</a><a href=3D"htt=
+ps://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Target-9" cl=
+ass=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a href=3D"https://=
+doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Target" class=3D"=
+associatedtype">Target</a> =3D &lt;Ptr as <a class=3D"trait" href=3D"https:=
+//doc.rust-lang.org/std/ops/trait.Deref.html" title=3D"trait std::ops::Dere=
+f">Deref</a>&gt;::<a class=3D"associatedtype" href=3D"https://doc.rust-lang=
+.org/std/ops/trait.Deref.html#associatedtype.Target" title=3D"type std::ops=
+::Deref::Target">Target</a></h4></section></div></details><details class=3D=
+"toggle implementors-toggle"><summary><section id=3D"impl-Deref-for-%26T" c=
+lass=3D"impl"><span class=3D"rightside"><span class=3D"since" title=3D"Stab=
+le since Rust version 1.0.0">1.0.0</span> =C2=B7 <a class=3D"src" href=3D"h=
+ttps://doc.rust-lang.org/src/core/ops/deref.rs.html#151">source</a></span><=
+a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#impl-Deref-for=
+-%26T" class=3D"anchor">=C2=A7</a><h3 class=3D"code-header">impl&lt;T&gt; <=
+a class=3D"trait" href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.htm=
+l" title=3D"trait std::ops::Deref">Deref</a> for <a class=3D"primitive" hre=
+f=3D"https://doc.rust-lang.org/std/primitive.reference.html">&amp;T</a><div=
+ class=3D"where">where
+    T: ?<a class=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/tra=
+it.Sized.html" title=3D"trait std::marker::Sized">Sized</a>,</div></h3></se=
+ction></summary><div class=3D"impl-items"><section id=3D"associatedtype.Tar=
+get-10" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=
+=3D"https://doc.rust-lang.org/src/core/ops/deref.rs.html#152">source</a><a =
+href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.T=
+arget-10" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a href=
+=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Targe=
+t" class=3D"associatedtype">Target</a> =3D T</h4></section></div></details>=
+<details class=3D"toggle implementors-toggle"><summary><section id=3D"impl-=
+Deref-for-%26mut+T" class=3D"impl"><span class=3D"rightside"><span class=3D=
+"since" title=3D"Stable since Rust version 1.0.0">1.0.0</span> =C2=B7 <a cl=
+ass=3D"src" href=3D"https://doc.rust-lang.org/src/core/ops/deref.rs.html#16=
+4">source</a></span><a href=3D"https://doc.rust-lang.org/std/ops/trait.Dere=
+f.html#impl-Deref-for-%26mut+T" class=3D"anchor">=C2=A7</a><h3 class=3D"cod=
+e-header">impl&lt;T&gt; <a class=3D"trait" href=3D"https://doc.rust-lang.or=
+g/std/ops/trait.Deref.html" title=3D"trait std::ops::Deref">Deref</a> for <=
+a class=3D"primitive" href=3D"https://doc.rust-lang.org/std/primitive.refer=
+ence.html">&amp;mut T</a><div class=3D"where">where
+    T: ?<a class=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/tra=
+it.Sized.html" title=3D"trait std::marker::Sized">Sized</a>,</div></h3></se=
+ction></summary><div class=3D"impl-items"><section id=3D"associatedtype.Tar=
+get-11" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=
+=3D"https://doc.rust-lang.org/src/core/ops/deref.rs.html#165">source</a><a =
+href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.T=
+arget-11" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a href=
+=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Targe=
+t" class=3D"associatedtype">Target</a> =3D T</h4></section></div></details>=
+<details class=3D"toggle implementors-toggle"><summary><section id=3D"impl-=
+Deref-for-ThinBox%3CT%3E" class=3D"impl"><a class=3D"src rightside" href=3D=
+"https://doc.rust-lang.org/src/alloc/boxed/thin.rs.html#143">source</a><a h=
+ref=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#impl-Deref-for-Th=
+inBox%3CT%3E" class=3D"anchor">=C2=A7</a><h3 class=3D"code-header">impl&lt;=
+T&gt; <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/ops/trait.De=
+ref.html" title=3D"trait std::ops::Deref">Deref</a> for <a class=3D"struct"=
+ href=3D"https://doc.rust-lang.org/std/boxed/struct.ThinBox.html" title=3D"=
+struct std::boxed::ThinBox">ThinBox</a>&lt;T&gt;<div class=3D"where">where
+    T: ?<a class=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/tra=
+it.Sized.html" title=3D"trait std::marker::Sized">Sized</a>,</div></h3></se=
+ction></summary><div class=3D"impl-items"><section id=3D"associatedtype.Tar=
+get-12" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=
+=3D"https://doc.rust-lang.org/src/alloc/boxed/thin.rs.html#144">source</a><=
+a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype=
+.Target-12" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a hr=
+ef=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Tar=
+get" class=3D"associatedtype">Target</a> =3D T</h4></section></div></detail=
+s><details class=3D"toggle implementors-toggle"><summary><section id=3D"imp=
+l-Deref-for-Ref%3C'_,+T%3E" class=3D"impl"><span class=3D"rightside"><span =
+class=3D"since" title=3D"Stable since Rust version 1.0.0">1.0.0</span> =C2=
+=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/src/core/cell.rs.htm=
+l#1464">source</a></span><a href=3D"https://doc.rust-lang.org/std/ops/trait=
+.Deref.html#impl-Deref-for-Ref%3C'_,+T%3E" class=3D"anchor">=C2=A7</a><h3 c=
+lass=3D"code-header">impl&lt;T&gt; <a class=3D"trait" href=3D"https://doc.r=
+ust-lang.org/std/ops/trait.Deref.html" title=3D"trait std::ops::Deref">Dere=
+f</a> for <a class=3D"struct" href=3D"https://doc.rust-lang.org/std/cell/st=
+ruct.Ref.html" title=3D"struct std::cell::Ref">Ref</a>&lt;'_, T&gt;<div cla=
+ss=3D"where">where
+    T: ?<a class=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/tra=
+it.Sized.html" title=3D"trait std::marker::Sized">Sized</a>,</div></h3></se=
+ction></summary><div class=3D"impl-items"><section id=3D"associatedtype.Tar=
+get-13" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=
+=3D"https://doc.rust-lang.org/src/core/cell.rs.html#1465">source</a><a href=
+=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Targe=
+t-13" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a href=3D"=
+https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Target" c=
+lass=3D"associatedtype">Target</a> =3D T</h4></section></div></details><det=
+ails class=3D"toggle implementors-toggle"><summary><section id=3D"impl-Dere=
+f-for-RefMut%3C'_,+T%3E" class=3D"impl"><span class=3D"rightside"><span cla=
+ss=3D"since" title=3D"Stable since Rust version 1.0.0">1.0.0</span> =C2=B7 =
+<a class=3D"src" href=3D"https://doc.rust-lang.org/src/core/cell.rs.html#18=
+50">source</a></span><a href=3D"https://doc.rust-lang.org/std/ops/trait.Der=
+ef.html#impl-Deref-for-RefMut%3C'_,+T%3E" class=3D"anchor">=C2=A7</a><h3 cl=
+ass=3D"code-header">impl&lt;T&gt; <a class=3D"trait" href=3D"https://doc.ru=
+st-lang.org/std/ops/trait.Deref.html" title=3D"trait std::ops::Deref">Deref=
+</a> for <a class=3D"struct" href=3D"https://doc.rust-lang.org/std/cell/str=
+uct.RefMut.html" title=3D"struct std::cell::RefMut">RefMut</a>&lt;'_, T&gt;=
+<div class=3D"where">where
+    T: ?<a class=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/tra=
+it.Sized.html" title=3D"trait std::marker::Sized">Sized</a>,</div></h3></se=
+ction></summary><div class=3D"impl-items"><section id=3D"associatedtype.Tar=
+get-14" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=
+=3D"https://doc.rust-lang.org/src/core/cell.rs.html#1851">source</a><a href=
+=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Targe=
+t-14" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a href=3D"=
+https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Target" c=
+lass=3D"associatedtype">Target</a> =3D T</h4></section></div></details><det=
+ails class=3D"toggle implementors-toggle"><summary><section id=3D"impl-Dere=
+f-for-ManuallyDrop%3CT%3E" class=3D"impl"><span class=3D"rightside"><span c=
+lass=3D"since" title=3D"Stable since Rust version 1.20.0">1.20.0</span> =C2=
+=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/src/core/mem/manuall=
+y_drop.rs.html#155">source</a></span><a href=3D"https://doc.rust-lang.org/s=
+td/ops/trait.Deref.html#impl-Deref-for-ManuallyDrop%3CT%3E" class=3D"anchor=
+">=C2=A7</a><h3 class=3D"code-header">impl&lt;T&gt; <a class=3D"trait" href=
+=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html" title=3D"trait std:=
+:ops::Deref">Deref</a> for <a class=3D"struct" href=3D"https://doc.rust-lan=
+g.org/std/mem/struct.ManuallyDrop.html" title=3D"struct std::mem::ManuallyD=
+rop">ManuallyDrop</a>&lt;T&gt;<div class=3D"where">where
+    T: ?<a class=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/tra=
+it.Sized.html" title=3D"trait std::marker::Sized">Sized</a>,</div></h3></se=
+ction></summary><div class=3D"impl-items"><section id=3D"associatedtype.Tar=
+get-15" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=
+=3D"https://doc.rust-lang.org/src/core/mem/manually_drop.rs.html#156">sourc=
+e</a><a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associat=
+edtype.Target-15" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type=
+ <a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedty=
+pe.Target" class=3D"associatedtype">Target</a> =3D T</h4></section></div></=
+details><details class=3D"toggle implementors-toggle"><summary><section id=
+=3D"impl-Deref-for-AssertUnwindSafe%3CT%3E" class=3D"impl"><span class=3D"r=
+ightside"><span class=3D"since" title=3D"Stable since Rust version 1.9.0">1=
+.9.0</span> =C2=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/src/c=
+ore/panic/unwind_safe.rs.html#251">source</a></span><a href=3D"https://doc.=
+rust-lang.org/std/ops/trait.Deref.html#impl-Deref-for-AssertUnwindSafe%3CT%=
+3E" class=3D"anchor">=C2=A7</a><h3 class=3D"code-header">impl&lt;T&gt; <a c=
+lass=3D"trait" href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html" =
+title=3D"trait std::ops::Deref">Deref</a> for <a class=3D"struct" href=3D"h=
+ttps://doc.rust-lang.org/std/panic/struct.AssertUnwindSafe.html" title=3D"s=
+truct std::panic::AssertUnwindSafe">AssertUnwindSafe</a>&lt;T&gt;</h3></sec=
+tion></summary><div class=3D"impl-items"><section id=3D"associatedtype.Targ=
+et-16" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=
+=3D"https://doc.rust-lang.org/src/core/panic/unwind_safe.rs.html#252">sourc=
+e</a><a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associat=
+edtype.Target-16" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type=
+ <a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedty=
+pe.Target" class=3D"associatedtype">Target</a> =3D T</h4></section></div></=
+details><details class=3D"toggle implementors-toggle"><summary><section id=
+=3D"impl-Deref-for-Box%3CT,+A%3E" class=3D"impl"><span class=3D"rightside">=
+<span class=3D"since" title=3D"Stable since Rust version 1.0.0">1.0.0</span=
+> =C2=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/src/alloc/boxed=
+.rs.html#2140">source</a></span><a href=3D"https://doc.rust-lang.org/std/op=
+s/trait.Deref.html#impl-Deref-for-Box%3CT,+A%3E" class=3D"anchor">=C2=A7</a=
+><h3 class=3D"code-header">impl&lt;T, A&gt; <a class=3D"trait" href=3D"http=
+s://doc.rust-lang.org/std/ops/trait.Deref.html" title=3D"trait std::ops::De=
+ref">Deref</a> for <a class=3D"struct" href=3D"https://doc.rust-lang.org/st=
+d/boxed/struct.Box.html" title=3D"struct std::boxed::Box">Box</a>&lt;T, A&g=
+t;<div class=3D"where">where
+    A: <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/alloc/trait=
+.Allocator.html" title=3D"trait std::alloc::Allocator">Allocator</a>,
+    T: ?<a class=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/tra=
+it.Sized.html" title=3D"trait std::marker::Sized">Sized</a>,</div></h3></se=
+ction></summary><div class=3D"impl-items"><section id=3D"associatedtype.Tar=
+get-17" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=
+=3D"https://doc.rust-lang.org/src/alloc/boxed.rs.html#2141">source</a><a hr=
+ef=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Tar=
+get-17" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a href=
+=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Targe=
+t" class=3D"associatedtype">Target</a> =3D T</h4></section></div></details>=
+<details class=3D"toggle implementors-toggle"><summary><section id=3D"impl-=
+Deref-for-PeekMut%3C'_,+T,+A%3E" class=3D"impl"><span class=3D"rightside"><=
+span class=3D"since" title=3D"Stable since Rust version 1.12.0">1.12.0</spa=
+n> =C2=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/src/alloc/coll=
+ections/binary_heap/mod.rs.html#326">source</a></span><a href=3D"https://do=
+c.rust-lang.org/std/ops/trait.Deref.html#impl-Deref-for-PeekMut%3C'_,+T,+A%=
+3E" class=3D"anchor">=C2=A7</a><h3 class=3D"code-header">impl&lt;T, A&gt; <=
+a class=3D"trait" href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.htm=
+l" title=3D"trait std::ops::Deref">Deref</a> for <a class=3D"struct" href=
+=3D"https://doc.rust-lang.org/std/collections/binary_heap/struct.PeekMut.ht=
+ml" title=3D"struct std::collections::binary_heap::PeekMut">PeekMut</a>&lt;=
+'_, T, A&gt;<div class=3D"where">where
+    T: <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/cmp/trait.O=
+rd.html" title=3D"trait std::cmp::Ord">Ord</a>,
+    A: <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/alloc/trait=
+.Allocator.html" title=3D"trait std::alloc::Allocator">Allocator</a>,</div>=
+</h3></section></summary><div class=3D"impl-items"><section id=3D"associate=
+dtype.Target-18" class=3D"associatedtype trait-impl"><a class=3D"src rights=
+ide" href=3D"https://doc.rust-lang.org/src/alloc/collections/binary_heap/mo=
+d.rs.html#327">source</a><a href=3D"https://doc.rust-lang.org/std/ops/trait=
+.Deref.html#associatedtype.Target-18" class=3D"anchor">=C2=A7</a><h4 class=
+=3D"code-header">type <a href=3D"https://doc.rust-lang.org/std/ops/trait.De=
+ref.html#associatedtype.Target" class=3D"associatedtype">Target</a> =3D T</=
+h4></section></div></details><details class=3D"toggle implementors-toggle">=
+<summary><section id=3D"impl-Deref-for-Rc%3CT,+A%3E" class=3D"impl"><span c=
+lass=3D"rightside"><span class=3D"since" title=3D"Stable since Rust version=
+ 1.0.0">1.0.0</span> =C2=B7 <a class=3D"src" href=3D"https://doc.rust-lang.=
+org/src/alloc/rc.rs.html#2164">source</a></span><a href=3D"https://doc.rust=
+-lang.org/std/ops/trait.Deref.html#impl-Deref-for-Rc%3CT,+A%3E" class=3D"an=
+chor">=C2=A7</a><h3 class=3D"code-header">impl&lt;T, A&gt; <a class=3D"trai=
+t" href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html" title=3D"tra=
+it std::ops::Deref">Deref</a> for <a class=3D"struct" href=3D"https://doc.r=
+ust-lang.org/std/rc/struct.Rc.html" title=3D"struct std::rc::Rc">Rc</a>&lt;=
+T, A&gt;<div class=3D"where">where
+    A: <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/alloc/trait=
+.Allocator.html" title=3D"trait std::alloc::Allocator">Allocator</a>,
+    T: ?<a class=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/tra=
+it.Sized.html" title=3D"trait std::marker::Sized">Sized</a>,</div></h3></se=
+ction></summary><div class=3D"impl-items"><section id=3D"associatedtype.Tar=
+get-19" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=
+=3D"https://doc.rust-lang.org/src/alloc/rc.rs.html#2165">source</a><a href=
+=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Targe=
+t-19" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a href=3D"=
+https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Target" c=
+lass=3D"associatedtype">Target</a> =3D T</h4></section></div></details><det=
+ails class=3D"toggle implementors-toggle"><summary><section id=3D"impl-Dere=
+f-for-UniqueRc%3CT,+A%3E" class=3D"impl"><a class=3D"src rightside" href=3D=
+"https://doc.rust-lang.org/src/alloc/rc.rs.html#3684">source</a><a href=3D"=
+https://doc.rust-lang.org/std/ops/trait.Deref.html#impl-Deref-for-UniqueRc%=
+3CT,+A%3E" class=3D"anchor">=C2=A7</a><h3 class=3D"code-header">impl&lt;T, =
+A&gt; <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/ops/trait.De=
+ref.html" title=3D"trait std::ops::Deref">Deref</a> for <a class=3D"struct"=
+ href=3D"https://doc.rust-lang.org/std/rc/struct.UniqueRc.html" title=3D"st=
+ruct std::rc::UniqueRc">UniqueRc</a>&lt;T, A&gt;<div class=3D"where">where
+    A: <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/alloc/trait=
+.Allocator.html" title=3D"trait std::alloc::Allocator">Allocator</a>,
+    T: ?<a class=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/tra=
+it.Sized.html" title=3D"trait std::marker::Sized">Sized</a>,</div></h3></se=
+ction></summary><div class=3D"impl-items"><section id=3D"associatedtype.Tar=
+get-20" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=
+=3D"https://doc.rust-lang.org/src/alloc/rc.rs.html#3685">source</a><a href=
+=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Targe=
+t-20" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a href=3D"=
+https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Target" c=
+lass=3D"associatedtype">Target</a> =3D T</h4></section></div></details><det=
+ails class=3D"toggle implementors-toggle"><summary><section id=3D"impl-Dere=
+f-for-Arc%3CT,+A%3E" class=3D"impl"><span class=3D"rightside"><span class=
+=3D"since" title=3D"Stable since Rust version 1.0.0">1.0.0</span> =C2=B7 <a=
+ class=3D"src" href=3D"https://doc.rust-lang.org/src/alloc/sync.rs.html#212=
+8">source</a></span><a href=3D"https://doc.rust-lang.org/std/ops/trait.Dere=
+f.html#impl-Deref-for-Arc%3CT,+A%3E" class=3D"anchor">=C2=A7</a><h3 class=
+=3D"code-header">impl&lt;T, A&gt; <a class=3D"trait" href=3D"https://doc.ru=
+st-lang.org/std/ops/trait.Deref.html" title=3D"trait std::ops::Deref">Deref=
+</a> for <a class=3D"struct" href=3D"https://doc.rust-lang.org/std/sync/str=
+uct.Arc.html" title=3D"struct std::sync::Arc">Arc</a>&lt;T, A&gt;<div class=
+=3D"where">where
+    A: <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/alloc/trait=
+.Allocator.html" title=3D"trait std::alloc::Allocator">Allocator</a>,
+    T: ?<a class=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/tra=
+it.Sized.html" title=3D"trait std::marker::Sized">Sized</a>,</div></h3></se=
+ction></summary><div class=3D"impl-items"><section id=3D"associatedtype.Tar=
+get-21" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=
+=3D"https://doc.rust-lang.org/src/alloc/sync.rs.html#2129">source</a><a hre=
+f=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Targ=
+et-21" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a href=3D=
+"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Target" =
+class=3D"associatedtype">Target</a> =3D T</h4></section></div></details><de=
+tails class=3D"toggle implementors-toggle"><summary><section id=3D"impl-Der=
+ef-for-Vec%3CT,+A%3E" class=3D"impl"><span class=3D"rightside"><span class=
+=3D"since" title=3D"Stable since Rust version 1.0.0">1.0.0</span> =C2=B7 <a=
+ class=3D"src" href=3D"https://doc.rust-lang.org/src/alloc/vec/mod.rs.html#=
+2825">source</a></span><a href=3D"https://doc.rust-lang.org/std/ops/trait.D=
+eref.html#impl-Deref-for-Vec%3CT,+A%3E" class=3D"anchor">=C2=A7</a><h3 clas=
+s=3D"code-header">impl&lt;T, A&gt; <a class=3D"trait" href=3D"https://doc.r=
+ust-lang.org/std/ops/trait.Deref.html" title=3D"trait std::ops::Deref">Dere=
+f</a> for <a class=3D"struct" href=3D"https://doc.rust-lang.org/std/vec/str=
+uct.Vec.html" title=3D"struct std::vec::Vec">Vec</a>&lt;T, A&gt;<div class=
+=3D"where">where
+    A: <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/alloc/trait=
+.Allocator.html" title=3D"trait std::alloc::Allocator">Allocator</a>,</div>=
+</h3></section></summary><div class=3D"impl-items"><section id=3D"associate=
+dtype.Target-22" class=3D"associatedtype trait-impl"><a class=3D"src rights=
+ide" href=3D"https://doc.rust-lang.org/src/alloc/vec/mod.rs.html#2826">sour=
+ce</a><a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associa=
+tedtype.Target-22" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">typ=
+e <a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedt=
+ype.Target" class=3D"associatedtype">Target</a> =3D <a class=3D"primitive" =
+href=3D"https://doc.rust-lang.org/std/primitive.slice.html">[T]</a></h4></s=
+ection></div></details><details class=3D"toggle implementors-toggle"><summa=
+ry><section id=3D"impl-Deref-for-LazyCell%3CT,+F%3E" class=3D"impl"><span c=
+lass=3D"rightside"><span class=3D"since" title=3D"Stable since Rust version=
+ 1.80.0">1.80.0</span> =C2=B7 <a class=3D"src" href=3D"https://doc.rust-lan=
+g.org/src/core/cell/lazy.rs.html#170">source</a></span><a href=3D"https://d=
+oc.rust-lang.org/std/ops/trait.Deref.html#impl-Deref-for-LazyCell%3CT,+F%3E=
+" class=3D"anchor">=C2=A7</a><h3 class=3D"code-header">impl&lt;T, F&gt; <a =
+class=3D"trait" href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html"=
+ title=3D"trait std::ops::Deref">Deref</a> for <a class=3D"struct" href=3D"=
+https://doc.rust-lang.org/std/cell/struct.LazyCell.html" title=3D"struct st=
+d::cell::LazyCell">LazyCell</a>&lt;T, F&gt;<div class=3D"where">where
+    F: <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/ops/trait.F=
+nOnce.html" title=3D"trait std::ops::FnOnce">FnOnce</a>() -&gt; T,</div></h=
+3></section></summary><div class=3D"impl-items"><section id=3D"associatedty=
+pe.Target-23" class=3D"associatedtype trait-impl"><a class=3D"src rightside=
+" href=3D"https://doc.rust-lang.org/src/core/cell/lazy.rs.html#171">source<=
+/a><a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associated=
+type.Target-23" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <=
+a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype=
+.Target" class=3D"associatedtype">Target</a> =3D T</h4></section></div></de=
+tails><details class=3D"toggle implementors-toggle"><summary><section id=3D=
+"impl-Deref-for-LazyLock%3CT,+F%3E" class=3D"impl"><span class=3D"rightside=
+"><span class=3D"since" title=3D"Stable since Rust version 1.80.0">1.80.0</=
+span> =C2=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/src/std/syn=
+c/lazy_lock.rs.html#204-216">source</a></span><a href=3D"https://doc.rust-l=
+ang.org/std/ops/trait.Deref.html#impl-Deref-for-LazyLock%3CT,+F%3E" class=
+=3D"anchor">=C2=A7</a><h3 class=3D"code-header">impl&lt;T, F: <a class=3D"t=
+rait" href=3D"https://doc.rust-lang.org/std/ops/trait.FnOnce.html" title=3D=
+"trait std::ops::FnOnce">FnOnce</a>() -&gt; T&gt; <a class=3D"trait" href=
+=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html" title=3D"trait std:=
+:ops::Deref">Deref</a> for <a class=3D"struct" href=3D"https://doc.rust-lan=
+g.org/std/sync/struct.LazyLock.html" title=3D"struct std::sync::LazyLock">L=
+azyLock</a>&lt;T, F&gt;</h3></section></summary><div class=3D"impl-items"><=
+section id=3D"associatedtype.Target-24" class=3D"associatedtype trait-impl"=
+><a class=3D"src rightside" href=3D"https://doc.rust-lang.org/src/std/sync/=
+lazy_lock.rs.html#205">source</a><a href=3D"https://doc.rust-lang.org/std/o=
+ps/trait.Deref.html#associatedtype.Target-24" class=3D"anchor">=C2=A7</a><h=
+4 class=3D"code-header">type <a href=3D"https://doc.rust-lang.org/std/ops/t=
+rait.Deref.html#associatedtype.Target" class=3D"associatedtype">Target</a> =
+=3D T</h4></section></div></details><details class=3D"toggle implementors-t=
+oggle"><summary><section id=3D"impl-Deref-for-MappedMutexGuard%3C'_,+T%3E" =
+class=3D"impl"><a class=3D"src rightside" href=3D"https://doc.rust-lang.org=
+/src/std/sync/mutex.rs.html#646-652">source</a><a href=3D"https://doc.rust-=
+lang.org/std/ops/trait.Deref.html#impl-Deref-for-MappedMutexGuard%3C'_,+T%3=
+E" class=3D"anchor">=C2=A7</a><h3 class=3D"code-header">impl&lt;T: ?<a clas=
+s=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/trait.Sized.html" =
+title=3D"trait std::marker::Sized">Sized</a>&gt; <a class=3D"trait" href=3D=
+"https://doc.rust-lang.org/std/ops/trait.Deref.html" title=3D"trait std::op=
+s::Deref">Deref</a> for <a class=3D"struct" href=3D"https://doc.rust-lang.o=
+rg/std/sync/struct.MappedMutexGuard.html" title=3D"struct std::sync::Mapped=
+MutexGuard">MappedMutexGuard</a>&lt;'_, T&gt;</h3></section></summary><div =
+class=3D"impl-items"><section id=3D"associatedtype.Target-25" class=3D"asso=
+ciatedtype trait-impl"><a class=3D"src rightside" href=3D"https://doc.rust-=
+lang.org/src/std/sync/mutex.rs.html#647">source</a><a href=3D"https://doc.r=
+ust-lang.org/std/ops/trait.Deref.html#associatedtype.Target-25" class=3D"an=
+chor">=C2=A7</a><h4 class=3D"code-header">type <a href=3D"https://doc.rust-=
+lang.org/std/ops/trait.Deref.html#associatedtype.Target" class=3D"associate=
+dtype">Target</a> =3D T</h4></section></div></details><details class=3D"tog=
+gle implementors-toggle"><summary><section id=3D"impl-Deref-for-MappedRwLoc=
+kReadGuard%3C'_,+T%3E" class=3D"impl"><a class=3D"src rightside" href=3D"ht=
+tps://doc.rust-lang.org/src/std/sync/rwlock.rs.html#681-689">source</a><a h=
+ref=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#impl-Deref-for-Ma=
+ppedRwLockReadGuard%3C'_,+T%3E" class=3D"anchor">=C2=A7</a><h3 class=3D"cod=
+e-header">impl&lt;T: ?<a class=3D"trait" href=3D"https://doc.rust-lang.org/=
+std/marker/trait.Sized.html" title=3D"trait std::marker::Sized">Sized</a>&g=
+t; <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/ops/trait.Deref=
+.html" title=3D"trait std::ops::Deref">Deref</a> for <a class=3D"struct" hr=
+ef=3D"https://doc.rust-lang.org/std/sync/struct.MappedRwLockReadGuard.html"=
+ title=3D"struct std::sync::MappedRwLockReadGuard">MappedRwLockReadGuard</a=
+>&lt;'_, T&gt;</h3></section></summary><div class=3D"impl-items"><section i=
+d=3D"associatedtype.Target-26" class=3D"associatedtype trait-impl"><a class=
+=3D"src rightside" href=3D"https://doc.rust-lang.org/src/std/sync/rwlock.rs=
+.html#682">source</a><a href=3D"https://doc.rust-lang.org/std/ops/trait.Der=
+ef.html#associatedtype.Target-26" class=3D"anchor">=C2=A7</a><h4 class=3D"c=
+ode-header">type <a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.h=
+tml#associatedtype.Target" class=3D"associatedtype">Target</a> =3D T</h4></=
+section></div></details><details class=3D"toggle implementors-toggle"><summ=
+ary><section id=3D"impl-Deref-for-MappedRwLockWriteGuard%3C'_,+T%3E" class=
+=3D"impl"><a class=3D"src rightside" href=3D"https://doc.rust-lang.org/src/=
+std/sync/rwlock.rs.html#692-700">source</a><a href=3D"https://doc.rust-lang=
+.org/std/ops/trait.Deref.html#impl-Deref-for-MappedRwLockWriteGuard%3C'_,+T=
+%3E" class=3D"anchor">=C2=A7</a><h3 class=3D"code-header">impl&lt;T: ?<a cl=
+ass=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/trait.Sized.html=
+" title=3D"trait std::marker::Sized">Sized</a>&gt; <a class=3D"trait" href=
+=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html" title=3D"trait std:=
+:ops::Deref">Deref</a> for <a class=3D"struct" href=3D"https://doc.rust-lan=
+g.org/std/sync/struct.MappedRwLockWriteGuard.html" title=3D"struct std::syn=
+c::MappedRwLockWriteGuard">MappedRwLockWriteGuard</a>&lt;'_, T&gt;</h3></se=
+ction></summary><div class=3D"impl-items"><section id=3D"associatedtype.Tar=
+get-27" class=3D"associatedtype trait-impl"><a class=3D"src rightside" href=
+=3D"https://doc.rust-lang.org/src/std/sync/rwlock.rs.html#693">source</a><a=
+ href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.=
+Target-27" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a hre=
+f=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Targ=
+et" class=3D"associatedtype">Target</a> =3D T</h4></section></div></details=
+><details class=3D"toggle implementors-toggle"><summary><section id=3D"impl=
+-Deref-for-MutexGuard%3C'_,+T%3E" class=3D"impl"><span class=3D"rightside">=
+<span class=3D"since" title=3D"Stable since Rust version 1.0.0">1.0.0</span=
+> =C2=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/src/std/sync/mu=
+tex.rs.html#530-536">source</a></span><a href=3D"https://doc.rust-lang.org/=
+std/ops/trait.Deref.html#impl-Deref-for-MutexGuard%3C'_,+T%3E" class=3D"anc=
+hor">=C2=A7</a><h3 class=3D"code-header">impl&lt;T: ?<a class=3D"trait" hre=
+f=3D"https://doc.rust-lang.org/std/marker/trait.Sized.html" title=3D"trait =
+std::marker::Sized">Sized</a>&gt; <a class=3D"trait" href=3D"https://doc.ru=
+st-lang.org/std/ops/trait.Deref.html" title=3D"trait std::ops::Deref">Deref=
+</a> for <a class=3D"struct" href=3D"https://doc.rust-lang.org/std/sync/str=
+uct.MutexGuard.html" title=3D"struct std::sync::MutexGuard">MutexGuard</a>&=
+lt;'_, T&gt;</h3></section></summary><div class=3D"impl-items"><section id=
+=3D"associatedtype.Target-28" class=3D"associatedtype trait-impl"><a class=
+=3D"src rightside" href=3D"https://doc.rust-lang.org/src/std/sync/mutex.rs.=
+html#531">source</a><a href=3D"https://doc.rust-lang.org/std/ops/trait.Dere=
+f.html#associatedtype.Target-28" class=3D"anchor">=C2=A7</a><h4 class=3D"co=
+de-header">type <a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.ht=
+ml#associatedtype.Target" class=3D"associatedtype">Target</a> =3D T</h4></s=
+ection></div></details><details class=3D"toggle implementors-toggle"><summa=
+ry><section id=3D"impl-Deref-for-ReentrantLockGuard%3C'_,+T%3E" class=3D"im=
+pl"><a class=3D"src rightside" href=3D"https://doc.rust-lang.org/src/std/sy=
+nc/reentrant_lock.rs.html#382-388">source</a><a href=3D"https://doc.rust-la=
+ng.org/std/ops/trait.Deref.html#impl-Deref-for-ReentrantLockGuard%3C'_,+T%3=
+E" class=3D"anchor">=C2=A7</a><h3 class=3D"code-header">impl&lt;T: ?<a clas=
+s=3D"trait" href=3D"https://doc.rust-lang.org/std/marker/trait.Sized.html" =
+title=3D"trait std::marker::Sized">Sized</a>&gt; <a class=3D"trait" href=3D=
+"https://doc.rust-lang.org/std/ops/trait.Deref.html" title=3D"trait std::op=
+s::Deref">Deref</a> for <a class=3D"struct" href=3D"https://doc.rust-lang.o=
+rg/std/sync/struct.ReentrantLockGuard.html" title=3D"struct std::sync::Reen=
+trantLockGuard">ReentrantLockGuard</a>&lt;'_, T&gt;</h3></section></summary=
+><div class=3D"impl-items"><section id=3D"associatedtype.Target-29" class=
+=3D"associatedtype trait-impl"><a class=3D"src rightside" href=3D"https://d=
+oc.rust-lang.org/src/std/sync/reentrant_lock.rs.html#383">source</a><a href=
+=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Targe=
+t-29" class=3D"anchor">=C2=A7</a><h4 class=3D"code-header">type <a href=3D"=
+https://doc.rust-lang.org/std/ops/trait.Deref.html#associatedtype.Target" c=
+lass=3D"associatedtype">Target</a> =3D T</h4></section></div></details><det=
+ails class=3D"toggle implementors-toggle"><summary><section id=3D"impl-Dere=
+f-for-RwLockReadGuard%3C'_,+T%3E" class=3D"impl"><span class=3D"rightside">=
+<span class=3D"since" title=3D"Stable since Rust version 1.0.0">1.0.0</span=
+> =C2=B7 <a class=3D"src" href=3D"https://doc.rust-lang.org/src/std/sync/rw=
+lock.rs.html#653-660">source</a></span><a href=3D"https://doc.rust-lang.org=
+/std/ops/trait.Deref.html#impl-Deref-for-RwLockReadGuard%3C'_,+T%3E" class=
+=3D"anchor">=C2=A7</a><h3 class=3D"code-header">impl&lt;T: ?<a class=3D"tra=
+it" href=3D"https://doc.rust-lang.org/std/marker/trait.Sized.html" title=3D=
+"trait std::marker::Sized">Sized</a>&gt; <a class=3D"trait" href=3D"https:/=
+/doc.rust-lang.org/std/ops/trait.Deref.html" title=3D"trait std::ops::Deref=
+">Deref</a> for <a class=3D"struct" href=3D"https://doc.rust-lang.org/std/s=
+ync/struct.RwLockReadGuard.html" title=3D"struct std::sync::RwLockReadGuard=
+">RwLockReadGuard</a>&lt;'_, T&gt;</h3></section></summary><div class=3D"im=
+pl-items"><section id=3D"associatedtype.Target-30" class=3D"associatedtype =
+trait-impl"><a class=3D"src rightside" href=3D"https://doc.rust-lang.org/sr=
+c/std/sync/rwlock.rs.html#654">source</a><a href=3D"https://doc.rust-lang.o=
+rg/std/ops/trait.Deref.html#associatedtype.Target-30" class=3D"anchor">=C2=
+=A7</a><h4 class=3D"code-header">type <a href=3D"https://doc.rust-lang.org/=
+std/ops/trait.Deref.html#associatedtype.Target" class=3D"associatedtype">Ta=
+rget</a> =3D T</h4></section></div></details><details class=3D"toggle imple=
+mentors-toggle"><summary><section id=3D"impl-Deref-for-RwLockWriteGuard%3C'=
+_,+T%3E" class=3D"impl"><span class=3D"rightside"><span class=3D"since" tit=
+le=3D"Stable since Rust version 1.0.0">1.0.0</span> =C2=B7 <a class=3D"src"=
+ href=3D"https://doc.rust-lang.org/src/std/sync/rwlock.rs.html#663-670">sou=
+rce</a></span><a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.html=
+#impl-Deref-for-RwLockWriteGuard%3C'_,+T%3E" class=3D"anchor">=C2=A7</a><h3=
+ class=3D"code-header">impl&lt;T: ?<a class=3D"trait" href=3D"https://doc.r=
+ust-lang.org/std/marker/trait.Sized.html" title=3D"trait std::marker::Sized=
+">Sized</a>&gt; <a class=3D"trait" href=3D"https://doc.rust-lang.org/std/op=
+s/trait.Deref.html" title=3D"trait std::ops::Deref">Deref</a> for <a class=
+=3D"struct" href=3D"https://doc.rust-lang.org/std/sync/struct.RwLockWriteGu=
+ard.html" title=3D"struct std::sync::RwLockWriteGuard">RwLockWriteGuard</a>=
+&lt;'_, T&gt;</h3></section></summary><div class=3D"impl-items"><section id=
+=3D"associatedtype.Target-31" class=3D"associatedtype trait-impl"><a class=
+=3D"src rightside" href=3D"https://doc.rust-lang.org/src/std/sync/rwlock.rs=
+.html#664">source</a><a href=3D"https://doc.rust-lang.org/std/ops/trait.Der=
+ef.html#associatedtype.Target-31" class=3D"anchor">=C2=A7</a><h4 class=3D"c=
+ode-header">type <a href=3D"https://doc.rust-lang.org/std/ops/trait.Deref.h=
+tml#associatedtype.Target" class=3D"associatedtype">Target</a> =3D T</h4></=
+section></div></details></div></section></div></main></body><div mx-name=3D=
+"dream-translation"><template shadowmode=3D"closed"><link rel=3D"stylesheet=
+" href=3D"chrome-extension://ogleeipbbcokpeabliinildngejmdneg/css/content.c=
+ss">
+
+<div id=3D"dmx_dialog" style=3D"width: 500px; height: 470px; display: none;=
+">
+    <div id=3D"dmx_dialog_title" style=3D"cursor: move;">
+        <div class=3D"dmx_left">
+            <div id=3D"dmx_close"><i class=3D"dmx-icon dmx-icon-close"></i>=
+</div>
+            <div id=3D"dmx_pin" class=3D"dmx-icon"></div>
+            <div id=3D"dmx_fullscreen" class=3D"dmx-icon"></div>
+            <div id=3D"dmx_history">
+                <i class=3D"dmx-icon disabled dmx-icon-left"></i>
+                <i class=3D"dmx-icon disabled dmx-icon-right"></i>
+            </div>
+            <div id=3D"dmx_navigate">
+                <u class=3D"dmx-icon active" action=3D"translate">=E7=BF=BB=
+=E8=AF=91</u>
+                <u class=3D"dmx-icon" action=3D"dictionary">=E8=AF=8D=E5=85=
+=B8</u>
+                <u class=3D"dmx-icon" action=3D"search">=E6=90=9C=E7=B4=A2<=
+/u>
+            </div>
+        </div>
+        <div class=3D"dmx_right">
+            <div id=3D"dmx_setting"><i class=3D"dmx-icon dmx-icon-setting">=
+</i></div>
+            <div id=3D"dmx_more"><i class=3D"dmx-icon dmx-icon-more"></i></=
+div>
+            <div id=3D"dmx_voice" class=3D"dmx_hide"><i class=3D"dmx-icon d=
+mx-icon-voice"></i></div>
+            <div id=3D"dmx_heart" class=3D"dmx_hide"><i class=3D"dmx-icon d=
+mx-icon-heart"></i></div>
+        </div>
+    </div>
+    <div id=3D"dmx_dialog_content"><div class=3D"dmx_main dmx_main_trans">
+    <div class=3D"case" id=3D"translate_input" contenteditable=3D"true"></d=
+iv>
+    <div class=3D"language_box fx">
+        <div id=3D"language_source" class=3D"language_button dmx-icon" valu=
+e=3D"auto">=E8=87=AA=E5=8A=A8=E6=A3=80=E6=B5=8B</div>
+        <div id=3D"language_exchange" class=3D"disabled"><i class=3D"dmx-ic=
+on dmx-icon-exchange"></i></div>
+        <div id=3D"language_target" class=3D"language_button dmx-icon" valu=
+e=3D"zh">=E4=B8=AD=E6=96=87(=E7=AE=80=E4=BD=93)</div>
+        <div id=3D"translate_button">=E7=BF=BB =E8=AF=91</div>
+        <div id=3D"translate_crop"><i class=3D"dmx-icon dmx-icon-crop"></i>=
+</div>
+        <div id=3D"language_dropdown" class=3D"fx"><u value=3D"auto">=E8=87=
+=AA=E5=8A=A8=E6=A3=80=E6=B5=8B</u><u value=3D"zh">=E4=B8=AD=E6=96=87(=E7=AE=
+=80=E4=BD=93)</u><u value=3D"en">=E8=8B=B1=E8=AF=AD</u><u value=3D"jp">=E6=
+=97=A5=E8=AF=AD</u><u value=3D"th">=E6=B3=B0=E8=AF=AD</u><u value=3D"spa">=
+=E8=A5=BF=E7=8F=AD=E7=89=99=E8=AF=AD</u><u value=3D"ara">=E9=98=BF=E6=8B=89=
+=E4=BC=AF=E8=AF=AD</u><u value=3D"fra">=E6=B3=95=E8=AF=AD</u><u value=3D"ko=
+r">=E9=9F=A9=E8=AF=AD</u><u value=3D"ru">=E4=BF=84=E8=AF=AD</u><u value=3D"=
+de">=E5=BE=B7=E8=AF=AD</u><u value=3D"pt">=E8=91=A1=E8=90=84=E7=89=99=E8=AF=
+=AD</u><u value=3D"it">=E6=84=8F=E5=A4=A7=E5=88=A9=E8=AF=AD</u><u value=3D"=
+el">=E5=B8=8C=E8=85=8A=E8=AF=AD</u><u value=3D"nl">=E8=8D=B7=E5=85=B0=E8=AF=
+=AD</u><u value=3D"pl">=E6=B3=A2=E5=85=B0=E8=AF=AD</u><u value=3D"fin">=E8=
+=8A=AC=E5=85=B0=E8=AF=AD</u><u value=3D"cs">=E6=8D=B7=E5=85=8B=E8=AF=AD</u>=
+<u value=3D"bul">=E4=BF=9D=E5=8A=A0=E5=88=A9=E4=BA=9A=E8=AF=AD</u><u value=
+=3D"dan">=E4=B8=B9=E9=BA=A6=E8=AF=AD</u><u value=3D"est">=E7=88=B1=E6=B2=99=
+=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"hu">=E5=8C=88=E7=89=99=E5=88=A9=
+=E8=AF=AD</u><u value=3D"rom">=E7=BD=97=E9=A9=AC=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"slo">=E6=96=AF=E6=B4=9B=E6=96=87=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"swe">=E7=91=9E=E5=85=B8=E8=AF=AD</u><u value=3D"vie">=E8=B6=
+=8A=E5=8D=97=E8=AF=AD</u><u value=3D"yue">=E4=B8=AD=E6=96=87(=E7=B2=A4=E8=
+=AF=AD)</u><u value=3D"cht">=E4=B8=AD=E6=96=87(=E7=B9=81=E4=BD=93)</u><u va=
+lue=3D"wyw">=E4=B8=AD=E6=96=87(=E6=96=87=E8=A8=80=E6=96=87)</u><u value=3D"=
+afr">=E5=8D=97=E9=9D=9E=E8=8D=B7=E5=85=B0=E8=AF=AD</u><u value=3D"alb">=E9=
+=98=BF=E5=B0=94=E5=B7=B4=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"amh">=E9=
+=98=BF=E5=A7=86=E5=93=88=E6=8B=89=E8=AF=AD</u><u value=3D"arm">=E4=BA=9A=E7=
+=BE=8E=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"asm">=E9=98=BF=E8=90=A8=E5=
+=A7=86=E8=AF=AD</u><u value=3D"ast">=E9=98=BF=E6=96=AF=E5=9B=BE=E9=87=8C=E4=
+=BA=9A=E6=96=AF=E8=AF=AD</u><u value=3D"aze">=E9=98=BF=E5=A1=9E=E6=8B=9C=E7=
+=96=86=E8=AF=AD</u><u value=3D"baq">=E5=B7=B4=E6=96=AF=E5=85=8B=E8=AF=AD</u=
+><u value=3D"bel">=E7=99=BD=E4=BF=84=E7=BD=97=E6=96=AF=E8=AF=AD</u><u value=
+=3D"ben">=E5=AD=9F=E5=8A=A0=E6=8B=89=E8=AF=AD</u><u value=3D"bos">=E6=B3=A2=
+=E6=96=AF=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"bur">=E7=BC=85=E7=94=B8=
+=E8=AF=AD</u><u value=3D"cat">=E5=8A=A0=E6=B3=B0=E7=BD=97=E5=B0=BC=E4=BA=9A=
+=E8=AF=AD</u><u value=3D"ceb">=E5=AE=BF=E5=8A=A1=E8=AF=AD</u><u value=3D"hr=
+v">=E5=85=8B=E7=BD=97=E5=9C=B0=E4=BA=9A=E8=AF=AD</u><u value=3D"epo">=E4=B8=
+=96=E7=95=8C=E8=AF=AD</u><u value=3D"fao">=E6=B3=95=E7=BD=97=E8=AF=AD</u><u=
+ value=3D"fil">=E8=8F=B2=E5=BE=8B=E5=AE=BE=E8=AF=AD</u><u value=3D"glg">=E5=
+=8A=A0=E5=88=A9=E8=A5=BF=E4=BA=9A=E8=AF=AD</u><u value=3D"geo">=E6=A0=BC=E9=
+=B2=81=E5=90=89=E4=BA=9A=E8=AF=AD</u><u value=3D"guj">=E5=8F=A4=E5=90=89=E6=
+=8B=89=E7=89=B9=E8=AF=AD</u><u value=3D"hau">=E8=B1=AA=E8=90=A8=E8=AF=AD</u=
+><u value=3D"heb">=E5=B8=8C=E4=BC=AF=E6=9D=A5=E8=AF=AD</u><u value=3D"hi">=
+=E5=8D=B0=E5=9C=B0=E8=AF=AD</u><u value=3D"ice">=E5=86=B0=E5=B2=9B=E8=AF=AD=
+</u><u value=3D"ibo">=E4=BC=8A=E5=8D=9A=E8=AF=AD</u><u value=3D"id">=E5=8D=
+=B0=E5=B0=BC=E8=AF=AD</u><u value=3D"gle">=E7=88=B1=E5=B0=94=E5=85=B0=E8=AF=
+=AD</u><u value=3D"kan">=E5=8D=A1=E7=BA=B3=E8=BE=BE=E8=AF=AD</u><u value=3D=
+"kaz">=E5=93=88=E8=90=A8=E5=85=8B=E8=AF=AD</u><u value=3D"kli">=E5=85=8B=E6=
+=9E=97=E8=B4=A1=E8=AF=AD</u><u value=3D"kur">=E5=BA=93=E5=B0=94=E5=BE=B7=E8=
+=AF=AD</u><u value=3D"lao">=E8=80=81=E6=8C=9D=E8=AF=AD</u><u value=3D"lat">=
+=E6=8B=89=E4=B8=81=E8=AF=AD</u><u value=3D"lav">=E6=8B=89=E8=84=B1=E7=BB=B4=
+=E4=BA=9A=E8=AF=AD</u><u value=3D"lit">=E7=AB=8B=E9=99=B6=E5=AE=9B=E8=AF=AD=
+</u><u value=3D"ltz">=E5=8D=A2=E6=A3=AE=E5=A0=A1=E8=AF=AD</u><u value=3D"ma=
+c">=E9=A9=AC=E5=85=B6=E9=A1=BF=E8=AF=AD</u><u value=3D"mg">=E9=A9=AC=E6=8B=
+=89=E5=8A=A0=E6=96=AF=E8=AF=AD</u><u value=3D"may">=E9=A9=AC=E6=9D=A5=E8=AF=
+=AD</u><u value=3D"mal">=E9=A9=AC=E6=8B=89=E9=9B=85=E6=8B=89=E5=A7=86=E8=AF=
+=AD</u><u value=3D"mlt">=E9=A9=AC=E8=80=B3=E4=BB=96=E8=AF=AD</u><u value=3D=
+"mar">=E9=A9=AC=E6=8B=89=E5=9C=B0=E8=AF=AD</u><u value=3D"nep">=E5=B0=BC=E6=
+=B3=8A=E5=B0=94=E8=AF=AD</u><u value=3D"nno">=E6=96=B0=E6=8C=AA=E5=A8=81=E8=
+=AF=AD</u><u value=3D"per">=E6=B3=A2=E6=96=AF=E8=AF=AD</u><u value=3D"srd">=
+=E8=90=A8=E4=B8=81=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"srp">=E5=A1=9E=
+=E5=B0=94=E7=BB=B4=E4=BA=9A=E8=AF=AD(=E6=8B=89=E4=B8=81=E6=96=87)</u><u val=
+ue=3D"sin">=E5=83=A7=E4=BC=BD=E7=BD=97=E8=AF=AD</u><u value=3D"sk">=E6=96=
+=AF=E6=B4=9B=E4=BC=90=E5=85=8B=E8=AF=AD</u><u value=3D"som">=E7=B4=A2=E9=A9=
+=AC=E9=87=8C=E8=AF=AD</u><u value=3D"swa">=E6=96=AF=E7=93=A6=E5=B8=8C=E9=87=
+=8C=E8=AF=AD</u><u value=3D"tgl">=E4=BB=96=E5=8A=A0=E7=A6=84=E8=AF=AD</u><u=
+ value=3D"tgk">=E5=A1=94=E5=90=89=E5=85=8B=E8=AF=AD</u><u value=3D"tam">=E6=
+=B3=B0=E7=B1=B3=E5=B0=94=E8=AF=AD</u><u value=3D"tat">=E9=9E=91=E9=9D=BC=E8=
+=AF=AD</u><u value=3D"tel">=E6=B3=B0=E5=8D=A2=E5=9B=BA=E8=AF=AD</u><u value=
+=3D"tr">=E5=9C=9F=E8=80=B3=E5=85=B6=E8=AF=AD</u><u value=3D"tuk">=E5=9C=9F=
+=E5=BA=93=E6=9B=BC=E8=AF=AD</u><u value=3D"ukr">=E4=B9=8C=E5=85=8B=E5=85=B0=
+=E8=AF=AD</u><u value=3D"urd">=E4=B9=8C=E5=B0=94=E9=83=BD=E8=AF=AD</u><u va=
+lue=3D"uzb">=E4=B9=8C=E5=85=B9=E5=88=AB=E5=85=8B=E8=AF=AD</u><u value=3D"oc=
+i">=E5=A5=A5=E5=85=8B=E8=AF=AD</u><u value=3D"kir">=E5=90=89=E5=B0=94=E5=90=
+=89=E6=96=AF=E8=AF=AD</u><u value=3D"pus">=E6=99=AE=E4=BB=80=E5=9B=BE=E8=AF=
+=AD</u><u value=3D"hkm">=E9=AB=98=E6=A3=89=E8=AF=AD</u><u value=3D"ht">=E6=
+=B5=B7=E5=9C=B0=E8=AF=AD</u><u value=3D"nob">=E4=B9=A6=E9=9D=A2=E6=8C=AA=E5=
+=A8=81=E8=AF=AD</u><u value=3D"pan">=E6=97=81=E9=81=AE=E6=99=AE=E8=AF=AD</u=
+><u value=3D"arq">=E9=98=BF=E5=B0=94=E5=8F=8A=E5=88=A9=E4=BA=9A=E9=98=BF=E6=
+=8B=89=E4=BC=AF=E8=AF=AD</u><u value=3D"bis">=E6=AF=94=E6=96=AF=E6=8B=89=E9=
+=A9=AC=E8=AF=AD</u><u value=3D"frn">=E5=8A=A0=E6=8B=BF=E5=A4=A7=E6=B3=95=E8=
+=AF=AD</u><u value=3D"hak">=E5=93=88=E5=8D=A1=E9=92=A6=E8=AF=AD</u><u value=
+=3D"hup">=E8=83=A1=E5=B8=95=E8=AF=AD</u><u value=3D"ing">=E5=8D=B0=E5=8F=A4=
+=E4=BB=80=E8=AF=AD</u><u value=3D"lag">=E6=8B=89=E7=89=B9=E5=8A=A0=E8=8E=B1=
+=E8=AF=AD</u><u value=3D"mau">=E6=AF=9B=E9=87=8C=E6=B1=82=E6=96=AF=E5=85=8B=
+=E9=87=8C=E5=A5=A5=E5=B0=94=E8=AF=AD</u><u value=3D"mot">=E9=BB=91=E5=B1=B1=
+=E8=AF=AD</u><u value=3D"pot">=E5=B7=B4=E8=A5=BF=E8=91=A1=E8=90=84=E7=89=99=
+=E8=AF=AD</u><u value=3D"ruy">=E5=8D=A2=E6=A3=AE=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"sec">=E5=A1=9E=E5=B0=94=E7=BB=B4=E4=BA=9A-=E5=85=8B=E7=BD=
+=97=E5=9C=B0=E4=BA=9A=E8=AF=AD</u><u value=3D"sil">=E8=A5=BF=E9=87=8C=E8=A5=
+=BF=E4=BA=9A=E8=AF=AD</u><u value=3D"tua">=E7=AA=81=E5=B0=BC=E6=96=AF=E9=98=
+=BF=E6=8B=89=E4=BC=AF=E8=AF=AD</u><u value=3D"ach">=E4=BA=9A=E9=BD=90=E8=AF=
+=AD</u><u value=3D"aka">=E9=98=BF=E8=82=AF=E8=AF=AD</u><u value=3D"arg">=E9=
+=98=BF=E6=8B=89=E8=B4=A1=E8=AF=AD</u><u value=3D"aym">=E8=89=BE=E9=A9=AC=E6=
+=8B=89=E8=AF=AD</u><u value=3D"bal">=E4=BF=BE=E8=B7=AF=E6=94=AF=E8=AF=AD</u=
+><u value=3D"bak">=E5=B7=B4=E4=BB=80=E5=9F=BA=E5=B0=94=E8=AF=AD</u><u value=
+=3D"bem">=E6=9C=AC=E5=B7=B4=E8=AF=AD</u><u value=3D"ber">=E6=9F=8F=E6=9F=8F=
+=E5=B0=94=E8=AF=AD</u><u value=3D"bho">=E5=8D=9A=E6=9D=B0=E6=99=AE=E5=B0=94=
+=E8=AF=AD</u><u value=3D"bli">=E6=AF=94=E6=9E=97=E8=AF=AD</u><u value=3D"br=
+e">=E5=B8=83=E5=88=97=E5=A1=94=E5=B0=BC=E8=AF=AD</u><u value=3D"chr">=E5=88=
+=87=E7=BD=97=E5=9F=BA=E8=AF=AD</u><u value=3D"nya">=E9=BD=90=E5=88=87=E7=93=
+=A6=E8=AF=AD</u><u value=3D"chv">=E6=A5=9A=E7=93=A6=E4=BB=80=E8=AF=AD</u><u=
+ value=3D"cor">=E5=BA=B7=E7=93=A6=E5=B0=94=E8=AF=AD</u><u value=3D"cos">=E7=
+=A7=91=E8=A5=BF=E5=98=89=E8=AF=AD</u><u value=3D"cre">=E5=85=8B=E9=87=8C=E5=
+=85=8B=E8=AF=AD</u><u value=3D"cri">=E5=85=8B=E9=87=8C=E7=B1=B3=E4=BA=9A=E9=
+=9E=91=E9=9D=BC=E8=AF=AD</u><u value=3D"div">=E8=BF=AA=E7=BB=B4=E5=B8=8C=E8=
+=AF=AD</u><u value=3D"eno">=E5=8F=A4=E8=8B=B1=E8=AF=AD</u><u value=3D"frm">=
+=E4=B8=AD=E5=8F=A4=E6=B3=95=E8=AF=AD</u><u value=3D"fri">=E5=BC=97=E7=95=99=
+=E5=88=A9=E8=AF=AD</u><u value=3D"ful">=E5=AF=8C=E6=8B=89=E5=B0=BC=E8=AF=AD=
+</u><u value=3D"gla">=E7=9B=96=E5=B0=94=E8=AF=AD</u><u value=3D"lug">=E5=8D=
+=A2=E5=B9=B2=E8=BE=BE=E8=AF=AD</u><u value=3D"gra">=E5=8F=A4=E5=B8=8C=E8=85=
+=8A=E8=AF=AD</u><u value=3D"grn">=E7=93=9C=E6=8B=89=E5=B0=BC=E8=AF=AD</u><u=
+ value=3D"haw">=E5=A4=8F=E5=A8=81=E5=A4=B7=E8=AF=AD</u><u value=3D"hil">=E5=
+=B8=8C=E5=88=A9=E7=9B=96=E5=86=9C=E8=AF=AD</u><u value=3D"ido">=E4=BC=8A=E5=
+=A4=9A=E8=AF=AD</u><u value=3D"ina">=E5=9B=A0=E7=89=B9=E8=AF=AD</u><u value=
+=3D"iku">=E4=BC=8A=E5=8A=AA=E5=85=8B=E6=8F=90=E5=9B=BE=E7=89=B9=E8=AF=AD</u=
+><u value=3D"jav">=E7=88=AA=E5=93=87=E8=AF=AD</u><u value=3D"kab">=E5=8D=A1=
+=E6=8B=9C=E5=B0=94=E8=AF=AD</u><u value=3D"kal">=E6=A0=BC=E9=99=B5=E5=85=B0=
+=E8=AF=AD</u><u value=3D"kau">=E5=8D=A1=E5=8A=AA=E9=87=8C=E8=AF=AD</u><u va=
+lue=3D"kas">=E5=85=8B=E4=BB=80=E7=B1=B3=E5=B0=94=E8=AF=AD</u><u value=3D"ka=
+h">=E5=8D=A1=E8=88=92=E6=AF=94=E8=AF=AD</u><u value=3D"kin">=E5=8D=A2=E6=97=
+=BA=E8=BE=BE=E8=AF=AD</u><u value=3D"kon">=E5=88=9A=E6=9E=9C=E8=AF=AD</u><u=
+ value=3D"kok">=E5=AD=94=E5=8D=A1=E5=B0=BC=E8=AF=AD</u><u value=3D"lim">=E6=
+=9E=97=E5=A0=A1=E8=AF=AD</u><u value=3D"lin">=E6=9E=97=E5=8A=A0=E6=8B=89=E8=
+=AF=AD</u><u value=3D"loj">=E9=80=BB=E8=BE=91=E8=AF=AD</u><u value=3D"log">=
+=E4=BD=8E=E5=9C=B0=E5=BE=B7=E8=AF=AD</u><u value=3D"los">=E4=B8=8B=E7=B4=A2=
+=E5=B8=83=E8=AF=AD</u><u value=3D"mai">=E8=BF=88=E8=92=82=E5=88=A9=E8=AF=AD=
+</u><u value=3D"glv">=E6=9B=BC=E5=85=8B=E6=96=AF=E8=AF=AD</u><u value=3D"ma=
+o">=E6=AF=9B=E5=88=A9=E8=AF=AD</u><u value=3D"mah">=E9=A9=AC=E7=BB=8D=E5=B0=
+=94=E8=AF=AD</u><u value=3D"nbl">=E5=8D=97=E6=81=A9=E5=BE=B7=E8=B4=9D=E8=8E=
+=B1=E8=AF=AD</u><u value=3D"nea">=E9=82=A3=E4=B8=8D=E5=8B=92=E6=96=AF=E8=AF=
+=AD</u><u value=3D"nqo">=E8=A5=BF=E9=9D=9E=E4=B9=A6=E9=9D=A2=E8=AF=AD</u><u=
+ value=3D"sme">=E5=8C=97=E6=96=B9=E8=90=A8=E7=B1=B3=E8=AF=AD</u><u value=3D=
+"nor">=E6=8C=AA=E5=A8=81=E8=AF=AD</u><u value=3D"oji">=E5=A5=A5=E6=9D=B0=E5=
+=B8=83=E7=93=A6=E8=AF=AD</u><u value=3D"ori">=E5=A5=A5=E9=87=8C=E4=BA=9A=E8=
+=AF=AD</u><u value=3D"orm">=E5=A5=A5=E7=BD=97=E8=8E=AB=E8=AF=AD</u><u value=
+=3D"oss">=E5=A5=A5=E5=A1=9E=E6=A2=AF=E8=AF=AD</u><u value=3D"pam">=E9=82=A6=
+=E6=9D=BF=E7=89=99=E8=AF=AD</u><u value=3D"pap">=E5=B8=95=E7=9A=AE=E9=98=BF=
+=E9=97=A8=E6=89=98=E8=AF=AD</u><u value=3D"ped">=E5=8C=97=E7=B4=A2=E6=89=98=
+=E8=AF=AD</u><u value=3D"que">=E5=85=8B=E4=B8=98=E4=BA=9A=E8=AF=AD</u><u va=
+lue=3D"roh">=E7=BD=97=E6=9B=BC=E4=BB=80=E8=AF=AD</u><u value=3D"ro">=E7=BD=
+=97=E5=A7=86=E8=AF=AD</u><u value=3D"sm">=E8=90=A8=E6=91=A9=E4=BA=9A=E8=AF=
+=AD</u><u value=3D"san">=E6=A2=B5=E8=AF=AD</u><u value=3D"sco">=E8=8B=8F=E6=
+=A0=BC=E5=85=B0=E8=AF=AD</u><u value=3D"sha">=E6=8E=B8=E8=AF=AD</u><u value=
+=3D"sna">=E4=BF=AE=E7=BA=B3=E8=AF=AD</u><u value=3D"snd">=E4=BF=A1=E5=BE=B7=
+=E8=AF=AD</u><u value=3D"sol">=E6=A1=91=E6=B5=B7=E8=AF=AD</u><u value=3D"so=
+t">=E5=8D=97=E7=B4=A2=E6=89=98=E8=AF=AD</u><u value=3D"syr">=E5=8F=99=E5=88=
+=A9=E4=BA=9A=E8=AF=AD</u><u value=3D"tet">=E5=BE=B7=E9=A1=BF=E8=AF=AD</u><u=
+ value=3D"tir">=E6=8F=90=E6=A0=BC=E5=88=A9=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u=
+ value=3D"tso">=E8=81=AA=E5=8A=A0=E8=AF=AD</u><u value=3D"twi">=E5=A5=91=E7=
+=BB=B4=E8=AF=AD</u><u value=3D"ups">=E9=AB=98=E5=9C=B0=E7=B4=A2=E5=B8=83=E8=
+=AF=AD</u><u value=3D"ven">=E6=96=87=E8=BE=BE=E8=AF=AD</u><u value=3D"wln">=
+=E7=93=A6=E9=9A=86=E8=AF=AD</u><u value=3D"wel">=E5=A8=81=E5=B0=94=E5=A3=AB=
+=E8=AF=AD</u><u value=3D"fry">=E8=A5=BF=E5=BC=97=E9=87=8C=E6=96=AF=E8=AF=AD=
+</u><u value=3D"wol">=E6=B2=83=E6=B4=9B=E5=A4=AB=E8=AF=AD</u><u value=3D"xh=
+o">=E7=A7=91=E8=90=A8=E8=AF=AD</u><u value=3D"yid">=E6=84=8F=E7=AC=AC=E7=BB=
+=AA=E8=AF=AD</u><u value=3D"yor">=E7=BA=A6=E9=B2=81=E5=B7=B4=E8=AF=AD</u><u=
+ value=3D"zaz">=E6=89=8E=E6=89=8E=E5=85=B6=E8=AF=AD</u><u value=3D"zul">=E7=
+=A5=96=E9=B2=81=E8=AF=AD</u><u value=3D"sun">=E5=B7=BD=E4=BB=96=E8=AF=AD</u=
+><u value=3D"hmn">=E8=8B=97=E8=AF=AD</u><u value=3D"src">=E5=A1=9E=E5=B0=94=
+=E7=BB=B4=E4=BA=9A=E8=AF=AD(=E8=A5=BF=E9=87=8C=E5=B0=94=E6=96=87)</u></div>
+    </div>
+</div>
+<div id=3D"case_list" class=3D"dmx_main fx"></div></div>
+    <div id=3D"dmx_dialog_resize_n"></div>
+    <div id=3D"dmx_dialog_resize_e"></div>
+    <div id=3D"dmx_dialog_resize_s"></div>
+    <div id=3D"dmx_dialog_resize_w"></div>
+    <div id=3D"dmx_dialog_resize_nw"></div>
+    <div id=3D"dmx_dialog_resize_ne"></div>
+    <div id=3D"dmx_dialog_resize_sw"></div>
+    <div id=3D"dmx_dialog_resize_se"></div>
+    <div id=3D"dmx_dialog_left"></div>
+</div>
+<div id=3D"dmx_mouse_icon" style=3D"display: none;"></div>
+<div id=3D"dmx_crop_bg"></div>
+<div id=3D"dmx_crop_fg"></div></template></div></html>
+------MultipartBoundary--uTiFA317ARjEiC3ZWRqh8WEiKSLQxQdNkZIRp5GSdu----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://doc.rust-lang.org/static.files/normalize-76eba96aa4d2e634.css
+
+@charset "utf-8";
+
+html { line-height: 1.15; text-size-adjust: 100%; }
+
+body { margin: 0px; }
+
+main { display: block; }
+
+h1 { font-size: 2em; margin: 0.67em 0px; }
+
+hr { box-sizing: content-box; height: 0px; overflow: visible; }
+
+pre { font-family: monospace, monospace; font-size: 1em; }
+
+a { background-color: transparent; }
+
+abbr[title] { border-bottom: none; text-decoration: underline dotted; }
+
+b, strong { font-weight: bolder; }
+
+code, kbd, samp { font-family: monospace, monospace; font-size: 1em; }
+
+small { font-size: 80%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-ali=
+gn: baseline; }
+
+sub { bottom: -0.25em; }
+
+sup { top: -0.5em; }
+
+img { border-style: none; }
+
+button, input, optgroup, select, textarea { font-family: inherit; font-size=
+: 100%; line-height: 1.15; margin: 0px; }
+
+button, input { overflow: visible; }
+
+button, select { text-transform: none; }
+
+[type=3D"button"], [type=3D"reset"], [type=3D"submit"], button { appearance=
+: button; }
+
+fieldset { padding: 0.35em 0.75em 0.625em; }
+
+legend { box-sizing: border-box; color: inherit; display: table; max-width:=
+ 100%; padding: 0px; white-space: normal; }
+
+progress { vertical-align: baseline; }
+
+textarea { overflow: auto; }
+
+[type=3D"checkbox"], [type=3D"radio"] { box-sizing: border-box; padding: 0p=
+x; }
+
+[type=3D"number"]::-webkit-inner-spin-button, [type=3D"number"]::-webkit-ou=
+ter-spin-button { height: auto; }
+
+[type=3D"search"] { appearance: textfield; outline-offset: -2px; }
+
+[type=3D"search"]::-webkit-search-decoration { appearance: none; }
+
+::-webkit-file-upload-button { appearance: button; font: inherit; }
+
+details { display: block; }
+
+summary { display: list-item; }
+
+template { display: none; }
+
+[hidden] { display: none; }
+------MultipartBoundary--uTiFA317ARjEiC3ZWRqh8WEiKSLQxQdNkZIRp5GSdu----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://doc.rust-lang.org/static.files/rustdoc-492a78a4a87dcc01.css
+
+@charset "utf-8";
+
+:root { --nav-sub-mobile-padding: 8px; --search-typename-width: 6.75rem; --=
+desktop-sidebar-width: 200px; --src-sidebar-width: 300px; --desktop-sidebar=
+-z-index: 100; --sidebar-elems-left-padding: 24px; --clipboard-image: url('=
+data:image/svg+xml,<svg width=3D"19" height=3D"18" viewBox=3D"0 0 24 25" \
+xmlns=3D"http://www.w3.org/2000/svg" aria-label=3D"Copy to clipboard">\
+<path d=3D"M18 20h2v3c0 1-1 2-2 2H2c-.998 0-2-1-2-2V5c0-.911.755-1.667 1.66=
+7-1.667h5A3.323 3.323 0 \
+0110 0a3.323 3.323 0 013.333 3.333h5C19.245 3.333 20 4.09 20 5v8.333h-2V9H2=
+v14h16v-3zM3 \
+7h14c0-.911-.793-1.667-1.75-1.667H13.5c-.957 0-1.75-.755-1.75-1.666C11.75 2=
+.755 10.957 2 10 \
+2s-1.75.755-1.75 1.667c0 .911-.793 1.666-1.75 1.666H4.75C3.793 5.333 3 6.09=
+ 3 7z"/>\
+<path d=3D"M4 19h6v2H4zM12 11H4v2h8zM4 17h4v-2H4zM15 15v-3l-4.5 4.5L15 21v-=
+3l8.027-.032L23 15z"/>\
+</svg>'); --copy-path-height: 34px; --copy-path-width: 33px; --checkmark-im=
+age: url('data:image/svg+xml,<svg viewBox=3D"-1 -1 23 23" \
+xmlns=3D"http://www.w3.org/2000/svg" fill=3D"black" height=3D"18px">\
+<g><path d=3D"M9 19.414l-6.707-6.707 1.414-1.414L9 16.586 20.293 5.293l1.41=
+4 1.414"></path>\
+</g></svg>'); --button-left-margin: 4px; --button-border-radius: 2px; }
+
+@font-face { font-family: "Fira Sans"; font-style: normal; font-weight: 400=
+; src: local("Fira Sans"), url("FiraSans-Regular-018c141bf0843ffd.woff2") f=
+ormat("woff2"); font-display: swap; }
+
+@font-face { font-family: "Fira Sans"; font-style: normal; font-weight: 500=
+; src: local("Fira Sans Medium"), url("FiraSans-Medium-8f9a781e4970d388.wof=
+f2") format("woff2"); font-display: swap; }
+
+@font-face { font-family: "Source Serif 4"; font-style: normal; font-weight=
+: 400; src: local("Source Serif 4"), url("SourceSerif4-Regular-46f98efaafac=
+5295.ttf.woff2") format("woff2"); font-display: swap; }
+
+@font-face { font-family: "Source Serif 4"; font-style: italic; font-weight=
+: 400; src: local("Source Serif 4 Italic"), url("SourceSerif4-It-acdfaf1a8a=
+f734b1.ttf.woff2") format("woff2"); font-display: swap; }
+
+@font-face { font-family: "Source Serif 4"; font-style: normal; font-weight=
+: 700; src: local("Source Serif 4 Bold"), url("SourceSerif4-Bold-a2c9cd1067=
+f8b328.ttf.woff2") format("woff2"); font-display: swap; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2") format=
+("woff2"); font-display: swap; }
+
+@font-face { font-family: "Source Code Pro"; font-style: italic; font-weigh=
+t: 400; src: url("SourceCodePro-It-1cc31594bf4f1f79.ttf.woff2") format("wof=
+f2"); font-display: swap; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 600; src: url("SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2") forma=
+t("woff2"); font-display: swap; }
+
+@font-face { font-family: NanumBarunGothic; src: url("NanumBarunGothic-0f09=
+457c7a19b7c6.ttf.woff2") format("woff2"); font-display: swap; unicode-range=
+: U+AC00-D7AF, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF; }
+
+* { box-sizing: border-box; }
+
+body { font-style: normal; font-variant: normal; font-size-adjust: none; fo=
+nt-kerning: auto; font-optical-sizing: auto; font-variation-settings: norma=
+l; font-weight: normal; font-stretch: normal; font-size: 1rem; line-height:=
+ 1.5; font-family: "Source Serif 4", NanumBarunGothic, serif; margin: 0px; =
+position: relative; overflow-wrap: anywhere; font-feature-settings: "kern",=
+ "liga"; background-color: var(--main-background-color); color: var(--main-=
+color); }
+
+h1 { font-size: 1.5rem; }
+
+h2 { font-size: 1.375rem; }
+
+h3 { font-size: 1.25rem; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 500; }
+
+h1, h2, h3, h4 { margin: 25px 0px 15px; padding-bottom: 6px; }
+
+.docblock h3, .docblock h4, h5, h6 { margin: 15px 0px 5px; }
+
+.docblock > h2:first-child, .docblock > h3:first-child, .docblock > h4:firs=
+t-child, .docblock > h5:first-child, .docblock > h6:first-child { margin-to=
+p: 0px; }
+
+.main-heading h1 { margin: 0px; padding: 0px; flex-grow: 1; overflow-wrap: =
+anywhere; }
+
+.main-heading { display: flex; flex-wrap: wrap; padding-bottom: 6px; margin=
+-bottom: 15px; }
+
+.content h2, .top-doc .docblock > h3, .top-doc .docblock > h4 { border-bott=
+om: 1px solid var(--headings-border-bottom-color); }
+
+h1, h2 { line-height: 1.25; padding-top: 3px; padding-bottom: 9px; }
+
+h3.code-header { font-size: 1.125rem; }
+
+h4.code-header { font-size: 1rem; }
+
+.code-header { font-weight: 600; margin: 0px; padding: 0px; white-space: pr=
+e-wrap; }
+
+#crate-search, h1, h2, h3, h4, h5, h6, .sidebar, .mobile-topbar, .search-in=
+put, .search-results .result-name, .item-name > a, .out-of-band, span.since=
+, a.src, #help-button > a, summary.hideme, .scraped-example-list, ul.all-it=
+ems { font-family: "Fira Sans", Arial, NanumBarunGothic, sans-serif; }
+
+#toggle-all-docs, a.anchor, .section-header a, #src-sidebar a, .rust a, .si=
+debar h2 a, .sidebar h3 a, .mobile-topbar h2 a, h1 a, .search-results a, .s=
+tab, .result-name i { color: var(--main-color); }
+
+span.enum, a.enum, span.struct, a.struct, span.union, a.union, span.primiti=
+ve, a.primitive, span.type, a.type, span.foreigntype, a.foreigntype { color=
+: var(--type-link-color); }
+
+span.trait, a.trait, span.traitalias, a.traitalias { color: var(--trait-lin=
+k-color); }
+
+span.associatedtype, a.associatedtype, span.constant, a.constant, span.stat=
+ic, a.static { color: var(--assoc-item-link-color); }
+
+span.fn, a.fn, span.method, a.method, span.tymethod, a.tymethod { color: va=
+r(--function-link-color); }
+
+span.attr, a.attr, span.derive, a.derive, span.macro, a.macro { color: var(=
+--macro-link-color); }
+
+span.mod, a.mod { color: var(--mod-link-color); }
+
+span.keyword, a.keyword { color: var(--keyword-link-color); }
+
+a { color: var(--link-color); text-decoration: none; }
+
+ol, ul { padding-left: 24px; }
+
+ul ul, ol ul, ul ol, ol ol { margin-bottom: 0.625em; }
+
+p, .docblock > .warning { margin: 0px 0px 0.75em; }
+
+p:last-child, .docblock > .warning:last-child { margin: 0px; }
+
+button { padding: 1px 6px; cursor: pointer; }
+
+button#toggle-all-docs { padding: 0px; background: none; border: none; appe=
+arance: none; opacity: 1; }
+
+.rustdoc { display: flex; flex-flow: row; }
+
+main { position: relative; flex-grow: 1; padding: 10px 15px 40px 45px; min-=
+width: 0px; }
+
+.src main { padding: 15px; }
+
+.width-limiter { max-width: 960px; margin-right: auto; }
+
+details:not(.toggle) summary { margin-bottom: 0.6em; }
+
+code, pre, .code-header { font-family: "Source Code Pro", monospace; }
+
+.docblock code, .docblock-short code { border-radius: 3px; padding: 0px 0.1=
+25em; }
+
+.docblock pre code, .docblock-short pre code { padding: 0px; }
+
+pre { padding: 14px; line-height: 1.5; }
+
+pre.item-decl { overflow-x: auto; }
+
+.item-decl .type-contents-toggle { contain: initial; }
+
+.src .content pre { padding: 20px; }
+
+.rustdoc.src .example-wrap pre.src-line-numbers { padding: 20px 0px 20px 4p=
+x; }
+
+img { max-width: 100%; }
+
+.logo-container { line-height: 0; display: block; }
+
+.rust-logo { filter: var(--rust-logo-filter); }
+
+.sidebar { font-size: 0.875rem; flex: 0 0 var(--desktop-sidebar-width); wid=
+th: var(--desktop-sidebar-width); overflow-y: scroll; overscroll-behavior: =
+contain; position: sticky; height: 100vh; top: 0px; left: 0px; z-index: var=
+(--desktop-sidebar-z-index); }
+
+.rustdoc.src .sidebar { flex-basis: 50px; width: 50px; border-right: 1px so=
+lid; overflow: hidden; }
+
+.hide-sidebar .sidebar, .hide-sidebar .sidebar-resizer { display: none; }
+
+.sidebar-resizer { touch-action: none; width: 9px; cursor: col-resize; z-in=
+dex: calc(var(--desktop-sidebar-z-index) + 1); position: fixed; height: 100=
+%; left: calc(var(--desktop-sidebar-width) + 1px); }
+
+.rustdoc.src .sidebar-resizer { left: 49px; }
+
+.src-sidebar-expanded .src .sidebar-resizer { left: var(--src-sidebar-width=
+); }
+
+.sidebar-resizing { user-select: none; }
+
+.sidebar-resizing .sidebar { position: fixed; }
+
+.sidebar-resizing > body { padding-left: var(--resizing-sidebar-width); }
+
+.sidebar-resizer:hover, .sidebar-resizer:active, .sidebar-resizer:focus, .s=
+idebar-resizer.active { width: 10px; margin: 0px; left: var(--desktop-sideb=
+ar-width); border-left: solid 1px var(--sidebar-resizer-hover); }
+
+.src-sidebar-expanded .rustdoc.src .sidebar-resizer:hover, .src-sidebar-exp=
+anded .rustdoc.src .sidebar-resizer:active, .src-sidebar-expanded .rustdoc.=
+src .sidebar-resizer:focus, .src-sidebar-expanded .rustdoc.src .sidebar-res=
+izer.active { left: calc(var(--src-sidebar-width) - 1px); }
+
+@media (pointer: coarse) {
+  .sidebar-resizer { display: none !important; }
+}
+
+.sidebar-resizer.active { padding: 0px 140px; width: 2px; margin-left: -140=
+px; border-left: none; }
+
+.sidebar-resizer.active::before { border-left: solid 2px var(--sidebar-resi=
+zer-active); display: block; height: 100%; content: ""; }
+
+.sidebar, .mobile-topbar, .sidebar-menu-toggle, #src-sidebar { background-c=
+olor: var(--sidebar-background-color); }
+
+.src .sidebar > * { visibility: hidden; }
+
+.src-sidebar-expanded .src .sidebar { overflow-y: auto; flex-basis: var(--s=
+rc-sidebar-width); width: var(--src-sidebar-width); }
+
+.src-sidebar-expanded .src .sidebar > * { visibility: visible; }
+
+#all-types { margin-top: 1em; }
+
+* { scrollbar-width: initial; scrollbar-color: var(--scrollbar-color); }
+
+.sidebar { scrollbar-width: thin; scrollbar-color: var(--scrollbar-color); =
+}
+
+::-webkit-scrollbar { width: 12px; }
+
+.sidebar::-webkit-scrollbar { width: 8px; }
+
+::-webkit-scrollbar-track { background-color: var(--scrollbar-track-backgro=
+und-color); }
+
+.sidebar::-webkit-scrollbar-track { background-color: var(--scrollbar-track=
+-background-color); }
+
+::-webkit-scrollbar-thumb, .sidebar::-webkit-scrollbar-thumb { background-c=
+olor: var(--scrollbar-thumb-background-color); }
+
+.hidden { display: none !important; }
+
+.logo-container > img { height: 48px; width: 48px; }
+
+ul.block, .block li { padding: 0px; margin: 0px; list-style: none; }
+
+.sidebar-elems a, .sidebar > h2 a { display: block; padding: 0.25rem; margi=
+n-right: 0.25rem; border-left: solid var(--sidebar-elems-left-padding) tran=
+sparent; margin-left: calc(-0.25rem - var(--sidebar-elems-left-padding)); b=
+ackground-clip: border-box; }
+
+.sidebar h2 { text-wrap: balance; overflow-wrap: anywhere; padding: 0px; ma=
+rgin: 0.7rem 0px; }
+
+.sidebar h3 { text-wrap: balance; overflow-wrap: anywhere; font-size: 1.125=
+rem; padding: 0px; margin: 0px; }
+
+.sidebar-elems, .sidebar > .version, .sidebar > h2 { padding-left: var(--si=
+debar-elems-left-padding); }
+
+.sidebar a { color: var(--sidebar-link-color); }
+
+.sidebar .current, .sidebar .current a, .sidebar-crate a.logo-container:hov=
+er + h2 a, .sidebar a:hover:not(.logo-container) { background-color: var(--=
+sidebar-current-link-background-color); }
+
+.sidebar-elems .block { margin-bottom: 2em; }
+
+.sidebar-elems .block li a { white-space: nowrap; text-overflow: ellipsis; =
+overflow: hidden; }
+
+.sidebar-crate { display: flex; align-items: center; justify-content: cente=
+r; margin: 14px 32px 1rem; gap: 10px 32px; flex-wrap: wrap; }
+
+.sidebar-crate h2 { flex-grow: 1; margin: 0px -8px; align-self: start; }
+
+.sidebar-crate .logo-container { margin: 0 calc(-16px - var(--sidebar-elems=
+-left-padding)); padding: 0 var(--sidebar-elems-left-padding); text-align: =
+center; }
+
+.sidebar-crate .logo-container img { margin-top: -16px; border-top: 16px so=
+lid transparent; box-sizing: content-box; position: relative; background-cl=
+ip: border-box; z-index: 1; }
+
+.sidebar-crate h2 a { display: block; border-left: solid var(--sidebar-elem=
+s-left-padding) transparent; background-clip: border-box; margin: 0 calc(-2=
+4px + 0.25rem) 0 calc(-0.2rem - var(--sidebar-elems-left-padding)); padding=
+: calc(8px - 0.285rem) 0.25rem calc(8px - 0.285rem) 0.2rem; }
+
+.sidebar-crate h2 .version { display: block; font-weight: normal; font-size=
+: 1rem; overflow-wrap: break-word; }
+
+.sidebar-crate + .version { margin-top: -1rem; margin-bottom: 1rem; }
+
+.mobile-topbar { display: none; }
+
+.rustdoc .example-wrap { display: flex; position: relative; margin-bottom: =
+10px; }
+
+.rustdoc .example-wrap > pre { border-radius: 6px; }
+
+.rustdoc .example-wrap:last-child { margin-bottom: 0px; }
+
+.rustdoc .example-wrap pre { margin: 0px; flex-grow: 1; }
+
+.rustdoc:not(.src) .example-wrap pre { overflow: auto hidden; }
+
+.rustdoc .example-wrap pre.example-line-numbers, .rustdoc .example-wrap pre=
+.src-line-numbers { flex-grow: 0; min-width: fit-content; overflow: initial=
+; text-align: right; user-select: none; padding: 14px 8px; color: var(--src=
+-line-numbers-span-color); }
+
+.rustdoc .example-wrap pre.src-line-numbers { padding: 14px 0px; }
+
+.src-line-numbers a, .src-line-numbers span { color: var(--src-line-numbers=
+-span-color); padding: 0px 8px; }
+
+.src-line-numbers :target { background-color: transparent; border-right: no=
+ne; padding: 0px 8px; }
+
+.src-line-numbers .line-highlighted { background-color: var(--src-line-numb=
+er-highlighted-background-color); }
+
+.search-loading { text-align: center; }
+
+.docblock-short { overflow-wrap: anywhere; }
+
+.docblock :not(pre) > code, .docblock-short code { white-space: pre-wrap; }
+
+.top-doc .docblock h2 { font-size: 1.375rem; }
+
+.top-doc .docblock h3 { font-size: 1.25rem; }
+
+.top-doc .docblock h4, .top-doc .docblock h5 { font-size: 1.125rem; }
+
+.top-doc .docblock h6 { font-size: 1rem; }
+
+.docblock h5 { font-size: 1rem; }
+
+.docblock h6 { font-size: 0.875rem; }
+
+.docblock { margin-left: 24px; position: relative; }
+
+.docblock > :not(.more-examples-toggle):not(.example-wrap) { max-width: 100=
+%; overflow-x: auto; }
+
+.out-of-band { flex-grow: 0; font-size: 1.125rem; }
+
+.docblock code, .docblock-short code, pre, .rustdoc.src .example-wrap { bac=
+kground-color: var(--code-block-background-color); }
+
+#main-content { position: relative; }
+
+.docblock table { margin: 0.5em 0px; border-collapse: collapse; }
+
+.docblock table td, .docblock table th { padding: 0.5em; border: 1px solid =
+var(--border-color); }
+
+.docblock table tbody tr:nth-child(2n) { background: var(--table-alt-row-ba=
+ckground-color); }
+
+.docblock .stab, .docblock-short .stab { display: inline-block; }
+
+div.where { white-space: pre-wrap; font-size: 0.875rem; }
+
+.item-info { display: block; margin-left: 24px; }
+
+.item-info code { font-size: 0.875rem; }
+
+#main-content > .item-info { margin-left: 0px; }
+
+nav.sub { flex-grow: 1; flex-flow: row; margin: 4px 0px 25px; display: flex=
+; align-items: center; }
+
+.search-form { position: relative; display: flex; height: 34px; flex-grow: =
+1; }
+
+.src nav.sub { margin: 0px 0px 15px; }
+
+.section-header { display: block; position: relative; }
+
+.section-header:hover > .anchor, .impl:hover > .anchor, .trait-impl:hover >=
+ .anchor, .variant:hover > .anchor { display: initial; }
+
+.anchor { display: none; position: absolute; left: -0.5em; background: none=
+ !important; }
+
+.anchor.field { left: -5px; }
+
+.section-header > .anchor { left: -15px; padding-right: 8px; }
+
+h2.section-header > .anchor { padding-right: 6px; }
+
+a.doc-anchor { color: var(--main-color); display: none; position: absolute;=
+ left: -17px; padding-right: 10px; padding-left: 3px; }
+
+:hover > .doc-anchor { display: block; }
+
+.top-doc > .docblock > :first-child > .doc-anchor { display: none !importan=
+t; }
+
+.main-heading a:hover, .example-wrap .rust a:hover, .all-items a:hover, .do=
+cblock a:not(.scrape-help):not(.tooltip):hover:not(.doc-anchor), .docblock-=
+short a:not(.scrape-help):not(.tooltip):hover, .item-info a { text-decorati=
+on: underline; }
+
+.crate.block li.current a { font-weight: 500; }
+
+table, .item-table { overflow-wrap: break-word; }
+
+.item-table { display: table; padding: 0px; margin: 0px; width: 100%; }
+
+.item-table > li { display: table-row; }
+
+.item-table > li > div { display: table-cell; }
+
+.item-table > li > .item-name { padding-right: 1.25rem; }
+
+.search-results-title { margin-top: 0px; white-space: nowrap; display: flex=
+; align-items: baseline; }
+
+#crate-search-div { position: relative; min-width: 5em; }
+
+#crate-search { min-width: 115px; padding: 0px 23px 0px 4px; max-width: 100=
+%; text-overflow: ellipsis; border: 1px solid var(--border-color); border-r=
+adius: 4px; outline: none; cursor: pointer; appearance: none; text-indent: =
+0.01px; background-color: var(--main-background-color); color: inherit; lin=
+e-height: 1.5; font-weight: 500; }
+
+#crate-search:hover, #crate-search:focus { border-color: var(--crate-search=
+-hover-border); }
+
+#crate-search-div::after { pointer-events: none; width: 100%; height: 100%;=
+ position: absolute; top: 0px; left: 0px; content: ""; background-repeat: n=
+o-repeat; background-size: 20px; background-position: calc(100% - 2px) 56%;=
+ background-image: url("data:image/svg+xml,<svg xmlns=3D\"http://www.w3.org=
+/2000/svg\" \9 width=3D\"128\" height=3D\"128\" viewBox=3D\"-30 -20 176 176=
+\"><path d=3D\"M111,40.5L64,87.499L17,40.5\" \9 fill=3D\"none\" stroke=3D\"=
+black\" strike-linecap=3D\"square\" stroke-miterlimit=3D\"10\" stroke-width=
+=3D\"12\"/> \9 </svg>"); filter: var(--crate-search-div-filter); }
+
+#crate-search-div:hover::after, #crate-search-div:focus-within::after { fil=
+ter: var(--crate-search-div-hover-filter); }
+
+#crate-search > option { font-size: 1rem; }
+
+.search-input { appearance: none; outline: none; border: 1px solid var(--bo=
+rder-color); border-radius: 2px; padding: 8px; font-size: 1rem; flex-grow: =
+1; background-color: var(--button-background-color); color: var(--search-co=
+lor); }
+
+.search-input:focus { border-color: var(--search-input-focused-border-color=
+); }
+
+.search-results { display: none; }
+
+.search-results.active { display: block; }
+
+.search-results > a { display: flex; margin-left: 2px; margin-right: 2px; b=
+order-bottom: 1px solid var(--search-result-border-color); gap: 1em; }
+
+.search-results > a > div.desc { white-space: nowrap; text-overflow: ellips=
+is; overflow: hidden; flex: 2 1 0%; }
+
+.search-results a:hover, .search-results a:focus { background-color: var(--=
+search-result-link-focus-background-color); }
+
+.search-results .result-name { display: flex; align-items: center; justify-=
+content: start; flex: 3 1 0%; }
+
+.search-results .result-name .alias { color: var(--search-results-alias-col=
+or); }
+
+.search-results .result-name .grey { color: var(--search-results-grey-color=
+); }
+
+.search-results .result-name .typename { color: var(--search-results-grey-c=
+olor); font-size: 0.875rem; width: var(--search-typename-width); }
+
+.search-results .result-name .path { word-break: break-all; max-width: calc=
+(100% - var(--search-typename-width)); display: inline-block; }
+
+.search-results .result-name .path > * { display: inline; }
+
+.popover { position: absolute; top: 100%; right: 0px; z-index: calc(var(--d=
+esktop-sidebar-z-index) + 1); margin-top: 7px; border-radius: 3px; border: =
+1px solid var(--border-color); background-color: var(--main-background-colo=
+r); color: var(--main-color); --popover-arrow-offset: 11px; }
+
+.popover::before { content: ""; position: absolute; right: var(--popover-ar=
+row-offset); border-top-color: ; border-top-style: ; border-right-color: ; =
+border-right-style: ; border-bottom-color: ; border-bottom-style: ; border-=
+left-color: ; border-left-style: ; border-image-source: ; border-image-slic=
+e: ; border-image-width: ; border-image-outset: ; border-image-repeat: ; bo=
+rder-width: 1px 1px 0px 0px; background-color: var(--main-background-color)=
+; padding: 4px; transform: rotate(-45deg); top: -5px; }
+
+.setting-line { margin: 1.2em 0.6em; }
+
+.setting-radio input, .setting-check input { margin-right: 0.3em; height: 1=
+.2rem; width: 1.2rem; border: 2px solid var(--settings-input-border-color);=
+ outline: none; appearance: none; cursor: pointer; }
+
+.setting-radio input { border-radius: 50%; }
+
+.setting-radio span, .setting-check span { padding-bottom: 1px; }
+
+.setting-radio { margin-top: 0.1em; margin-bottom: 0.1em; min-width: 3.8em;=
+ padding: 0.3em; display: inline-flex; align-items: center; cursor: pointer=
+; }
+
+.setting-radio + .setting-radio { margin-left: 0.5em; }
+
+.setting-check { margin-right: 20px; display: flex; align-items: center; cu=
+rsor: pointer; }
+
+.setting-radio input:checked { box-shadow: inset 0 0 0 3px var(--main-backg=
+round-color); background-color: var(--settings-input-color); }
+
+.setting-check input:checked { background-color: var(--settings-input-color=
+); border-width: 1px; content: url("data:image/svg+xml,<svg xmlns=3D\"http:=
+//www.w3.org/2000/svg\" viewBox=3D\"0 0 40 40\">\9 \9 <path d=3D\"M7,25L17,=
+32L33,12\" fill=3D\"none\" stroke=3D\"black\" stroke-width=3D\"5\"/>\9 \9 <=
+path d=3D\"M7,23L17,30L33,10\" fill=3D\"none\" stroke=3D\"white\" stroke-wi=
+dth=3D\"5\"/></svg>"); }
+
+.setting-radio input:focus, .setting-check input:focus { box-shadow: 0 0 1p=
+x 1px var(--settings-input-color); }
+
+.setting-radio input:checked:focus { box-shadow: inset 0 0 0 3px var(--main=
+-background-color),0 0 2px 2px var(--settings-input-color); }
+
+.setting-radio input:hover, .setting-check input:hover { border-color: var(=
+--settings-input-color) !important; }
+
+#help.popover { max-width: 600px; --popover-arrow-offset: 48px; }
+
+#help dt { float: left; clear: left; margin-right: 0.5rem; }
+
+#help span.top, #help span.bottom { text-align: center; display: block; fon=
+t-size: 1.125rem; }
+
+#help span.top { margin: 10px 0px 6px; border-bottom: 1px solid var(--borde=
+r-color); padding-bottom: 4px; }
+
+#help span.bottom { clear: both; border-top: 1px solid var(--border-color);=
+ }
+
+.side-by-side > div { width: 50%; float: left; padding: 0px 20px 20px 17px;=
+ }
+
+.item-info .stab { display: block; padding: 3px; margin-bottom: 5px; }
+
+.item-name .stab { margin-left: 0.3125em; }
+
+.stab { padding: 0px 2px; font-size: 0.875rem; font-weight: normal; color: =
+var(--main-color); background-color: var(--stab-background-color); width: f=
+it-content; white-space: pre-wrap; border-radius: 3px; display: inline; ver=
+tical-align: baseline; }
+
+.stab.portability > code { background: none; color: var(--stab-code-color);=
+ }
+
+.stab .emoji, .item-info .stab::before { font-size: 1.25rem; }
+
+.stab .emoji { margin-right: 0.3rem; }
+
+.item-info .stab::before { content: "=EF=BF=BD"; width: 0px; display: inlin=
+e-block; color: transparent; }
+
+.emoji { text-shadow: black 1px 0px 0px, black -1px 0px 0px, black 0px 1px =
+0px, black 0px -1px 0px; }
+
+.since { font-weight: normal; font-size: initial; }
+
+.rightside { padding-left: 12px; float: right; }
+
+.rightside:not(a), .out-of-band { color: var(--right-side-color); }
+
+pre.rust { tab-size: 4; }
+
+pre.rust .kw { color: var(--code-highlight-kw-color); }
+
+pre.rust .kw-2 { color: var(--code-highlight-kw-2-color); }
+
+pre.rust .lifetime { color: var(--code-highlight-lifetime-color); }
+
+pre.rust .prelude-ty { color: var(--code-highlight-prelude-color); }
+
+pre.rust .prelude-val { color: var(--code-highlight-prelude-val-color); }
+
+pre.rust .string { color: var(--code-highlight-string-color); }
+
+pre.rust .number { color: var(--code-highlight-number-color); }
+
+pre.rust .bool-val { color: var(--code-highlight-literal-color); }
+
+pre.rust .self { color: var(--code-highlight-self-color); }
+
+pre.rust .attr { color: var(--code-highlight-attribute-color); }
+
+pre.rust .macro, pre.rust .macro-nonterminal { color: var(--code-highlight-=
+macro-color); }
+
+pre.rust .question-mark { font-weight: bold; color: var(--code-highlight-qu=
+estion-mark-color); }
+
+pre.rust .comment { color: var(--code-highlight-comment-color); }
+
+pre.rust .doccomment { color: var(--code-highlight-doc-comment-color); }
+
+.rustdoc.src .example-wrap pre.rust a { background: var(--codeblock-link-ba=
+ckground); }
+
+.example-wrap.compile_fail, .example-wrap.should_panic { border-left: 2px s=
+olid var(--codeblock-error-color); }
+
+.ignore.example-wrap { border-left: 2px solid var(--codeblock-ignore-color)=
+; }
+
+.example-wrap.compile_fail:hover, .example-wrap.should_panic:hover { border=
+-left: 2px solid var(--codeblock-error-hover-color); }
+
+.example-wrap.ignore:hover { border-left: 2px solid var(--codeblock-ignore-=
+hover-color); }
+
+.example-wrap.compile_fail .tooltip, .example-wrap.should_panic .tooltip { =
+color: var(--codeblock-error-color); }
+
+.example-wrap.ignore .tooltip { color: var(--codeblock-ignore-color); }
+
+.example-wrap.compile_fail:hover .tooltip, .example-wrap.should_panic:hover=
+ .tooltip { color: var(--codeblock-error-hover-color); }
+
+.example-wrap.ignore:hover .tooltip { color: var(--codeblock-ignore-hover-c=
+olor); }
+
+.example-wrap .tooltip { position: absolute; display: block; left: -25px; t=
+op: 5px; margin: 0px; line-height: 1; }
+
+.example-wrap.compile_fail .tooltip, .example-wrap.should_panic .tooltip, .=
+example-wrap.ignore .tooltip { font-weight: bold; font-size: 1.25rem; }
+
+.content .docblock .warning { border-left: 2px solid var(--warning-border-c=
+olor); padding: 14px; position: relative; overflow-x: visible !important; }
+
+.content .docblock .warning::before { color: var(--warning-border-color); c=
+ontent: "=E2=93=98"; position: absolute; left: -25px; top: 5px; font-weight=
+: bold; font-size: 1.25rem; }
+
+.top-doc > .docblock > .warning:first-child::before { top: 20px; }
+
+.example-wrap > a.test-arrow, .example-wrap .button-holder { visibility: hi=
+dden; position: absolute; top: 4px; right: 4px; z-index: 1; }
+
+a.test-arrow { height: var(--copy-path-height); padding: 6px 4px 0px 11px; =
+}
+
+a.test-arrow::before { content: url("data:image/svg+xml,<svg viewBox=3D\"0 =
+0 20 20\" width=3D\"18\" height=3D\"20\" \9 \9 xmlns=3D\"http://www.w3.org/=
+2000/svg\"><path d=3D\"M0 0l18 10-18 10z\"/></svg>"); }
+
+.example-wrap .button-holder { display: flex; }
+
+@media not (pointer: coarse) {
+  .example-wrap:hover > a.test-arrow, .example-wrap:hover > .button-holder =
+{ visibility: visible; }
+}
+
+.example-wrap .button-holder.keep-visible { visibility: visible; }
+
+.example-wrap .button-holder .copy-button, .example-wrap .test-arrow { back=
+ground: var(--main-background-color); cursor: pointer; border-radius: var(-=
+-button-border-radius); height: var(--copy-path-height); width: var(--copy-=
+path-width); }
+
+.example-wrap .button-holder .copy-button { margin-left: var(--button-left-=
+margin); padding: 2px 0px 0px 4px; border: 0px; }
+
+.example-wrap .button-holder .copy-button::before, .example-wrap .test-arro=
+w::before { filter: var(--copy-path-img-filter); }
+
+.example-wrap .button-holder .copy-button::before { content: var(--clipboar=
+d-image); }
+
+.example-wrap .button-holder .copy-button:hover::before, .example-wrap .tes=
+t-arrow:hover::before { filter: var(--copy-path-img-hover-filter); }
+
+.example-wrap .button-holder .copy-button.clicked::before { content: var(--=
+checkmark-image); padding-right: 5px; }
+
+.code-attribute { font-weight: 300; color: var(--code-attribute-color); }
+
+.item-spacer { width: 100%; height: 12px; display: block; }
+
+.out-of-band > span.since { font-size: 1.25rem; }
+
+.sub-variant h4 { font-size: 1rem; font-weight: 400; margin-top: 0px; margi=
+n-bottom: 0px; }
+
+.sub-variant { margin-left: 24px; margin-bottom: 40px; }
+
+.sub-variant > .sub-variant-field { margin-left: 24px; }
+
+@keyframes targetfadein {=20
+  0% { background-color: var(--main-background-color); }
+  10% { background-color: var(--target-border-color); }
+  100% { background-color: var(--target-background-color); }
+}
+
+:target { padding-right: 3px; background-color: var(--target-background-col=
+or); border-right: 3px solid var(--target-border-color); animation: 0.65s c=
+ubic-bezier(0, 0, 0.1, 1) 0.1s 1 normal none running targetfadein; }
+
+.code-header a.tooltip { color: inherit; margin-right: 15px; position: rela=
+tive; }
+
+.code-header a.tooltip:hover { color: var(--link-color); }
+
+a.tooltip:hover::after { position: absolute; top: calc(100% - 10px); left: =
+-15px; right: -15px; height: 20px; content: "=C2=A0"; }
+
+.fade-out { opacity: 0; transition: opacity 0.45s cubic-bezier(0, 0, 0.1, 1=
+); }
+
+.popover.tooltip .content { margin: 0.25em 0.5em; }
+
+.popover.tooltip .content pre, .popover.tooltip .content code { background:=
+ transparent; margin: 0px; padding: 0px; font-size: 1.25rem; white-space: p=
+re-wrap; }
+
+.popover.tooltip .content > h3:first-child { margin: 0px 0px 5px; }
+
+.search-failed { text-align: center; margin-top: 20px; display: none; }
+
+.search-failed.active { display: block; }
+
+.search-failed > ul { text-align: left; max-width: 570px; margin-left: auto=
+; margin-right: auto; }
+
+#search-tabs { display: flex; flex-direction: row; gap: 1px; margin-bottom:=
+ 4px; }
+
+#search-tabs button { text-align: center; font-size: 1.125rem; border-width=
+: 2px 0px 0px; border-right-style: initial; border-bottom-style: initial; b=
+order-left-style: initial; border-color: initial; border-image: initial; bo=
+rder-top-style: solid; flex: 1 1 0%; line-height: 1.5; color: inherit; }
+
+#search-tabs button:not(.selected) { background-color: var(--search-tab-but=
+ton-not-selected-background); border-top-color: var(--search-tab-button-not=
+-selected-border-top-color); }
+
+#search-tabs button:hover, #search-tabs button.selected { background-color:=
+ var(--search-tab-button-selected-background); border-top-color: var(--sear=
+ch-tab-button-selected-border-top-color); }
+
+#search-tabs .count { font-size: 1rem; font-variant-numeric: tabular-nums; =
+color: var(--search-tab-title-count-color); }
+
+#search .error code { border-radius: 3px; background-color: var(--search-er=
+ror-code-background-color); }
+
+.search-corrections { font-weight: normal; }
+
+#src-sidebar { width: 100%; overflow: auto; }
+
+#src-sidebar div.files > a:hover, details.dir-entry summary:hover, #src-sid=
+ebar div.files > a:focus, details.dir-entry summary:focus { background-colo=
+r: var(--src-sidebar-background-hover); }
+
+#src-sidebar div.files > a.selected { background-color: var(--src-sidebar-b=
+ackground-selected); }
+
+.src-sidebar-title { position: sticky; top: 0px; display: flex; padding: 8p=
+x 8px 0px 48px; margin-bottom: 7px; background: var(--sidebar-background-co=
+lor); border-bottom: 1px solid var(--border-color); }
+
+#settings-menu, #help-button { margin-left: var(--button-left-margin); disp=
+lay: flex; }
+
+#sidebar-button { display: none; line-height: 0; }
+
+.hide-sidebar #sidebar-button, .src #sidebar-button { display: flex; margin=
+-right: 4px; position: fixed; left: 6px; height: 34px; width: 34px; backgro=
+und-color: var(--main-background-color); z-index: 1; }
+
+.src #sidebar-button { left: 8px; z-index: calc(var(--desktop-sidebar-z-ind=
+ex) + 1); }
+
+.hide-sidebar .src #sidebar-button { position: static; }
+
+#settings-menu > a, #help-button > a, #sidebar-button > a { display: flex; =
+align-items: center; justify-content: center; background-color: var(--butto=
+n-background-color); border: 1px solid var(--border-color); border-radius: =
+var(--button-border-radius); color: var(--settings-button-color); font-size=
+: 20px; width: 33px; }
+
+#settings-menu > a:hover, #settings-menu > a:focus, #help-button > a:hover,=
+ #help-button > a:focus, #sidebar-button > a:hover, #sidebar-button > a:foc=
+us { border-color: var(--settings-button-border-focus); }
+
+#settings-menu > a { line-height: 0; font-size: 0px; }
+
+#settings-menu > a::before { content: url("data:image/svg+xml,<svg width=3D=
+\"22\" height=3D\"22\" viewBox=3D\"0 0 12 12\" \9 enable-background=3D\"new=
+ 0 0 12 12\" xmlns=3D\"http://www.w3.org/2000/svg\">\9 <path d=3D\"M10.25,6=
+c0-0.1243286-0.0261841-0.241333-0.0366211-0.362915l1.6077881-1.5545654l\9 -=
+1.25-2.1650391  c0,0-1.2674561,0.3625488-2.1323853,0.6099854c-0.2034912-0.1=
+431885-0.421875\9 -0.2639771-0.6494751-0.3701782L7.25,0h-2.5 c0,0-0.3214111=
+,1.2857666-0.5393066,2.1572876\9 C3.9830933,2.2634888,3.7647095,2.3842773,3=
+.5612183,2.5274658L1.428833,1.9174805 \9 l-1.25,2.1650391c0,0,0.9641113,0.9=
+321899,1.6077881,1.5545654C1.7761841,5.758667,\9 1.75,5.8756714,1.75,6  s0.=
+0261841,0.241333,0.0366211,0.362915L0.178833,7.9174805l1.25,\9 2.1650391l2.=
+1323853-0.6099854  c0.2034912,0.1432495,0.421875,0.2639771,0.6494751,0.3701=
+782\9 L4.75,12h2.5l0.5393066-2.1572876  c0.2276001-0.1062012,0.4459839-0.22=
+69287,0.6494751\9 -0.3701782l2.1323853,0.6099854l1.25-2.1650391L10.2133789,=
+6.362915  C10.2238159,6.241333,\9 10.25,6.1243286,10.25,6z M6,7.5C5.1715698=
+,7.5,4.5,6.8284302,4.5,6S5.1715698,4.5,6,4.5S7.5\9 ,5.1715698,7.5,6  S6.828=
+4302,7.5,6,7.5z\" fill=3D\"black\"/></svg>"); width: 22px; height: 22px; fi=
+lter: var(--settings-menu-filter); }
+
+#sidebar-button > a::before { content: url("data:image/svg+xml,<svg xmlns=
+=3D\"http://www.w3.org/2000/svg\" viewBox=3D\"0 0 22 22\" \9 \9 fill=3D\"no=
+ne\" stroke=3D\"black\">\9 \9 <rect x=3D\"1\" y=3D\"1\" width=3D\"20\" heig=
+ht=3D\"20\" ry=3D\"1.5\" stroke-width=3D\"1.5\"/>\9 \9 <circle cx=3D\"4.375=
+\" cy=3D\"4.375\" r=3D\"1\" stroke-width=3D\".75\"/>\9 \9 <path d=3D\"m7.61=
+21 3v16 M5.375 7.625h-2 m2 3h-2 m2 3h-2\" stroke-width=3D\"1.25\"/></svg>")=
+; width: 22px; height: 22px; }
+
+#copy-path { color: var(--copy-path-button-color); background: var(--main-b=
+ackground-color); height: var(--copy-path-height); width: var(--copy-path-w=
+idth); margin-left: 10px; padding: 0px 0px 0px 2px; border: 0px; font-size:=
+ 0px; }
+
+#copy-path::before { filter: var(--copy-path-img-filter); content: var(--cl=
+ipboard-image); }
+
+#copy-path:hover::before { filter: var(--copy-path-img-hover-filter); }
+
+#copy-path.clicked::before { content: var(--checkmark-image); }
+
+@keyframes rotating {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#settings-menu.rotate > a img { animation: 2s linear 0s infinite normal non=
+e running rotating; }
+
+kbd { display: inline-block; padding: 3px 5px; font: 15px / 10px monospace;=
+ vertical-align: middle; border: solid 1px var(--border-color); border-radi=
+us: 3px; color: var(--kbd-color); background-color: var(--kbd-background); =
+box-shadow: inset 0 -1px 0 var(--kbd-box-shadow-color); }
+
+ul.all-items > li { list-style: none; }
+
+details.dir-entry { padding-left: 4px; }
+
+details.dir-entry > summary { margin: 0px 0px 0px -4px; padding: 0px 0px 0p=
+x 4px; cursor: pointer; }
+
+details.dir-entry div.folders, details.dir-entry div.files { padding-left: =
+23px; }
+
+details.dir-entry a { display: block; }
+
+details.toggle { contain: layout; position: relative; }
+
+details.toggle > summary.hideme { cursor: pointer; font-size: 1rem; }
+
+details.toggle > summary { list-style: none; outline: none; }
+
+details.toggle > summary::-webkit-details-marker, details.toggle > summary:=
+:marker { display: none; }
+
+details.toggle > summary.hideme > span { margin-left: 9px; }
+
+details.toggle > summary::before { background: url("data:image/svg+xml,<svg=
+ width=3D\"17\" height=3D\"17\" shape-rendering=3D\"crispEdges\" stroke=3D\=
+"black\" fill=3D\"none\" xmlns=3D\"http://www.w3.org/2000/svg\"><path d=3D\=
+"M5 2.5H2.5v12H5m7-12h2.5v12H12M5 8.5h7M8.5 12V8.625v0V5\"/></svg>") left t=
+op no-repeat; content: ""; cursor: pointer; width: 16px; height: 16px; disp=
+lay: inline-block; vertical-align: middle; opacity: 0.5; filter: var(--togg=
+le-filter); }
+
+details.toggle > summary.hideme > span, .more-examples-toggle summary, .mor=
+e-examples-toggle .hide-more { color: var(--toggles-color); }
+
+details.toggle > summary::after { content: "Expand"; overflow: hidden; widt=
+h: 0px; height: 0px; position: absolute; }
+
+details.toggle > summary.hideme::after { content: ""; }
+
+details.toggle > summary:focus::before, details.toggle > summary:hover::bef=
+ore { opacity: 1; }
+
+details.toggle > summary:focus-visible::before { outline: rgb(0, 0, 0) dott=
+ed 1px; outline-offset: 1px; }
+
+details.non-exhaustive { margin-bottom: 8px; }
+
+details.toggle > summary.hideme::before { position: relative; }
+
+details.toggle > summary:not(.hideme)::before { position: absolute; left: -=
+24px; top: 4px; }
+
+.impl-items > details.toggle > summary:not(.hideme)::before { position: abs=
+olute; left: -24px; }
+
+details.toggle[open] > summary.hideme { position: absolute; }
+
+details.toggle[open] > summary.hideme > span { display: none; }
+
+details.toggle[open] > summary::before { background: url("data:image/svg+xm=
+l,<svg width=3D\"17\" height=3D\"17\" shape-rendering=3D\"crispEdges\" stro=
+ke=3D\"black\" fill=3D\"none\" xmlns=3D\"http://www.w3.org/2000/svg\"><path=
+ d=3D\"M5 2.5H2.5v12H5m7-12h2.5v12H12M5 8.5h7\"/></svg>") left top no-repea=
+t; }
+
+details.toggle[open] > summary::after { content: "Collapse"; }
+
+.docblock summary > * { display: inline-block; }
+
+.docblock > .example-wrap:first-child .tooltip { margin-top: 16px; }
+
+.src #sidebar-button > a::before, .sidebar-menu-toggle::before { content: u=
+rl("data:image/svg+xml,<svg xmlns=3D\"http://www.w3.org/2000/svg\" \9 \9 vi=
+ewBox=3D\"0 0 22 22\" fill=3D\"none\" stroke=3D\"black\">\9 \9 <path d=3D\"=
+M3,5h16M3,11h16M3,17h16\" stroke-width=3D\"2.75\"/></svg>"); opacity: 0.75;=
+ }
+
+.sidebar-menu-toggle:hover::before, .sidebar-menu-toggle:active::before, .s=
+idebar-menu-toggle:focus::before { opacity: 1; }
+
+.src #sidebar-button > a::before { content: url("data:image/svg+xml,<svg xm=
+lns=3D\"http://www.w3.org/2000/svg\" \9 \9 viewBox=3D\"0 0 22 22\" fill=3D\=
+"none\" stroke=3D\"black\">\9 \9 <path d=3D\"M16,9v-4h-6v-1l-2,-2h-4l-2,2v1=
+6h13L21,9h-15L2,19\" stroke-width=3D\"1.25\"/>\9 \9 <path d=3D\"M15,7h-11v3=
+\" stroke-width=3D\"0.75\"/>\9 \9 <path d=3D\"M3.75,10v1.25\" stroke-width=
+=3D\"0.375\"/></svg>"); opacity: 0.75; }
+
+@media (max-width: 850px) {
+  #search-tabs .count { display: block; }
+}
+
+@media (max-width: 700px) {
+  [id] { scroll-margin-top: 45px; }
+  .rustdoc { display: block; }
+  main { padding-left: 15px; padding-top: 0px; }
+  .main-heading { flex-direction: column; }
+  .out-of-band { text-align: left; margin-left: initial; padding: initial; =
+}
+  .out-of-band .since::before { content: "Since "; }
+  .sidebar .logo-container, .sidebar .location, .sidebar-resizer { display:=
+ none; }
+  .sidebar { position: fixed; top: 45px; left: -1000px; z-index: 11; height=
+: calc(-45px + 100vh); width: 200px; }
+  .src main, .rustdoc.src .sidebar { top: 0px; padding: 0px; height: 100vh;=
+ border: 0px; }
+  .src .search-form { margin-left: 40px; }
+  .hide-sidebar .search-form { margin-left: 32px; }
+  .hide-sidebar .src .search-form { margin-left: 0px; }
+  .sidebar.shown, .src-sidebar-expanded .src .sidebar, .rustdoc:not(.src) .=
+sidebar:focus-within { left: 0px; }
+  .mobile-topbar h2 { padding-bottom: 0px; margin: auto 0.5em auto auto; ov=
+erflow: hidden; font-size: 24px; white-space: nowrap; text-overflow: ellips=
+is; }
+  .mobile-topbar .logo-container > img { max-width: 35px; max-height: 35px;=
+ margin: 5px 0px 5px 20px; }
+  .mobile-topbar { display: flex; flex-direction: row; position: sticky; z-=
+index: 10; font-size: 2rem; height: 45px; width: 100%; left: 0px; top: 0px;=
+ }
+  .hide-sidebar .mobile-topbar { display: none; }
+  .sidebar-menu-toggle { width: 45px; border: none; line-height: 0; }
+  .hide-sidebar .sidebar-menu-toggle { display: none; }
+  .sidebar-elems { margin-top: 1em; }
+  .anchor { display: none !important; }
+  #main-content > details.toggle > summary::before, #main-content > div > d=
+etails.toggle > summary::before { left: -11px; }
+  #copy-path, #help-button { display: none; }
+  #sidebar-button > a::before { content: url("data:image/svg+xml,<svg xmlns=
+=3D\"http://www.w3.org/2000/svg\" \9 \9 \9 viewBox=3D\"0 0 22 22\" fill=3D\=
+"none\" stroke=3D\"black\">\9 \9 \9 <rect x=3D\"1\" y=3D\"1\" width=3D\"20\=
+" height=3D\"20\" ry=3D\"1.5\" stroke-width=3D\"1.5\"/>\9 \9 \9 <circle cx=
+=3D\"4.375\" cy=3D\"4.375\" r=3D\"1\" stroke-width=3D\".75\"/>\9 \9 \9 <pat=
+h d=3D\"m3 7.375h16m0-3h-4\" stroke-width=3D\"1.25\"/></svg>"); width: 22px=
+; height: 22px; }
+  .sidebar-menu-toggle::before { filter: var(--mobile-sidebar-menu-filter);=
+ }
+  .sidebar-menu-toggle:hover { background: var(--main-background-color); }
+  .item-table, .item-row, .item-table > li, .item-table > li > div, .search=
+-results > a, .search-results > a > div { display: block; }
+  .search-results > a { padding: 5px 0px; }
+  .search-results > a > div.desc, .item-table > li > div.desc { padding-lef=
+t: 2em; }
+  .search-results .result-name { display: block; }
+  .search-results .result-name .typename { width: initial; margin-right: 0p=
+x; }
+  .search-results .result-name .typename, .search-results .result-name .pat=
+h { display: inline; }
+  .src-sidebar-expanded .src .sidebar { position: fixed; max-width: 100vw; =
+width: 100vw; }
+  .src .src-sidebar-title { padding-top: 0px; }
+  details.toggle:not(.top-doc) > summary { margin-left: 10px; }
+  .impl-items > details.toggle > summary:not(.hideme)::before, #main-conten=
+t > details.toggle:not(.top-doc) > summary::before, #main-content > div > d=
+etails.toggle > summary::before { left: -11px; }
+  .impl-items > .item-info { margin-left: 34px; }
+  .src nav.sub { margin: 0px; padding: var(--nav-sub-mobile-padding); }
+}
+
+@media (min-width: 701px) {
+  .scraped-example-title { position: absolute; z-index: 10; background: var=
+(--main-background-color); bottom: 8px; right: 5px; padding: 2px 4px; box-s=
+hadow: 0 0 4px var(--main-background-color); }
+  .item-table > li > .item-name { width: 33%; }
+  .item-table > li > div { overflow-wrap: anywhere; }
+}
+
+@media print {
+  nav.sidebar, nav.sub, .out-of-band, a.src, #copy-path, details.toggle[ope=
+n] > summary::before, details.toggle > summary::before, details.toggle.top-=
+doc > summary { display: none; }
+  .docblock { margin-left: 0px; }
+  main { padding: 10px; }
+}
+
+@media (max-width: 464px) {
+  .docblock { margin-left: 12px; }
+  .docblock code { overflow-wrap: anywhere; }
+  nav.sub { flex-direction: column; }
+  .search-form { align-self: stretch; }
+}
+
+.variant, .implementors-toggle > summary, .impl, #implementors-list > .docb=
+lock, .impl-items > section, .impl-items > .toggle > summary, .methods > se=
+ction, .methods > .toggle > summary { margin-bottom: 0.75em; }
+
+.variants > .docblock, .implementors-toggle > .docblock, .impl-items > .tog=
+gle[open]:not(:last-child), .methods > .toggle[open]:not(:last-child), .imp=
+lementors-toggle[open]:not(:last-child) { margin-bottom: 2em; }
+
+#trait-implementations-list .impl-items > .toggle:not(:last-child), #synthe=
+tic-implementations-list .impl-items > .toggle:not(:last-child), #blanket-i=
+mplementations-list .impl-items > .toggle:not(:last-child) { margin-bottom:=
+ 1em; }
+
+.scraped-example-list .scrape-help { margin-left: 10px; padding: 0px 4px; f=
+ont-weight: normal; font-size: 12px; position: relative; bottom: 1px; borde=
+r: 1px solid var(--scrape-example-help-border-color); border-radius: 50px; =
+color: var(--scrape-example-help-color); }
+
+.scraped-example-list .scrape-help:hover { border-color: var(--scrape-examp=
+le-help-hover-border-color); color: var(--scrape-example-help-hover-color);=
+ }
+
+.scraped-example { position: relative; }
+
+.scraped-example .code-wrapper { position: relative; display: flex; flex-fl=
+ow: wrap; width: 100%; }
+
+.scraped-example:not(.expanded) .code-wrapper { max-height: calc(7.5em + 10=
+px); }
+
+.scraped-example:not(.expanded) .code-wrapper pre { overflow-y: hidden; pad=
+ding-bottom: 0px; max-height: calc(7.5em + 10px); }
+
+.more-scraped-examples .scraped-example:not(.expanded) .code-wrapper, .more=
+-scraped-examples .scraped-example:not(.expanded) .code-wrapper pre { max-h=
+eight: calc(15em + 10px); }
+
+.scraped-example .code-wrapper .next, .scraped-example .code-wrapper .prev,=
+ .scraped-example .code-wrapper .expand { color: var(--main-color); positio=
+n: absolute; top: 0.25em; z-index: 1; padding: 0px; background: none; borde=
+r: none; appearance: none; opacity: 1; }
+
+.scraped-example .code-wrapper .prev { right: 2.25em; }
+
+.scraped-example .code-wrapper .next { right: 1.25em; }
+
+.scraped-example .code-wrapper .expand { right: 0.25em; }
+
+.scraped-example:not(.expanded) .code-wrapper::before, .scraped-example:not=
+(.expanded) .code-wrapper::after { content: " "; width: 100%; height: 5px; =
+position: absolute; z-index: 1; }
+
+.scraped-example:not(.expanded) .code-wrapper::before { top: 0px; backgroun=
+d: linear-gradient(to bottom,var(--scrape-example-code-wrapper-background-s=
+tart),var(--scrape-example-code-wrapper-background-end)); }
+
+.scraped-example:not(.expanded) .code-wrapper::after { bottom: 0px; backgro=
+und: linear-gradient(to top,var(--scrape-example-code-wrapper-background-st=
+art),var(--scrape-example-code-wrapper-background-end)); }
+
+.scraped-example .code-wrapper .example-wrap { width: 100%; overflow-y: hid=
+den; margin-bottom: 0px; }
+
+.scraped-example:not(.expanded) .code-wrapper .example-wrap { overflow-x: h=
+idden; }
+
+.scraped-example .example-wrap .rust span.highlight { background: var(--scr=
+ape-example-code-line-highlight); }
+
+.scraped-example .example-wrap .rust span.highlight.focus { background: var=
+(--scrape-example-code-line-highlight-focus); }
+
+.more-examples-toggle { max-width: calc(100% + 25px); margin-top: 10px; mar=
+gin-left: -25px; }
+
+.more-examples-toggle .hide-more { margin-left: 25px; cursor: pointer; }
+
+.more-scraped-examples { margin-left: 25px; position: relative; }
+
+.toggle-line { position: absolute; top: 5px; bottom: 0px; right: calc(100% =
++ 10px); padding: 0px 4px; cursor: pointer; }
+
+.toggle-line-inner { min-width: 2px; height: 100%; background: var(--scrape=
+-example-toggle-line-background); }
+
+.toggle-line:hover .toggle-line-inner { background: var(--scrape-example-to=
+ggle-line-hover-background); }
+
+.more-scraped-examples .scraped-example, .example-links { margin-top: 20px;=
+ }
+
+.more-scraped-examples .scraped-example:first-child { margin-top: 5px; }
+
+.example-links ul { margin-bottom: 0px; }
+
+:root[data-theme=3D"light"], :root:not([data-theme]) { --main-background-co=
+lor: white; --main-color: black; --settings-input-color: #2196f3; --setting=
+s-input-border-color: #717171; --settings-button-color: #000; --settings-bu=
+tton-border-focus: #717171; --sidebar-background-color: #f5f5f5; --sidebar-=
+background-color-hover: #e0e0e0; --code-block-background-color: #f5f5f5; --=
+scrollbar-track-background-color: #dcdcdc; --scrollbar-thumb-background-col=
+or: rgba(36,37,39,0.6); --scrollbar-color: rgba(36,37,39,0.6) #d9d9d9; --he=
+adings-border-bottom-color: #ddd; --border-color: #e0e0e0; --button-backgro=
+und-color: #fff; --right-side-color: grey; --code-attribute-color: #999; --=
+toggles-color: #999; --toggle-filter: none; --mobile-sidebar-menu-filter: n=
+one; --search-input-focused-border-color: #66afe9; --copy-path-button-color=
+: #999; --copy-path-img-filter: invert(50%); --copy-path-img-hover-filter: =
+invert(35%); --codeblock-error-hover-color: rgb(255,0,0); --codeblock-error=
+-color: rgba(255,0,0,.5); --codeblock-ignore-hover-color: rgb(255,142,0); -=
+-codeblock-ignore-color: rgba(255,142,0,.6); --warning-border-color: #ff8e0=
+0; --type-link-color: #ad378a; --trait-link-color: #6e4fc9; --assoc-item-li=
+nk-color: #3873ad; --function-link-color: #ad7c37; --macro-link-color: #068=
+000; --keyword-link-color: #3873ad; --mod-link-color: #3873ad; --link-color=
+: #3873ad; --sidebar-link-color: #356da4; --sidebar-current-link-background=
+-color: #fff; --search-result-link-focus-background-color: #ccc; --search-r=
+esult-border-color: #aaa3; --search-color: #000; --search-error-code-backgr=
+ound-color: #d0cccc; --search-results-alias-color: #000; --search-results-g=
+rey-color: #999; --search-tab-title-count-color: #888; --search-tab-button-=
+not-selected-border-top-color: #e6e6e6; --search-tab-button-not-selected-ba=
+ckground: #e6e6e6; --search-tab-button-selected-border-top-color: #0089ff; =
+--search-tab-button-selected-background: #fff; --settings-menu-filter: none=
+; --stab-background-color: #fff5d6; --stab-code-color: #000; --code-highlig=
+ht-kw-color: #8959a8; --code-highlight-kw-2-color: #4271ae; --code-highligh=
+t-lifetime-color: #b76514; --code-highlight-prelude-color: #4271ae; --code-=
+highlight-prelude-val-color: #c82829; --code-highlight-number-color: #718c0=
+0; --code-highlight-string-color: #718c00; --code-highlight-literal-color: =
+#c82829; --code-highlight-attribute-color: #c82829; --code-highlight-self-c=
+olor: #c82829; --code-highlight-macro-color: #3e999f; --code-highlight-ques=
+tion-mark-color: #ff9011; --code-highlight-comment-color: #8e908c; --code-h=
+ighlight-doc-comment-color: #4d4d4c; --src-line-numbers-span-color: #c67e2d=
+; --src-line-number-highlighted-background-color: #fdffd3; --target-backgro=
+und-color: #fdffd3; --target-border-color: #ad7c37; --kbd-color: #000; --kb=
+d-background: #fafbfc; --kbd-box-shadow-color: #c6cbd1; --rust-logo-filter:=
+ initial; --crate-search-div-filter: invert(100%) sepia(0%) saturate(4223%)=
+ hue-rotate(289deg) brightness(114%) contrast(76%); --crate-search-div-hove=
+r-filter: invert(44%) sepia(18%) saturate(23%) hue-rotate(317deg) brightnes=
+s(96%) contrast(93%); --crate-search-hover-border: #717171; --src-sidebar-b=
+ackground-selected: #fff; --src-sidebar-background-hover: #e0e0e0; --table-=
+alt-row-background-color: #f5f5f5; --codeblock-link-background: #eee; --scr=
+ape-example-toggle-line-background: #ccc; --scrape-example-toggle-line-hove=
+r-background: #999; --scrape-example-code-line-highlight: #fcffd6; --scrape=
+-example-code-line-highlight-focus: #f6fdb0; --scrape-example-help-border-c=
+olor: #555; --scrape-example-help-color: #333; --scrape-example-help-hover-=
+border-color: #000; --scrape-example-help-hover-color: #000; --scrape-examp=
+le-code-wrapper-background-start: rgba(255,255,255,1); --scrape-example-cod=
+e-wrapper-background-end: rgba(255,255,255,0); --sidebar-resizer-hover: hsl=
+(207,90%,66%); --sidebar-resizer-active: hsl(207,90%,54%); }
+
+:root[data-theme=3D"dark"] { --main-background-color: #353535; --main-color=
+: #ddd; --settings-input-color: #2196f3; --settings-input-border-color: #99=
+9; --settings-button-color: #000; --settings-button-border-focus: #ffb900; =
+--sidebar-background-color: #505050; --sidebar-background-color-hover: #676=
+767; --code-block-background-color: #2A2A2A; --scrollbar-track-background-c=
+olor: #717171; --scrollbar-thumb-background-color: rgba(32,34,37,.6); --scr=
+ollbar-color: rgba(32,34,37,.6) #5a5a5a; --headings-border-bottom-color: #d=
+2d2d2; --border-color: #e0e0e0; --button-background-color: #f0f0f0; --right=
+-side-color: grey; --code-attribute-color: #999; --toggles-color: #999; --t=
+oggle-filter: invert(100%); --mobile-sidebar-menu-filter: invert(100%); --s=
+earch-input-focused-border-color: #008dfd; --copy-path-button-color: #999; =
+--copy-path-img-filter: invert(50%); --copy-path-img-hover-filter: invert(6=
+5%); --codeblock-error-hover-color: rgb(255,0,0); --codeblock-error-color: =
+rgba(255,0,0,.5); --codeblock-ignore-hover-color: rgb(255,142,0); --codeblo=
+ck-ignore-color: rgba(255,142,0,.6); --warning-border-color: #ff8e00; --typ=
+e-link-color: #2dbfb8; --trait-link-color: #b78cf2; --assoc-item-link-color=
+: #d2991d; --function-link-color: #2bab63; --macro-link-color: #09bd00; --k=
+eyword-link-color: #d2991d; --mod-link-color: #d2991d; --link-color: #d2991=
+d; --sidebar-link-color: #fdbf35; --sidebar-current-link-background-color: =
+#444; --search-result-link-focus-background-color: #616161; --search-result=
+-border-color: #aaa3; --search-color: #111; --search-error-code-background-=
+color: #484848; --search-results-alias-color: #fff; --search-results-grey-c=
+olor: #ccc; --search-tab-title-count-color: #888; --search-tab-button-not-s=
+elected-border-top-color: #252525; --search-tab-button-not-selected-backgro=
+und: #252525; --search-tab-button-selected-border-top-color: #0089ff; --sea=
+rch-tab-button-selected-background: #353535; --settings-menu-filter: none; =
+--stab-background-color: #314559; --stab-code-color: #e6e1cf; --code-highli=
+ght-kw-color: #ab8ac1; --code-highlight-kw-2-color: #769acb; --code-highlig=
+ht-lifetime-color: #d97f26; --code-highlight-prelude-color: #769acb; --code=
+-highlight-prelude-val-color: #ee6868; --code-highlight-number-color: #83a3=
+00; --code-highlight-string-color: #83a300; --code-highlight-literal-color:=
+ #ee6868; --code-highlight-attribute-color: #ee6868; --code-highlight-self-=
+color: #ee6868; --code-highlight-macro-color: #3e999f; --code-highlight-que=
+stion-mark-color: #ff9011; --code-highlight-comment-color: #8d8d8b; --code-=
+highlight-doc-comment-color: #8ca375; --src-line-numbers-span-color: #3b91e=
+2; --src-line-number-highlighted-background-color: #0a042f; --target-backgr=
+ound-color: #494a3d; --target-border-color: #bb7410; --kbd-color: #000; --k=
+bd-background: #fafbfc; --kbd-box-shadow-color: #c6cbd1; --rust-logo-filter=
+: drop-shadow(1px 0 0px #fff) drop-shadow(0 1px 0 #fff) drop-shadow(-1px 0 =
+0 #fff) drop-shadow(0 -1px 0 #fff); --crate-search-div-filter: invert(94%) =
+sepia(0%) saturate(721%) hue-rotate(255deg) brightness(90%) contrast(90%); =
+--crate-search-div-hover-filter: invert(69%) sepia(60%) saturate(6613%) hue=
+-rotate(184deg) brightness(100%) contrast(91%); --crate-search-hover-border=
+: #2196f3; --src-sidebar-background-selected: #333; --src-sidebar-backgroun=
+d-hover: #444; --table-alt-row-background-color: #2a2a2a; --codeblock-link-=
+background: #333; --scrape-example-toggle-line-background: #999; --scrape-e=
+xample-toggle-line-hover-background: #c5c5c5; --scrape-example-code-line-hi=
+ghlight: #5b3b01; --scrape-example-code-line-highlight-focus: #7c4b0f; --sc=
+rape-example-help-border-color: #aaa; --scrape-example-help-color: #eee; --=
+scrape-example-help-hover-border-color: #fff; --scrape-example-help-hover-c=
+olor: #fff; --scrape-example-code-wrapper-background-start: rgba(53,53,53,1=
+); --scrape-example-code-wrapper-background-end: rgba(53,53,53,0); --sideba=
+r-resizer-hover: hsl(207,30%,54%); --sidebar-resizer-active: hsl(207,90%,54=
+%); }
+
+:root[data-theme=3D"ayu"] { --main-background-color: #0f1419; --main-color:=
+ #c5c5c5; --settings-input-color: #ffb454; --settings-input-border-color: #=
+999; --settings-button-color: #fff; --settings-button-border-focus: #e0e0e0=
+; --sidebar-background-color: #14191f; --sidebar-background-color-hover: rg=
+ba(70,70,70,0.33); --code-block-background-color: #191f26; --scrollbar-trac=
+k-background-color: transparent; --scrollbar-thumb-background-color: #5c677=
+3; --scrollbar-color: #5c6773 #24292f; --headings-border-bottom-color: #5c6=
+773; --border-color: #5c6773; --button-background-color: #141920; --right-s=
+ide-color: grey; --code-attribute-color: #999; --toggles-color: #999; --tog=
+gle-filter: invert(100%); --mobile-sidebar-menu-filter: invert(100%); --sea=
+rch-input-focused-border-color: #5c6773; --copy-path-button-color: #fff; --=
+copy-path-img-filter: invert(70%); --copy-path-img-hover-filter: invert(100=
+%); --codeblock-error-hover-color: rgb(255,0,0); --codeblock-error-color: r=
+gba(255,0,0,.5); --codeblock-ignore-hover-color: rgb(255,142,0); --codebloc=
+k-ignore-color: rgba(255,142,0,.6); --warning-border-color: #ff8e00; --type=
+-link-color: #ffa0a5; --trait-link-color: #39afd7; --assoc-item-link-color:=
+ #39afd7; --function-link-color: #fdd687; --macro-link-color: #a37acc; --ke=
+yword-link-color: #39afd7; --mod-link-color: #39afd7; --link-color: #39afd7=
+; --sidebar-link-color: #53b1db; --sidebar-current-link-background-color: t=
+ransparent; --search-result-link-focus-background-color: #3c3c3c; --search-=
+result-border-color: #aaa3; --search-color: #fff; --search-error-code-backg=
+round-color: #4f4c4c; --search-results-alias-color: #c5c5c5; --search-resul=
+ts-grey-color: #999; --search-tab-title-count-color: #888; --search-tab-but=
+ton-not-selected-border-top-color: none; --search-tab-button-selected-borde=
+r-top-color: none; --settings-menu-filter: invert(100%); --stab-background-=
+color: #314559; --stab-code-color: #e6e1cf; --code-highlight-kw-color: #ff7=
+733; --code-highlight-kw-2-color: #ff7733; --code-highlight-lifetime-color:=
+ #ff7733; --code-highlight-prelude-color: #69f2df; --code-highlight-prelude=
+-val-color: #ff7733; --code-highlight-number-color: #b8cc52; --code-highlig=
+ht-string-color: #b8cc52; --code-highlight-literal-color: #ff7733; --code-h=
+ighlight-attribute-color: #e6e1cf; --code-highlight-self-color: #36a3d9; --=
+code-highlight-macro-color: #a37acc; --code-highlight-question-mark-color: =
+#ff9011; --code-highlight-comment-color: #788797; --code-highlight-doc-comm=
+ent-color: #a1ac88; --src-line-numbers-span-color: #5c6773; --src-line-numb=
+er-highlighted-background-color: rgba(255,236,164,0.06); --target-backgroun=
+d-color: rgba(255,236,164,0.06); --target-border-color: rgba(255,180,76,0.8=
+5); --kbd-color: #c5c5c5; --kbd-background: #314559; --kbd-box-shadow-color=
+: #5c6773; --rust-logo-filter: drop-shadow(1px 0 0px #fff) drop-shadow(0 1p=
+x 0 #fff) drop-shadow(-1px 0 0 #fff) drop-shadow(0 -1px 0 #fff); --crate-se=
+arch-div-filter: invert(41%) sepia(12%) saturate(487%) hue-rotate(171deg) b=
+rightness(94%) contrast(94%); --crate-search-div-hover-filter: invert(98%) =
+sepia(12%) saturate(81%) hue-rotate(343deg) brightness(113%) contrast(76%);=
+ --crate-search-hover-border: #e0e0e0; --src-sidebar-background-selected: #=
+14191f; --src-sidebar-background-hover: #14191f; --table-alt-row-background=
+-color: #191f26; --codeblock-link-background: #333; --scrape-example-toggle=
+-line-background: #999; --scrape-example-toggle-line-hover-background: #c5c=
+5c5; --scrape-example-code-line-highlight: #5b3b01; --scrape-example-code-l=
+ine-highlight-focus: #7c4b0f; --scrape-example-help-border-color: #aaa; --s=
+crape-example-help-color: #eee; --scrape-example-help-hover-border-color: #=
+fff; --scrape-example-help-hover-color: #fff; --scrape-example-code-wrapper=
+-background-start: rgba(15,20,25,1); --scrape-example-code-wrapper-backgrou=
+nd-end: rgba(15,20,25,0); --sidebar-resizer-hover: hsl(34,50%,33%); --sideb=
+ar-resizer-active: hsl(34,100%,66%); --search-tab-button-not-selected-backg=
+round: transparent !important; --search-tab-button-selected-background: #14=
+1920 !important; }
+
+:root[data-theme=3D"ayu"] h1, :root[data-theme=3D"ayu"] h2, :root[data-them=
+e=3D"ayu"] h3, :root[data-theme=3D"ayu"] h4, :where(:root[data-theme=3D"ayu=
+"]) h1 a, :root[data-theme=3D"ayu"] .sidebar h2 a, :root[data-theme=3D"ayu"=
+] .sidebar h3 a { color: rgb(255, 255, 255); }
+
+:root[data-theme=3D"ayu"] .docblock code { color: rgb(255, 180, 84); }
+
+:root[data-theme=3D"ayu"] .docblock a > code { color: rgb(57, 175, 215) !im=
+portant; }
+
+:root[data-theme=3D"ayu"] .code-header, :root[data-theme=3D"ayu"] .docblock=
+ pre > code, :root[data-theme=3D"ayu"] pre, :root[data-theme=3D"ayu"] pre >=
+ code, :root[data-theme=3D"ayu"] .item-info code, :root[data-theme=3D"ayu"]=
+ .rustdoc.source .example-wrap { color: rgb(230, 225, 207); }
+
+:root[data-theme=3D"ayu"] .sidebar .current, :root[data-theme=3D"ayu"] .sid=
+ebar .current a, :root[data-theme=3D"ayu"] .sidebar a:hover, :root[data-the=
+me=3D"ayu"] #src-sidebar div.files > a:hover, :root[data-theme=3D"ayu"] det=
+ails.dir-entry summary:hover, :root[data-theme=3D"ayu"] #src-sidebar div.fi=
+les > a:focus, :root[data-theme=3D"ayu"] details.dir-entry summary:focus, :=
+root[data-theme=3D"ayu"] #src-sidebar div.files > a.selected { color: rgb(2=
+55, 180, 76); }
+
+:root[data-theme=3D"ayu"] .sidebar-elems .location { color: rgb(255, 119, 5=
+1); }
+
+:root[data-theme=3D"ayu"] .src-line-numbers .line-highlighted { color: rgb(=
+112, 128, 144); padding-right: 7px; border-right: 1px solid rgb(255, 180, 7=
+6); }
+
+:root[data-theme=3D"ayu"] .search-results a:hover, :root[data-theme=3D"ayu"=
+] .search-results a:focus { color: rgb(255, 255, 255) !important; backgroun=
+d-color: rgb(60, 60, 60); }
+
+:root[data-theme=3D"ayu"] .search-results a { color: rgb(0, 150, 207); }
+
+:root[data-theme=3D"ayu"] .search-results a div.desc { color: rgb(197, 197,=
+ 197); }
+
+:root[data-theme=3D"ayu"] .result-name .primitive > i, :root[data-theme=3D"=
+ayu"] .result-name .keyword > i { color: rgb(120, 135, 151); }
+
+:root[data-theme=3D"ayu"] #search-tabs > button.selected { border-top: none=
+; border-bottom: 1px solid rgb(255, 180, 76) !important; }
+
+:root[data-theme=3D"ayu"] #search-tabs > button:not(.selected) { border: no=
+ne; background-color: transparent !important; }
+
+:root[data-theme=3D"ayu"] #search-tabs > button:hover { border-bottom: 1px =
+solid rgba(242, 151, 24, 0.3); }
+
+:root[data-theme=3D"ayu"] #settings-menu > a img, :root[data-theme=3D"ayu"]=
+ #sidebar-button > a::before { filter: invert(1); }
+------MultipartBoundary--uTiFA317ARjEiC3ZWRqh8WEiKSLQxQdNkZIRp5GSdu----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://doc.rust-lang.org/static.files/rust-logo-151179464ae7ed46.svg
+
+<svg version=3D"1.1" height=3D"106" width=3D"106" xmlns=3D"http://www.w3.or=
+g/2000/svg" xmlns:xlink=3D"http://www.w3.org/1999/xlink">
+<g id=3D"logo" transform=3D"translate(53, 53)">
+  <path id=3D"r" transform=3D"translate(0.5, 0.5)" stroke=3D"black" stroke-=
+width=3D"1" stroke-linejoin=3D"round" d=3D"
+    M -9,-15 H 4 C 12,-15 12,-7 4,-7 H -9 Z
+    M -40,22 H 0 V 11 H -9 V 3 H 1 C 12,3 6,22 15,22 H 40
+    V 3 H 34 V 5 C 34,13 25,12 24,7 C 23,2 19,-2 18,-2 C 33,-10 24,-26 12,-=
+26 H -35
+    V -15 H -25 V 11 H -40 Z" />
+  <g id=3D"gear" mask=3D"url(#holes)">
+    <circle r=3D"43" fill=3D"none" stroke=3D"black" stroke-width=3D"9" />
+    <g id=3D"cogs">
+      <polygon id=3D"cog" stroke=3D"black" stroke-width=3D"3" stroke-linejo=
+in=3D"round" points=3D"46,3 51,0 46,-3" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(11.25)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(22.50)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(33.75)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(45.00)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(56.25)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(67.50)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(78.75)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(90.00)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(101.25)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(112.50)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(123.75)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(135.00)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(146.25)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(157.50)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(168.75)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(180.00)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(191.25)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(202.50)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(213.75)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(225.00)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(236.25)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(247.50)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(258.75)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(270.00)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(281.25)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(292.50)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(303.75)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(315.00)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(326.25)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(337.50)" />
+      <use xlink:href=3D"#cog" transform=3D"rotate(348.75)" />
+    </g>
+    <g id=3D"mounts">
+      <polygon id=3D"mount" stroke=3D"black" stroke-width=3D"6" stroke-line=
+join=3D"round" points=3D"-7,-42 0,-35 7,-42" />
+      <use xlink:href=3D"#mount" transform=3D"rotate(72)" />
+      <use xlink:href=3D"#mount" transform=3D"rotate(144)" />
+      <use xlink:href=3D"#mount" transform=3D"rotate(216)" />
+      <use xlink:href=3D"#mount" transform=3D"rotate(288)" />
+    </g>
+  </g>
+  <mask id=3D"holes">
+    <rect x=3D"-60" y=3D"-60" width=3D"120" height=3D"120" fill=3D"white"/>
+    <circle id=3D"hole" cy=3D"-40" r=3D"3" />
+    <use xlink:href=3D"#hole" transform=3D"rotate(72)" />
+    <use xlink:href=3D"#hole" transform=3D"rotate(144)" />
+    <use xlink:href=3D"#hole" transform=3D"rotate(216)" />
+    <use xlink:href=3D"#hole" transform=3D"rotate(288)" />
+  </mask>
+</g>
+</svg>=0A
+------MultipartBoundary--uTiFA317ARjEiC3ZWRqh8WEiKSLQxQdNkZIRp5GSdu----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: chrome-extension://ogleeipbbcokpeabliinildngejmdneg/css/content.css
+
+@charset "utf-8";
+
+.dmx_unselectable { user-select: none !important; }
+
+.dmx_overflow_hidden { overflow: hidden; }
+
+div[mx-name=3D"dream-translation"] { all: initial; }
+
+@font-face { font-family: dmx-icon; src: url("chrome-extension://ogleeipbbc=
+okpeabliinildngejmdneg/css/dmx_icon.woff2") format("woff2"); }
+
+.dmx-icon { font-size: 16px; font-style: normal; -webkit-font-smoothing: an=
+tialiased; user-select: none; font-family: dmx-icon, serif !important; }
+
+.dmx-icon-crop::before { content: "=EE=9B=88"; }
+
+.dmx-icon-logo::before { content: "=EE=9B=87"; }
+
+.dmx-icon-move::before { content: "=EE=9B=86"; }
+
+.dmx-icon-folder::before { content: "=EE=9B=84"; }
+
+.dmx-icon-folder-open::before { content: "=EE=9B=85"; }
+
+.dmx-icon-delete::before { content: "=EE=9B=82"; }
+
+.dmx-icon-edit::before { content: "=EE=9B=83"; }
+
+.dmx-icon-export::before { content: "=EE=9B=80"; }
+
+.dmx-icon-import::before { content: "=EE=9B=81"; }
+
+.dmx-icon-history::before { content: "=EE=9A=BF"; }
+
+.dmx-icon-oxford::before { content: "=EE=9A=BE"; }
+
+.dmx-icon-thefree::before { content: "=EE=9A=BD"; }
+
+.dmx-icon-wikipedia::before { content: "=EE=9A=B0"; }
+
+.dmx-icon-dreye::before { content: "=EE=9A=BC"; }
+
+.dmx-icon-eudic::before { content: "=EE=9A=BB"; }
+
+.dmx-icon-etymonline::before { content: "=EE=9A=B1"; }
+
+.dmx-icon-rrdict::before { content: "=EE=9A=B9"; }
+
+.dmx-icon-lexico::before { content: "=EE=9A=BA"; }
+
+.dmx-icon-urban::before { content: "=EE=9A=B8"; }
+
+.dmx-icon-macmillan::before { content: "=EE=9A=B7"; }
+
+.dmx-icon-vocabulary::before { content: "=EE=9A=B6"; }
+
+.dmx-icon-wordreference::before { content: "=EE=9A=B5"; }
+
+.dmx-icon-collins::before { content: "=EE=9A=B4"; }
+
+.dmx-icon-iciba::before { content: "=EE=9A=B3"; }
+
+.dmx-icon-hjdict::before { content: "=EE=9A=B2"; }
+
+.dmx-icon-dictionary::before { content: "=EE=9A=AF"; }
+
+.dmx-icon-so::before { content: "=EE=9A=AA"; }
+
+.dmx-icon-merriam::before { content: "=EE=9A=AB"; }
+
+.dmx-icon-longman::before { content: "=EE=9A=AC"; }
+
+.dmx-icon-cambridge::before { content: "=EE=9A=AD"; }
+
+.dmx-icon-dictcn::before { content: "=EE=9A=AE"; }
+
+.dmx-icon-sound-us::before { content: "=EE=99=B4"; }
+
+.dmx-icon-sound-zh::before { content: "=EE=99=B5"; }
+
+.dmx-icon-sound-fr::before { content: "=EE=99=B6"; }
+
+.dmx-icon-sound-de::before { content: "=EE=99=B7"; }
+
+.dmx-icon-sound-th::before { content: "=EE=9A=9C"; }
+
+.dmx-icon-sound-ru::before { content: "=EE=9A=9D"; }
+
+.dmx-icon-sound-pt::before { content: "=EE=9A=9E"; }
+
+.dmx-icon-sound-uk::before { content: "=EE=9A=9F"; }
+
+.dmx-icon-sound-jp::before { content: "=EE=9A=A0"; }
+
+.dmx-icon-sound-el::before { content: "=EE=9A=A1"; }
+
+.dmx-icon-sound-cn::before { content: "=EE=9A=A2"; }
+
+.dmx-icon-sound-nl::before { content: "=EE=9A=A3"; }
+
+.dmx-icon-sound-it::before { content: "=EE=9A=A4"; }
+
+.dmx-icon-sound-sp::before { content: "=EE=9A=A5"; }
+
+.dmx-icon-sound-ko::before { content: "=EE=9A=A6"; }
+
+.dmx-icon-sound-ar::before { content: "=EE=9A=A7"; }
+
+.dmx-icon-sound-en::before { content: "=EE=9A=A8"; }
+
+.dmx-icon-sound-pl::before { content: "=EE=9A=A9"; }
+
+.dmx-icon-youdao::before { content: "=EE=9A=93"; }
+
+.dmx-icon-sound-square::before { content: "=EE=9A=9B"; }
+
+.dmx-icon-sound::before { content: "=EE=99=BA"; }
+
+.dmx-icon-user::before { content: "=EE=9A=99"; }
+
+.dmx-icon-angle-double-right::before { content: "=EE=9A=96"; }
+
+.dmx-icon-angle-double-left::before { content: "=EE=9A=97"; }
+
+.dmx-icon-angle-double-up::before { content: "=EE=9A=98"; }
+
+.dmx-icon-angle-double-down::before { content: "=EE=9A=9A"; }
+
+.dmx-icon-youdaonote::before { content: "=EE=9A=91"; }
+
+.dmx-icon-youtube::before { content: "=EE=9A=92"; }
+
+.dmx-icon-windows::before { content: "=EE=9A=94"; }
+
+.dmx-icon-yahoo::before { content: "=EE=9A=95"; }
+
+.dmx-icon-voice-off::before { content: "=EE=9A=8A"; }
+
+.dmx-icon-voice-on::before { content: "=EE=9A=8B"; }
+
+.dmx-icon-voice::before { content: "=EE=9A=8C"; }
+
+.dmx-icon-video::before { content: "=EE=9A=8D"; }
+
+.dmx-icon-vip-crown::before { content: "=EE=9A=8E"; }
+
+.dmx-icon-vip-fill::before { content: "=EE=9A=8F"; }
+
+.dmx-icon-vip-card::before { content: "=EE=9A=90"; }
+
+.dmx-icon-up::before { content: "=EE=9A=88"; }
+
+.dmx-icon-up-circle::before { content: "=EE=9A=89"; }
+
+.dmx-icon-trash::before { content: "=EE=9A=82"; }
+
+.dmx-icon-twitter::before { content: "=EE=9A=83"; }
+
+.dmx-icon-tool::before { content: "=EE=9A=84"; }
+
+.dmx-icon-telegram::before { content: "=EE=9A=85"; }
+
+.dmx-icon-tinder::before { content: "=EE=9A=86"; }
+
+.dmx-icon-twitter-circle::before { content: "=EE=9A=87"; }
+
+.dmx-icon-switch::before { content: "=EE=99=BF"; }
+
+.dmx-icon-switch-on::before { content: "=EE=9A=80"; }
+
+.dmx-icon-switch-off::before { content: "=EE=9A=81"; }
+
+.dmx-icon-success::before { content: "=EE=99=BD"; }
+
+.dmx-icon-suse::before { content: "=EE=99=BE"; }
+
+.dmx-icon-star::before { content: "=EE=99=BB"; }
+
+.dmx-icon-stop::before { content: "=EE=99=BC"; }
+
+.dmx-icon-sound-big::before { content: "=EE=99=B3"; }
+
+.dmx-icon-sound-line::before { content: "=EE=99=B8"; }
+
+.dmx-icon-sound-horn::before { content: "=EE=99=B9"; }
+
+.dmx-icon-sogou::before { content: "=EE=99=AD"; }
+
+.dmx-icon-smile::before { content: "=EE=99=AE"; }
+
+.dmx-icon-skull::before { content: "=EE=99=AF"; }
+
+.dmx-icon-search::before { content: "=EE=99=B0"; }
+
+.dmx-icon-s::before { content: "=EE=99=B1"; }
+
+.dmx-icon-setting::before { content: "=EE=99=B2"; }
+
+.dmx-icon-reply::before { content: "=EE=99=A8"; }
+
+.dmx-icon-redhat::before { content: "=EE=99=A9"; }
+
+.dmx-icon-right::before { content: "=EE=99=AA"; }
+
+.dmx-icon-reload::before { content: "=EE=99=AB"; }
+
+.dmx-icon-refresh::before { content: "=EE=99=AC"; }
+
+.dmx-icon-plus::before { content: "=EE=99=A5"; }
+
+.dmx-icon-play::before { content: "=EE=99=A6"; }
+
+.dmx-icon-qq::before { content: "=EE=99=A7"; }
+
+.dmx-icon-plane-send::before { content: "=EE=99=9C"; }
+
+.dmx-icon-plane-departure::before { content: "=EE=99=9D"; }
+
+.dmx-icon-plane-up::before { content: "=EE=99=9E"; }
+
+.dmx-icon-plane-paper::before { content: "=EE=99=9F"; }
+
+.dmx-icon-plane::before { content: "=EE=99=A0"; }
+
+.dmx-icon-plane-fly::before { content: "=EE=99=A1"; }
+
+.dmx-icon-plane-up-fill::before { content: "=EE=99=A2"; }
+
+.dmx-icon-plane-send-fill::before { content: "=EE=99=A3"; }
+
+.dmx-icon-plane-takeoff::before { content: "=EE=99=A4"; }
+
+.dmx-icon-picture-fill::before { content: "=EE=99=98"; }
+
+.dmx-icon-pin::before { content: "=EE=99=99"; }
+
+.dmx-icon-pin-left::before { content: "=EE=99=9A"; }
+
+.dmx-icon-picture::before { content: "=EE=99=9B"; }
+
+.dmx-icon-microsoft::before { content: "=EE=99=91"; }
+
+.dmx-icon-m::before { content: "=EE=99=92"; }
+
+.dmx-icon-modx::before { content: "=EE=99=93"; }
+
+.dmx-icon-meetup::before { content: "=EE=99=94"; }
+
+.dmx-icon-mule::before { content: "=EE=99=95"; }
+
+.dmx-icon-music::before { content: "=EE=99=96"; }
+
+.dmx-icon-more::before { content: "=EE=99=97"; }
+
+.dmx-icon-loading::before { content: "=EE=99=90"; }
+
+.dmx-icon-l::before { content: "=EE=99=8A"; }
+
+.dmx-icon-itunes::before { content: "=EE=99=8B"; }
+
+.dmx-icon-info::before { content: "=EE=99=8C"; }
+
+.dmx-icon-laugh::before { content: "=EE=99=8D"; }
+
+.dmx-icon-left::before { content: "=EE=99=8E"; }
+
+.dmx-icon-list::before { content: "=EE=99=8F"; }
+
+.dmx-icon-help::before { content: "=EE=99=87"; }
+
+.dmx-icon-horn::before { content: "=EE=99=88"; }
+
+.dmx-icon-home::before { content: "=EE=99=89"; }
+
+.dmx-icon-headset::before { content: "=EE=99=84"; }
+
+.dmx-icon-headset-c::before { content: "=EE=99=85"; }
+
+.dmx-icon-heart::before { content: "=EE=99=86"; }
+
+.dmx-icon-good::before { content: "=EE=99=82"; }
+
+.dmx-icon-google::before { content: "=EE=99=83"; }
+
+.dmx-icon-fullscreen-exit::before { content: "=EE=98=BE"; }
+
+.dmx-icon-fullscreen::before { content: "=EE=98=BF"; }
+
+.dmx-icon-fan::before { content: "=EE=99=80"; }
+
+.dmx-icon-flag::before { content: "=EE=99=81"; }
+
+.dmx-icon-eye-left::before { content: "=EE=98=B9"; }
+
+.dmx-icon-error::before { content: "=EE=98=BA"; }
+
+.dmx-icon-eye-right::before { content: "=EE=98=BB"; }
+
+.dmx-icon-exchange::before { content: "=EE=98=BC"; }
+
+.dmx-icon-edge::before { content: "=EE=98=BD"; }
+
+.dmx-icon-down::before { content: "=EE=98=B4"; }
+
+.dmx-icon-diaspora::before { content: "=EE=98=B5"; }
+
+.dmx-icon-devil::before { content: "=EE=98=B6"; }
+
+.dmx-icon-degree::before { content: "=EE=98=B7"; }
+
+.dmx-icon-d::before { content: "=EE=98=B8"; }
+
+.dmx-icon-close::before { content: "=EE=98=AE"; }
+
+.dmx-icon-circle::before { content: "=EE=98=AF"; }
+
+.dmx-icon-cry-fill::before { content: "=EE=98=B0"; }
+
+.dmx-icon-copy::before { content: "=EE=98=B1"; }
+
+.dmx-icon-cry::before { content: "=EE=98=B2"; }
+
+.dmx-icon-close-bg::before { content: "=EE=98=B3"; }
+
+.dmx-icon-bing::before { content: "=EE=98=AB"; }
+
+.dmx-icon-bell::before { content: "=EE=98=AC"; }
+
+.dmx-icon-baidu::before { content: "=EE=98=AD"; }
+
+.dmx-icon-arrow-right::before { content: "=EE=98=A5"; }
+
+.dmx-icon-arrow-left::before { content: "=EE=98=A6"; }
+
+.dmx-icon-arrow-up::before { content: "=EE=98=A7"; }
+
+.dmx-icon-arrow-down::before { content: "=EE=98=A8"; }
+
+.dmx-icon-arrow-thin-down::before { content: "=EE=98=A9"; }
+
+.dmx-icon-arrow-thin-up::before { content: "=EE=98=AA"; }
+
+.dmx-icon-android::before { content: "=EE=98=A2"; }
+
+.dmx-icon-apple::before { content: "=EE=98=A3"; }
+
+.dmx-icon-angular::before { content: "=EE=98=A4"; }
+
+.dmx-icon-alibaba::before { content: "=EE=98=A1"; }
+------MultipartBoundary--uTiFA317ARjEiC3ZWRqh8WEiKSLQxQdNkZIRp5GSdu------

@@ -1,0 +1,1540 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://blog.frognew.com/2020/07/rust-strings.html
+Subject: =?utf-8?Q?rust=E8=AF=AD=E8=A8=80=E5=9F=BA=E7=A1=80=E5=AD=A6=E4=B9=A0:=20r?=
+ =?utf-8?Q?ust=E4=B8=AD=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=B2=20|=20=E9=9D?=
+ =?utf-8?Q?=92=E8=9B=99=E5=B0=8F=E7=99=BD?=
+Date: Thu, 31 Oct 2024 11:07:40 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--Lg9vhvK63wAlOUU7ulhpD6lawIunSNigL7II5KJLKp----"
+
+
+------MultipartBoundary--Lg9vhvK63wAlOUU7ulhpD6lawIunSNigL7II5KJLKp----
+Content-Type: text/html
+Content-ID: <frame-B77B5D46E568F06C2655A68EF0AA7985@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://blog.frognew.com/2020/07/rust-strings.html
+
+<!DOCTYPE html><html lang=3D"zh-CN" dir=3D"ltr"><head><meta http-equiv=3D"C=
+ontent-Type" content=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport"=
+ content=3D"width=3Ddevice-width,initial-scale=3D1"><meta name=3D"descripti=
+on" content=3D"=E5=9C=A8Rust=E4=B8=AD=E6=8F=90=E5=88=B0=E5=AD=97=E7=AC=A6=
+=E4=B8=B2=EF=BC=8C=E9=80=9A=E5=B8=B8=E6=8C=87=E7=9A=84=E6=98=AFrust=E6=A0=
+=B8=E5=BF=83=E8=AF=AD=E8=A8=80=E4=B8=AD=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=B2=
+=E7=B1=BB=E5=9E=8Bstr(=E5=AD=97=E7=AC=A6=E4=B8=B2slice)=E5=92=8Crust=E6=A0=
+=87=E5=87=86=E5=BA=93=E4=B8=AD=E7=9A=84String=E7=B1=BB=E5=9E=8B=E3=80=82
+=E9=99=A4=E4=BA=86str=E5=92=8CString=E8=BF=99=E4=B8=A4=E4=B8=AA=E5=B8=B8=E7=
+=94=A8=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=B2=E7=B1=BB=E5=9E=8B=EF=BC=8C=E5=9C=
+=A8=E6=A0=87=E5=87=86=E5=BA=93=E4=B8=AD=E8=BF=98=E6=9C=89=E4=B8=80=E4=BA=9B=
+=E5=85=B6=E4=BB=96=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=B2=E7=B1=BB=E5=9E=8B=EF=
+=BC=8C=E4=BE=8B=E5=A6=82OsString=E3=80=81OsStr=E3=80=81CString=E3=80=81CStr=
+=E3=80=82
+=E6=9C=AC=E6=96=87=E5=B0=86=E4=BB=8B=E7=BB=8Dstr=E5=92=8CString=E4=B8=A4=E4=
+=B8=AA=E5=AD=97=E7=AC=A6=E4=B8=B2=E7=B1=BB=E5=9E=8B=E3=80=82"><meta name=3D=
+"theme-color" media=3D"(prefers-color-scheme: light)" content=3D"#ffffff"><=
+meta name=3D"theme-color" media=3D"(prefers-color-scheme: dark)" content=3D=
+"#343a40"><meta name=3D"color-scheme" content=3D"light dark"><meta property=
+=3D"og:url" content=3D"https://blog.frognew.com/2020/07/rust-strings.html">=
+<meta property=3D"og:site_name" content=3D"=E9=9D=92=E8=9B=99=E5=B0=8F=E7=
+=99=BD"><meta property=3D"og:title" content=3D"rust=E8=AF=AD=E8=A8=80=E5=9F=
+=BA=E7=A1=80=E5=AD=A6=E4=B9=A0: rust=E4=B8=AD=E7=9A=84=E5=AD=97=E7=AC=A6=E4=
+=B8=B2"><meta property=3D"og:description" content=3D"=E5=9C=A8Rust=E4=B8=AD=
+=E6=8F=90=E5=88=B0=E5=AD=97=E7=AC=A6=E4=B8=B2=EF=BC=8C=E9=80=9A=E5=B8=B8=E6=
+=8C=87=E7=9A=84=E6=98=AFrust=E6=A0=B8=E5=BF=83=E8=AF=AD=E8=A8=80=E4=B8=AD=
+=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=B2=E7=B1=BB=E5=9E=8Bstr(=E5=AD=97=E7=AC=
+=A6=E4=B8=B2slice)=E5=92=8Crust=E6=A0=87=E5=87=86=E5=BA=93=E4=B8=AD=E7=9A=
+=84String=E7=B1=BB=E5=9E=8B=E3=80=82 =E9=99=A4=E4=BA=86str=E5=92=8CString=
+=E8=BF=99=E4=B8=A4=E4=B8=AA=E5=B8=B8=E7=94=A8=E7=9A=84=E5=AD=97=E7=AC=A6=E4=
+=B8=B2=E7=B1=BB=E5=9E=8B=EF=BC=8C=E5=9C=A8=E6=A0=87=E5=87=86=E5=BA=93=E4=B8=
+=AD=E8=BF=98=E6=9C=89=E4=B8=80=E4=BA=9B=E5=85=B6=E4=BB=96=E7=9A=84=E5=AD=97=
+=E7=AC=A6=E4=B8=B2=E7=B1=BB=E5=9E=8B=EF=BC=8C=E4=BE=8B=E5=A6=82OsString=E3=
+=80=81OsStr=E3=80=81CString=E3=80=81CStr=E3=80=82 =E6=9C=AC=E6=96=87=E5=B0=
+=86=E4=BB=8B=E7=BB=8Dstr=E5=92=8CString=E4=B8=A4=E4=B8=AA=E5=AD=97=E7=AC=A6=
+=E4=B8=B2=E7=B1=BB=E5=9E=8B=E3=80=82"><meta property=3D"og:locale" content=
+=3D"zh_CN"><meta property=3D"og:type" content=3D"article"><meta property=3D=
+"article:section" content=3D"posts"><meta property=3D"article:published_tim=
+e" content=3D"2020-07-04T00:00:00+00:00"><meta property=3D"article:modified=
+_time" content=3D"2020-07-04T00:00:00+00:00"><meta property=3D"article:tag"=
+ content=3D"Rust"><title>rust=E8=AF=AD=E8=A8=80=E5=9F=BA=E7=A1=80=E5=AD=A6=
+=E4=B9=A0: rust=E4=B8=AD=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=B2 | =E9=9D=92=E8=
+=9B=99=E5=B0=8F=E7=99=BD</title>
+<link rel=3D"manifest" href=3D"https://blog.frognew.com/manifest.json"><lin=
+k rel=3D"icon" href=3D"https://blog.frognew.com/favicon.png"><link rel=3D"c=
+anonical" href=3D"https://blog.frognew.com/2020/07/rust-strings.html"><link=
+ rel=3D"stylesheet" href=3D"https://blog.frognew.com/book.min.9b27ed26614bc=
+dbf388d4b11c8bf91918db61799eb28795bfb274a0d378b8335.css" crossorigin=3D"ano=
+nymous"></head><body dir=3D"ltr"><input type=3D"checkbox" class=3D"hidden t=
+oggle" id=3D"menu-control">
+<input type=3D"checkbox" class=3D"hidden toggle" id=3D"toc-control"><main c=
+lass=3D"container flex"><aside class=3D"book-menu"><div class=3D"book-menu-=
+content"><nav><h2 class=3D"book-brand"><a class=3D"flex align-center" href=
+=3D"https://blog.frognew.com/"><span>=E9=9D=92=E8=9B=99=E5=B0=8F=E7=99=BD</=
+span></a></h2><ul><li><input type=3D"checkbox" id=3D"section-d268f2b153644c=
+d52aae6cfb5255906b" class=3D"toggle">
+<label for=3D"section-d268f2b153644cd52aae6cfb5255906b" class=3D"flex justi=
+fy-between"><a href=3D"https://blog.frognew.com/library/agi.html">AGI</a></=
+label><ul><li><a href=3D"https://blog.frognew.com/library/agi/fundamental.h=
+tml">=E5=9F=BA=E7=A1=80</a><ul></ul></li><li><a href=3D"https://blog.frogne=
+w.com/library/agi/prompt-engineering.html">=E6=8F=90=E7=A4=BA=E5=B7=A5=E7=
+=A8=8B</a><ul></ul></li><li><input type=3D"checkbox" id=3D"section-37e1d551=
+7a100be2c172fc092f002ccf" class=3D"toggle">
+<label for=3D"section-37e1d5517a100be2c172fc092f002ccf" class=3D"flex justi=
+fy-between"><a href=3D"https://blog.frognew.com/library/agi/langchain.html"=
+>LangChain</a></label><ul><li><a href=3D"https://blog.frognew.com/library/a=
+gi/langchain/architecture.html">Architecture</a></li><li><a href=3D"https:/=
+/blog.frognew.com/library/agi/langchain/lcel.html">LCEL</a></li><li><a href=
+=3D"https://blog.frognew.com/library/agi/langchain/components.html">Compone=
+nts</a><ul></ul></li><li><a href=3D"https://blog.frognew.com/library/agi/la=
+ngchain/techniques.html">Techniques</a><ul></ul></li><li><a href=3D"https:/=
+/blog.frognew.com/library/agi/langchain/tutorials.html">Tutorials</a><ul></=
+ul></li><li><a href=3D"https://blog.frognew.com/library/agi/langchain/how-t=
+o-guides.html">How-to guides</a><ul></ul></li><li><a href=3D"https://blog.f=
+rognew.com/library/agi/langchain/langchain-hub.html">LangChain Hub</a></li>=
+</ul></li><li><a href=3D"https://blog.frognew.com/library/agi/tec-landscape=
+.html">=E6=8A=80=E6=9C=AF=E5=9B=BE</a></li><li><a href=3D"https://blog.frog=
+new.com/library/agi/favorites.html">=E6=94=B6=E8=97=8F=E5=A4=B9</a></li></u=
+l></li><li><input type=3D"checkbox" id=3D"section-57b1c926681d44ce29a48cae2=
+40aed6b" class=3D"toggle">
+<label for=3D"section-57b1c926681d44ce29a48cae240aed6b" class=3D"flex justi=
+fy-between"><a href=3D"https://blog.frognew.com/library/cloudnative.html">C=
+loud Native</a></label><ul><li><a href=3D"https://blog.frognew.com/library/=
+cloudnative/kubernetes.html">Kubernetes</a></li><li><input type=3D"checkbox=
+" id=3D"section-6c98a531e311cc14e2ce8070d7242480" class=3D"toggle">
+<label for=3D"section-6c98a531e311cc14e2ce8070d7242480" class=3D"flex justi=
+fy-between"><a href=3D"https://blog.frognew.com/library/cloudnative/wasm.ht=
+ml">Wasm</a></label><ul><li><a href=3D"https://blog.frognew.com/library/clo=
+udnative/wasm/wasmedge.html">WasmEdge</a></li></ul></li><li><a href=3D"http=
+s://blog.frognew.com/library/cloudnative/favorites.html">=E6=94=B6=E8=97=8F=
+=E5=A4=B9</a></li></ul></li><li><a href=3D"https://blog.frognew.com/library=
+/rust.html">Rust</a><ul></ul></li><li><a href=3D"https://blog.frognew.com/l=
+ibrary/go.html">Go</a><ul></ul></li><li><a href=3D"https://blog.frognew.com=
+/library/python.html">Python</a><ul></ul></li><li><a href=3D"https://blog.f=
+rognew.com/library/linux.html">Linux</a><ul></ul></li><li><input type=3D"ch=
+eckbox" id=3D"section-2b143ba7f48773fe85a7eee23ec996df" class=3D"toggle">
+<label for=3D"section-2b143ba7f48773fe85a7eee23ec996df" class=3D"flex justi=
+fy-between"><a href=3D"https://blog.frognew.com/library/database.html">Data=
+base</a></label><ul><li><a href=3D"https://blog.frognew.com/library/databas=
+e/postgresql.html">PostgreSQL</a><ul></ul></li><li><a href=3D"https://blog.=
+frognew.com/library/database/mysql.html">MySQL</a><ul></ul></li></ul></li><=
+li><input type=3D"checkbox" id=3D"section-aecb4a5bfd651830b737f7b4343fad57"=
+ class=3D"toggle">
+<label for=3D"section-aecb4a5bfd651830b737f7b4343fad57" class=3D"flex justi=
+fy-between"><a role=3D"button">IDE</a></label><ul><li><a href=3D"https://bl=
+og.frognew.com/library/ide/terminal.html">Terminal</a></li><li><input type=
+=3D"checkbox" id=3D"section-8510464456a960e2281d50a42367703c" class=3D"togg=
+le">
+<label for=3D"section-8510464456a960e2281d50a42367703c" class=3D"flex justi=
+fy-between"><a role=3D"button">VS Code</a></label><ul><li><a href=3D"https:=
+//blog.frognew.com/library/ide/vscode/code-server.html">Code-Server</a></li=
+><li><a href=3D"https://blog.frognew.com/library/ide/vscode/vscode.html">VS=
+ Code</a></li><li><input type=3D"checkbox" id=3D"section-a04654fcc3a760a366=
+4959a0e80981cc" class=3D"toggle">
+<label for=3D"section-a04654fcc3a760a3664959a0e80981cc" class=3D"flex justi=
+fy-between"><a href=3D"https://blog.frognew.com/library/ide/vscode/extentio=
+ns.html">Extentions</a></label><ul><li><a href=3D"https://blog.frognew.com/=
+library/ide/vscode/extentions/rust.html">Rust</a></li><li><a href=3D"https:=
+//blog.frognew.com/library/ide/vscode/extentions/go.html">Go</a></li><li><a=
+ href=3D"https://blog.frognew.com/library/ide/vscode/extentions/python.html=
+">Python</a></li></ul></li></ul></li><li><a href=3D"https://blog.frognew.co=
+m/library/ide/ai-programming.html">AI Programming</a></li><li><a href=3D"ht=
+tps://blog.frognew.com/library/ide/git.html">Git</a></li></ul></li></ul><ul=
+><li><a href=3D"https://blog.frognew.com/posts.html">Blog</a></li></ul></na=
+v></div></aside><div class=3D"book-page"><header class=3D"book-header"><div=
+ class=3D"flex align-center justify-between"><label for=3D"menu-control"><i=
+mg src=3D"https://blog.frognew.com/svg/menu.svg" class=3D"book-icon" alt=3D=
+"Menu">
+</label><strong>rust=E8=AF=AD=E8=A8=80=E5=9F=BA=E7=A1=80=E5=AD=A6=E4=B9=A0:=
+ rust=E4=B8=AD=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=B2</strong>
+<label for=3D"toc-control"><img src=3D"https://blog.frognew.com/svg/toc.svg=
+" class=3D"book-icon" alt=3D"Table of Contents"></label></div><aside class=
+=3D"hidden clearfix"><nav id=3D"TableOfContents"><ul><li><a href=3D"https:/=
+/blog.frognew.com/2020/07/rust-strings.html#str%E5%AD%97%E7%AC%A6%E4%B8%B2s=
+lice">str=E5=AD=97=E7=AC=A6=E4=B8=B2slice</a></li><li><a href=3D"https://bl=
+og.frognew.com/2020/07/rust-strings.html#string%E6%98%AF%E4%B8%80%E7%A7%8D%=
+E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B">String=E6=98=AF=E4=B8=80=E7=A7=8D=E9=
+=9B=86=E5=90=88=E7=B1=BB=E5=9E=8B</a></li><li><a href=3D"https://blog.frogn=
+ew.com/2020/07/rust-strings.html#%E9%81%8D%E5%8E%86%E5%AD%97%E7%AC%A6%E4%B8=
+%B2">=E9=81=8D=E5=8E=86=E5=AD=97=E7=AC=A6=E4=B8=B2</a></li></ul></nav></asi=
+de></header><article class=3D"markdown book-post"><h1><a href=3D"https://bl=
+og.frognew.com/2020/07/rust-strings.html">rust=E8=AF=AD=E8=A8=80=E5=9F=BA=
+=E7=A1=80=E5=AD=A6=E4=B9=A0: rust=E4=B8=AD=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=
+=B2</a></h1><h5>2020-07-04</h5><div><a href=3D"https://blog.frognew.com/tag=
+s/rust.html">Rust</a></div><p>=E5=9C=A8Rust=E4=B8=AD=E6=8F=90=E5=88=B0=E5=
+=AD=97=E7=AC=A6=E4=B8=B2=EF=BC=8C=E9=80=9A=E5=B8=B8=E6=8C=87=E7=9A=84=E6=98=
+=AFrust=E6=A0=B8=E5=BF=83=E8=AF=AD=E8=A8=80=E4=B8=AD=E7=9A=84=E5=AD=97=E7=
+=AC=A6=E4=B8=B2=E7=B1=BB=E5=9E=8B<code>str</code>(=E5=AD=97=E7=AC=A6=E4=B8=
+=B2slice)=E5=92=8Crust=E6=A0=87=E5=87=86=E5=BA=93=E4=B8=AD=E7=9A=84<code>St=
+ring</code>=E7=B1=BB=E5=9E=8B=E3=80=82
+=E9=99=A4=E4=BA=86<code>str</code>=E5=92=8C<code>String</code>=E8=BF=99=E4=
+=B8=A4=E4=B8=AA=E5=B8=B8=E7=94=A8=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=B2=E7=B1=
+=BB=E5=9E=8B=EF=BC=8C=E5=9C=A8=E6=A0=87=E5=87=86=E5=BA=93=E4=B8=AD=E8=BF=98=
+=E6=9C=89=E4=B8=80=E4=BA=9B=E5=85=B6=E4=BB=96=E7=9A=84=E5=AD=97=E7=AC=A6=E4=
+=B8=B2=E7=B1=BB=E5=9E=8B=EF=BC=8C=E4=BE=8B=E5=A6=82<code>OsString</code>=E3=
+=80=81<code>OsStr</code>=E3=80=81<code>CString</code>=E3=80=81<code>CStr</c=
+ode>=E3=80=82
+=E6=9C=AC=E6=96=87=E5=B0=86=E4=BB=8B=E7=BB=8D<code>str</code>=E5=92=8C<code=
+>String</code>=E4=B8=A4=E4=B8=AA=E5=AD=97=E7=AC=A6=E4=B8=B2=E7=B1=BB=E5=9E=
+=8B=E3=80=82</p><h2 id=3D"str=E5=AD=97=E7=AC=A6=E4=B8=B2slice">str=E5=AD=97=
+=E7=AC=A6=E4=B8=B2slice
+<a class=3D"anchor" href=3D"https://blog.frognew.com/2020/07/rust-strings.h=
+tml#str%e5%ad%97%e7%ac%a6%e4%b8%b2slice">#</a></h2><p><code>str</code>=E6=
+=98=AFrust=E6=A0=B8=E5=BF=83=E8=AF=AD=E8=A8=80=E4=B8=AD=E5=86=85=E7=BD=AE=
+=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=B2=E7=B1=BB=E5=9E=8B=EF=BC=8C=E5=AE=83=E9=
+=80=9A=E5=B8=B8=E4=BB=A5"=E5=80=9F=E7=94=A8"<code>&amp;str</code>=E7=9A=84=
+=E5=BD=A2=E5=BC=8F=E5=87=BA=E7=8E=B0=EF=BC=8Cstr=E5=8D=B3=E5=AD=97=E7=AC=A6=
+=E4=B8=B2slice=EF=BC=8C=E6=98=AF=E4=B8=80=E4=BA=9B=E5=AD=98=E5=82=A8=E5=9C=
+=A8=E5=88=AB=E5=A4=84=E7=9A=84UTF-8=E7=BC=96=E7=A0=81=E7=9A=84=E5=AD=97=E7=
+=AC=A6=E4=B8=B2=E6=95=B0=E6=8D=AE=E7=9A=84=E5=BC=95=E7=94=A8=E3=80=82
+=E4=BE=8B=E5=A6=82=E7=BC=96=E5=86=99=E7=9A=84rust=E4=BB=A3=E7=A0=81=E4=B8=
+=AD=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=B2=E5=AD=97=E9=9D=A2=E5=80=BC=E8=A2=AB=
+=E5=AD=98=E5=82=A8=E5=9C=A8=E7=A8=8B=E5=BA=8F=E7=9A=84=E4=BA=8C=E8=BF=9B=E5=
+=88=B6=E4=B8=AD=E3=80=82</p><p>=E5=9C=A8=E5=AD=A6=E4=B9=A0<code>str</code>=
+=E4=B9=8B=E5=89=8D=EF=BC=8C=E5=85=88=E7=9C=8B=E4=B8=80=E4=B8=8Bslice=E7=B1=
+=BB=E5=9E=8B=E3=80=82slice=E6=98=AFrust=E4=B8=AD<code>=E6=B2=A1=E6=9C=89=E6=
+=89=80=E6=9C=89=E6=9D=83</code>=E7=9A=84=E6=95=B0=E6=8D=AE=E7=B1=BB=E5=9E=
+=8B=E4=B9=8B=E4=B8=80=EF=BC=8C=E4=BD=BF=E7=94=A8slice=E5=8F=AF=E4=BB=A5=E5=
+=BC=95=E7=94=A8=E9=9B=86=E5=90=88=E4=B8=AD=E4=B8=80=E6=AE=B5=E8=BF=9E=E7=BB=
+=AD=E7=9A=84=E5=85=83=E7=B4=A0=E5=BA=8F=E5=88=97=EF=BC=8C=E8=80=8C=E4=B8=8D=
+=E7=94=A8=E5=BC=95=E7=94=A8=E6=95=B4=E4=B8=AA=E9=9B=86=E5=90=88=E3=80=82</p=
+><p>=E5=AD=97=E7=AC=A6=E4=B8=B2slice=E6=98=AF<code>String</code>=E4=B8=AD=
+=E4=B8=80=E9=83=A8=E5=88=86=E5=80=BC=E7=9A=84=E5=BC=95=E7=94=A8=EF=BC=8C=E4=
+=BE=8B=E5=A6=82:</p><div class=3D"highlight"><pre tabindex=3D"0" style=3D"c=
+olor:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-siz=
+e:4"><code class=3D"language-rust" data-lang=3D"rust"><span style=3D"displa=
+y:flex"><span style=3D"white-space:pre;-webkit-user-select:none;user-select=
+:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span><span><span s=
+tyle=3D"color:#ff6ac1">fn</span> <span style=3D"color:#57c7ff">main</span>(=
+) {
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">2</span><span>   <span style=3D"color:#ff5c57">let</span> s <=
+span style=3D"color:#ff6ac1">=3D</span> <span style=3D"color:#ff5c57">Strin=
+g</span>::from(<span style=3D"color:#5af78e">"hello world"</span>);
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">3</span><span>   <span style=3D"color:#ff5c57">let</span> hel=
+lo <span style=3D"color:#ff6ac1">=3D</span> <span style=3D"color:#ff6ac1">&=
+amp;</span>s[<span style=3D"color:#ff6ac1">..</span><span style=3D"color:#f=
+f9f43">5</span>];
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">4</span><span>   <span style=3D"color:#ff5c57">let</span> mid=
+ <span style=3D"color:#ff6ac1">=3D</span> <span style=3D"color:#ff6ac1">&am=
+p;</span>s[<span style=3D"color:#ff9f43">4</span><span style=3D"color:#ff6a=
+c1">..</span><span style=3D"color:#ff9f43">7</span>];
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">5</span><span>   <span style=3D"color:#ff5c57">let</span> wor=
+ld <span style=3D"color:#ff6ac1">=3D</span> <span style=3D"color:#ff6ac1">&=
+amp;</span>s[<span style=3D"color:#ff9f43">6</span><span style=3D"color:#ff=
+6ac1">..</span>];
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">6</span><span>   println!(<span style=3D"color:#5af78e">"</sp=
+an><span style=3D"color:#5af78e">{}</span><span style=3D"color:#5af78e">"</=
+span>, hello); <span style=3D"color:#78787e">// "hello"
+</span></span></span><span style=3D"display:flex"><span style=3D"white-spac=
+e:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0=
+ .4em;color:#7f7f7f">7</span><span><span style=3D"color:#78787e"></span>   =
+println!(<span style=3D"color:#5af78e">"</span><span style=3D"color:#5af78e=
+">{}</span><span style=3D"color:#5af78e">"</span>, mid);   <span style=3D"c=
+olor:#78787e">// "o w"
+</span></span></span><span style=3D"display:flex"><span style=3D"white-spac=
+e:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0=
+ .4em;color:#7f7f7f">8</span><span><span style=3D"color:#78787e"></span>   =
+println!(<span style=3D"color:#5af78e">"</span><span style=3D"color:#5af78e=
+">{}</span><span style=3D"color:#5af78e">"</span>, world); <span style=3D"c=
+olor:#78787e">// "world"
+</span></span></span><span style=3D"display:flex"><span style=3D"white-spac=
+e:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0=
+ .4em;color:#7f7f7f">9</span><span><span style=3D"color:#78787e"></span>}
+</span></span></code></pre></div><p>rust=E4=B8=ADslice=E7=9A=84=E8=AF=AD=E6=
+=B3=95=E6=98=AF=E4=BD=BF=E7=94=A8<code>[start_index..end_index]</code>=E6=
+=8C=87=E5=AE=9A=E7=9A=84=E8=8C=83=E5=9B=B4=E5=88=9B=E5=BB=BA=E4=B8=80=E4=B8=
+=AAslice=EF=BC=8C=E5=8C=85=E5=90=AB<code>start_index</code>=E5=A4=84=E7=9A=
+=84=E5=85=83=E7=B4=A0=EF=BC=8C=E8=80=8C=E4=B8=8D=E5=8C=85=E5=90=AB<code>end=
+_index</code>=E5=A4=84=E7=9A=84=E5=85=83=E7=B4=A0=EF=BC=8Crust=E4=B8=AD=E5=
+=88=87=E7=89=87slice=E5=88=92=E5=BE=97=E7=9A=84=E5=85=83=E7=B4=A0=E4=B8=AA=
+=E6=95=B0=E6=98=AF<code>end_index - start_index</code>=EF=BC=88=E5=9C=A8=E8=
+=BF=99=E7=82=B9=E4=B8=8A=E4=B8=8Ego=E8=AF=AD=E8=A8=80=E4=B8=AD=E7=9A=84slic=
+e=E5=8D=81=E5=88=86=E7=9B=B8=E4=BC=BC=EF=BC=89=E3=80=82</p><p>=E9=9C=80=E8=
+=A6=81=E6=B3=A8=E6=84=8F=E5=AD=97=E7=AC=A6=E4=B8=B2slice=E6=8C=87=E5=AE=9A=
+=E8=8C=83=E5=9B=B4=E8=BE=B9=E7=95=8C=E7=9A=84=E7=B4=A2=E5=BC=95=E5=BF=85=E9=
+=A1=BB=E6=98=AF=E6=9C=89=E6=95=88=E7=9A=84UTF-8=E5=AD=97=E7=AC=A6=E4=B8=B2=
+=E8=BE=B9=E7=95=8C=EF=BC=8C=E5=A6=82=E6=9E=9C=E4=BB=8E=E4=B8=80=E4=B8=AA=E5=
+=A4=9A=E5=AD=97=E8=8A=82=E5=AD=97=E7=AC=A6=E7=9A=84=E4=B8=AD=E9=97=B4=E4=BD=
+=8D=E7=BD=AE=E5=88=9B=E5=BB=BA=E5=AD=97=E7=AC=A6=E4=B8=B2slice=EF=BC=8C=E7=
+=A8=8B=E5=BA=8F=E5=B0=86=E4=BC=9Apanic=EF=BC=88=E5=9C=A8=E8=BF=99=E7=82=B9=
+=E4=B8=8A=E4=B8=8Ego=E8=AF=AD=E8=A8=80=E5=AF=B9string=E7=B1=BB=E5=9E=8B=E8=
+=BF=9B=E8=A1=8C=E5=88=87=E7=89=87=E6=93=8D=E4=BD=9C=E6=98=AF=E4=B8=8D=E5=90=
+=8C=E7=9A=84=EF=BC=8C=E5=9C=A8go=E4=B8=AD=E4=B8=8D=E4=BC=9Apanic=EF=BC=89=
+=E3=80=82=E4=BE=8B=E5=A6=82:</p><div class=3D"highlight"><pre tabindex=3D"0=
+" style=3D"color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-si=
+ze:4;tab-size:4"><code class=3D"language-rust" data-lang=3D"rust"><span sty=
+le=3D"display:flex"><span style=3D"white-space:pre;-webkit-user-select:none=
+;user-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span><=
+span><span style=3D"color:#ff6ac1">fn</span> <span style=3D"color:#57c7ff">=
+main</span>() {
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">2</span><span>   <span style=3D"color:#ff5c57">let</span> s <=
+span style=3D"color:#ff6ac1">=3D</span> <span style=3D"color:#ff5c57">Strin=
+g</span>::from(<span style=3D"color:#5af78e">"=E4=BD=A0=E5=A5=BD =E4=B8=96=
+=E7=95=8C"</span>);
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">3</span><span>   <span style=3D"color:#ff5c57">let</span> hel=
+lo <span style=3D"color:#ff6ac1">=3D</span> <span style=3D"color:#ff6ac1">&=
+amp;</span>s[<span style=3D"color:#ff6ac1">..</span><span style=3D"color:#f=
+f9f43">1</span>]; <span style=3D"color:#78787e">// thread 'main' panicked a=
+t 'byte index 1 is not a char boundary; it is inside '=E4=BD=A0' (bytes 0..=
+3) of `=E4=BD=A0=E5=A5=BD =E4=B8=96=E7=95=8C`'
+</span></span></span><span style=3D"display:flex"><span style=3D"white-spac=
+e:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0=
+ .4em;color:#7f7f7f">4</span><span><span style=3D"color:#78787e"></span>   =
+println!(<span style=3D"color:#5af78e">"</span><span style=3D"color:#5af78e=
+">{}</span><span style=3D"color:#5af78e">"</span>, hello);=20
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">5</span><span>}
+</span></span></code></pre></div><p>=E5=89=8D=E9=9D=A2=E5=A3=B0=E6=98=8E=E5=
+=AD=97=E7=AC=A6=E4=B8=B2slice=E6=97=B6=E6=98=AF=E4=BD=BF=E7=94=A8=E7=9A=84=
+=E7=B1=BB=E5=9E=8B=E5=AD=97=E6=AE=B5=E6=8E=A8=E6=96=AD=EF=BC=8C=E8=BF=98=E9=
+=9C=80=E8=A6=81=E7=9F=A5=E9=81=93=E5=AD=97=E7=AC=A6=E4=B8=B2slice=E7=9A=84=
+=E7=B1=BB=E5=9E=8B=E5=A3=B0=E6=98=8E=E6=98=AF<code>&amp;str</code>=EF=BC=8C=
+=E4=BE=8B=E5=A6=82:</p><div class=3D"highlight"><pre tabindex=3D"0" style=
+=3D"color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;ta=
+b-size:4"><code class=3D"language-rust" data-lang=3D"rust"><span style=3D"d=
+isplay:flex"><span style=3D"white-space:pre;-webkit-user-select:none;user-s=
+elect:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span><span><s=
+pan style=3D"color:#ff6ac1">fn</span> <span style=3D"color:#57c7ff">main</s=
+pan>() {
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">2</span><span>   <span style=3D"color:#ff5c57">let</span> s <=
+span style=3D"color:#ff6ac1">=3D</span> <span style=3D"color:#ff5c57">Strin=
+g</span>::from(<span style=3D"color:#5af78e">"hello world"</span>);
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">3</span><span>   <span style=3D"color:#ff5c57">let</span> hel=
+lo :<span style=3D"color:#ff6ac1">&amp;</span><span style=3D"color:#9aedfe"=
+>str</span> <span style=3D"color:#ff6ac1">=3D</span> <span style=3D"color:#=
+ff6ac1">&amp;</span>s[<span style=3D"color:#ff6ac1">..</span><span style=3D=
+"color:#ff9f43">5</span>];
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">4</span><span>   println!(<span style=3D"color:#5af78e">"</sp=
+an><span style=3D"color:#5af78e">{}</span><span style=3D"color:#5af78e">"</=
+span>, hello);=20
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">5</span><span>}
+</span></span></code></pre></div><p>=E5=AD=97=E7=AC=A6=E4=B8=B2=E5=AD=97=E9=
+=9D=A2=E5=80=BC=E5=AE=9E=E9=99=85=E4=B8=8A=E5=B0=B1=E6=98=AF=E5=AD=97=E7=AC=
+=A6=E4=B8=B2slice:</p><div class=3D"highlight"><pre tabindex=3D"0" style=3D=
+"color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-s=
+ize:4"><code class=3D"language-rust" data-lang=3D"rust"><span style=3D"disp=
+lay:flex"><span style=3D"white-space:pre;-webkit-user-select:none;user-sele=
+ct:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span><span><span=
+ style=3D"color:#ff5c57">let</span> hello :<span style=3D"color:#ff6ac1">&a=
+mp;</span><span style=3D"color:#9aedfe">str</span> <span style=3D"color:#ff=
+6ac1">=3D</span> <span style=3D"color:#5af78e">"hello"</span>;
+</span></span></code></pre></div><p>=E4=B8=8A=E9=9D=A2=E4=BB=A3=E7=A0=81=E4=
+=B8=AD=E7=9A=84<code>hello</code>=E5=8F=98=E9=87=8F=E7=9A=84=E7=B1=BB=E5=9E=
+=8B=E6=98=AF<code>&amp;str</code>=EF=BC=8C=E5=AE=83=E6=98=AF=E4=B8=80=E4=B8=
+=AA=E6=8C=87=E5=90=91=E4=BA=8C=E8=BF=9B=E5=88=B6=E7=A8=8B=E5=BA=8F=E7=89=B9=
+=E5=AE=9A=E4=BD=8D=E7=BD=AE=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=B2slice=EF=BC=
+=8C<code>&amp;str</code>=E6=98=AF=E4=B8=80=E4=B8=AA=E4=B8=8D=E5=8F=AF=E5=8F=
+=98=E5=BC=95=E7=94=A8=EF=BC=8C=E5=AD=97=E7=AC=A6=E4=B8=B2=E5=AD=97=E9=9D=A2=
+=E5=80=BC=E6=98=AF=E4=B8=8D=E5=8F=AF=E5=8F=98=E7=9A=84=E3=80=82</p><h2 id=
+=3D"string=E6=98=AF=E4=B8=80=E7=A7=8D=E9=9B=86=E5=90=88=E7=B1=BB=E5=9E=8B">=
+String=E6=98=AF=E4=B8=80=E7=A7=8D=E9=9B=86=E5=90=88=E7=B1=BB=E5=9E=8B
+<a class=3D"anchor" href=3D"https://blog.frognew.com/2020/07/rust-strings.h=
+tml#string%e6%98%af%e4%b8%80%e7%a7%8d%e9%9b%86%e5%90%88%e7%b1%bb%e5%9e%8b">=
+#</a></h2><p>Rust=E4=B8=AD=E7=9A=84=E5=AD=97=E7=AC=A6=E4=B8=B2<code>String<=
+/code>=E6=98=AF=E4=BB=A5=E5=AD=97=E8=8A=82=E9=9B=86=E5=90=88=E5=8A=A0=E4=B8=
+=8A=E4=B8=80=E4=BA=9B=E6=96=B9=E6=B3=95=E5=AE=9E=E7=8E=B0=E7=9A=84=E3=80=82
+=E5=8F=AF=E4=BB=A5=E8=AE=A4=E4=B8=BA<code>String</code>=E6=98=AF=E4=B8=80=
+=E7=A7=8D=E9=9B=86=E5=90=88=E7=B1=BB=E5=9E=8B=EF=BC=8C=E6=94=AF=E6=8C=81=E9=
+=9B=86=E5=90=88=E7=B1=BB=E5=9E=8B=E5=B8=B8=E8=A7=81=E5=A2=9E=E5=88=A0=E6=94=
+=B9=E6=9F=A5=E6=93=8D=E4=BD=9C=E3=80=82
+<code>String</code>=E7=B1=BB=E5=9E=8B=E7=94=B1Rust=E7=9A=84=E6=A0=87=E5=87=
+=86=E5=BA=93=E6=8F=90=E4=BE=9B=EF=BC=8C=E6=98=AF=E5=8F=AF=E5=8F=98=E7=9A=84=
+=E3=80=81=E6=9C=89=E6=89=80=E6=9C=89=E6=9D=83=E7=9A=84=E3=80=81=E4=BB=A5UTF=
+-8=E7=BC=96=E7=A0=81=E5=AD=97=E7=AC=A6=E4=B8=B2=E6=95=B0=E6=8D=AE=E7=9A=84=
+=E5=BC=95=E7=94=A8=E3=80=82</p><p>=E4=BD=BF=E7=94=A8String=E7=B1=BB=E5=9E=
+=8B=E7=9A=84<code>new</code>=E5=87=BD=E6=95=B0=EF=BC=8C=E5=8F=AF=E4=BB=A5=
+=E5=88=9B=E5=BB=BA=E4=B8=80=E4=B8=AA=E7=A9=BA=E7=9A=84=E5=AD=97=E7=AC=A6=E4=
+=B8=B2=EF=BC=8C=E8=B0=83=E7=94=A8<code>push_str</code>=E6=96=B9=E6=B3=95=E5=
+=8F=AF=E4=BB=A5=E5=90=91=E5=85=B6=E4=B8=AD=E6=B7=BB=E5=8A=A0=E5=AD=97=E7=AC=
+=A6=E4=B8=B2slice:</p><div class=3D"highlight"><pre tabindex=3D"0" style=3D=
+"color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-s=
+ize:4"><code class=3D"language-rust" data-lang=3D"rust"><span style=3D"disp=
+lay:flex"><span style=3D"white-space:pre;-webkit-user-select:none;user-sele=
+ct:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f">1</span><span><span=
+ style=3D"color:#ff6ac1">fn</span> <span style=3D"color:#57c7ff">main</span=
+>() {
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">2</span><span>    <span style=3D"color:#ff5c57">let</span> <s=
+pan style=3D"color:#ff6ac1">mut</span> s <span style=3D"color:#ff6ac1">=3D<=
+/span> <span style=3D"color:#ff5c57">String</span>::new();
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">3</span><span>    s.push_str(<span style=3D"color:#5af78e">"h=
+ello"</span>);
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">4</span><span>    s.push_str(<span style=3D"color:#5af78e">" =
+"</span>);
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">5</span><span>    s.push_str(<span style=3D"color:#5af78e">"w=
+orld"</span>);
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">6</span><span>    println!(<span style=3D"color:#5af78e">"</s=
+pan><span style=3D"color:#5af78e">{}</span><span style=3D"color:#5af78e">"<=
+/span>, s);
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">7</span><span>}
+</span></span></code></pre></div><p>rust=E4=B8=AD=E7=9A=84String=E7=B1=BB=
+=E5=9E=8B=E5=AD=97=E7=AC=A6=E4=B8=B2=E4=B8=8D=E6=94=AF=E6=8C=81=E7=B4=A2=E5=
+=BC=95=E8=AE=BF=E9=97=AE=EF=BC=8C=E4=BE=8B=E5=A6=82<code>s[0]</code>=E4=BC=
+=9A=E5=87=BA=E7=8E=B0=E7=BC=96=E8=AF=91=E9=94=99=E8=AF=AF=E3=80=82</p><p>=
+=E5=A6=82=E6=9E=9C=E5=8E=BB=E6=9F=A5=E7=9C=8B<code>String</code>=E7=B1=BB=
+=E5=9E=8B=E6=BA=90=E7=A0=81=E7=9A=84=E8=AF=9D=EF=BC=8C=E4=BC=9A=E5=8F=91=E7=
+=8E=B0=E5=AE=83=E5=AE=9E=E9=99=85=E4=B8=8A=E6=98=AF=E4=B8=80=E4=B8=AA<code>=
+Vec&lt;u8&gt;</code>=E7=9A=84=E5=B0=81=E8=A3=85:</p><div class=3D"highlight=
+"><pre tabindex=3D"0" style=3D"color:#e2e4e5;background-color:#282a36;-moz-=
+tab-size:4;-o-tab-size:4;tab-size:4"><code class=3D"language-rust" data-lan=
+g=3D"rust"><span style=3D"display:flex"><span style=3D"white-space:pre;-web=
+kit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;colo=
+r:#7f7f7f">1</span><span><span style=3D"color:#ff6ac1">pub</span> <span sty=
+le=3D"color:#ff6ac1">struct</span> <span style=3D"color:#ff5c57">String</sp=
+an> {
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">2</span><span>    vec: <span style=3D"color:#ff5c57">Vec</spa=
+n><span style=3D"color:#ff6ac1">&lt;</span><span style=3D"color:#9aedfe">u8=
+</span><span style=3D"color:#ff6ac1">&gt;</span>,
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">3</span><span>}
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">4</span><span><span style=3D"color:#ff6ac1">....</span>
+</span></span></code></pre></div><p>=E5=8F=AF=E4=BB=A5=E7=9C=8B=E5=87=BA<co=
+de>String</code>=E7=B1=BB=E5=9E=8B=E6=98=AF=E5=AD=97=E8=8A=82vector=E5=8A=
+=A0=E4=B8=8A=E4=B8=80=E4=BA=9B=E6=96=B9=E6=B3=95=E5=AE=9E=E7=8E=B0=E7=9A=84=
+=E3=80=82</p><h2 id=3D"=E9=81=8D=E5=8E=86=E5=AD=97=E7=AC=A6=E4=B8=B2">=E9=
+=81=8D=E5=8E=86=E5=AD=97=E7=AC=A6=E4=B8=B2
+<a class=3D"anchor" href=3D"https://blog.frognew.com/2020/07/rust-strings.h=
+tml#%e9%81%8d%e5%8e%86%e5%ad%97%e7%ac%a6%e4%b8%b2">#</a></h2><p>rust=E5=AD=
+=97=E7=AC=A6=E4=B8=B2UTF-8=E7=BC=96=E7=A0=81=E7=9A=84=E7=89=B9=E6=80=A7=EF=
+=BC=8C=E5=86=B3=E5=AE=9A=E4=BA=86=E6=9C=89=E4=B8=A4=E7=A7=8D=E9=81=8D=E5=8E=
+=86=E5=AD=97=E7=AC=A6=E4=B8=B2=E7=9A=84=E6=96=B9=E5=BC=8F=EF=BC=8C=E4=BB=A5=
+=E5=AD=97=E7=AC=A6=E5=BD=A2=E5=BC=8F=E5=92=8C=E4=BB=A5=E5=AD=97=E8=8A=82=E5=
+=BD=A2=E5=BC=8F=E3=80=82</p><div class=3D"highlight"><pre tabindex=3D"0" st=
+yle=3D"color:#e2e4e5;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4=
+;tab-size:4"><code class=3D"language-rust" data-lang=3D"rust"><span style=
+=3D"display:flex"><span style=3D"white-space:pre;-webkit-user-select:none;u=
+ser-select:none;margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1</span><s=
+pan><span style=3D"color:#ff6ac1">fn</span> <span style=3D"color:#57c7ff">m=
+ain</span>() {
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f"> 2</span><span>    <span style=3D"color:#ff5c57">let</span> s=
+ <span style=3D"color:#ff6ac1">=3D</span> <span style=3D"color:#5af78e">"=
+=E4=BD=A0=E5=A5=BD"</span>;
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f"> 3</span><span>    <span style=3D"color:#ff6ac1">for</span> c=
+ <span style=3D"color:#ff6ac1">in</span> s.chars() {
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f"> 4</span><span>        print!(<span style=3D"color:#5af78e">"=
+</span><span style=3D"color:#5af78e">{}</span><span style=3D"color:#5af78e"=
+>, "</span>, c) <span style=3D"color:#78787e">// =E4=BD=A0, =E5=A5=BD,=20
+</span></span></span><span style=3D"display:flex"><span style=3D"white-spac=
+e:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0=
+ .4em;color:#7f7f7f"> 5</span><span><span style=3D"color:#78787e"></span>  =
+  }
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f"> 6</span><span>    println!();
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f"> 7</span><span>    <span style=3D"color:#ff6ac1">for</span> s=
+ <span style=3D"color:#ff6ac1">in</span> s.bytes() {
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f"> 8</span><span>        print!(<span style=3D"color:#5af78e">"=
+</span><span style=3D"color:#5af78e">{}</span><span style=3D"color:#5af78e"=
+>, "</span>, s) <span style=3D"color:#78787e">// 228, 189, 160, 229, 165, 1=
+89,
+</span></span></span><span style=3D"display:flex"><span style=3D"white-spac=
+e:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0=
+ .4em;color:#7f7f7f"> 9</span><span><span style=3D"color:#78787e"></span>  =
+  }
+</span></span><span style=3D"display:flex"><span style=3D"white-space:pre;-=
+webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;c=
+olor:#7f7f7f">10</span><span>}
+</span></span></code></pre></div></article><footer class=3D"book-footer"><d=
+iv class=3D"flex flex-wrap justify-between"></div><div>=C2=A9 2024 <a href=
+=3D"https://blog.frognew.com/">=E9=9D=92=E8=9B=99=E5=B0=8F=E7=99=BD</a></di=
+v></footer><div class=3D"book-comments"><div id=3D"disqus_thread"></div><a =
+href=3D"https://disqus.com/" class=3D"dsq-brlink">comments powered by <span=
+ class=3D"logo-disqus">Disqus</span></a></div><label for=3D"menu-control" c=
+lass=3D"hidden book-menu-overlay"></label></div><aside class=3D"book-toc"><=
+div class=3D"book-toc-content"><nav id=3D"TableOfContents"><ul><li><a href=
+=3D"https://blog.frognew.com/2020/07/rust-strings.html#str%E5%AD%97%E7%AC%A=
+6%E4%B8%B2slice">str=E5=AD=97=E7=AC=A6=E4=B8=B2slice</a></li><li><a href=3D=
+"https://blog.frognew.com/2020/07/rust-strings.html#string%E6%98%AF%E4%B8%8=
+0%E7%A7%8D%E9%9B%86%E5%90%88%E7%B1%BB%E5%9E%8B">String=E6=98=AF=E4=B8=80=E7=
+=A7=8D=E9=9B=86=E5=90=88=E7=B1=BB=E5=9E=8B</a></li><li><a href=3D"https://b=
+log.frognew.com/2020/07/rust-strings.html#%E9%81%8D%E5%8E%86%E5%AD%97%E7%AC=
+%A6%E4%B8%B2">=E9=81=8D=E5=8E=86=E5=AD=97=E7=AC=A6=E4=B8=B2</a></li></ul></=
+nav></div></aside></main></body><div mx-name=3D"dream-translation"><templat=
+e shadowmode=3D"closed"><link rel=3D"stylesheet" href=3D"chrome-extension:/=
+/ogleeipbbcokpeabliinildngejmdneg/css/content.css">
+
+<div id=3D"dmx_dialog" style=3D"width: 500px; height: 470px; display: none;=
+">
+    <div id=3D"dmx_dialog_title" style=3D"cursor: move;">
+        <div class=3D"dmx_left">
+            <div id=3D"dmx_close"><i class=3D"dmx-icon dmx-icon-close"></i>=
+</div>
+            <div id=3D"dmx_pin" class=3D"dmx-icon"></div>
+            <div id=3D"dmx_fullscreen" class=3D"dmx-icon"></div>
+            <div id=3D"dmx_history">
+                <i class=3D"dmx-icon disabled dmx-icon-left"></i>
+                <i class=3D"dmx-icon disabled dmx-icon-right"></i>
+            </div>
+            <div id=3D"dmx_navigate">
+                <u class=3D"dmx-icon active" action=3D"translate">=E7=BF=BB=
+=E8=AF=91</u>
+                <u class=3D"dmx-icon" action=3D"dictionary">=E8=AF=8D=E5=85=
+=B8</u>
+                <u class=3D"dmx-icon" action=3D"search">=E6=90=9C=E7=B4=A2<=
+/u>
+            </div>
+        </div>
+        <div class=3D"dmx_right">
+            <div id=3D"dmx_setting"><i class=3D"dmx-icon dmx-icon-setting">=
+</i></div>
+            <div id=3D"dmx_more"><i class=3D"dmx-icon dmx-icon-more"></i></=
+div>
+            <div id=3D"dmx_voice" class=3D"dmx_hide"><i class=3D"dmx-icon d=
+mx-icon-voice"></i></div>
+            <div id=3D"dmx_heart" class=3D"dmx_hide"><i class=3D"dmx-icon d=
+mx-icon-heart"></i></div>
+        </div>
+    </div>
+    <div id=3D"dmx_dialog_content"><div class=3D"dmx_main dmx_main_trans">
+    <div class=3D"case" id=3D"translate_input" contenteditable=3D"true"></d=
+iv>
+    <div class=3D"language_box fx">
+        <div id=3D"language_source" class=3D"language_button dmx-icon" valu=
+e=3D"auto">=E8=87=AA=E5=8A=A8=E6=A3=80=E6=B5=8B</div>
+        <div id=3D"language_exchange" class=3D"disabled"><i class=3D"dmx-ic=
+on dmx-icon-exchange"></i></div>
+        <div id=3D"language_target" class=3D"language_button dmx-icon" valu=
+e=3D"zh">=E4=B8=AD=E6=96=87(=E7=AE=80=E4=BD=93)</div>
+        <div id=3D"translate_button">=E7=BF=BB =E8=AF=91</div>
+        <div id=3D"translate_crop"><i class=3D"dmx-icon dmx-icon-crop"></i>=
+</div>
+        <div id=3D"language_dropdown" class=3D"fx"><u value=3D"auto">=E8=87=
+=AA=E5=8A=A8=E6=A3=80=E6=B5=8B</u><u value=3D"zh">=E4=B8=AD=E6=96=87(=E7=AE=
+=80=E4=BD=93)</u><u value=3D"en">=E8=8B=B1=E8=AF=AD</u><u value=3D"jp">=E6=
+=97=A5=E8=AF=AD</u><u value=3D"th">=E6=B3=B0=E8=AF=AD</u><u value=3D"spa">=
+=E8=A5=BF=E7=8F=AD=E7=89=99=E8=AF=AD</u><u value=3D"ara">=E9=98=BF=E6=8B=89=
+=E4=BC=AF=E8=AF=AD</u><u value=3D"fra">=E6=B3=95=E8=AF=AD</u><u value=3D"ko=
+r">=E9=9F=A9=E8=AF=AD</u><u value=3D"ru">=E4=BF=84=E8=AF=AD</u><u value=3D"=
+de">=E5=BE=B7=E8=AF=AD</u><u value=3D"pt">=E8=91=A1=E8=90=84=E7=89=99=E8=AF=
+=AD</u><u value=3D"it">=E6=84=8F=E5=A4=A7=E5=88=A9=E8=AF=AD</u><u value=3D"=
+el">=E5=B8=8C=E8=85=8A=E8=AF=AD</u><u value=3D"nl">=E8=8D=B7=E5=85=B0=E8=AF=
+=AD</u><u value=3D"pl">=E6=B3=A2=E5=85=B0=E8=AF=AD</u><u value=3D"fin">=E8=
+=8A=AC=E5=85=B0=E8=AF=AD</u><u value=3D"cs">=E6=8D=B7=E5=85=8B=E8=AF=AD</u>=
+<u value=3D"bul">=E4=BF=9D=E5=8A=A0=E5=88=A9=E4=BA=9A=E8=AF=AD</u><u value=
+=3D"dan">=E4=B8=B9=E9=BA=A6=E8=AF=AD</u><u value=3D"est">=E7=88=B1=E6=B2=99=
+=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"hu">=E5=8C=88=E7=89=99=E5=88=A9=
+=E8=AF=AD</u><u value=3D"rom">=E7=BD=97=E9=A9=AC=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"slo">=E6=96=AF=E6=B4=9B=E6=96=87=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"swe">=E7=91=9E=E5=85=B8=E8=AF=AD</u><u value=3D"vie">=E8=B6=
+=8A=E5=8D=97=E8=AF=AD</u><u value=3D"yue">=E4=B8=AD=E6=96=87(=E7=B2=A4=E8=
+=AF=AD)</u><u value=3D"cht">=E4=B8=AD=E6=96=87(=E7=B9=81=E4=BD=93)</u><u va=
+lue=3D"wyw">=E4=B8=AD=E6=96=87(=E6=96=87=E8=A8=80=E6=96=87)</u><u value=3D"=
+afr">=E5=8D=97=E9=9D=9E=E8=8D=B7=E5=85=B0=E8=AF=AD</u><u value=3D"alb">=E9=
+=98=BF=E5=B0=94=E5=B7=B4=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"amh">=E9=
+=98=BF=E5=A7=86=E5=93=88=E6=8B=89=E8=AF=AD</u><u value=3D"arm">=E4=BA=9A=E7=
+=BE=8E=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"asm">=E9=98=BF=E8=90=A8=E5=
+=A7=86=E8=AF=AD</u><u value=3D"ast">=E9=98=BF=E6=96=AF=E5=9B=BE=E9=87=8C=E4=
+=BA=9A=E6=96=AF=E8=AF=AD</u><u value=3D"aze">=E9=98=BF=E5=A1=9E=E6=8B=9C=E7=
+=96=86=E8=AF=AD</u><u value=3D"baq">=E5=B7=B4=E6=96=AF=E5=85=8B=E8=AF=AD</u=
+><u value=3D"bel">=E7=99=BD=E4=BF=84=E7=BD=97=E6=96=AF=E8=AF=AD</u><u value=
+=3D"ben">=E5=AD=9F=E5=8A=A0=E6=8B=89=E8=AF=AD</u><u value=3D"bos">=E6=B3=A2=
+=E6=96=AF=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"bur">=E7=BC=85=E7=94=B8=
+=E8=AF=AD</u><u value=3D"cat">=E5=8A=A0=E6=B3=B0=E7=BD=97=E5=B0=BC=E4=BA=9A=
+=E8=AF=AD</u><u value=3D"ceb">=E5=AE=BF=E5=8A=A1=E8=AF=AD</u><u value=3D"hr=
+v">=E5=85=8B=E7=BD=97=E5=9C=B0=E4=BA=9A=E8=AF=AD</u><u value=3D"epo">=E4=B8=
+=96=E7=95=8C=E8=AF=AD</u><u value=3D"fao">=E6=B3=95=E7=BD=97=E8=AF=AD</u><u=
+ value=3D"fil">=E8=8F=B2=E5=BE=8B=E5=AE=BE=E8=AF=AD</u><u value=3D"glg">=E5=
+=8A=A0=E5=88=A9=E8=A5=BF=E4=BA=9A=E8=AF=AD</u><u value=3D"geo">=E6=A0=BC=E9=
+=B2=81=E5=90=89=E4=BA=9A=E8=AF=AD</u><u value=3D"guj">=E5=8F=A4=E5=90=89=E6=
+=8B=89=E7=89=B9=E8=AF=AD</u><u value=3D"hau">=E8=B1=AA=E8=90=A8=E8=AF=AD</u=
+><u value=3D"heb">=E5=B8=8C=E4=BC=AF=E6=9D=A5=E8=AF=AD</u><u value=3D"hi">=
+=E5=8D=B0=E5=9C=B0=E8=AF=AD</u><u value=3D"ice">=E5=86=B0=E5=B2=9B=E8=AF=AD=
+</u><u value=3D"ibo">=E4=BC=8A=E5=8D=9A=E8=AF=AD</u><u value=3D"id">=E5=8D=
+=B0=E5=B0=BC=E8=AF=AD</u><u value=3D"gle">=E7=88=B1=E5=B0=94=E5=85=B0=E8=AF=
+=AD</u><u value=3D"kan">=E5=8D=A1=E7=BA=B3=E8=BE=BE=E8=AF=AD</u><u value=3D=
+"kaz">=E5=93=88=E8=90=A8=E5=85=8B=E8=AF=AD</u><u value=3D"kli">=E5=85=8B=E6=
+=9E=97=E8=B4=A1=E8=AF=AD</u><u value=3D"kur">=E5=BA=93=E5=B0=94=E5=BE=B7=E8=
+=AF=AD</u><u value=3D"lao">=E8=80=81=E6=8C=9D=E8=AF=AD</u><u value=3D"lat">=
+=E6=8B=89=E4=B8=81=E8=AF=AD</u><u value=3D"lav">=E6=8B=89=E8=84=B1=E7=BB=B4=
+=E4=BA=9A=E8=AF=AD</u><u value=3D"lit">=E7=AB=8B=E9=99=B6=E5=AE=9B=E8=AF=AD=
+</u><u value=3D"ltz">=E5=8D=A2=E6=A3=AE=E5=A0=A1=E8=AF=AD</u><u value=3D"ma=
+c">=E9=A9=AC=E5=85=B6=E9=A1=BF=E8=AF=AD</u><u value=3D"mg">=E9=A9=AC=E6=8B=
+=89=E5=8A=A0=E6=96=AF=E8=AF=AD</u><u value=3D"may">=E9=A9=AC=E6=9D=A5=E8=AF=
+=AD</u><u value=3D"mal">=E9=A9=AC=E6=8B=89=E9=9B=85=E6=8B=89=E5=A7=86=E8=AF=
+=AD</u><u value=3D"mlt">=E9=A9=AC=E8=80=B3=E4=BB=96=E8=AF=AD</u><u value=3D=
+"mar">=E9=A9=AC=E6=8B=89=E5=9C=B0=E8=AF=AD</u><u value=3D"nep">=E5=B0=BC=E6=
+=B3=8A=E5=B0=94=E8=AF=AD</u><u value=3D"nno">=E6=96=B0=E6=8C=AA=E5=A8=81=E8=
+=AF=AD</u><u value=3D"per">=E6=B3=A2=E6=96=AF=E8=AF=AD</u><u value=3D"srd">=
+=E8=90=A8=E4=B8=81=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"srp">=E5=A1=9E=
+=E5=B0=94=E7=BB=B4=E4=BA=9A=E8=AF=AD(=E6=8B=89=E4=B8=81=E6=96=87)</u><u val=
+ue=3D"sin">=E5=83=A7=E4=BC=BD=E7=BD=97=E8=AF=AD</u><u value=3D"sk">=E6=96=
+=AF=E6=B4=9B=E4=BC=90=E5=85=8B=E8=AF=AD</u><u value=3D"som">=E7=B4=A2=E9=A9=
+=AC=E9=87=8C=E8=AF=AD</u><u value=3D"swa">=E6=96=AF=E7=93=A6=E5=B8=8C=E9=87=
+=8C=E8=AF=AD</u><u value=3D"tgl">=E4=BB=96=E5=8A=A0=E7=A6=84=E8=AF=AD</u><u=
+ value=3D"tgk">=E5=A1=94=E5=90=89=E5=85=8B=E8=AF=AD</u><u value=3D"tam">=E6=
+=B3=B0=E7=B1=B3=E5=B0=94=E8=AF=AD</u><u value=3D"tat">=E9=9E=91=E9=9D=BC=E8=
+=AF=AD</u><u value=3D"tel">=E6=B3=B0=E5=8D=A2=E5=9B=BA=E8=AF=AD</u><u value=
+=3D"tr">=E5=9C=9F=E8=80=B3=E5=85=B6=E8=AF=AD</u><u value=3D"tuk">=E5=9C=9F=
+=E5=BA=93=E6=9B=BC=E8=AF=AD</u><u value=3D"ukr">=E4=B9=8C=E5=85=8B=E5=85=B0=
+=E8=AF=AD</u><u value=3D"urd">=E4=B9=8C=E5=B0=94=E9=83=BD=E8=AF=AD</u><u va=
+lue=3D"uzb">=E4=B9=8C=E5=85=B9=E5=88=AB=E5=85=8B=E8=AF=AD</u><u value=3D"oc=
+i">=E5=A5=A5=E5=85=8B=E8=AF=AD</u><u value=3D"kir">=E5=90=89=E5=B0=94=E5=90=
+=89=E6=96=AF=E8=AF=AD</u><u value=3D"pus">=E6=99=AE=E4=BB=80=E5=9B=BE=E8=AF=
+=AD</u><u value=3D"hkm">=E9=AB=98=E6=A3=89=E8=AF=AD</u><u value=3D"ht">=E6=
+=B5=B7=E5=9C=B0=E8=AF=AD</u><u value=3D"nob">=E4=B9=A6=E9=9D=A2=E6=8C=AA=E5=
+=A8=81=E8=AF=AD</u><u value=3D"pan">=E6=97=81=E9=81=AE=E6=99=AE=E8=AF=AD</u=
+><u value=3D"arq">=E9=98=BF=E5=B0=94=E5=8F=8A=E5=88=A9=E4=BA=9A=E9=98=BF=E6=
+=8B=89=E4=BC=AF=E8=AF=AD</u><u value=3D"bis">=E6=AF=94=E6=96=AF=E6=8B=89=E9=
+=A9=AC=E8=AF=AD</u><u value=3D"frn">=E5=8A=A0=E6=8B=BF=E5=A4=A7=E6=B3=95=E8=
+=AF=AD</u><u value=3D"hak">=E5=93=88=E5=8D=A1=E9=92=A6=E8=AF=AD</u><u value=
+=3D"hup">=E8=83=A1=E5=B8=95=E8=AF=AD</u><u value=3D"ing">=E5=8D=B0=E5=8F=A4=
+=E4=BB=80=E8=AF=AD</u><u value=3D"lag">=E6=8B=89=E7=89=B9=E5=8A=A0=E8=8E=B1=
+=E8=AF=AD</u><u value=3D"mau">=E6=AF=9B=E9=87=8C=E6=B1=82=E6=96=AF=E5=85=8B=
+=E9=87=8C=E5=A5=A5=E5=B0=94=E8=AF=AD</u><u value=3D"mot">=E9=BB=91=E5=B1=B1=
+=E8=AF=AD</u><u value=3D"pot">=E5=B7=B4=E8=A5=BF=E8=91=A1=E8=90=84=E7=89=99=
+=E8=AF=AD</u><u value=3D"ruy">=E5=8D=A2=E6=A3=AE=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"sec">=E5=A1=9E=E5=B0=94=E7=BB=B4=E4=BA=9A-=E5=85=8B=E7=BD=
+=97=E5=9C=B0=E4=BA=9A=E8=AF=AD</u><u value=3D"sil">=E8=A5=BF=E9=87=8C=E8=A5=
+=BF=E4=BA=9A=E8=AF=AD</u><u value=3D"tua">=E7=AA=81=E5=B0=BC=E6=96=AF=E9=98=
+=BF=E6=8B=89=E4=BC=AF=E8=AF=AD</u><u value=3D"ach">=E4=BA=9A=E9=BD=90=E8=AF=
+=AD</u><u value=3D"aka">=E9=98=BF=E8=82=AF=E8=AF=AD</u><u value=3D"arg">=E9=
+=98=BF=E6=8B=89=E8=B4=A1=E8=AF=AD</u><u value=3D"aym">=E8=89=BE=E9=A9=AC=E6=
+=8B=89=E8=AF=AD</u><u value=3D"bal">=E4=BF=BE=E8=B7=AF=E6=94=AF=E8=AF=AD</u=
+><u value=3D"bak">=E5=B7=B4=E4=BB=80=E5=9F=BA=E5=B0=94=E8=AF=AD</u><u value=
+=3D"bem">=E6=9C=AC=E5=B7=B4=E8=AF=AD</u><u value=3D"ber">=E6=9F=8F=E6=9F=8F=
+=E5=B0=94=E8=AF=AD</u><u value=3D"bho">=E5=8D=9A=E6=9D=B0=E6=99=AE=E5=B0=94=
+=E8=AF=AD</u><u value=3D"bli">=E6=AF=94=E6=9E=97=E8=AF=AD</u><u value=3D"br=
+e">=E5=B8=83=E5=88=97=E5=A1=94=E5=B0=BC=E8=AF=AD</u><u value=3D"chr">=E5=88=
+=87=E7=BD=97=E5=9F=BA=E8=AF=AD</u><u value=3D"nya">=E9=BD=90=E5=88=87=E7=93=
+=A6=E8=AF=AD</u><u value=3D"chv">=E6=A5=9A=E7=93=A6=E4=BB=80=E8=AF=AD</u><u=
+ value=3D"cor">=E5=BA=B7=E7=93=A6=E5=B0=94=E8=AF=AD</u><u value=3D"cos">=E7=
+=A7=91=E8=A5=BF=E5=98=89=E8=AF=AD</u><u value=3D"cre">=E5=85=8B=E9=87=8C=E5=
+=85=8B=E8=AF=AD</u><u value=3D"cri">=E5=85=8B=E9=87=8C=E7=B1=B3=E4=BA=9A=E9=
+=9E=91=E9=9D=BC=E8=AF=AD</u><u value=3D"div">=E8=BF=AA=E7=BB=B4=E5=B8=8C=E8=
+=AF=AD</u><u value=3D"eno">=E5=8F=A4=E8=8B=B1=E8=AF=AD</u><u value=3D"frm">=
+=E4=B8=AD=E5=8F=A4=E6=B3=95=E8=AF=AD</u><u value=3D"fri">=E5=BC=97=E7=95=99=
+=E5=88=A9=E8=AF=AD</u><u value=3D"ful">=E5=AF=8C=E6=8B=89=E5=B0=BC=E8=AF=AD=
+</u><u value=3D"gla">=E7=9B=96=E5=B0=94=E8=AF=AD</u><u value=3D"lug">=E5=8D=
+=A2=E5=B9=B2=E8=BE=BE=E8=AF=AD</u><u value=3D"gra">=E5=8F=A4=E5=B8=8C=E8=85=
+=8A=E8=AF=AD</u><u value=3D"grn">=E7=93=9C=E6=8B=89=E5=B0=BC=E8=AF=AD</u><u=
+ value=3D"haw">=E5=A4=8F=E5=A8=81=E5=A4=B7=E8=AF=AD</u><u value=3D"hil">=E5=
+=B8=8C=E5=88=A9=E7=9B=96=E5=86=9C=E8=AF=AD</u><u value=3D"ido">=E4=BC=8A=E5=
+=A4=9A=E8=AF=AD</u><u value=3D"ina">=E5=9B=A0=E7=89=B9=E8=AF=AD</u><u value=
+=3D"iku">=E4=BC=8A=E5=8A=AA=E5=85=8B=E6=8F=90=E5=9B=BE=E7=89=B9=E8=AF=AD</u=
+><u value=3D"jav">=E7=88=AA=E5=93=87=E8=AF=AD</u><u value=3D"kab">=E5=8D=A1=
+=E6=8B=9C=E5=B0=94=E8=AF=AD</u><u value=3D"kal">=E6=A0=BC=E9=99=B5=E5=85=B0=
+=E8=AF=AD</u><u value=3D"kau">=E5=8D=A1=E5=8A=AA=E9=87=8C=E8=AF=AD</u><u va=
+lue=3D"kas">=E5=85=8B=E4=BB=80=E7=B1=B3=E5=B0=94=E8=AF=AD</u><u value=3D"ka=
+h">=E5=8D=A1=E8=88=92=E6=AF=94=E8=AF=AD</u><u value=3D"kin">=E5=8D=A2=E6=97=
+=BA=E8=BE=BE=E8=AF=AD</u><u value=3D"kon">=E5=88=9A=E6=9E=9C=E8=AF=AD</u><u=
+ value=3D"kok">=E5=AD=94=E5=8D=A1=E5=B0=BC=E8=AF=AD</u><u value=3D"lim">=E6=
+=9E=97=E5=A0=A1=E8=AF=AD</u><u value=3D"lin">=E6=9E=97=E5=8A=A0=E6=8B=89=E8=
+=AF=AD</u><u value=3D"loj">=E9=80=BB=E8=BE=91=E8=AF=AD</u><u value=3D"log">=
+=E4=BD=8E=E5=9C=B0=E5=BE=B7=E8=AF=AD</u><u value=3D"los">=E4=B8=8B=E7=B4=A2=
+=E5=B8=83=E8=AF=AD</u><u value=3D"mai">=E8=BF=88=E8=92=82=E5=88=A9=E8=AF=AD=
+</u><u value=3D"glv">=E6=9B=BC=E5=85=8B=E6=96=AF=E8=AF=AD</u><u value=3D"ma=
+o">=E6=AF=9B=E5=88=A9=E8=AF=AD</u><u value=3D"mah">=E9=A9=AC=E7=BB=8D=E5=B0=
+=94=E8=AF=AD</u><u value=3D"nbl">=E5=8D=97=E6=81=A9=E5=BE=B7=E8=B4=9D=E8=8E=
+=B1=E8=AF=AD</u><u value=3D"nea">=E9=82=A3=E4=B8=8D=E5=8B=92=E6=96=AF=E8=AF=
+=AD</u><u value=3D"nqo">=E8=A5=BF=E9=9D=9E=E4=B9=A6=E9=9D=A2=E8=AF=AD</u><u=
+ value=3D"sme">=E5=8C=97=E6=96=B9=E8=90=A8=E7=B1=B3=E8=AF=AD</u><u value=3D=
+"nor">=E6=8C=AA=E5=A8=81=E8=AF=AD</u><u value=3D"oji">=E5=A5=A5=E6=9D=B0=E5=
+=B8=83=E7=93=A6=E8=AF=AD</u><u value=3D"ori">=E5=A5=A5=E9=87=8C=E4=BA=9A=E8=
+=AF=AD</u><u value=3D"orm">=E5=A5=A5=E7=BD=97=E8=8E=AB=E8=AF=AD</u><u value=
+=3D"oss">=E5=A5=A5=E5=A1=9E=E6=A2=AF=E8=AF=AD</u><u value=3D"pam">=E9=82=A6=
+=E6=9D=BF=E7=89=99=E8=AF=AD</u><u value=3D"pap">=E5=B8=95=E7=9A=AE=E9=98=BF=
+=E9=97=A8=E6=89=98=E8=AF=AD</u><u value=3D"ped">=E5=8C=97=E7=B4=A2=E6=89=98=
+=E8=AF=AD</u><u value=3D"que">=E5=85=8B=E4=B8=98=E4=BA=9A=E8=AF=AD</u><u va=
+lue=3D"roh">=E7=BD=97=E6=9B=BC=E4=BB=80=E8=AF=AD</u><u value=3D"ro">=E7=BD=
+=97=E5=A7=86=E8=AF=AD</u><u value=3D"sm">=E8=90=A8=E6=91=A9=E4=BA=9A=E8=AF=
+=AD</u><u value=3D"san">=E6=A2=B5=E8=AF=AD</u><u value=3D"sco">=E8=8B=8F=E6=
+=A0=BC=E5=85=B0=E8=AF=AD</u><u value=3D"sha">=E6=8E=B8=E8=AF=AD</u><u value=
+=3D"sna">=E4=BF=AE=E7=BA=B3=E8=AF=AD</u><u value=3D"snd">=E4=BF=A1=E5=BE=B7=
+=E8=AF=AD</u><u value=3D"sol">=E6=A1=91=E6=B5=B7=E8=AF=AD</u><u value=3D"so=
+t">=E5=8D=97=E7=B4=A2=E6=89=98=E8=AF=AD</u><u value=3D"syr">=E5=8F=99=E5=88=
+=A9=E4=BA=9A=E8=AF=AD</u><u value=3D"tet">=E5=BE=B7=E9=A1=BF=E8=AF=AD</u><u=
+ value=3D"tir">=E6=8F=90=E6=A0=BC=E5=88=A9=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u=
+ value=3D"tso">=E8=81=AA=E5=8A=A0=E8=AF=AD</u><u value=3D"twi">=E5=A5=91=E7=
+=BB=B4=E8=AF=AD</u><u value=3D"ups">=E9=AB=98=E5=9C=B0=E7=B4=A2=E5=B8=83=E8=
+=AF=AD</u><u value=3D"ven">=E6=96=87=E8=BE=BE=E8=AF=AD</u><u value=3D"wln">=
+=E7=93=A6=E9=9A=86=E8=AF=AD</u><u value=3D"wel">=E5=A8=81=E5=B0=94=E5=A3=AB=
+=E8=AF=AD</u><u value=3D"fry">=E8=A5=BF=E5=BC=97=E9=87=8C=E6=96=AF=E8=AF=AD=
+</u><u value=3D"wol">=E6=B2=83=E6=B4=9B=E5=A4=AB=E8=AF=AD</u><u value=3D"xh=
+o">=E7=A7=91=E8=90=A8=E8=AF=AD</u><u value=3D"yid">=E6=84=8F=E7=AC=AC=E7=BB=
+=AA=E8=AF=AD</u><u value=3D"yor">=E7=BA=A6=E9=B2=81=E5=B7=B4=E8=AF=AD</u><u=
+ value=3D"zaz">=E6=89=8E=E6=89=8E=E5=85=B6=E8=AF=AD</u><u value=3D"zul">=E7=
+=A5=96=E9=B2=81=E8=AF=AD</u><u value=3D"sun">=E5=B7=BD=E4=BB=96=E8=AF=AD</u=
+><u value=3D"hmn">=E8=8B=97=E8=AF=AD</u><u value=3D"src">=E5=A1=9E=E5=B0=94=
+=E7=BB=B4=E4=BA=9A=E8=AF=AD(=E8=A5=BF=E9=87=8C=E5=B0=94=E6=96=87)</u></div>
+    </div>
+</div>
+<div id=3D"case_list" class=3D"dmx_main fx"></div></div>
+    <div id=3D"dmx_dialog_resize_n"></div>
+    <div id=3D"dmx_dialog_resize_e"></div>
+    <div id=3D"dmx_dialog_resize_s"></div>
+    <div id=3D"dmx_dialog_resize_w"></div>
+    <div id=3D"dmx_dialog_resize_nw"></div>
+    <div id=3D"dmx_dialog_resize_ne"></div>
+    <div id=3D"dmx_dialog_resize_sw"></div>
+    <div id=3D"dmx_dialog_resize_se"></div>
+    <div id=3D"dmx_dialog_left"></div>
+</div>
+<div id=3D"dmx_mouse_icon" style=3D"display: none;"></div>
+<div id=3D"dmx_crop_bg"></div>
+<div id=3D"dmx_crop_fg"></div></template></div></html>
+------MultipartBoundary--Lg9vhvK63wAlOUU7ulhpD6lawIunSNigL7II5KJLKp----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://blog.frognew.com/book.min.9b27ed26614bcdbf388d4b11c8bf91918db61799eb28795bfb274a0d378b8335.css
+
+@charset "utf-8";
+
+:root { --gray-100: #f8f9fa; --gray-200: #e9ecef; --gray-500: #adb5bd; --co=
+lor-link: #0055bb; --color-visited-link: #8440f1; --body-background: white;=
+ --body-font-color: black; --icon-filter: none; --hint-color-info: #6bf; --=
+hint-color-warning: #fd6; --hint-color-danger: #f66; }
+
+@media (prefers-color-scheme: dark) {
+  :root { --gray-100: rgba(255, 255, 255, 0.1); --gray-200: rgba(255, 255, =
+255, 0.2); --gray-500: rgba(255, 255, 255, 0.5); --color-link: #84b2ff; --c=
+olor-visited-link: #b88dff; --body-background: #343a40; --body-font-color: =
+#e9ecef; --icon-filter: brightness(0) invert(1); --hint-color-info: #6bf; -=
+-hint-color-warning: #fd6; --hint-color-danger: #f66; }
+}
+
+html { line-height: 1.15; text-size-adjust: 100%; }
+
+body { margin: 0px; }
+
+main { display: block; }
+
+h1 { font-size: 2em; margin: 0.67em 0px; }
+
+hr { box-sizing: content-box; height: 0px; overflow: visible; }
+
+pre { font-family: monospace, monospace; font-size: 1em; }
+
+a { background-color: transparent; }
+
+abbr[title] { border-bottom: none; text-decoration: underline dotted; }
+
+b, strong { font-weight: bolder; }
+
+code, kbd, samp { font-family: monospace, monospace; font-size: 1em; }
+
+small { font-size: 80%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-ali=
+gn: baseline; }
+
+sub { bottom: -0.25em; }
+
+sup { top: -0.5em; }
+
+img { border-style: none; }
+
+button, input, optgroup, select, textarea { font-family: inherit; font-size=
+: 100%; line-height: 1.15; margin: 0px; }
+
+button, input { overflow: visible; }
+
+button, select { text-transform: none; }
+
+button, [type=3D"button"], [type=3D"reset"], [type=3D"submit"] { appearance=
+: button; }
+
+fieldset { padding: 0.35em 0.75em 0.625em; }
+
+legend { box-sizing: border-box; color: inherit; display: table; max-width:=
+ 100%; padding: 0px; white-space: normal; }
+
+progress { vertical-align: baseline; }
+
+textarea { overflow: auto; }
+
+[type=3D"checkbox"], [type=3D"radio"] { box-sizing: border-box; padding: 0p=
+x; }
+
+[type=3D"number"]::-webkit-inner-spin-button, [type=3D"number"]::-webkit-ou=
+ter-spin-button { height: auto; }
+
+[type=3D"search"] { appearance: textfield; outline-offset: -2px; }
+
+[type=3D"search"]::-webkit-search-decoration { appearance: none; }
+
+::-webkit-file-upload-button { appearance: button; font: inherit; }
+
+details { display: block; }
+
+summary { display: list-item; }
+
+template { display: none; }
+
+[hidden] { display: none; }
+
+.flex { display: flex; }
+
+.flex-auto { flex: 1 1 auto; }
+
+.flex-even { flex: 1 1 0%; }
+
+.flex-wrap { flex-wrap: wrap; }
+
+.justify-start { justify-content: flex-start; }
+
+.justify-end { justify-content: flex-end; }
+
+.justify-center { justify-content: center; }
+
+.justify-between { justify-content: space-between; }
+
+.align-center { align-items: center; }
+
+.mx-auto { margin: 0px auto; }
+
+.text-center { text-align: center; }
+
+.text-left { text-align: left; }
+
+.text-right { text-align: right; }
+
+.hidden { display: none; }
+
+input.toggle { height: 0px; width: 0px; overflow: hidden; opacity: 0; posit=
+ion: absolute; }
+
+.clearfix::after { content: ""; display: table; clear: both; }
+
+html { font-size: 16px; scroll-behavior: smooth; touch-action: manipulation=
+; }
+
+body { min-width: 20rem; color: var(--body-font-color); background: var(--b=
+ody-background); letter-spacing: 0.33px; font-weight: 400; text-rendering: =
+optimizelegibility; -webkit-font-smoothing: antialiased; box-sizing: border=
+-box; }
+
+body * { box-sizing: inherit; }
+
+h1, h2, h3, h4, h5 { font-weight: 400; }
+
+a { text-decoration: none; color: var(--color-link); }
+
+img { vertical-align: baseline; }
+
+:focus { outline-style: auto; outline-color: -webkit-focus-ring-color; }
+
+aside nav ul { padding: 0px; margin: 0px; list-style: none; }
+
+aside nav ul li { margin: 1em 0px; position: relative; }
+
+aside nav ul a { display: block; }
+
+aside nav ul a:hover { opacity: 0.5; }
+
+aside nav ul ul { padding-inline-start: 1rem; }
+
+ul.pagination { display: flex; justify-content: center; list-style-type: no=
+ne; padding-inline-start: 0px; }
+
+ul.pagination .page-item a { padding: 1rem; }
+
+.container { max-width: 100rem; margin: 0px auto; }
+
+.book-icon { filter: var(--icon-filter); }
+
+.book-brand { margin-top: 0px; margin-bottom: 1rem; }
+
+.book-brand img { height: 1.5em; width: 1.5em; margin-inline-end: 0.5rem; }
+
+.book-menu { flex: 0 0 16rem; font-size: 0.875rem; }
+
+.book-menu .book-menu-content { width: 16rem; padding: 1rem; background: va=
+r(--body-background); position: fixed; top: 0px; bottom: 0px; overflow: hid=
+den auto; }
+
+.book-menu a, .book-menu label { color: inherit; cursor: pointer; overflow-=
+wrap: break-word; }
+
+.book-menu a.active { color: var(--color-link); }
+
+.book-menu input.toggle + label + ul { display: none; }
+
+.book-menu input.toggle:checked + label + ul { display: block; }
+
+.book-menu input.toggle + label::after { content: "=E2=96=B8"; }
+
+.book-menu input.toggle:checked + label::after { content: "=E2=96=BE"; }
+
+body[dir=3D"rtl"] .book-menu input.toggle + label::after { content: "=E2=97=
+=82"; }
+
+body[dir=3D"rtl"] .book-menu input.toggle:checked + label::after { content:=
+ "=E2=96=BE"; }
+
+.book-section-flat { margin: 2rem 0px; }
+
+.book-section-flat > a, .book-section-flat > span, .book-section-flat > lab=
+el { font-weight: bolder; }
+
+.book-section-flat > ul { padding-inline-start: 0px; }
+
+.book-page { min-width: 20rem; flex-grow: 1; padding: 1rem; }
+
+.book-post { margin-bottom: 3rem; }
+
+.book-header { display: none; margin-bottom: 1rem; }
+
+.book-header label { line-height: 0; }
+
+.book-header img.book-icon { height: 1.5em; width: 1.5em; }
+
+.book-search { position: relative; margin: 1rem 0px; border-bottom: 1px sol=
+id transparent; }
+
+.book-search input { width: 100%; padding: 0.5rem; border: 0px; border-radi=
+us: 0.25rem; background: var(--gray-100); color: var(--body-font-color); }
+
+.book-search input:required + .book-search-spinner { display: block; }
+
+.book-search .book-search-spinner { position: absolute; top: 0px; margin: 0=
+.5rem; margin-inline-start: calc(100% - 1.5rem); width: 1rem; height: 1rem;=
+ border-width: 1px; border-style: solid; border-right-color: transparent; b=
+order-bottom-color: transparent; border-left-color: transparent; border-ima=
+ge: initial; border-top-color: var(--body-font-color); border-radius: 50%; =
+animation: 1s ease 0s infinite normal none running spin; }
+
+@keyframes spin {=20
+  100% { transform: rotate(360deg); }
+}
+
+.book-search small { opacity: 0.5; }
+
+.book-toc { flex: 0 0 16rem; font-size: 0.75rem; }
+
+.book-toc .book-toc-content { width: 16rem; padding: 1rem; position: fixed;=
+ top: 0px; bottom: 0px; overflow: hidden auto; }
+
+.book-toc img { height: 1em; width: 1em; }
+
+.book-toc nav > ul > li:first-child { margin-top: 0px; }
+
+.book-footer { padding-top: 1rem; font-size: 0.875rem; }
+
+.book-footer img { height: 1em; width: 1em; margin-inline-end: 0.5rem; }
+
+.book-comments { margin-top: 1rem; }
+
+.book-languages { margin-block-end: 2rem; }
+
+.book-languages .book-icon { height: 1em; width: 1em; margin-inline-end: 0.=
+5em; }
+
+.book-languages ul { padding-inline-start: 1.5em; }
+
+.book-menu-content, .book-toc-content, .book-page, .book-header aside, .mar=
+kdown { transition: transform 0.2s ease-in-out, margin, opacity, visibility=
+; will-change: transform, margin, opacity; }
+
+@media screen and (max-width: 56rem) {
+  #menu-control, #toc-control { display: inline; }
+  .book-menu { visibility: hidden; margin-inline-start: -16rem; font-size: =
+16px; z-index: 1; }
+  .book-toc { display: none; }
+  .book-header { display: block; }
+  #menu-control:focus ~ main label[for=3D"menu-control"] { outline-style: a=
+uto; outline-color: -webkit-focus-ring-color; }
+  #menu-control:checked ~ main .book-menu { visibility: initial; }
+  #menu-control:checked ~ main .book-menu .book-menu-content { transform: t=
+ranslateX(16rem); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0.5rem; }
+  #menu-control:checked ~ main .book-page { opacity: 0.25; }
+  #menu-control:checked ~ main .book-menu-overlay { display: block; positio=
+n: absolute; inset: 0px; }
+  #toc-control:focus ~ main label[for=3D"toc-control"] { outline-style: aut=
+o; outline-color: -webkit-focus-ring-color; }
+  #toc-control:checked ~ main .book-header aside { display: block; }
+  body[dir=3D"rtl"] #menu-control:checked ~ main .book-menu .book-menu-cont=
+ent { transform: translateX(-16rem); }
+}
+
+@media screen and (min-width: 100rem) {
+  .book-page, .book-menu .book-menu-content, .book-toc .book-toc-content { =
+padding: 2rem 1rem; }
+}
+
+@font-face { font-family: roboto; font-style: normal; font-weight: 400; fon=
+t-display: swap; src: local(""), url("fonts/roboto-v27-latin-regular.woff2"=
+) format("woff2"), url("fonts/roboto-v27-latin-regular.woff") format("woff"=
+); }
+
+@font-face { font-family: roboto; font-style: normal; font-weight: 700; fon=
+t-display: swap; src: local(""), url("fonts/roboto-v27-latin-700.woff2") fo=
+rmat("woff2"), url("fonts/roboto-v27-latin-700.woff") format("woff"); }
+
+@font-face { font-family: "roboto mono"; font-style: normal; font-weight: 4=
+00; font-display: swap; src: local(""), url("fonts/roboto-mono-v13-latin-re=
+gular.woff2") format("woff2"), url("fonts/roboto-mono-v13-latin-regular.wof=
+f") format("woff"); }
+
+body { font-family: roboto, sans-serif; }
+
+code { font-family: "roboto mono", monospace; }
+
+@media print {
+  .book-menu, .book-footer, .book-toc { display: none; }
+  .book-header, .book-header aside { display: block; }
+  main { display: block !important; }
+}
+
+.markdown { line-height: 1.6; }
+
+.markdown > :first-child { margin-top: 0px; }
+
+.markdown h1, .markdown h2, .markdown h3, .markdown h4, .markdown h5, .mark=
+down h6 { font-weight: 400; line-height: 1; margin-top: 1.5em; margin-botto=
+m: 1rem; }
+
+.markdown h1 a.anchor, .markdown h2 a.anchor, .markdown h3 a.anchor, .markd=
+own h4 a.anchor, .markdown h5 a.anchor, .markdown h6 a.anchor { opacity: 0;=
+ font-size: 0.75em; vertical-align: middle; text-decoration: none; }
+
+.markdown h1:hover a.anchor, .markdown h1 a.anchor:focus, .markdown h2:hove=
+r a.anchor, .markdown h2 a.anchor:focus, .markdown h3:hover a.anchor, .mark=
+down h3 a.anchor:focus, .markdown h4:hover a.anchor, .markdown h4 a.anchor:=
+focus, .markdown h5:hover a.anchor, .markdown h5 a.anchor:focus, .markdown =
+h6:hover a.anchor, .markdown h6 a.anchor:focus { opacity: initial; }
+
+.markdown h4, .markdown h5, .markdown h6 { font-weight: bolder; }
+
+.markdown h5 { font-size: 0.875em; }
+
+.markdown h6 { font-size: 0.75em; }
+
+.markdown b, .markdown optgroup, .markdown strong { font-weight: bolder; }
+
+.markdown a { text-decoration: none; }
+
+.markdown a:hover { text-decoration: underline; }
+
+.markdown a:visited { color: var(--color-visited-link); }
+
+.markdown img { max-width: 100%; height: auto; }
+
+.markdown code { direction: ltr; unicode-bidi: embed; padding: 0px 0.25rem;=
+ background: var(--gray-200); border-radius: 0.25rem; font-size: 0.875em; }
+
+.markdown pre { direction: ltr; unicode-bidi: embed; padding: 1rem; backgro=
+und: var(--gray-100); border-radius: 0.25rem; overflow-x: auto; }
+
+.markdown pre code { padding: 0px; background: 0px 0px; }
+
+.markdown p { overflow-wrap: break-word; }
+
+.markdown blockquote { margin: 1rem 0px; padding: 0.5rem 1rem 0.5rem 0.75re=
+m; border-inline-start: .25rem solid var(--gray-200); border-radius: 0.25re=
+m; }
+
+.markdown blockquote :first-child { margin-top: 0px; }
+
+.markdown blockquote :last-child { margin-bottom: 0px; }
+
+.markdown table { overflow: auto; display: block; border-spacing: 0px; bord=
+er-collapse: collapse; margin-top: 1rem; margin-bottom: 1rem; }
+
+.markdown table tr th, .markdown table tr td { padding: 0.5rem 1rem; border=
+: 1px solid var(--gray-200); }
+
+.markdown table tr:nth-child(2n) { background: var(--gray-100); }
+
+.markdown hr { height: 1px; border: none; background: var(--gray-200); }
+
+.markdown ul, .markdown ol { padding-inline-start: 2rem; overflow-wrap: bre=
+ak-word; }
+
+.markdown dl dt { font-weight: bolder; margin-top: 1rem; }
+
+.markdown dl dd { margin-inline-start: 0px; margin-bottom: 1rem; }
+
+.markdown .highlight { direction: ltr; unicode-bidi: embed; }
+
+.markdown .highlight table tr td:nth-child(1) pre { margin: 0px; padding-in=
+line-end: 0px; }
+
+.markdown .highlight table tr td:nth-child(2) pre { margin: 0px; padding-in=
+line-start: 0px; }
+
+.markdown details { padding: 1rem; border: 1px solid var(--gray-200); borde=
+r-radius: 0.25rem; }
+
+.markdown details summary { line-height: 1; padding: 1rem; margin: -1rem; c=
+ursor: pointer; }
+
+.markdown details[open] summary { margin-bottom: 0px; }
+
+.markdown figure { margin: 1rem 0px; }
+
+.markdown figure figcaption p { margin-top: 0px; }
+
+.markdown-inner > :first-child { margin-top: 0px; }
+
+.markdown-inner > :last-child { margin-bottom: 0px; }
+
+.markdown .book-expand { margin-top: 1rem; margin-bottom: 1rem; border: 1px=
+ solid var(--gray-200); border-radius: 0.25rem; overflow: hidden; }
+
+.markdown .book-expand .book-expand-head { background: var(--gray-100); pad=
+ding: 0.5rem 1rem; cursor: pointer; }
+
+.markdown .book-expand .book-expand-content { display: none; padding: 1rem;=
+ }
+
+.markdown .book-expand input[type=3D"checkbox"]:checked + .book-expand-cont=
+ent { display: block; }
+
+.markdown .book-tabs { margin-top: 1rem; margin-bottom: 1rem; border: 1px s=
+olid var(--gray-200); border-radius: 0.25rem; overflow: hidden; display: fl=
+ex; flex-wrap: wrap; }
+
+.markdown .book-tabs label { display: inline-block; padding: 0.5rem 1rem; b=
+order-bottom: 1px transparent; cursor: pointer; }
+
+.markdown .book-tabs .book-tabs-content { order: 999; width: 100%; border-t=
+op: 1px solid var(--gray-100); padding: 1rem; display: none; }
+
+.markdown .book-tabs input[type=3D"radio"]:checked + label { border-bottom:=
+ 1px solid var(--color-link); }
+
+.markdown .book-tabs input[type=3D"radio"]:checked + label + .book-tabs-con=
+tent { display: block; }
+
+.markdown .book-tabs input[type=3D"radio"]:focus + label { outline-style: a=
+uto; outline-color: -webkit-focus-ring-color; }
+
+.markdown .book-columns { margin-left: -1rem; margin-right: -1rem; }
+
+.markdown .book-columns > div { margin: 1rem 0px; min-width: 10rem; padding=
+: 0px 1rem; }
+
+.markdown a.book-btn { display: inline-block; font-size: 0.875rem; color: v=
+ar(--color-link); line-height: 2rem; padding: 0px 1rem; border: 1px solid v=
+ar(--color-link); border-radius: 0.25rem; cursor: pointer; }
+
+.markdown a.book-btn:hover { text-decoration: none; }
+
+.markdown .book-hint.info { border-color: rgb(102, 187, 255); background-co=
+lor: rgba(102, 187, 255, 0.1); }
+
+.markdown .book-hint.warning { border-color: rgb(255, 221, 102); background=
+-color: rgba(255, 221, 102, 0.1); }
+
+.markdown .book-hint.danger { border-color: rgb(255, 102, 102); background-=
+color: rgba(255, 102, 102, 0.1); }
+------MultipartBoundary--Lg9vhvK63wAlOUU7ulhpD6lawIunSNigL7II5KJLKp----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://blog.frognew.com/svg/menu.svg
+
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"24" height=3D"24" viewBo=
+x=3D"0 0 24 24"><path fill=3D"none" d=3D"M0 0h24v24H0V0z"/><path d=3D"M3 18=
+h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+------MultipartBoundary--Lg9vhvK63wAlOUU7ulhpD6lawIunSNigL7II5KJLKp----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://blog.frognew.com/svg/toc.svg
+
+<svg xmlns=3D"http://www.w3.org/2000/svg" width=3D"24" height=3D"24" viewBo=
+x=3D"0 0 24 24"><path d=3D"M3 9h14V7H3v2zm0 4h14v-2H3v2zm0 4h14v-2H3v2zm16 =
+0h2v-2h-2v2zm0-10v2h2V7h-2zm0 6h2v-2h-2v2z"/><path d=3D"M0 0h24v24H0z" fill=
+=3D"none"/></svg>
+------MultipartBoundary--Lg9vhvK63wAlOUU7ulhpD6lawIunSNigL7II5KJLKp----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: chrome-extension://ogleeipbbcokpeabliinildngejmdneg/css/content.css
+
+@charset "utf-8";
+
+.dmx_unselectable { user-select: none !important; }
+
+.dmx_overflow_hidden { overflow: hidden; }
+
+div[mx-name=3D"dream-translation"] { all: initial; }
+
+@font-face { font-family: dmx-icon; src: url("chrome-extension://ogleeipbbc=
+okpeabliinildngejmdneg/css/dmx_icon.woff2") format("woff2"); }
+
+.dmx-icon { font-size: 16px; font-style: normal; -webkit-font-smoothing: an=
+tialiased; user-select: none; font-family: dmx-icon, serif !important; }
+
+.dmx-icon-crop::before { content: "=EE=9B=88"; }
+
+.dmx-icon-logo::before { content: "=EE=9B=87"; }
+
+.dmx-icon-move::before { content: "=EE=9B=86"; }
+
+.dmx-icon-folder::before { content: "=EE=9B=84"; }
+
+.dmx-icon-folder-open::before { content: "=EE=9B=85"; }
+
+.dmx-icon-delete::before { content: "=EE=9B=82"; }
+
+.dmx-icon-edit::before { content: "=EE=9B=83"; }
+
+.dmx-icon-export::before { content: "=EE=9B=80"; }
+
+.dmx-icon-import::before { content: "=EE=9B=81"; }
+
+.dmx-icon-history::before { content: "=EE=9A=BF"; }
+
+.dmx-icon-oxford::before { content: "=EE=9A=BE"; }
+
+.dmx-icon-thefree::before { content: "=EE=9A=BD"; }
+
+.dmx-icon-wikipedia::before { content: "=EE=9A=B0"; }
+
+.dmx-icon-dreye::before { content: "=EE=9A=BC"; }
+
+.dmx-icon-eudic::before { content: "=EE=9A=BB"; }
+
+.dmx-icon-etymonline::before { content: "=EE=9A=B1"; }
+
+.dmx-icon-rrdict::before { content: "=EE=9A=B9"; }
+
+.dmx-icon-lexico::before { content: "=EE=9A=BA"; }
+
+.dmx-icon-urban::before { content: "=EE=9A=B8"; }
+
+.dmx-icon-macmillan::before { content: "=EE=9A=B7"; }
+
+.dmx-icon-vocabulary::before { content: "=EE=9A=B6"; }
+
+.dmx-icon-wordreference::before { content: "=EE=9A=B5"; }
+
+.dmx-icon-collins::before { content: "=EE=9A=B4"; }
+
+.dmx-icon-iciba::before { content: "=EE=9A=B3"; }
+
+.dmx-icon-hjdict::before { content: "=EE=9A=B2"; }
+
+.dmx-icon-dictionary::before { content: "=EE=9A=AF"; }
+
+.dmx-icon-so::before { content: "=EE=9A=AA"; }
+
+.dmx-icon-merriam::before { content: "=EE=9A=AB"; }
+
+.dmx-icon-longman::before { content: "=EE=9A=AC"; }
+
+.dmx-icon-cambridge::before { content: "=EE=9A=AD"; }
+
+.dmx-icon-dictcn::before { content: "=EE=9A=AE"; }
+
+.dmx-icon-sound-us::before { content: "=EE=99=B4"; }
+
+.dmx-icon-sound-zh::before { content: "=EE=99=B5"; }
+
+.dmx-icon-sound-fr::before { content: "=EE=99=B6"; }
+
+.dmx-icon-sound-de::before { content: "=EE=99=B7"; }
+
+.dmx-icon-sound-th::before { content: "=EE=9A=9C"; }
+
+.dmx-icon-sound-ru::before { content: "=EE=9A=9D"; }
+
+.dmx-icon-sound-pt::before { content: "=EE=9A=9E"; }
+
+.dmx-icon-sound-uk::before { content: "=EE=9A=9F"; }
+
+.dmx-icon-sound-jp::before { content: "=EE=9A=A0"; }
+
+.dmx-icon-sound-el::before { content: "=EE=9A=A1"; }
+
+.dmx-icon-sound-cn::before { content: "=EE=9A=A2"; }
+
+.dmx-icon-sound-nl::before { content: "=EE=9A=A3"; }
+
+.dmx-icon-sound-it::before { content: "=EE=9A=A4"; }
+
+.dmx-icon-sound-sp::before { content: "=EE=9A=A5"; }
+
+.dmx-icon-sound-ko::before { content: "=EE=9A=A6"; }
+
+.dmx-icon-sound-ar::before { content: "=EE=9A=A7"; }
+
+.dmx-icon-sound-en::before { content: "=EE=9A=A8"; }
+
+.dmx-icon-sound-pl::before { content: "=EE=9A=A9"; }
+
+.dmx-icon-youdao::before { content: "=EE=9A=93"; }
+
+.dmx-icon-sound-square::before { content: "=EE=9A=9B"; }
+
+.dmx-icon-sound::before { content: "=EE=99=BA"; }
+
+.dmx-icon-user::before { content: "=EE=9A=99"; }
+
+.dmx-icon-angle-double-right::before { content: "=EE=9A=96"; }
+
+.dmx-icon-angle-double-left::before { content: "=EE=9A=97"; }
+
+.dmx-icon-angle-double-up::before { content: "=EE=9A=98"; }
+
+.dmx-icon-angle-double-down::before { content: "=EE=9A=9A"; }
+
+.dmx-icon-youdaonote::before { content: "=EE=9A=91"; }
+
+.dmx-icon-youtube::before { content: "=EE=9A=92"; }
+
+.dmx-icon-windows::before { content: "=EE=9A=94"; }
+
+.dmx-icon-yahoo::before { content: "=EE=9A=95"; }
+
+.dmx-icon-voice-off::before { content: "=EE=9A=8A"; }
+
+.dmx-icon-voice-on::before { content: "=EE=9A=8B"; }
+
+.dmx-icon-voice::before { content: "=EE=9A=8C"; }
+
+.dmx-icon-video::before { content: "=EE=9A=8D"; }
+
+.dmx-icon-vip-crown::before { content: "=EE=9A=8E"; }
+
+.dmx-icon-vip-fill::before { content: "=EE=9A=8F"; }
+
+.dmx-icon-vip-card::before { content: "=EE=9A=90"; }
+
+.dmx-icon-up::before { content: "=EE=9A=88"; }
+
+.dmx-icon-up-circle::before { content: "=EE=9A=89"; }
+
+.dmx-icon-trash::before { content: "=EE=9A=82"; }
+
+.dmx-icon-twitter::before { content: "=EE=9A=83"; }
+
+.dmx-icon-tool::before { content: "=EE=9A=84"; }
+
+.dmx-icon-telegram::before { content: "=EE=9A=85"; }
+
+.dmx-icon-tinder::before { content: "=EE=9A=86"; }
+
+.dmx-icon-twitter-circle::before { content: "=EE=9A=87"; }
+
+.dmx-icon-switch::before { content: "=EE=99=BF"; }
+
+.dmx-icon-switch-on::before { content: "=EE=9A=80"; }
+
+.dmx-icon-switch-off::before { content: "=EE=9A=81"; }
+
+.dmx-icon-success::before { content: "=EE=99=BD"; }
+
+.dmx-icon-suse::before { content: "=EE=99=BE"; }
+
+.dmx-icon-star::before { content: "=EE=99=BB"; }
+
+.dmx-icon-stop::before { content: "=EE=99=BC"; }
+
+.dmx-icon-sound-big::before { content: "=EE=99=B3"; }
+
+.dmx-icon-sound-line::before { content: "=EE=99=B8"; }
+
+.dmx-icon-sound-horn::before { content: "=EE=99=B9"; }
+
+.dmx-icon-sogou::before { content: "=EE=99=AD"; }
+
+.dmx-icon-smile::before { content: "=EE=99=AE"; }
+
+.dmx-icon-skull::before { content: "=EE=99=AF"; }
+
+.dmx-icon-search::before { content: "=EE=99=B0"; }
+
+.dmx-icon-s::before { content: "=EE=99=B1"; }
+
+.dmx-icon-setting::before { content: "=EE=99=B2"; }
+
+.dmx-icon-reply::before { content: "=EE=99=A8"; }
+
+.dmx-icon-redhat::before { content: "=EE=99=A9"; }
+
+.dmx-icon-right::before { content: "=EE=99=AA"; }
+
+.dmx-icon-reload::before { content: "=EE=99=AB"; }
+
+.dmx-icon-refresh::before { content: "=EE=99=AC"; }
+
+.dmx-icon-plus::before { content: "=EE=99=A5"; }
+
+.dmx-icon-play::before { content: "=EE=99=A6"; }
+
+.dmx-icon-qq::before { content: "=EE=99=A7"; }
+
+.dmx-icon-plane-send::before { content: "=EE=99=9C"; }
+
+.dmx-icon-plane-departure::before { content: "=EE=99=9D"; }
+
+.dmx-icon-plane-up::before { content: "=EE=99=9E"; }
+
+.dmx-icon-plane-paper::before { content: "=EE=99=9F"; }
+
+.dmx-icon-plane::before { content: "=EE=99=A0"; }
+
+.dmx-icon-plane-fly::before { content: "=EE=99=A1"; }
+
+.dmx-icon-plane-up-fill::before { content: "=EE=99=A2"; }
+
+.dmx-icon-plane-send-fill::before { content: "=EE=99=A3"; }
+
+.dmx-icon-plane-takeoff::before { content: "=EE=99=A4"; }
+
+.dmx-icon-picture-fill::before { content: "=EE=99=98"; }
+
+.dmx-icon-pin::before { content: "=EE=99=99"; }
+
+.dmx-icon-pin-left::before { content: "=EE=99=9A"; }
+
+.dmx-icon-picture::before { content: "=EE=99=9B"; }
+
+.dmx-icon-microsoft::before { content: "=EE=99=91"; }
+
+.dmx-icon-m::before { content: "=EE=99=92"; }
+
+.dmx-icon-modx::before { content: "=EE=99=93"; }
+
+.dmx-icon-meetup::before { content: "=EE=99=94"; }
+
+.dmx-icon-mule::before { content: "=EE=99=95"; }
+
+.dmx-icon-music::before { content: "=EE=99=96"; }
+
+.dmx-icon-more::before { content: "=EE=99=97"; }
+
+.dmx-icon-loading::before { content: "=EE=99=90"; }
+
+.dmx-icon-l::before { content: "=EE=99=8A"; }
+
+.dmx-icon-itunes::before { content: "=EE=99=8B"; }
+
+.dmx-icon-info::before { content: "=EE=99=8C"; }
+
+.dmx-icon-laugh::before { content: "=EE=99=8D"; }
+
+.dmx-icon-left::before { content: "=EE=99=8E"; }
+
+.dmx-icon-list::before { content: "=EE=99=8F"; }
+
+.dmx-icon-help::before { content: "=EE=99=87"; }
+
+.dmx-icon-horn::before { content: "=EE=99=88"; }
+
+.dmx-icon-home::before { content: "=EE=99=89"; }
+
+.dmx-icon-headset::before { content: "=EE=99=84"; }
+
+.dmx-icon-headset-c::before { content: "=EE=99=85"; }
+
+.dmx-icon-heart::before { content: "=EE=99=86"; }
+
+.dmx-icon-good::before { content: "=EE=99=82"; }
+
+.dmx-icon-google::before { content: "=EE=99=83"; }
+
+.dmx-icon-fullscreen-exit::before { content: "=EE=98=BE"; }
+
+.dmx-icon-fullscreen::before { content: "=EE=98=BF"; }
+
+.dmx-icon-fan::before { content: "=EE=99=80"; }
+
+.dmx-icon-flag::before { content: "=EE=99=81"; }
+
+.dmx-icon-eye-left::before { content: "=EE=98=B9"; }
+
+.dmx-icon-error::before { content: "=EE=98=BA"; }
+
+.dmx-icon-eye-right::before { content: "=EE=98=BB"; }
+
+.dmx-icon-exchange::before { content: "=EE=98=BC"; }
+
+.dmx-icon-edge::before { content: "=EE=98=BD"; }
+
+.dmx-icon-down::before { content: "=EE=98=B4"; }
+
+.dmx-icon-diaspora::before { content: "=EE=98=B5"; }
+
+.dmx-icon-devil::before { content: "=EE=98=B6"; }
+
+.dmx-icon-degree::before { content: "=EE=98=B7"; }
+
+.dmx-icon-d::before { content: "=EE=98=B8"; }
+
+.dmx-icon-close::before { content: "=EE=98=AE"; }
+
+.dmx-icon-circle::before { content: "=EE=98=AF"; }
+
+.dmx-icon-cry-fill::before { content: "=EE=98=B0"; }
+
+.dmx-icon-copy::before { content: "=EE=98=B1"; }
+
+.dmx-icon-cry::before { content: "=EE=98=B2"; }
+
+.dmx-icon-close-bg::before { content: "=EE=98=B3"; }
+
+.dmx-icon-bing::before { content: "=EE=98=AB"; }
+
+.dmx-icon-bell::before { content: "=EE=98=AC"; }
+
+.dmx-icon-baidu::before { content: "=EE=98=AD"; }
+
+.dmx-icon-arrow-right::before { content: "=EE=98=A5"; }
+
+.dmx-icon-arrow-left::before { content: "=EE=98=A6"; }
+
+.dmx-icon-arrow-up::before { content: "=EE=98=A7"; }
+
+.dmx-icon-arrow-down::before { content: "=EE=98=A8"; }
+
+.dmx-icon-arrow-thin-down::before { content: "=EE=98=A9"; }
+
+.dmx-icon-arrow-thin-up::before { content: "=EE=98=AA"; }
+
+.dmx-icon-android::before { content: "=EE=98=A2"; }
+
+.dmx-icon-apple::before { content: "=EE=98=A3"; }
+
+.dmx-icon-angular::before { content: "=EE=98=A4"; }
+
+.dmx-icon-alibaba::before { content: "=EE=98=A1"; }
+------MultipartBoundary--Lg9vhvK63wAlOUU7ulhpD6lawIunSNigL7II5KJLKp------

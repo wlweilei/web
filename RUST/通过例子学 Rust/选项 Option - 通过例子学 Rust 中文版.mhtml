@@ -1,0 +1,4424 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://rustwiki.org/zh-CN/rust-by-example/std/option.html
+Subject: =?utf-8?Q?=E9=80=89=E9=A1=B9=20Option=20-=20=E9=80=9A=E8=BF=87=E4=BE=8B?=
+ =?utf-8?Q?=E5=AD=90=E5=AD=A6=20Rust=20=E4=B8=AD=E6=96=87=E7=89=88?=
+Date: Fri, 1 Nov 2024 11:39:48 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----"
+
+
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/html
+Content-ID: <frame-D9DFC474851BCC5097128E7E324F27D6@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://rustwiki.org/zh-CN/rust-by-example/std/option.html
+
+<!DOCTYPE html><html lang=3D"zh-CN" class=3D"js sidebar-visible light"><hea=
+d><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">=
+<link rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-3e65da9c-21ce-4c=
+d0-b985-fa58f0bd0816@mhtml.blink" /><link rel=3D"stylesheet" type=3D"text/c=
+ss" href=3D"cid:css-9ae01ddd-5490-49fe-840d-c3b969fc9d73@mhtml.blink" /><li=
+nk rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-b5f336c3-c5ba-44e1-=
+90b5-e6db20f4ad76@mhtml.blink" /><link rel=3D"stylesheet" type=3D"text/css"=
+ href=3D"cid:css-6b45b6b8-83f1-4bf5-bf7c-b0292cecaade@mhtml.blink" /><link =
+rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-cee8c559-bb3b-4fde-995=
+5-fea049f0292c@mhtml.blink" />
+        <!-- Book generated using mdBook -->
+       =20
+        <title>=E9=80=89=E9=A1=B9 Option - =E9=80=9A=E8=BF=87=E4=BE=8B=E5=
+=AD=90=E5=AD=A6 Rust =E4=B8=AD=E6=96=87=E7=89=88</title>
+
+
+        <!-- Custom HTML head -->
+       =20
+       =20
+        <meta name=3D"description" content=3D"=E9=80=9A=E8=BF=87=E4=BE=8B=
+=E5=AD=90=E5=AD=A6 Rust, Rust By Example =E4=B8=AD=E6=96=87=E7=89=88=EF=BC=
+=8CRBE =E4=B8=AD=E6=96=87=E7=89=88=EF=BC=8C=E6=9C=AC=E4=B9=A6=E9=80=9A=E8=
+=BF=87=E8=AF=A6=E7=BB=86=E7=9A=84=E5=8F=AF=E8=BF=90=E8=A1=8C=E7=9A=84 Rust =
+=E7=A8=8B=E5=BA=8F=E6=9D=A5=E8=AE=B2=E8=A7=A3 Rust =E8=AF=AD=E8=A8=80=E6=9C=
+=89=E5=85=B3=E7=9A=84=E7=9F=A5=E8=AF=86=E7=82=B9=EF=BC=8C=E9=80=9A=E4=BF=97=
+=E6=98=93=E6=87=82=EF=BC=8C=E6=98=AF Rust =E5=88=9D=E5=AD=A6=E8=80=85=E5=BF=
+=85=E5=A4=87=E7=9A=84=E5=AD=A6=E4=B9=A0=E5=8F=82=E8=80=83=E4=B9=A6=EF=BC=8C=
+=E5=90=8C=E6=97=B6=E4=B9=9F=E8=83=BD=E4=BD=9C=E4=B8=BA Rust =E5=B7=A5=E7=A8=
+=8B=E5=B8=88=E6=97=A5=E5=B8=B8=E5=B7=A5=E4=BD=9C=E4=B8=AD=E5=BF=AB=E9=80=9F=
+=E6=9F=A5=E6=89=BE=E7=9F=A5=E8=AF=86=E7=82=B9=E7=9A=84=E5=BF=85=E5=A4=87=E6=
+=9F=A5=E8=AF=A2=E6=89=8B=E5=86=8C=E3=80=82">
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <meta name=3D"theme-color" content=3D"rgba(0, 0, 0, 0)">
+
+        <link rel=3D"icon" href=3D"https://rustwiki.org/zh-CN/rust-by-examp=
+le/favicon.svg">
+        <link rel=3D"shortcut icon" href=3D"https://rustwiki.org/zh-CN/rust=
+-by-example/favicon.png">
+        <link rel=3D"stylesheet" href=3D"https://rustwiki.org/zh-CN/rust-by=
+-example/css/variables.css">
+        <link rel=3D"stylesheet" href=3D"https://rustwiki.org/zh-CN/rust-by=
+-example/css/general.css">
+        <link rel=3D"stylesheet" href=3D"https://rustwiki.org/zh-CN/rust-by=
+-example/css/chrome.css">
+        <link rel=3D"stylesheet" href=3D"https://rustwiki.org/zh-CN/rust-by=
+-example/css/print.css" media=3D"print">
+
+        <!-- Fonts -->
+        <link rel=3D"stylesheet" href=3D"https://rustwiki.org/zh-CN/rust-by=
+-example/FontAwesome/css/font-awesome.css">
+        <link rel=3D"stylesheet" href=3D"https://rustwiki.org/zh-CN/rust-by=
+-example/fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel=3D"stylesheet" href=3D"https://rustwiki.org/zh-CN/rust-by=
+-example/highlight.css">
+       =20
+       =20
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+       =20
+
+        <!-- Work around some values being stored in localStorage wrapped i=
+n quotes -->
+       =20
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+       =20
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+       =20
+
+        <nav id=3D"sidebar" class=3D"sidebar" aria-label=3D"Table of conten=
+ts" aria-hidden=3D"false">
+            <div class=3D"sidebar-scrollbox">
+                <ol class=3D"chapter"><li class=3D"chapter-item expanded af=
+fix "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/index.html" tab=
+index=3D"0">=E7=AE=80=E4=BB=8B</a></li><li class=3D"chapter-item expanded "=
+><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/hello.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">1.</strong> Hello World</a></li><li><ol=
+ class=3D"section"><li class=3D"chapter-item expanded "><a href=3D"https://=
+rustwiki.org/zh-CN/rust-by-example/hello/comment.html" tabindex=3D"0"><stro=
+ng aria-hidden=3D"true">1.1.</strong> =E6=B3=A8=E9=87=8A</a></li><li class=
+=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-e=
+xample/hello/print.html" tabindex=3D"0"><strong aria-hidden=3D"true">1.2.</=
+strong> =E6=A0=BC=E5=BC=8F=E5=8C=96=E8=BE=93=E5=87=BA</a></li><li><ol class=
+=3D"section"><li class=3D"chapter-item expanded "><a href=3D"https://rustwi=
+ki.org/zh-CN/rust-by-example/hello/print/print_debug.html" tabindex=3D"0"><=
+strong aria-hidden=3D"true">1.2.1.</strong> =E8=B0=83=E8=AF=95=EF=BC=88debu=
+g=EF=BC=89</a></li><li class=3D"chapter-item expanded "><a href=3D"https://=
+rustwiki.org/zh-CN/rust-by-example/hello/print/print_display.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">1.2.2.</strong> =E6=98=BE=E7=A4=BA=EF=
+=BC=88display=EF=BC=89</a></li><li class=3D"chapter-item expanded "><a href=
+=3D"https://rustwiki.org/zh-CN/rust-by-example/hello/print/print_display/te=
+stcase_list.html" tabindex=3D"0"><strong aria-hidden=3D"true">1.2.3.</stron=
+g> =E6=B5=8B=E8=AF=95=E5=AE=9E=E4=BE=8B=EF=BC=9AList</a></li><li class=3D"c=
+hapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-exampl=
+e/hello/print/fmt.html" tabindex=3D"0"><strong aria-hidden=3D"true">1.2.4.<=
+/strong> =E6=A0=BC=E5=BC=8F=E5=8C=96</a></li></ol></li></ol></li><li class=
+=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-e=
+xample/primitives.html" tabindex=3D"0"><strong aria-hidden=3D"true">2.</str=
+ong> =E5=8E=9F=E7=94=9F=E7=B1=BB=E5=9E=8B</a></li><li><ol class=3D"section"=
+><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN=
+/rust-by-example/primitives/literals.html" tabindex=3D"0"><strong aria-hidd=
+en=3D"true">2.1.</strong> =E5=AD=97=E9=9D=A2=E9=87=8F=E5=92=8C=E8=BF=90=E7=
+=AE=97=E7=AC=A6</a></li><li class=3D"chapter-item expanded "><a href=3D"htt=
+ps://rustwiki.org/zh-CN/rust-by-example/primitives/tuples.html" tabindex=3D=
+"0"><strong aria-hidden=3D"true">2.2.</strong> =E5=85=83=E7=BB=84</a></li><=
+li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/r=
+ust-by-example/primitives/array.html" tabindex=3D"0"><strong aria-hidden=3D=
+"true">2.3.</strong> =E6=95=B0=E7=BB=84=E5=92=8C=E5=88=87=E7=89=87</a></li>=
+</ol></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.=
+org/zh-CN/rust-by-example/custom_types.html" tabindex=3D"0"><strong aria-hi=
+dden=3D"true">3.</strong> =E8=87=AA=E5=AE=9A=E4=B9=89=E7=B1=BB=E5=9E=8B</a>=
+</li><li><ol class=3D"section"><li class=3D"chapter-item expanded "><a href=
+=3D"https://rustwiki.org/zh-CN/rust-by-example/custom_types/structs.html" t=
+abindex=3D"0"><strong aria-hidden=3D"true">3.1.</strong> =E7=BB=93=E6=9E=84=
+=E4=BD=93</a></li><li class=3D"chapter-item expanded "><a href=3D"https://r=
+ustwiki.org/zh-CN/rust-by-example/custom_types/enum.html" tabindex=3D"0"><s=
+trong aria-hidden=3D"true">3.2.</strong> =E6=9E=9A=E4=B8=BE</a></li><li><ol=
+ class=3D"section"><li class=3D"chapter-item expanded "><a href=3D"https://=
+rustwiki.org/zh-CN/rust-by-example/custom_types/enum/enum_use.html" tabinde=
+x=3D"0"><strong aria-hidden=3D"true">3.2.1.</strong> =E4=BD=BF=E7=94=A8 use=
+</a></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.o=
+rg/zh-CN/rust-by-example/custom_types/enum/c_like.html" tabindex=3D"0"><str=
+ong aria-hidden=3D"true">3.2.2.</strong> C =E9=A3=8E=E6=A0=BC=E7=94=A8=E6=
+=B3=95</a></li><li class=3D"chapter-item expanded "><a href=3D"https://rust=
+wiki.org/zh-CN/rust-by-example/custom_types/enum/testcase_linked_list.html"=
+ tabindex=3D"0"><strong aria-hidden=3D"true">3.2.3.</strong> =E6=B5=8B=E8=
+=AF=95=E5=AE=9E=E4=BE=8B=EF=BC=9A=E9=93=BE=E8=A1=A8</a></li></ol></li><li c=
+lass=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-=
+by-example/custom_types/constants.html" tabindex=3D"0"><strong aria-hidden=
+=3D"true">3.3.</strong> =E5=B8=B8=E9=87=8F</a></li></ol></li><li class=3D"c=
+hapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-exampl=
+e/variable_bindings.html" tabindex=3D"0"><strong aria-hidden=3D"true">4.</s=
+trong> =E5=8F=98=E9=87=8F=E7=BB=91=E5=AE=9A</a></li><li><ol class=3D"sectio=
+n"><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-=
+CN/rust-by-example/variable_bindings/mut.html" tabindex=3D"0"><strong aria-=
+hidden=3D"true">4.1.</strong> =E5=8F=AF=E5=8F=98=E5=8F=98=E9=87=8F</a></li>=
+<li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/=
+rust-by-example/variable_bindings/scope.html" tabindex=3D"0"><strong aria-h=
+idden=3D"true">4.2.</strong> =E4=BD=9C=E7=94=A8=E5=9F=9F=E5=92=8C=E9=81=AE=
+=E8=94=BD</a></li><li class=3D"chapter-item expanded "><a href=3D"https://r=
+ustwiki.org/zh-CN/rust-by-example/variable_bindings/declare.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">4.3.</strong> =E5=8F=98=E9=87=8F=E5=85=
+=88=E5=A3=B0=E6=98=8E</a></li><li class=3D"chapter-item expanded "><a href=
+=3D"https://rustwiki.org/zh-CN/rust-by-example/variable_bindings/freeze.htm=
+l" tabindex=3D"0"><strong aria-hidden=3D"true">4.4.</strong> =E5=86=BB=E7=
+=BB=93</a></li></ol></li><li class=3D"chapter-item expanded "><a href=3D"ht=
+tps://rustwiki.org/zh-CN/rust-by-example/types.html" tabindex=3D"0"><strong=
+ aria-hidden=3D"true">5.</strong> =E7=B1=BB=E5=9E=8B=E7=B3=BB=E7=BB=9F</a><=
+/li><li><ol class=3D"section"><li class=3D"chapter-item expanded "><a href=
+=3D"https://rustwiki.org/zh-CN/rust-by-example/types/cast.html" tabindex=3D=
+"0"><strong aria-hidden=3D"true">5.1.</strong> =E7=B1=BB=E5=9E=8B=E8=BD=AC=
+=E6=8D=A2</a></li><li class=3D"chapter-item expanded "><a href=3D"https://r=
+ustwiki.org/zh-CN/rust-by-example/types/literals.html" tabindex=3D"0"><stro=
+ng aria-hidden=3D"true">5.2.</strong> =E5=AD=97=E9=9D=A2=E9=87=8F</a></li><=
+li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/r=
+ust-by-example/types/inference.html" tabindex=3D"0"><strong aria-hidden=3D"=
+true">5.3.</strong> =E7=B1=BB=E5=9E=8B=E6=8E=A8=E6=96=AD</a></li><li class=
+=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-e=
+xample/types/alias.html" tabindex=3D"0"><strong aria-hidden=3D"true">5.4.</=
+strong> =E5=88=AB=E5=90=8D</a></li></ol></li><li class=3D"chapter-item expa=
+nded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/conversion.htm=
+l" tabindex=3D"0"><strong aria-hidden=3D"true">6.</strong> =E7=B1=BB=E5=9E=
+=8B=E8=BD=AC=E6=8D=A2</a></li><li><ol class=3D"section"><li class=3D"chapte=
+r-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/con=
+version/from_into.html" tabindex=3D"0"><strong aria-hidden=3D"true">6.1.</s=
+trong> From =E5=92=8C Into</a></li><li class=3D"chapter-item expanded "><a =
+href=3D"https://rustwiki.org/zh-CN/rust-by-example/conversion/try_from_try_=
+into.html" tabindex=3D"0"><strong aria-hidden=3D"true">6.2.</strong> TryFro=
+m =E5=92=8C TryInto</a></li><li class=3D"chapter-item expanded "><a href=3D=
+"https://rustwiki.org/zh-CN/rust-by-example/conversion/string.html" tabinde=
+x=3D"0"><strong aria-hidden=3D"true">6.3.</strong> ToString =E5=92=8C FromS=
+tr</a></li></ol></li><li class=3D"chapter-item expanded "><a href=3D"https:=
+//rustwiki.org/zh-CN/rust-by-example/expression.html" tabindex=3D"0"><stron=
+g aria-hidden=3D"true">7.</strong> =E8=A1=A8=E8=BE=BE=E5=BC=8F</a></li><li =
+class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust=
+-by-example/flow_control.html" tabindex=3D"0"><strong aria-hidden=3D"true">=
+8.</strong> =E6=B5=81=E7=A8=8B=E6=8E=A7=E5=88=B6</a></li><li><ol class=3D"s=
+ection"><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.or=
+g/zh-CN/rust-by-example/flow_control/if_else.html" tabindex=3D"0"><strong a=
+ria-hidden=3D"true">8.1.</strong> if/else</a></li><li class=3D"chapter-item=
+ expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/flow_cont=
+rol/loop.html" tabindex=3D"0"><strong aria-hidden=3D"true">8.2.</strong> lo=
+op =E5=BE=AA=E7=8E=AF</a></li><li><ol class=3D"section"><li class=3D"chapte=
+r-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/flo=
+w_control/loop/nested.html" tabindex=3D"0"><strong aria-hidden=3D"true">8.2=
+.1.</strong> =E5=B5=8C=E5=A5=97=E5=BE=AA=E7=8E=AF=E5=92=8C=E6=A0=87=E7=AD=
+=BE</a></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwik=
+i.org/zh-CN/rust-by-example/flow_control/loop/return.html" tabindex=3D"0"><=
+strong aria-hidden=3D"true">8.2.2.</strong> =E4=BB=8E loop =E5=BE=AA=E7=8E=
+=AF=E8=BF=94=E5=9B=9E</a></li></ol></li><li class=3D"chapter-item expanded =
+"><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/flow_control/while.=
+html" tabindex=3D"0"><strong aria-hidden=3D"true">8.3.</strong> while =E5=
+=BE=AA=E7=8E=AF</a></li><li class=3D"chapter-item expanded "><a href=3D"htt=
+ps://rustwiki.org/zh-CN/rust-by-example/flow_control/for.html" tabindex=3D"=
+0"><strong aria-hidden=3D"true">8.4.</strong> for =E5=BE=AA=E7=8E=AF=E5=92=
+=8C=E5=8C=BA=E9=97=B4</a></li><li class=3D"chapter-item expanded "><a href=
+=3D"https://rustwiki.org/zh-CN/rust-by-example/flow_control/match.html" tab=
+index=3D"0"><strong aria-hidden=3D"true">8.5.</strong> match =E5=8C=B9=E9=
+=85=8D</a></li><li><ol class=3D"section"><li class=3D"chapter-item expanded=
+ "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/flow_control/match=
+/destructuring.html" tabindex=3D"0"><strong aria-hidden=3D"true">8.5.1.</st=
+rong> =E8=A7=A3=E6=9E=84</a></li><li><ol class=3D"section"><li class=3D"cha=
+pter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/=
+flow_control/match/destructuring/destructure_tuple.html" tabindex=3D"0"><st=
+rong aria-hidden=3D"true">8.5.1.1.</strong> =E5=85=83=E7=BB=84</a></li><li =
+class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust=
+-by-example/flow_control/match/destructuring/destructure_enum.html" tabinde=
+x=3D"0"><strong aria-hidden=3D"true">8.5.1.2.</strong> =E6=9E=9A=E4=B8=BE</=
+a></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org=
+/zh-CN/rust-by-example/flow_control/match/destructuring/destructure_pointer=
+s.html" tabindex=3D"0"><strong aria-hidden=3D"true">8.5.1.3.</strong> =E6=
+=8C=87=E9=92=88=E5=92=8C=E5=BC=95=E7=94=A8</a></li><li class=3D"chapter-ite=
+m expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/flow_con=
+trol/match/destructuring/destructure_structures.html" tabindex=3D"0"><stron=
+g aria-hidden=3D"true">8.5.1.4.</strong> =E7=BB=93=E6=9E=84=E4=BD=93</a></l=
+i></ol></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwik=
+i.org/zh-CN/rust-by-example/flow_control/match/guard.html" tabindex=3D"0"><=
+strong aria-hidden=3D"true">8.5.2.</strong> =E5=8D=AB=E8=AF=AD=E5=8F=A5</a>=
+</li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/z=
+h-CN/rust-by-example/flow_control/match/binding.html" tabindex=3D"0"><stron=
+g aria-hidden=3D"true">8.5.3.</strong> =E7=BB=91=E5=AE=9A</a></li></ol></li=
+><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN=
+/rust-by-example/flow_control/if_let.html" tabindex=3D"0"><strong aria-hidd=
+en=3D"true">8.6.</strong> if let</a></li><li class=3D"chapter-item expanded=
+ "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/flow_control/while=
+_let.html" tabindex=3D"0"><strong aria-hidden=3D"true">8.7.</strong> while =
+let</a></li></ol></li><li class=3D"chapter-item expanded "><a href=3D"https=
+://rustwiki.org/zh-CN/rust-by-example/fn.html" tabindex=3D"0"><strong aria-=
+hidden=3D"true">9.</strong> =E5=87=BD=E6=95=B0</a></li><li><ol class=3D"sec=
+tion"><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/=
+zh-CN/rust-by-example/fn/methods.html" tabindex=3D"0"><strong aria-hidden=
+=3D"true">9.1.</strong> =E6=96=B9=E6=B3=95</a></li><li class=3D"chapter-ite=
+m expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/fn/closu=
+res.html" tabindex=3D"0"><strong aria-hidden=3D"true">9.2.</strong> =E9=97=
+=AD=E5=8C=85</a></li><li><ol class=3D"section"><li class=3D"chapter-item ex=
+panded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/fn/closures/=
+capture.html" tabindex=3D"0"><strong aria-hidden=3D"true">9.2.1.</strong> =
+=E6=8D=95=E8=8E=B7</a></li><li class=3D"chapter-item expanded "><a href=3D"=
+https://rustwiki.org/zh-CN/rust-by-example/fn/closures/input_parameters.htm=
+l" tabindex=3D"0"><strong aria-hidden=3D"true">9.2.2.</strong> =E4=BD=9C=E4=
+=B8=BA=E8=BE=93=E5=85=A5=E5=8F=82=E6=95=B0</a></li><li class=3D"chapter-ite=
+m expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/fn/closu=
+res/anonymity.html" tabindex=3D"0"><strong aria-hidden=3D"true">9.2.3.</str=
+ong> =E7=B1=BB=E5=9E=8B=E5=8C=BF=E5=90=8D</a></li><li class=3D"chapter-item=
+ expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/fn/closur=
+es/input_functions.html" tabindex=3D"0"><strong aria-hidden=3D"true">9.2.4.=
+</strong> =E8=BE=93=E5=85=A5=E5=87=BD=E6=95=B0</a></li><li class=3D"chapter=
+-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/fn/c=
+losures/output_parameters.html" tabindex=3D"0"><strong aria-hidden=3D"true"=
+>9.2.5.</strong> =E4=BD=9C=E4=B8=BA=E8=BE=93=E5=87=BA=E5=8F=82=E6=95=B0</a>=
+</li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/z=
+h-CN/rust-by-example/fn/closures/closure_examples.html" tabindex=3D"0"><str=
+ong aria-hidden=3D"true">9.2.6.</strong> std =E4=B8=AD=E7=9A=84=E4=BE=8B=E5=
+=AD=90</a></li><li><ol class=3D"section"><li class=3D"chapter-item expanded=
+ "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/fn/closures/closur=
+e_examples/iter_any.html" tabindex=3D"0"><strong aria-hidden=3D"true">9.2.6=
+.1.</strong> Iterator::any</a></li><li class=3D"chapter-item expanded "><a =
+href=3D"https://rustwiki.org/zh-CN/rust-by-example/fn/closures/closure_exam=
+ples/iter_find.html" tabindex=3D"0"><strong aria-hidden=3D"true">9.2.6.2.</=
+strong> Iterator::find</a></li></ol></li></ol></li><li class=3D"chapter-ite=
+m expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/fn/hof.h=
+tml" tabindex=3D"0"><strong aria-hidden=3D"true">9.3.</strong> =E9=AB=98=E9=
+=98=B6=E5=87=BD=E6=95=B0</a></li><li class=3D"chapter-item expanded "><a hr=
+ef=3D"https://rustwiki.org/zh-CN/rust-by-example/fn/diverging.html" tabinde=
+x=3D"0"><strong aria-hidden=3D"true">9.4.</strong> =E5=8F=91=E6=95=A3=E5=87=
+=BD=E6=95=B0</a></li></ol></li><li class=3D"chapter-item expanded "><a href=
+=3D"https://rustwiki.org/zh-CN/rust-by-example/mod.html" tabindex=3D"0"><st=
+rong aria-hidden=3D"true">10.</strong> =E6=A8=A1=E5=9D=97</a></li><li><ol c=
+lass=3D"section"><li class=3D"chapter-item expanded "><a href=3D"https://ru=
+stwiki.org/zh-CN/rust-by-example/mod/visibility.html" tabindex=3D"0"><stron=
+g aria-hidden=3D"true">10.1.</strong> =E5=8F=AF=E8=A7=81=E6=80=A7</a></li><=
+li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/r=
+ust-by-example/mod/struct_visibility.html" tabindex=3D"0"><strong aria-hidd=
+en=3D"true">10.2.</strong> =E7=BB=93=E6=9E=84=E4=BD=93=E7=9A=84=E5=8F=AF=E8=
+=A7=81=E6=80=A7</a></li><li class=3D"chapter-item expanded "><a href=3D"htt=
+ps://rustwiki.org/zh-CN/rust-by-example/mod/use.html" tabindex=3D"0"><stron=
+g aria-hidden=3D"true">10.3.</strong> use =E5=A3=B0=E6=98=8E</a></li><li cl=
+ass=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-b=
+y-example/mod/super.html" tabindex=3D"0"><strong aria-hidden=3D"true">10.4.=
+</strong> super =E5=92=8C self</a></li><li class=3D"chapter-item expanded "=
+><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/mod/split.html" tabi=
+ndex=3D"0"><strong aria-hidden=3D"true">10.5.</strong> =E6=96=87=E4=BB=B6=
+=E5=88=86=E5=B1=82</a></li></ol></li><li class=3D"chapter-item expanded "><=
+a href=3D"https://rustwiki.org/zh-CN/rust-by-example/crates.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">11.</strong> crate</a></li><li><ol clas=
+s=3D"section"><li class=3D"chapter-item expanded "><a href=3D"https://rustw=
+iki.org/zh-CN/rust-by-example/crates/lib.html" tabindex=3D"0"><strong aria-=
+hidden=3D"true">11.1.</strong> =E5=BA=93</a></li><li class=3D"chapter-item =
+expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/crates/usi=
+ng_lib.html" tabindex=3D"0"><strong aria-hidden=3D"true">11.2.</strong> =E4=
+=BD=BF=E7=94=A8=E5=BA=93</a></li></ol></li><li class=3D"chapter-item expand=
+ed "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/cargo.html" tabi=
+ndex=3D"0"><strong aria-hidden=3D"true">12.</strong> cargo</a></li><li><ol =
+class=3D"section"><li class=3D"chapter-item expanded "><a href=3D"https://r=
+ustwiki.org/zh-CN/rust-by-example/cargo/deps.html" tabindex=3D"0"><strong a=
+ria-hidden=3D"true">12.1.</strong> =E4=BE=9D=E8=B5=96</a></li><li class=3D"=
+chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-examp=
+le/cargo/conventions.html" tabindex=3D"0"><strong aria-hidden=3D"true">12.2=
+.</strong> =E7=BA=A6=E5=AE=9A=E8=A7=84=E8=8C=83</a></li><li class=3D"chapte=
+r-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/car=
+go/test.html" tabindex=3D"0"><strong aria-hidden=3D"true">12.3.</strong> =
+=E6=B5=8B=E8=AF=95</a></li><li class=3D"chapter-item expanded "><a href=3D"=
+https://rustwiki.org/zh-CN/rust-by-example/cargo/build_scripts.html" tabind=
+ex=3D"0"><strong aria-hidden=3D"true">12.4.</strong> =E6=9E=84=E5=BB=BA=E8=
+=84=9A=E6=9C=AC</a></li></ol></li><li class=3D"chapter-item expanded "><a h=
+ref=3D"https://rustwiki.org/zh-CN/rust-by-example/attribute.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">13.</strong> =E5=B1=9E=E6=80=A7</a></li=
+><li><ol class=3D"section"><li class=3D"chapter-item expanded "><a href=3D"=
+https://rustwiki.org/zh-CN/rust-by-example/attribute/unused.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">13.1.</strong> =E6=AD=BB=E4=BB=A3=E7=A0=
+=81 dead_code</a></li><li class=3D"chapter-item expanded "><a href=3D"https=
+://rustwiki.org/zh-CN/rust-by-example/attribute/crate.html" tabindex=3D"0">=
+<strong aria-hidden=3D"true">13.2.</strong> crate</a></li><li class=3D"chap=
+ter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/a=
+ttribute/cfg.html" tabindex=3D"0"><strong aria-hidden=3D"true">13.3.</stron=
+g> cfg</a></li><li><ol class=3D"section"><li class=3D"chapter-item expanded=
+ "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/attribute/cfg/cust=
+om.html" tabindex=3D"0"><strong aria-hidden=3D"true">13.3.1.</strong> =E8=
+=87=AA=E5=AE=9A=E4=B9=89=E6=9D=A1=E4=BB=B6</a></li></ol></li></ol></li><li =
+class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust=
+-by-example/generics.html" tabindex=3D"0"><strong aria-hidden=3D"true">14.<=
+/strong> =E6=B3=9B=E5=9E=8B</a></li><li><ol class=3D"section"><li class=3D"=
+chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-examp=
+le/generics/gen_fn.html" tabindex=3D"0"><strong aria-hidden=3D"true">14.1.<=
+/strong> =E5=87=BD=E6=95=B0</a></li><li class=3D"chapter-item expanded "><a=
+ href=3D"https://rustwiki.org/zh-CN/rust-by-example/generics/impl.html" tab=
+index=3D"0"><strong aria-hidden=3D"true">14.2.</strong> =E5=AE=9E=E7=8E=B0<=
+/a></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.or=
+g/zh-CN/rust-by-example/generics/gen_trait.html" tabindex=3D"0"><strong ari=
+a-hidden=3D"true">14.3.</strong> trait</a></li><li class=3D"chapter-item ex=
+panded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/generics/bou=
+nds.html" tabindex=3D"0"><strong aria-hidden=3D"true">14.4.</strong> =E7=BA=
+=A6=E6=9D=9F</a></li><li><ol class=3D"section"><li class=3D"chapter-item ex=
+panded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/generics/bou=
+nds/testcase_empty.html" tabindex=3D"0"><strong aria-hidden=3D"true">14.4.1=
+.</strong> =E6=B5=8B=E8=AF=95=E5=AE=9E=E4=BE=8B=EF=BC=9A=E7=A9=BA=E7=BA=A6=
+=E6=9D=9F</a></li></ol></li><li class=3D"chapter-item expanded "><a href=3D=
+"https://rustwiki.org/zh-CN/rust-by-example/generics/multi_bounds.html" tab=
+index=3D"0"><strong aria-hidden=3D"true">14.5.</strong> =E5=A4=9A=E9=87=8D=
+=E7=BA=A6=E6=9D=9F</a></li><li class=3D"chapter-item expanded "><a href=3D"=
+https://rustwiki.org/zh-CN/rust-by-example/generics/where.html" tabindex=3D=
+"0"><strong aria-hidden=3D"true">14.6.</strong> where =E5=AD=90=E5=8F=A5</a=
+></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/=
+zh-CN/rust-by-example/generics/new_types.html" tabindex=3D"0"><strong aria-=
+hidden=3D"true">14.7.</strong> newtype =E6=83=AF=E7=94=A8=E6=B3=95</a></li>=
+<li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/=
+rust-by-example/generics/assoc_items.html" tabindex=3D"0"><strong aria-hidd=
+en=3D"true">14.8.</strong> =E5=85=B3=E8=81=94=E9=A1=B9</a></li><li><ol clas=
+s=3D"section"><li class=3D"chapter-item expanded "><a href=3D"https://rustw=
+iki.org/zh-CN/rust-by-example/generics/assoc_items/the_problem.html" tabind=
+ex=3D"0"><strong aria-hidden=3D"true">14.8.1.</strong> =E5=AD=98=E5=9C=A8=
+=E9=97=AE=E9=A2=98</a></li><li class=3D"chapter-item expanded "><a href=3D"=
+https://rustwiki.org/zh-CN/rust-by-example/generics/assoc_items/types.html"=
+ tabindex=3D"0"><strong aria-hidden=3D"true">14.8.2.</strong> =E5=85=B3=E8=
+=81=94=E7=B1=BB=E5=9E=8B</a></li></ol></li><li class=3D"chapter-item expand=
+ed "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/generics/phantom=
+.html" tabindex=3D"0"><strong aria-hidden=3D"true">14.9.</strong> =E8=99=9A=
+=E7=B1=BB=E5=9E=8B=E5=8F=82=E6=95=B0</a></li><li><ol class=3D"section"><li =
+class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust=
+-by-example/generics/phantom/testcase_units.html" tabindex=3D"0"><strong ar=
+ia-hidden=3D"true">14.9.1.</strong> =E6=B5=8B=E8=AF=95=E5=AE=9E=E4=BE=8B=EF=
+=BC=9A=E5=8D=95=E4=BD=8D=E6=A3=80=E6=9F=A5</a></li></ol></li></ol></li><li =
+class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust=
+-by-example/scope.html" tabindex=3D"0"><strong aria-hidden=3D"true">15.</st=
+rong> =E4=BD=9C=E7=94=A8=E5=9F=9F=E8=A7=84=E5=88=99</a></li><li><ol class=
+=3D"section"><li class=3D"chapter-item expanded "><a href=3D"https://rustwi=
+ki.org/zh-CN/rust-by-example/scope/raii.html" tabindex=3D"0"><strong aria-h=
+idden=3D"true">15.1.</strong> RAII</a></li><li class=3D"chapter-item expand=
+ed "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/scope/move.html"=
+ tabindex=3D"0"><strong aria-hidden=3D"true">15.2.</strong> =E6=89=80=E6=9C=
+=89=E6=9D=83=E5=92=8C=E7=A7=BB=E5=8A=A8</a></li><li><ol class=3D"section"><=
+li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/r=
+ust-by-example/scope/move/mut.html" tabindex=3D"0"><strong aria-hidden=3D"t=
+rue">15.2.1.</strong> =E5=8F=AF=E5=8F=98=E6=80=A7</a></li><li class=3D"chap=
+ter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/s=
+cope/move/partial_move.html" tabindex=3D"0"><strong aria-hidden=3D"true">15=
+.2.2.</strong> =E9=83=A8=E5=88=86=E7=A7=BB=E5=8A=A8</a></li></ol></li><li c=
+lass=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-=
+by-example/scope/borrow.html" tabindex=3D"0"><strong aria-hidden=3D"true">1=
+5.3.</strong> =E5=80=9F=E7=94=A8</a></li><li><ol class=3D"section"><li clas=
+s=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-=
+example/scope/borrow/mut.html" tabindex=3D"0"><strong aria-hidden=3D"true">=
+15.3.1.</strong> =E5=8F=AF=E5=8F=98=E6=80=A7</a></li><li class=3D"chapter-i=
+tem expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/scope/=
+borrow/alias.html" tabindex=3D"0"><strong aria-hidden=3D"true">15.3.2.</str=
+ong> =E5=88=AB=E5=90=8D=E4=BD=BF=E7=94=A8</a></li><li class=3D"chapter-item=
+ expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/scope/bor=
+row/ref.html" tabindex=3D"0"><strong aria-hidden=3D"true">15.3.3.</strong> =
+ref =E6=A8=A1=E5=BC=8F</a></li></ol></li><li class=3D"chapter-item expanded=
+ "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/scope/lifetime.htm=
+l" tabindex=3D"0"><strong aria-hidden=3D"true">15.4.</strong> =E7=94=9F=E5=
+=91=BD=E5=91=A8=E6=9C=9F</a></li><li><ol class=3D"section"><li class=3D"cha=
+pter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/=
+scope/lifetime/explicit.html" tabindex=3D"0"><strong aria-hidden=3D"true">1=
+5.4.1.</strong> =E6=98=BE=E5=BC=8F=E6=A0=87=E6=B3=A8</a></li><li class=3D"c=
+hapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-exampl=
+e/scope/lifetime/fn.html" tabindex=3D"0"><strong aria-hidden=3D"true">15.4.=
+2.</strong> =E5=87=BD=E6=95=B0</a></li><li class=3D"chapter-item expanded "=
+><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/scope/lifetime/metho=
+ds.html" tabindex=3D"0"><strong aria-hidden=3D"true">15.4.3.</strong> =E6=
+=96=B9=E6=B3=95</a></li><li class=3D"chapter-item expanded "><a href=3D"htt=
+ps://rustwiki.org/zh-CN/rust-by-example/scope/lifetime/struct.html" tabinde=
+x=3D"0"><strong aria-hidden=3D"true">15.4.4.</strong> =E7=BB=93=E6=9E=84=E4=
+=BD=93</a></li><li class=3D"chapter-item expanded "><a href=3D"https://rust=
+wiki.org/zh-CN/rust-by-example/scope/lifetime/trait.html" tabindex=3D"0"><s=
+trong aria-hidden=3D"true">15.4.5.</strong> trait</a></li><li class=3D"chap=
+ter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/s=
+cope/lifetime/lifetime_bounds.html" tabindex=3D"0"><strong aria-hidden=3D"t=
+rue">15.4.6.</strong> =E7=BA=A6=E6=9D=9F</a></li><li class=3D"chapter-item =
+expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/scope/life=
+time/lifetime_coercion.html" tabindex=3D"0"><strong aria-hidden=3D"true">15=
+.4.7.</strong> =E5=BC=BA=E5=88=B6=E8=BD=AC=E6=8D=A2</a></li><li class=3D"ch=
+apter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example=
+/scope/lifetime/static_lifetime.html" tabindex=3D"0"><strong aria-hidden=3D=
+"true">15.4.8.</strong> static</a></li><li class=3D"chapter-item expanded "=
+><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/scope/lifetime/elisi=
+on.html" tabindex=3D"0"><strong aria-hidden=3D"true">15.4.9.</strong> =E7=
+=9C=81=E7=95=A5</a></li></ol></li></ol></li><li class=3D"chapter-item expan=
+ded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/trait.html" tab=
+index=3D"0"><strong aria-hidden=3D"true">16.</strong> =E7=89=B9=E8=B4=A8 tr=
+ait</a></li><li><ol class=3D"section"><li class=3D"chapter-item expanded ">=
+<a href=3D"https://rustwiki.org/zh-CN/rust-by-example/trait/derive.html" ta=
+bindex=3D"0"><strong aria-hidden=3D"true">16.1.</strong> =E6=B4=BE=E7=94=9F=
+</a></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.o=
+rg/zh-CN/rust-by-example/trait/dyn.html" tabindex=3D"0"><strong aria-hidden=
+=3D"true">16.2.</strong> =E4=BD=BF=E7=94=A8 dyn =E8=BF=94=E5=9B=9E trait</a=
+></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/=
+zh-CN/rust-by-example/trait/ops.html" tabindex=3D"0"><strong aria-hidden=3D=
+"true">16.3.</strong> =E8=BF=90=E7=AE=97=E7=AC=A6=E9=87=8D=E8=BD=BD</a></li=
+><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN=
+/rust-by-example/trait/drop.html" tabindex=3D"0"><strong aria-hidden=3D"tru=
+e">16.4.</strong> Drop</a></li><li class=3D"chapter-item expanded "><a href=
+=3D"https://rustwiki.org/zh-CN/rust-by-example/trait/iter.html" tabindex=3D=
+"0"><strong aria-hidden=3D"true">16.5.</strong> Iterator</a></li><li class=
+=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-e=
+xample/trait/impl_trait.html" tabindex=3D"0"><strong aria-hidden=3D"true">1=
+6.6.</strong> impl Trait</a></li><li class=3D"chapter-item expanded "><a hr=
+ef=3D"https://rustwiki.org/zh-CN/rust-by-example/trait/clone.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">16.7.</strong> Clone</a></li><li class=
+=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-e=
+xample/trait/supertraits.html" tabindex=3D"0"><strong aria-hidden=3D"true">=
+16.8.</strong> =E7=88=B6 trait</a></li><li class=3D"chapter-item expanded "=
+><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/trait/disambiguating=
+.html" tabindex=3D"0"><strong aria-hidden=3D"true">16.9.</strong> =E6=B6=88=
+=E9=99=A4=E9=87=8D=E5=8F=A0 trait</a></li></ol></li><li class=3D"chapter-it=
+em expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/macros.=
+html" tabindex=3D"0"><strong aria-hidden=3D"true">17.</strong> =E4=BD=BF=E7=
+=94=A8 macro_rules! =E6=9D=A5=E5=88=9B=E5=BB=BA=E5=AE=8F</a></li><li><ol cl=
+ass=3D"section"><li class=3D"chapter-item expanded "><a href=3D"https://rus=
+twiki.org/zh-CN/rust-by-example/macros/syntax.html" tabindex=3D"0"><strong =
+aria-hidden=3D"true">17.1.</strong> =E8=AF=AD=E6=B3=95</a></li><li><ol clas=
+s=3D"section"><li class=3D"chapter-item expanded "><a href=3D"https://rustw=
+iki.org/zh-CN/rust-by-example/macros/designators.html" tabindex=3D"0"><stro=
+ng aria-hidden=3D"true">17.1.1.</strong> =E6=8C=87=E7=A4=BA=E7=AC=A6</a></l=
+i><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-C=
+N/rust-by-example/macros/overload.html" tabindex=3D"0"><strong aria-hidden=
+=3D"true">17.1.2.</strong> =E9=87=8D=E8=BD=BD</a></li><li class=3D"chapter-=
+item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/macro=
+s/repeat.html" tabindex=3D"0"><strong aria-hidden=3D"true">17.1.3.</strong>=
+ =E9=87=8D=E5=A4=8D</a></li></ol></li><li class=3D"chapter-item expanded ">=
+<a href=3D"https://rustwiki.org/zh-CN/rust-by-example/macros/dry.html" tabi=
+ndex=3D"0"><strong aria-hidden=3D"true">17.2.</strong> DRY (=E4=B8=8D=E5=86=
+=99=E9=87=8D=E5=A4=8D=E4=BB=A3=E7=A0=81)</a></li><li class=3D"chapter-item =
+expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/macros/dsl=
+.html" tabindex=3D"0"><strong aria-hidden=3D"true">17.3.</strong> DSL (=E9=
+=A2=86=E5=9F=9F=E4=B8=93=E7=94=A8=E8=AF=AD=E8=A8=80)</a></li><li class=3D"c=
+hapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-exampl=
+e/macros/variadics.html" tabindex=3D"0"><strong aria-hidden=3D"true">17.4.<=
+/strong> =E5=8F=AF=E5=8F=98=E5=8F=82=E6=95=B0=E6=8E=A5=E5=8F=A3</a></li></o=
+l></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org=
+/zh-CN/rust-by-example/error.html" tabindex=3D"0"><strong aria-hidden=3D"tr=
+ue">18.</strong> =E9=94=99=E8=AF=AF=E5=A4=84=E7=90=86</a></li><li><ol class=
+=3D"section"><li class=3D"chapter-item expanded "><a href=3D"https://rustwi=
+ki.org/zh-CN/rust-by-example/error/panic.html" tabindex=3D"0"><strong aria-=
+hidden=3D"true">18.1.</strong> panic</a></li><li class=3D"chapter-item expa=
+nded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/error/option_u=
+nwrap.html" tabindex=3D"0"><strong aria-hidden=3D"true">18.2.</strong> Opti=
+on =E5=92=8C unwrap</a></li><li><ol class=3D"section"><li class=3D"chapter-=
+item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/error=
+/option_unwrap/question_mark.html" tabindex=3D"0"><strong aria-hidden=3D"tr=
+ue">18.2.1.</strong> =E4=BD=BF=E7=94=A8 ? =E8=A7=A3=E5=BC=80 Option</a></li=
+><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN=
+/rust-by-example/error/option_unwrap/map.html" tabindex=3D"0"><strong aria-=
+hidden=3D"true">18.2.2.</strong> =E7=BB=84=E5=90=88=E7=AE=97=E5=AD=90=EF=BC=
+=9Amap</a></li><li class=3D"chapter-item expanded "><a href=3D"https://rust=
+wiki.org/zh-CN/rust-by-example/error/option_unwrap/and_then.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">18.2.3.</strong> =E7=BB=84=E5=90=88=E7=
+=AE=97=E5=AD=90=EF=BC=9Aand_then</a></li></ol></li><li class=3D"chapter-ite=
+m expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/error/re=
+sult.html" tabindex=3D"0"><strong aria-hidden=3D"true">18.3.</strong> =E7=
+=BB=93=E6=9E=9C Result</a></li><li><ol class=3D"section"><li class=3D"chapt=
+er-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/er=
+ror/result/result_map.html" tabindex=3D"0"><strong aria-hidden=3D"true">18.=
+3.1.</strong> Result =E7=9A=84 map</a></li><li class=3D"chapter-item expand=
+ed "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/error/result/res=
+ult_alias.html" tabindex=3D"0"><strong aria-hidden=3D"true">18.3.2.</strong=
+> =E7=BB=99 Result =E5=8F=96=E5=88=AB=E5=90=8D</a></li><li class=3D"chapter=
+-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/erro=
+r/result/early_returns.html" tabindex=3D"0"><strong aria-hidden=3D"true">18=
+.3.3.</strong> =E6=8F=90=E5=89=8D=E8=BF=94=E5=9B=9E</a></li><li class=3D"ch=
+apter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example=
+/error/result/enter_question_mark.html" tabindex=3D"0"><strong aria-hidden=
+=3D"true">18.3.4.</strong> =E5=BC=95=E5=85=A5 ?</a></li></ol></li><li class=
+=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-e=
+xample/error/multiple_error_types.html" tabindex=3D"0"><strong aria-hidden=
+=3D"true">18.4.</strong> =E5=A4=84=E7=90=86=E5=A4=9A=E7=A7=8D=E9=94=99=E8=
+=AF=AF=E7=B1=BB=E5=9E=8B</a></li><li><ol class=3D"section"><li class=3D"cha=
+pter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/=
+error/multiple_error_types/option_result.html" tabindex=3D"0"><strong aria-=
+hidden=3D"true">18.4.1.</strong> =E4=BB=8E Option =E4=B8=AD=E5=8F=96=E5=87=
+=BA Result</a></li><li class=3D"chapter-item expanded "><a href=3D"https://=
+rustwiki.org/zh-CN/rust-by-example/error/multiple_error_types/define_error_=
+type.html" tabindex=3D"0"><strong aria-hidden=3D"true">18.4.2.</strong> =E5=
+=AE=9A=E4=B9=89=E4=B8=80=E7=A7=8D=E9=94=99=E8=AF=AF=E7=B1=BB=E5=9E=8B</a></=
+li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-=
+CN/rust-by-example/error/multiple_error_types/boxing_errors.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">18.4.3.</strong> =E6=8A=8A=E9=94=99=E8=
+=AF=AF =E2=80=9C=E8=A3=85=E7=AE=B1=E2=80=9D</a></li><li class=3D"chapter-it=
+em expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/error/m=
+ultiple_error_types/reenter_question_mark.html" tabindex=3D"0"><strong aria=
+-hidden=3D"true">18.4.4.</strong> ? =E7=9A=84=E5=85=B6=E4=BB=96=E7=94=A8=E6=
+=B3=95</a></li><li class=3D"chapter-item expanded "><a href=3D"https://rust=
+wiki.org/zh-CN/rust-by-example/error/multiple_error_types/wrap_error.html" =
+tabindex=3D"0"><strong aria-hidden=3D"true">18.4.5.</strong> =E5=8C=85=E8=
+=A3=B9=E9=94=99=E8=AF=AF</a></li></ol></li><li class=3D"chapter-item expand=
+ed "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/error/iter_resul=
+t.html" tabindex=3D"0"><strong aria-hidden=3D"true">18.5.</strong> =E9=81=
+=8D=E5=8E=86 Result</a></li></ol></li><li class=3D"chapter-item expanded ">=
+<a href=3D"https://rustwiki.org/zh-CN/rust-by-example/std.html" tabindex=3D=
+"0"><strong aria-hidden=3D"true">19.</strong> =E6=A0=87=E5=87=86=E5=BA=93=
+=E7=B1=BB=E5=9E=8B</a></li><li><ol class=3D"section"><li class=3D"chapter-i=
+tem expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/std/bo=
+x.html" tabindex=3D"0"><strong aria-hidden=3D"true">19.1.</strong> =E7=AE=
+=B1=E5=AD=90=E3=80=81=E6=A0=88=E5=92=8C=E5=A0=86</a></li><li class=3D"chapt=
+er-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/st=
+d/vec.html" tabindex=3D"0"><strong aria-hidden=3D"true">19.2.</strong> =E5=
+=8A=A8=E6=80=81=E6=95=B0=E7=BB=84 vector</a></li><li class=3D"chapter-item =
+expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/std/str.ht=
+ml" tabindex=3D"0"><strong aria-hidden=3D"true">19.3.</strong> =E5=AD=97=E7=
+=AC=A6=E4=B8=B2 String</a></li><li class=3D"chapter-item expanded "><a href=
+=3D"https://rustwiki.org/zh-CN/rust-by-example/std/option.html" class=3D"ac=
+tive" tabindex=3D"0"><strong aria-hidden=3D"true">19.4.</strong> =E9=80=89=
+=E9=A1=B9 Option</a></li><li class=3D"chapter-item expanded "><a href=3D"ht=
+tps://rustwiki.org/zh-CN/rust-by-example/std/result.html" tabindex=3D"0"><s=
+trong aria-hidden=3D"true">19.5.</strong> =E7=BB=93=E6=9E=9C Result</a></li=
+><li><ol class=3D"section"><li class=3D"chapter-item expanded "><a href=3D"=
+https://rustwiki.org/zh-CN/rust-by-example/std/result/question_mark.html" t=
+abindex=3D"0"><strong aria-hidden=3D"true">19.5.1.</strong> ? =E7=94=A8=E6=
+=B3=95</a></li></ol></li><li class=3D"chapter-item expanded "><a href=3D"ht=
+tps://rustwiki.org/zh-CN/rust-by-example/std/panic.html" tabindex=3D"0"><st=
+rong aria-hidden=3D"true">19.6.</strong> panic!</a></li><li class=3D"chapte=
+r-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/std=
+/hash.html" tabindex=3D"0"><strong aria-hidden=3D"true">19.7.</strong> =E6=
+=95=A3=E5=88=97=E8=A1=A8 HashMap</a></li><li><ol class=3D"section"><li clas=
+s=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-=
+example/std/hash/alt_key_types.html" tabindex=3D"0"><strong aria-hidden=3D"=
+true">19.7.1.</strong> =E6=9B=B4=E6=94=B9=E6=88=96=E8=87=AA=E5=AE=9A=E4=B9=
+=89=E5=85=B3=E9=94=AE=E5=AD=97=E7=B1=BB=E5=9E=8B</a></li><li class=3D"chapt=
+er-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/st=
+d/hash/hashset.html" tabindex=3D"0"><strong aria-hidden=3D"true">19.7.2.</s=
+trong> =E6=95=A3=E5=88=97=E9=9B=86 HashSet</a></li></ol></li><li class=3D"c=
+hapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-exampl=
+e/std/rc.html" tabindex=3D"0"><strong aria-hidden=3D"true">19.8.</strong> =
+=E5=BC=95=E7=94=A8=E8=AE=A1=E6=95=B0 Rc</a></li><li class=3D"chapter-item e=
+xpanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/std/arc.htm=
+l" tabindex=3D"0"><strong aria-hidden=3D"true">19.9.</strong> =E5=85=B1=E4=
+=BA=AB=E5=BC=95=E7=94=A8=E8=AE=A1=E6=95=B0 Arc</a></li></ol></li><li class=
+=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-e=
+xample/std_misc.html" tabindex=3D"0"><strong aria-hidden=3D"true">20.</stro=
+ng> =E6=A0=87=E5=87=86=E5=BA=93=E6=9B=B4=E5=A4=9A=E4=BB=8B=E7=BB=8D</a></li=
+><li><ol class=3D"section"><li class=3D"chapter-item expanded "><a href=3D"=
+https://rustwiki.org/zh-CN/rust-by-example/std_misc/threads.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">20.1.</strong> =E7=BA=BF=E7=A8=8B</a></=
+li><li><ol class=3D"section"><li class=3D"chapter-item expanded "><a href=
+=3D"https://rustwiki.org/zh-CN/rust-by-example/std_misc/threads/testcase_ma=
+preduce.html" tabindex=3D"0"><strong aria-hidden=3D"true">20.1.1.</strong> =
+=E6=B5=8B=E8=AF=95=E5=AE=9E=E4=BE=8B=EF=BC=9Amap-reduce</a></li></ol></li><=
+li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/r=
+ust-by-example/std_misc/channels.html" tabindex=3D"0"><strong aria-hidden=
+=3D"true">20.2.</strong> =E9=80=9A=E9=81=93</a></li><li class=3D"chapter-it=
+em expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/std_mis=
+c/path.html" tabindex=3D"0"><strong aria-hidden=3D"true">20.3.</strong> =E8=
+=B7=AF=E5=BE=84</a></li><li class=3D"chapter-item expanded "><a href=3D"htt=
+ps://rustwiki.org/zh-CN/rust-by-example/std_misc/file.html" tabindex=3D"0">=
+<strong aria-hidden=3D"true">20.4.</strong> =E6=96=87=E4=BB=B6=E8=BE=93=E5=
+=85=A5=E8=BE=93=E5=87=BA=EF=BC=88I/O=EF=BC=89</a></li><li><ol class=3D"sect=
+ion"><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/z=
+h-CN/rust-by-example/std_misc/file/open.html" tabindex=3D"0"><strong aria-h=
+idden=3D"true">20.4.1.</strong> =E6=89=93=E5=BC=80=E6=96=87=E4=BB=B6 open</=
+a></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org=
+/zh-CN/rust-by-example/std_misc/file/create.html" tabindex=3D"0"><strong ar=
+ia-hidden=3D"true">20.4.2.</strong> =E5=88=9B=E5=BB=BA=E6=96=87=E4=BB=B6 cr=
+eate</a></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwi=
+ki.org/zh-CN/rust-by-example/std_misc/file/read_lines.html" tabindex=3D"0">=
+<strong aria-hidden=3D"true">20.4.3.</strong> =E8=AF=BB=E5=8F=96=E8=A1=8C r=
+ead lines</a></li></ol></li><li class=3D"chapter-item expanded "><a href=3D=
+"https://rustwiki.org/zh-CN/rust-by-example/std_misc/process.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">20.5.</strong> =E5=AD=90=E8=BF=9B=E7=A8=
+=8B</a></li><li><ol class=3D"section"><li class=3D"chapter-item expanded ">=
+<a href=3D"https://rustwiki.org/zh-CN/rust-by-example/std_misc/process/pipe=
+.html" tabindex=3D"0"><strong aria-hidden=3D"true">20.5.1.</strong> =E7=AE=
+=A1=E9=81=93</a></li><li class=3D"chapter-item expanded "><a href=3D"https:=
+//rustwiki.org/zh-CN/rust-by-example/std_misc/process/wait.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">20.5.2.</strong> =E7=AD=89=E5=BE=85</a>=
+</li></ol></li><li class=3D"chapter-item expanded "><a href=3D"https://rust=
+wiki.org/zh-CN/rust-by-example/std_misc/fs.html" tabindex=3D"0"><strong ari=
+a-hidden=3D"true">20.6.</strong> =E6=96=87=E4=BB=B6=E7=B3=BB=E7=BB=9F=E6=93=
+=8D=E4=BD=9C</a></li><li class=3D"chapter-item expanded "><a href=3D"https:=
+//rustwiki.org/zh-CN/rust-by-example/std_misc/arg.html" tabindex=3D"0"><str=
+ong aria-hidden=3D"true">20.7.</strong> =E7=A8=8B=E5=BA=8F=E5=8F=82=E6=95=
+=B0</a></li><li><ol class=3D"section"><li class=3D"chapter-item expanded ">=
+<a href=3D"https://rustwiki.org/zh-CN/rust-by-example/std_misc/arg/matching=
+.html" tabindex=3D"0"><strong aria-hidden=3D"true">20.7.1.</strong> =E5=8F=
+=82=E6=95=B0=E8=A7=A3=E6=9E=90</a></li></ol></li><li class=3D"chapter-item =
+expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-example/std_misc/f=
+fi.html" tabindex=3D"0"><strong aria-hidden=3D"true">20.8.</strong> =E5=A4=
+=96=E9=83=A8=E8=AF=AD=E8=A8=80=E5=87=BD=E6=95=B0=E6=8E=A5=E5=8F=A3</a></li>=
+</ol></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.=
+org/zh-CN/rust-by-example/testing.html" tabindex=3D"0"><strong aria-hidden=
+=3D"true">21.</strong> =E6=B5=8B=E8=AF=95</a></li><li><ol class=3D"section"=
+><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN=
+/rust-by-example/testing/unit_testing.html" tabindex=3D"0"><strong aria-hid=
+den=3D"true">21.1.</strong> =E5=8D=95=E5=85=83=E6=B5=8B=E8=AF=95</a></li><l=
+i class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/ru=
+st-by-example/testing/doc_testing.html" tabindex=3D"0"><strong aria-hidden=
+=3D"true">21.2.</strong> =E6=96=87=E6=A1=A3=E6=B5=8B=E8=AF=95</a></li><li c=
+lass=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-=
+by-example/testing/integration_testing.html" tabindex=3D"0"><strong aria-hi=
+dden=3D"true">21.3.</strong> =E9=9B=86=E6=88=90=E6=B5=8B=E8=AF=95</a></li><=
+li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/r=
+ust-by-example/testing/dev_dependencies.html" tabindex=3D"0"><strong aria-h=
+idden=3D"true">21.4.</strong> =E5=BC=80=E5=8F=91=E4=BE=9D=E8=B5=96</a></li>=
+</ol></li><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.=
+org/zh-CN/rust-by-example/unsafe.html" tabindex=3D"0"><strong aria-hidden=
+=3D"true">22.</strong> =E4=B8=8D=E5=AE=89=E5=85=A8=E6=93=8D=E4=BD=9C</a></l=
+i><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-C=
+N/rust-by-example/compatibility.html" tabindex=3D"0"><strong aria-hidden=3D=
+"true">23.</strong> =E5=85=BC=E5=AE=B9=E6=80=A7</a></li><li><ol class=3D"se=
+ction"><li class=3D"chapter-item expanded "><a href=3D"https://rustwiki.org=
+/zh-CN/rust-by-example/compatibility/raw_identifiers.html" tabindex=3D"0"><=
+strong aria-hidden=3D"true">23.1.</strong> =E5=8E=9F=E5=A7=8B=E6=A0=87=E5=
+=BF=97=E7=AC=A6</a></li></ol></li><li class=3D"chapter-item expanded "><a h=
+ref=3D"https://rustwiki.org/zh-CN/rust-by-example/meta.html" tabindex=3D"0"=
+><strong aria-hidden=3D"true">24.</strong> =E8=A1=A5=E5=85=85</a></li><li><=
+ol class=3D"section"><li class=3D"chapter-item expanded "><a href=3D"https:=
+//rustwiki.org/zh-CN/rust-by-example/meta/doc.html" tabindex=3D"0"><strong =
+aria-hidden=3D"true">24.1.</strong> =E6=96=87=E6=A1=A3</a></li><li class=3D=
+"chapter-item expanded "><a href=3D"https://rustwiki.org/zh-CN/rust-by-exam=
+ple/meta/playpen.html" tabindex=3D"0"><strong aria-hidden=3D"true">24.2.</s=
+trong> Playpen</a></li></ol></li></ol>
+            </div>
+            <div id=3D"sidebar-resize-handle" class=3D"sidebar-resize-handl=
+e"></div>
+        </nav>
+
+        <div id=3D"page-wrapper" class=3D"page-wrapper">
+
+            <div class=3D"page">
+                                <div id=3D"menu-bar-hover-placeholder"></di=
+v>
+                <div id=3D"menu-bar" class=3D"menu-bar" style=3D"top: 0px;"=
+>
+                    <div class=3D"left-buttons">
+                        <button id=3D"sidebar-toggle" class=3D"icon-button"=
+ type=3D"button" title=3D"Toggle Table of Contents" aria-label=3D"Toggle Ta=
+ble of Contents" aria-controls=3D"sidebar" aria-expanded=3D"true">
+                            <i class=3D"fa fa-bars"></i>
+                        </button>
+                        <button id=3D"theme-toggle" class=3D"icon-button" t=
+ype=3D"button" title=3D"Change theme" aria-label=3D"Change theme" aria-hasp=
+opup=3D"true" aria-expanded=3D"false" aria-controls=3D"theme-list">
+                            <i class=3D"fa fa-paint-brush"></i>
+                        </button>
+                        <ul id=3D"theme-list" class=3D"theme-popup" aria-la=
+bel=3D"Themes" role=3D"menu">
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"light">Light (default)</button></li>
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"rust">Rust</button></li>
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"coal">Coal</button></li>
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"navy">Navy</button></li>
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"ayu">Ayu</button></li>
+                        </ul>
+                        <button id=3D"search-toggle" class=3D"icon-button" =
+type=3D"button" title=3D"Search. (Shortkey: s)" aria-label=3D"Toggle Search=
+bar" aria-expanded=3D"false" aria-keyshortcuts=3D"S" aria-controls=3D"searc=
+hbar">
+                            <i class=3D"fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class=3D"menu-title">=E9=80=9A=E8=BF=87=E4=BE=8B=E5=
+=AD=90=E5=AD=A6 Rust =E4=B8=AD=E6=96=87=E7=89=88</h1>
+
+                    <div class=3D"right-buttons"><a href=3D"https://rustwik=
+i.org/" title=3D"=E9=A6=96=E9=A1=B5" aria-label=3D"=E9=A6=96=E9=A1=B5"><i i=
+d=3D"go-back-homepage" class=3D"fa fa-home"></i></a>
+                        <a href=3D"https://rustwiki.org/zh-CN/rust-by-examp=
+le/print.html" title=3D"Print this book" aria-label=3D"Print this book">
+                            <i id=3D"print-button" class=3D"fa fa-print"></=
+i>
+                        </a>
+                        <a href=3D"https://github.com/rust-lang-cn/rust-by-=
+example-cn" title=3D"Git repository" aria-label=3D"Git repository">
+                            <i id=3D"git-repository-button" class=3D"fa fa-=
+github"></i>
+                        </a>
+                        <a href=3D"https://github.com/rust-lang-cn/rust-by-=
+example-cn/edit/master/src/std/option.md" title=3D"=E6=8A=A5=E5=91=8A=E9=94=
+=99=E8=AF=AF=E6=88=96=E6=94=B9=E8=BF=9B=E6=9C=AC=E9=A1=B5=E7=BF=BB=E8=AF=91=
+" aria-label=3D"Suggest an edit" target=3D"_blank">
+                            <i id=3D"git-edit-button" class=3D"fa fa-edit">=
+</i>
+                        </a>
+
+                    <a href=3D"https://rustwiki.org/en/rust-by-example/std/=
+option.html" title=3D"=E5=88=87=E6=8D=A2=E5=88=B0=E8=8B=B1=E8=AF=AD" aria-l=
+abel=3D"=E5=88=87=E6=8D=A2=E5=88=B0=E8=8B=B1=E8=AF=AD"><i id=3D"change-lang=
+uage-button" class=3D"fa fa-language"> English</i></a></div>
+                </div>
+
+                <div id=3D"search-wrapper" class=3D"hidden">
+                    <form id=3D"searchbar-outer" class=3D"searchbar-outer">
+                        <input type=3D"search" id=3D"searchbar" name=3D"sea=
+rchbar" placeholder=3D"Search this book ..." aria-controls=3D"searchresults=
+-outer" aria-describedby=3D"searchresults-header">
+                    </form>
+                    <div id=3D"searchresults-outer" class=3D"searchresults-=
+outer hidden">
+                        <div id=3D"searchresults-header" class=3D"searchres=
+ults-header"></div>
+                        <ul id=3D"searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sideba=
+r toggle button are added to the DOM -->
+               =20
+
+                <div id=3D"content" class=3D"content">
+                    <main>
+                        <h1 id=3D"=E9=80=89=E9=A1=B9-option"><a class=3D"he=
+ader" href=3D"https://rustwiki.org/zh-CN/rust-by-example/std/option.html#%E=
+9%80%89%E9%A1%B9-option">=E9=80=89=E9=A1=B9 <code>Option</code></a></h1>
+<p>=E6=9C=89=E6=97=B6=E5=80=99=E6=83=B3=E8=A6=81=E6=8D=95=E6=8D=89=E5=88=B0=
+=E7=A8=8B=E5=BA=8F=E6=9F=90=E9=83=A8=E5=88=86=E7=9A=84=E5=A4=B1=E8=B4=A5=E4=
+=BF=A1=E6=81=AF=EF=BC=8C=E8=80=8C=E4=B8=8D=E6=98=AF=E8=B0=83=E7=94=A8 <code=
+ class=3D"hljs">panic!</code>=EF=BC=9B=E8=BF=99=E5=8F=AF=E4=BD=BF=E7=94=A8 =
+<code class=3D"hljs">Option</code>
+=E6=9E=9A=E4=B8=BE=E7=B1=BB=E5=9E=8B=E6=9D=A5=E5=AE=9E=E7=8E=B0=E3=80=82</p=
+>
+<p><code class=3D"hljs">Option&lt;T&gt;</code> =E6=9C=89=E4=B8=A4=E4=B8=AA=
+=E5=8F=98=E9=87=8F=EF=BC=9A</p>
+<ul>
+<li><code class=3D"hljs">None</code>=EF=BC=8C=E8=A1=A8=E6=98=8E=E5=A4=B1=E8=
+=B4=A5=E6=88=96=E7=BC=BA=E5=B0=91=E5=80=BC</li>
+<li><code class=3D"hljs">Some(value)</code>=EF=BC=8C=E5=85=83=E7=BB=84=E7=
+=BB=93=E6=9E=84=E4=BD=93=EF=BC=8C=E5=B0=81=E8=A3=85=E4=BA=86=E4=B8=80=E4=B8=
+=AA <code class=3D"hljs">T</code> =E7=B1=BB=E5=9E=8B=E7=9A=84=E5=80=BC <cod=
+e class=3D"hljs">value</code></li>
+</ul>
+<pre><pre class=3D"playground"><div class=3D"buttons"><button class=3D"fa f=
+a-history reset-button" title=3D"Undo changes" aria-label=3D"Undo changes">=
+</button><button class=3D"fa fa-copy clip-button" title=3D"Copy to clipboar=
+d" aria-label=3D"Copy to clipboard"><i class=3D"tooltiptext"></i></button><=
+/div><code class=3D"editable ignore mdbook-runnable edition2021 ace_editor =
+hljs ace-dawn" style=3D"font-size: 0.875em; height: 702px;"><textarea class=
+=3D"ace_text-input" wrap=3D"off" autocorrect=3D"off" autocapitalize=3D"off"=
+ spellcheck=3D"false" style=3D"opacity: 0; font-size: 1px; height: 1px; wid=
+th: 1px; top: 18px; left: 4px;"></textarea><div class=3D"ace_gutter" aria-h=
+idden=3D"true" style=3D"display: none; left: 0px; width: 33px;"><div class=
+=3D"ace_layer ace_gutter-layer ace_folding-enabled" style=3D"height: 1e+06p=
+x; top: 0px; left: 0px; width: 33px;"><div class=3D"ace_gutter-cell ace_gut=
+ter-active-line " style=3D"height: 18px; top: 0px;"><span style=3D"display:=
+ none;"></span></div><div class=3D"ace_gutter-cell " style=3D"height: 18px;=
+ top: 18px;"><span class=3D"ace_fold-widget ace_start ace_open" style=3D"he=
+ight: 18px; display: inline-block;"></span></div><div class=3D"ace_gutter-c=
+ell " style=3D"height: 18px; top: 36px;"><span class=3D"ace_fold-widget ace=
+_start ace_open" style=3D"height: 18px; display: inline-block;"></span></di=
+v><div class=3D"ace_gutter-cell " style=3D"height: 18px; top: 54px;"><span =
+style=3D"display: none;"></span></div><div class=3D"ace_gutter-cell " style=
+=3D"height: 18px; top: 72px;"><span style=3D"display: none;"></span></div><=
+div class=3D"ace_gutter-cell " style=3D"height: 18px; top: 90px;"><span cla=
+ss=3D"ace_fold-widget ace_start ace_open" style=3D"height: 18px; display: i=
+nline-block;"></span></div><div class=3D"ace_gutter-cell " style=3D"height:=
+ 18px; top: 108px;"><span style=3D"display: none;"></span></div><div class=
+=3D"ace_gutter-cell " style=3D"height: 18px; top: 126px;"><span style=3D"di=
+splay: none;"></span></div><div class=3D"ace_gutter-cell " style=3D"height:=
+ 18px; top: 144px;"><span style=3D"display: none;"></span></div><div class=
+=3D"ace_gutter-cell " style=3D"height: 18px; top: 162px;"><span style=3D"di=
+splay: none;"></span></div><div class=3D"ace_gutter-cell " style=3D"height:=
+ 18px; top: 180px;"><span style=3D"display: none;"></span></div><div class=
+=3D"ace_gutter-cell " style=3D"height: 18px; top: 198px;"><span style=3D"di=
+splay: none;"></span></div><div class=3D"ace_gutter-cell " style=3D"height:=
+ 18px; top: 216px;"><span class=3D"ace_fold-widget ace_start ace_open" styl=
+e=3D"height: 18px; display: inline-block;"></span></div><div class=3D"ace_g=
+utter-cell " style=3D"height: 18px; top: 234px;"><span style=3D"display: no=
+ne;"></span></div><div class=3D"ace_gutter-cell " style=3D"height: 18px; to=
+p: 252px;"><span class=3D"ace_fold-widget ace_start ace_open" style=3D"heig=
+ht: 18px; display: inline-block;"></span></div><div class=3D"ace_gutter-cel=
+l " style=3D"height: 18px; top: 270px;"><span style=3D"display: none;"></sp=
+an></div><div class=3D"ace_gutter-cell " style=3D"height: 18px; top: 288px;=
+"><span class=3D"ace_fold-widget ace_start ace_open" style=3D"height: 18px;=
+ display: inline-block;"></span></div><div class=3D"ace_gutter-cell " style=
+=3D"height: 18px; top: 306px;"><span style=3D"display: none;"></span></div>=
+<div class=3D"ace_gutter-cell " style=3D"height: 18px; top: 324px;"><span s=
+tyle=3D"display: none;"></span></div><div class=3D"ace_gutter-cell " style=
+=3D"height: 18px; top: 342px;"><span style=3D"display: none;"></span></div>=
+<div class=3D"ace_gutter-cell " style=3D"height: 18px; top: 360px;"><span s=
+tyle=3D"display: none;"></span></div><div class=3D"ace_gutter-cell " style=
+=3D"height: 18px; top: 378px;"><span style=3D"display: none;"></span></div>=
+<div class=3D"ace_gutter-cell " style=3D"height: 18px; top: 396px;"><span c=
+lass=3D"ace_fold-widget ace_start ace_open" style=3D"height: 18px; display:=
+ inline-block;"></span></div><div class=3D"ace_gutter-cell " style=3D"heigh=
+t: 18px; top: 414px;"><span style=3D"display: none;"></span></div><div clas=
+s=3D"ace_gutter-cell " style=3D"height: 18px; top: 432px;"><span style=3D"d=
+isplay: none;"></span></div><div class=3D"ace_gutter-cell " style=3D"height=
+: 18px; top: 450px;"><span style=3D"display: none;"></span></div><div class=
+=3D"ace_gutter-cell " style=3D"height: 18px; top: 468px;"><span style=3D"di=
+splay: none;"></span></div><div class=3D"ace_gutter-cell " style=3D"height:=
+ 18px; top: 486px;"><span style=3D"display: none;"></span></div><div class=
+=3D"ace_gutter-cell " style=3D"height: 18px; top: 504px;"><span style=3D"di=
+splay: none;"></span></div><div class=3D"ace_gutter-cell " style=3D"height:=
+ 18px; top: 522px;"><span style=3D"display: none;"></span></div><div class=
+=3D"ace_gutter-cell " style=3D"height: 18px; top: 540px;"><span style=3D"di=
+splay: none;"></span></div><div class=3D"ace_gutter-cell " style=3D"height:=
+ 18px; top: 558px;"><span style=3D"display: none;"></span></div><div class=
+=3D"ace_gutter-cell " style=3D"height: 18px; top: 576px;"><span style=3D"di=
+splay: none;"></span></div><div class=3D"ace_gutter-cell " style=3D"height:=
+ 18px; top: 594px;"><span style=3D"display: none;"></span></div><div class=
+=3D"ace_gutter-cell " style=3D"height: 18px; top: 612px;"><span style=3D"di=
+splay: none;"></span></div><div class=3D"ace_gutter-cell " style=3D"height:=
+ 18px; top: 630px;"><span style=3D"display: none;"></span></div><div class=
+=3D"ace_gutter-cell " style=3D"height: 18px; top: 648px;"><span style=3D"di=
+splay: none;"></span></div><div class=3D"ace_gutter-cell " style=3D"height:=
+ 18px; top: 666px;"><span style=3D"display: none;"></span></div><div class=
+=3D"ace_gutter-cell " style=3D"height: 18px; top: 684px;"><span style=3D"di=
+splay: none;"></span></div></div></div><div class=3D"ace_scroller" style=3D=
+"left: 0px; right: 0px; bottom: 0px;"><div class=3D"ace_content" style=3D"t=
+op: 0px; left: 0px; width: 750px; height: 738px;"><div class=3D"ace_layer a=
+ce_print-margin-layer"><div class=3D"ace_print-margin" style=3D"left: 676px=
+; visibility: hidden;"></div></div><div class=3D"ace_layer ace_marker-layer=
+"></div><div class=3D"ace_layer ace_text-layer" style=3D"height: 1e+06px; m=
+argin: 0px 4px; top: 0px; left: 0px;"><div class=3D"ace_line" style=3D"heig=
+ht: 18px; top: 0px;"><span class=3D"ace_comment ace_line ace_double-dash ac=
+e_source ace_rust">// <span class=3D"ace_cjk" style=3D"width: 16.8px;">=E4=
+=B8=8D</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E4=BC=9A</sp=
+an> `panic!` <span class=3D"ace_cjk" style=3D"width: 16.8px;">=E7=9A=84</sp=
+an><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E6=95=B4</span><span c=
+lass=3D"ace_cjk" style=3D"width: 16.8px;">=E6=95=B0</span><span class=3D"ac=
+e_cjk" style=3D"width: 16.8px;">=E9=99=A4</span><span class=3D"ace_cjk" sty=
+le=3D"width: 16.8px;">=E6=B3=95</span><span class=3D"ace_cjk" style=3D"widt=
+h: 16.8px;">=E3=80=82</span></span></div><div class=3D"ace_line" style=3D"h=
+eight: 18px; top: 18px;"><span class=3D"ace_keyword ace_source ace_rust">fn=
+</span> <span class=3D"ace_entity ace_name ace_function ace_source ace_rust=
+">checked_division</span><span class=3D"ace_paren ace_lparen">(</span>divid=
+end<span class=3D"ace_punctuation ace_operator">:</span> <span class=3D"ace=
+_storage ace_type ace_source ace_rust">i32</span><span class=3D"ace_punctua=
+tion ace_operator">,</span> divisor<span class=3D"ace_punctuation ace_opera=
+tor">:</span> <span class=3D"ace_storage ace_type ace_source ace_rust">i32<=
+/span><span class=3D"ace_paren ace_rparen">)</span> <span class=3D"ace_keyw=
+ord ace_operator">-&gt;</span> Option<span class=3D"ace_keyword ace_operato=
+r">&lt;</span><span class=3D"ace_storage ace_type ace_source ace_rust">i32<=
+/span><span class=3D"ace_keyword ace_operator">&gt;</span> <span class=3D"a=
+ce_paren ace_lparen">{</span></div><div class=3D"ace_line" style=3D"height:=
+ 18px; top: 36px;">    <span class=3D"ace_keyword ace_source ace_rust">if</=
+span> divisor <span class=3D"ace_keyword ace_operator">=3D=3D</span> <span =
+class=3D"ace_constant ace_numeric ace_source ace_rust">0</span> <span class=
+=3D"ace_paren ace_lparen">{</span></div><div class=3D"ace_line" style=3D"he=
+ight: 18px; top: 54px;"><span class=3D"ace_indent-guide">    </span>    <sp=
+an class=3D"ace_comment ace_line ace_double-dash ace_source ace_rust">// <s=
+pan class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=A4=B1</span><span class=
+=3D"ace_cjk" style=3D"width: 16.8px;">=E8=B4=A5</span><span class=3D"ace_cj=
+k" style=3D"width: 16.8px;">=E8=A1=A8</span><span class=3D"ace_cjk" style=
+=3D"width: 16.8px;">=E7=A4=BA</span><span class=3D"ace_cjk" style=3D"width:=
+ 16.8px;">=E6=88=90</span> `None` <span class=3D"ace_cjk" style=3D"width: 1=
+6.8px;">=E5=8F=96</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=
+=E5=80=BC</span></span></div><div class=3D"ace_line" style=3D"height: 18px;=
+ top: 72px;"><span class=3D"ace_indent-guide">    </span>    <span class=3D=
+"ace_constant ace_language ace_source ace_rust">None</span></div><div class=
+=3D"ace_line" style=3D"height: 18px; top: 90px;">    <span class=3D"ace_par=
+en ace_rparen">}</span> <span class=3D"ace_keyword ace_source ace_rust">els=
+e</span> <span class=3D"ace_paren ace_lparen">{</span></div><div class=3D"a=
+ce_line" style=3D"height: 18px; top: 108px;"><span class=3D"ace_indent-guid=
+e">    </span>    <span class=3D"ace_comment ace_line ace_double-dash ace_s=
+ource ace_rust">// <span class=3D"ace_cjk" style=3D"width: 16.8px;">=E7=BB=
+=93</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E6=9E=9C</span>=
+ Result <span class=3D"ace_cjk" style=3D"width: 16.8px;">=E8=A2=AB</span><s=
+pan class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=8C=85</span><span class=
+=3D"ace_cjk" style=3D"width: 16.8px;">=E8=A3=85</span><span class=3D"ace_cj=
+k" style=3D"width: 16.8px;">=E5=88=B0</span> `Some` <span class=3D"ace_cjk"=
+ style=3D"width: 16.8px;">=E5=8F=96</span><span class=3D"ace_cjk" style=3D"=
+width: 16.8px;">=E5=80=BC</span><span class=3D"ace_cjk" style=3D"width: 16.=
+8px;">=E4=B8=AD</span></span></div><div class=3D"ace_line" style=3D"height:=
+ 18px; top: 126px;"><span class=3D"ace_indent-guide">    </span>    <span c=
+lass=3D"ace_constant ace_language ace_source ace_rust">Some</span><span cla=
+ss=3D"ace_paren ace_lparen">(</span>dividend <span class=3D"ace_keyword ace=
+_operator">/</span> divisor<span class=3D"ace_paren ace_rparen">)</span></d=
+iv><div class=3D"ace_line" style=3D"height: 18px; top: 144px;">    <span cl=
+ass=3D"ace_paren ace_rparen">}</span></div><div class=3D"ace_line" style=3D=
+"height: 18px; top: 162px;"><span class=3D"ace_paren ace_rparen">}</span></=
+div><div class=3D"ace_line" style=3D"height: 18px; top: 180px;"></div><div =
+class=3D"ace_line" style=3D"height: 18px; top: 198px;"><span class=3D"ace_c=
+omment ace_line ace_double-dash ace_source ace_rust">// <span class=3D"ace_=
+cjk" style=3D"width: 16.8px;">=E6=AD=A4</span><span class=3D"ace_cjk" style=
+=3D"width: 16.8px;">=E5=87=BD</span><span class=3D"ace_cjk" style=3D"width:=
+ 16.8px;">=E6=95=B0</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=
+=E5=A4=84</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E7=90=86<=
+/span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=8F=AF</span><spa=
+n class=3D"ace_cjk" style=3D"width: 16.8px;">=E8=83=BD</span><span class=3D=
+"ace_cjk" style=3D"width: 16.8px;">=E5=A4=B1</span><span class=3D"ace_cjk" =
+style=3D"width: 16.8px;">=E8=B4=A5</span><span class=3D"ace_cjk" style=3D"w=
+idth: 16.8px;">=E7=9A=84</span><span class=3D"ace_cjk" style=3D"width: 16.8=
+px;">=E9=99=A4</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E6=
+=B3=95</span></span></div><div class=3D"ace_line" style=3D"height: 18px; to=
+p: 216px;"><span class=3D"ace_keyword ace_source ace_rust">fn</span> <span =
+class=3D"ace_entity ace_name ace_function ace_source ace_rust">try_division=
+</span><span class=3D"ace_paren ace_lparen">(</span>dividend<span class=3D"=
+ace_punctuation ace_operator">:</span> <span class=3D"ace_storage ace_type =
+ace_source ace_rust">i32</span><span class=3D"ace_punctuation ace_operator"=
+>,</span> divisor<span class=3D"ace_punctuation ace_operator">:</span> <spa=
+n class=3D"ace_storage ace_type ace_source ace_rust">i32</span><span class=
+=3D"ace_paren ace_rparen">)</span> <span class=3D"ace_paren ace_lparen">{</=
+span></div><div class=3D"ace_line" style=3D"height: 18px; top: 234px;">    =
+<span class=3D"ace_comment ace_line ace_double-dash ace_source ace_rust">//=
+ `Option` <span class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=80=BC</span>=
+<span class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=8F=AF</span><span clas=
+s=3D"ace_cjk" style=3D"width: 16.8px;">=E4=BB=A5</span><span class=3D"ace_c=
+jk" style=3D"width: 16.8px;">=E8=BF=9B</span><span class=3D"ace_cjk" style=
+=3D"width: 16.8px;">=E8=A1=8C</span><span class=3D"ace_cjk" style=3D"width:=
+ 16.8px;">=E6=A8=A1</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=
+=E5=BC=8F</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=8C=B9<=
+/span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E9=85=8D</span><spa=
+n class=3D"ace_cjk" style=3D"width: 16.8px;">=EF=BC=8C</span><span class=3D=
+"ace_cjk" style=3D"width: 16.8px;">=E5=B0=B1</span><span class=3D"ace_cjk" =
+style=3D"width: 16.8px;">=E5=92=8C</span><span class=3D"ace_cjk" style=3D"w=
+idth: 16.8px;">=E5=85=B6</span><span class=3D"ace_cjk" style=3D"width: 16.8=
+px;">=E4=BB=96</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E6=
+=9E=9A</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E4=B8=BE</sp=
+an><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E7=B1=BB</span><span c=
+lass=3D"ace_cjk" style=3D"width: 16.8px;">=E5=9E=8B</span><span class=3D"ac=
+e_cjk" style=3D"width: 16.8px;">=E4=B8=80</span><span class=3D"ace_cjk" sty=
+le=3D"width: 16.8px;">=E6=A0=B7</span></span></div><div class=3D"ace_line" =
+style=3D"height: 18px; top: 252px;">    <span class=3D"ace_keyword ace_sour=
+ce ace_rust">match</span> checked_division<span class=3D"ace_paren ace_lpar=
+en">(</span>dividend<span class=3D"ace_punctuation ace_operator">,</span> d=
+ivisor<span class=3D"ace_paren ace_rparen">)</span> <span class=3D"ace_pare=
+n ace_lparen">{</span></div><div class=3D"ace_line" style=3D"height: 18px; =
+top: 270px;"><span class=3D"ace_indent-guide">    </span>    <span class=3D=
+"ace_constant ace_language ace_source ace_rust">None</span> <span class=3D"=
+ace_keyword ace_operator">=3D&gt;</span> println<span class=3D"ace_keyword =
+ace_operator">!</span><span class=3D"ace_paren ace_lparen">(</span><span cl=
+ass=3D"ace_string ace_quoted ace_double ace_source ace_rust">"{} / {} faile=
+d!"</span><span class=3D"ace_punctuation ace_operator">,</span> dividend<sp=
+an class=3D"ace_punctuation ace_operator">,</span> divisor<span class=3D"ac=
+e_paren ace_rparen">)</span><span class=3D"ace_punctuation ace_operator">,<=
+/span></div><div class=3D"ace_line" style=3D"height: 18px; top: 288px;"><sp=
+an class=3D"ace_indent-guide">    </span>    <span class=3D"ace_constant ac=
+e_language ace_source ace_rust">Some</span><span class=3D"ace_paren ace_lpa=
+ren">(</span>quotient<span class=3D"ace_paren ace_rparen">)</span> <span cl=
+ass=3D"ace_keyword ace_operator">=3D&gt;</span> <span class=3D"ace_paren ac=
+e_lparen">{</span></div><div class=3D"ace_line" style=3D"height: 18px; top:=
+ 306px;"><span class=3D"ace_indent-guide">    </span><span class=3D"ace_ind=
+ent-guide">    </span>    println<span class=3D"ace_keyword ace_operator">!=
+</span><span class=3D"ace_paren ace_lparen">(</span><span class=3D"ace_stri=
+ng ace_quoted ace_double ace_source ace_rust">"{} / {} =3D {}"</span><span =
+class=3D"ace_punctuation ace_operator">,</span> dividend<span class=3D"ace_=
+punctuation ace_operator">,</span> divisor<span class=3D"ace_punctuation ac=
+e_operator">,</span> quotient<span class=3D"ace_paren ace_rparen">)</span><=
+/div><div class=3D"ace_line" style=3D"height: 18px; top: 324px;"><span clas=
+s=3D"ace_indent-guide">    </span>    <span class=3D"ace_paren ace_rparen">=
+}</span><span class=3D"ace_punctuation ace_operator">,</span></div><div cla=
+ss=3D"ace_line" style=3D"height: 18px; top: 342px;">    <span class=3D"ace_=
+paren ace_rparen">}</span></div><div class=3D"ace_line" style=3D"height: 18=
+px; top: 360px;"><span class=3D"ace_paren ace_rparen">}</span></div><div cl=
+ass=3D"ace_line" style=3D"height: 18px; top: 378px;"></div><div class=3D"ac=
+e_line" style=3D"height: 18px; top: 396px;"><span class=3D"ace_keyword ace_=
+source ace_rust">fn</span> <span class=3D"ace_entity ace_name ace_function =
+ace_source ace_rust">main</span><span class=3D"ace_paren ace_lparen">(</spa=
+n><span class=3D"ace_paren ace_rparen">)</span> <span class=3D"ace_paren ac=
+e_lparen">{</span></div><div class=3D"ace_line" style=3D"height: 18px; top:=
+ 414px;">    try_division<span class=3D"ace_paren ace_lparen">(</span><span=
+ class=3D"ace_constant ace_numeric ace_source ace_rust">4</span><span class=
+=3D"ace_punctuation ace_operator">,</span> <span class=3D"ace_constant ace_=
+numeric ace_source ace_rust">2</span><span class=3D"ace_paren ace_rparen">)=
+</span><span class=3D"ace_punctuation ace_operator">;</span></div><div clas=
+s=3D"ace_line" style=3D"height: 18px; top: 432px;">    try_division<span cl=
+ass=3D"ace_paren ace_lparen">(</span><span class=3D"ace_constant ace_numeri=
+c ace_source ace_rust">1</span><span class=3D"ace_punctuation ace_operator"=
+>,</span> <span class=3D"ace_constant ace_numeric ace_source ace_rust">0</s=
+pan><span class=3D"ace_paren ace_rparen">)</span><span class=3D"ace_punctua=
+tion ace_operator">;</span></div><div class=3D"ace_line" style=3D"height: 1=
+8px; top: 450px;"></div><div class=3D"ace_line" style=3D"height: 18px; top:=
+ 468px;">    <span class=3D"ace_comment ace_line ace_double-dash ace_source=
+ ace_rust">// <span class=3D"ace_cjk" style=3D"width: 16.8px;">=E7=BB=91</s=
+pan><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=AE=9A</span> `None=
+` <span class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=88=B0</span><span cl=
+ass=3D"ace_cjk" style=3D"width: 16.8px;">=E4=B8=80</span><span class=3D"ace=
+_cjk" style=3D"width: 16.8px;">=E4=B8=AA</span><span class=3D"ace_cjk" styl=
+e=3D"width: 16.8px;">=E5=8F=98</span><span class=3D"ace_cjk" style=3D"width=
+: 16.8px;">=E9=87=8F</span><span class=3D"ace_cjk" style=3D"width: 16.8px;"=
+>=E9=9C=80</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E8=A6=81=
+</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E7=B1=BB</span><sp=
+an class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=9E=8B</span><span class=
+=3D"ace_cjk" style=3D"width: 16.8px;">=E6=A0=87</span><span class=3D"ace_cj=
+k" style=3D"width: 16.8px;">=E6=B3=A8</span></span></div><div class=3D"ace_=
+line" style=3D"height: 18px; top: 486px;">    <span class=3D"ace_keyword ac=
+e_source ace_rust">let</span> none<span class=3D"ace_punctuation ace_operat=
+or">:</span> Option<span class=3D"ace_keyword ace_operator">&lt;</span><spa=
+n class=3D"ace_storage ace_type ace_source ace_rust">i32</span><span class=
+=3D"ace_keyword ace_operator">&gt;</span> <span class=3D"ace_keyword ace_op=
+erator">=3D</span> <span class=3D"ace_constant ace_language ace_source ace_=
+rust">None</span><span class=3D"ace_punctuation ace_operator">;</span></div=
+><div class=3D"ace_line" style=3D"height: 18px; top: 504px;">    <span clas=
+s=3D"ace_keyword ace_source ace_rust">let</span> _equivalent_none <span cla=
+ss=3D"ace_keyword ace_operator">=3D</span> <span class=3D"ace_support ace_c=
+onstant">None::</span><span class=3D"ace_keyword ace_operator">&lt;</span><=
+span class=3D"ace_storage ace_type ace_source ace_rust">i32</span><span cla=
+ss=3D"ace_keyword ace_operator">&gt;</span><span class=3D"ace_punctuation a=
+ce_operator">;</span></div><div class=3D"ace_line" style=3D"height: 18px; t=
+op: 522px;"></div><div class=3D"ace_line" style=3D"height: 18px; top: 540px=
+;">    <span class=3D"ace_keyword ace_source ace_rust">let</span> optional_=
+float <span class=3D"ace_keyword ace_operator">=3D</span> <span class=3D"ac=
+e_constant ace_language ace_source ace_rust">Some</span><span class=3D"ace_=
+paren ace_lparen">(</span><span class=3D"ace_constant ace_numeric ace_sourc=
+e ace_rust">0f32</span><span class=3D"ace_paren ace_rparen">)</span><span c=
+lass=3D"ace_punctuation ace_operator">;</span></div><div class=3D"ace_line"=
+ style=3D"height: 18px; top: 558px;"></div><div class=3D"ace_line" style=3D=
+"height: 18px; top: 576px;">    <span class=3D"ace_comment ace_line ace_dou=
+ble-dash ace_source ace_rust">// <span class=3D"ace_cjk" style=3D"width: 16=
+.8px;">=E8=A7=A3</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=
+=8C=85</span> `Some` <span class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=
+=B0=86</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=8F=96</sp=
+an><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=87=BA</span><span c=
+lass=3D"ace_cjk" style=3D"width: 16.8px;">=E8=A2=AB</span><span class=3D"ac=
+e_cjk" style=3D"width: 16.8px;">=E5=8C=85</span><span class=3D"ace_cjk" sty=
+le=3D"width: 16.8px;">=E8=A3=85</span><span class=3D"ace_cjk" style=3D"widt=
+h: 16.8px;">=E7=9A=84</span><span class=3D"ace_cjk" style=3D"width: 16.8px;=
+">=E5=80=BC</span><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E3=80=
+=82</span></span></div><div class=3D"ace_line" style=3D"height: 18px; top: =
+594px;">    println<span class=3D"ace_keyword ace_operator">!</span><span c=
+lass=3D"ace_paren ace_lparen">(</span><span class=3D"ace_string ace_quoted =
+ace_double ace_source ace_rust">"{:?} unwraps to {:?}"</span><span class=3D=
+"ace_punctuation ace_operator">,</span> optional_float<span class=3D"ace_pu=
+nctuation ace_operator">,</span> optional_float<span class=3D"ace_punctuati=
+on ace_operator">.</span>unwrap<span class=3D"ace_paren ace_lparen">(</span=
+><span class=3D"ace_paren ace_rparen">))</span><span class=3D"ace_punctuati=
+on ace_operator">;</span></div><div class=3D"ace_line" style=3D"height: 18p=
+x; top: 612px;"></div><div class=3D"ace_line" style=3D"height: 18px; top: 6=
+30px;">    <span class=3D"ace_comment ace_line ace_double-dash ace_source a=
+ce_rust">// <span class=3D"ace_cjk" style=3D"width: 16.8px;">=E8=A7=A3</spa=
+n><span class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=8C=85</span> `None` =
+<span class=3D"ace_cjk" style=3D"width: 16.8px;">=E5=B0=86</span><span clas=
+s=3D"ace_cjk" style=3D"width: 16.8px;">=E4=BC=9A</span><span class=3D"ace_c=
+jk" style=3D"width: 16.8px;">=E5=BC=95</span><span class=3D"ace_cjk" style=
+=3D"width: 16.8px;">=E5=8F=91</span> `panic!`<span class=3D"ace_cjk" style=
+=3D"width: 16.8px;">=E3=80=82</span></span></div><div class=3D"ace_line" st=
+yle=3D"height: 18px; top: 648px;">    println<span class=3D"ace_keyword ace=
+_operator">!</span><span class=3D"ace_paren ace_lparen">(</span><span class=
+=3D"ace_string ace_quoted ace_double ace_source ace_rust">"{:?} unwraps to =
+{:?}"</span><span class=3D"ace_punctuation ace_operator">,</span> none<span=
+ class=3D"ace_punctuation ace_operator">,</span> none<span class=3D"ace_pun=
+ctuation ace_operator">.</span>unwrap<span class=3D"ace_paren ace_lparen">(=
+</span><span class=3D"ace_paren ace_rparen">))</span><span class=3D"ace_pun=
+ctuation ace_operator">;</span></div><div class=3D"ace_line" style=3D"heigh=
+t: 18px; top: 666px;"><span class=3D"ace_paren ace_rparen">}</span></div><d=
+iv class=3D"ace_line" style=3D"height: 18px; top: 684px;"></div></div><div =
+class=3D"ace_layer ace_marker-layer"></div><div class=3D"ace_layer ace_curs=
+or-layer ace_hidden-cursors"><div class=3D"ace_cursor" style=3D"display: bl=
+ock; top: 0px; left: 4px; width: 8px; height: 18px;"></div></div></div></di=
+v><div class=3D"ace_scrollbar ace_scrollbar-v" style=3D"display: none; widt=
+h: 20px; bottom: 0px;"><div class=3D"ace_scrollbar-inner" style=3D"width: 2=
+0px; height: 702px;"></div></div><div class=3D"ace_scrollbar ace_scrollbar-=
+h" style=3D"display: none; height: 20px; left: 0px; right: 0px;"><div class=
+=3D"ace_scrollbar-inner" style=3D"height: 20px; width: 750px;"></div></div>=
+<div style=3D"height: auto; width: auto; top: 0px; left: 0px; visibility: h=
+idden; position: absolute; white-space: pre; font: inherit; overflow: hidde=
+n;"><div style=3D"height: auto; width: auto; top: 0px; left: 0px; visibilit=
+y: hidden; position: absolute; white-space: pre; font: inherit; overflow: v=
+isible;">=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=
+=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=
+=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=
+=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=
+=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=
+=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=
+=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=
+=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=
+=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=
+=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=
+=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=
+=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=
+=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=
+=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=
+=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=
+=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=
+=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=
+=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=
+=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=
+=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=
+=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94=D7=94</div><div style=3D"height: au=
+to; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolut=
+e; white-space: pre; font-style: inherit; font-variant: inherit; font-stret=
+ch: inherit; font-size: inherit; line-height: inherit; font-family: inherit=
+; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: in=
+herit; font-feature-settings: inherit; font-variation-settings: inherit; ov=
+erflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></code></pre><=
+/pre>
+
+                    </main>
+
+                    <nav class=3D"nav-wrapper" aria-label=3D"Page navigatio=
+n">
+                        <!-- Mobile navigation buttons -->
+                            <a rel=3D"prev" href=3D"https://rustwiki.org/zh=
+-CN/rust-by-example/std/str.html" class=3D"mobile-nav-chapters previous" ti=
+tle=3D"Previous chapter" aria-label=3D"Previous chapter" aria-keyshortcuts=
+=3D"Left">
+                                <i class=3D"fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel=3D"next" href=3D"https://rustwiki.org/zh=
+-CN/rust-by-example/std/result.html" class=3D"mobile-nav-chapters next" tit=
+le=3D"Next chapter" aria-label=3D"Next chapter" aria-keyshortcuts=3D"Right"=
+>
+                                <i class=3D"fa fa-angle-right"></i>
+                            </a>
+
+                        <div style=3D"clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class=3D"nav-wide-wrapper" aria-label=3D"Page navigation">
+                    <a rel=3D"prev" href=3D"https://rustwiki.org/zh-CN/rust=
+-by-example/std/str.html" class=3D"nav-chapters previous" title=3D"Previous=
+ chapter" aria-label=3D"Previous chapter" aria-keyshortcuts=3D"Left">
+                        <i class=3D"fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel=3D"next" href=3D"https://rustwiki.org/zh-CN/rust=
+-by-example/std/result.html" class=3D"nav-chapters next" title=3D"Next chap=
+ter" aria-label=3D"Next chapter" aria-keyshortcuts=3D"Right">
+                        <i class=3D"fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+       =20
+
+       =20
+       =20
+       =20
+       =20
+       =20
+
+       =20
+       =20
+       =20
+
+       =20
+       =20
+       =20
+
+        <!-- Custom JS scripts -->
+       =20
+
+
+   =20
+
+</body><div mx-name=3D"dream-translation"><template shadowmode=3D"closed"><=
+link rel=3D"stylesheet" href=3D"chrome-extension://ogleeipbbcokpeabliinildn=
+gejmdneg/css/content.css">
+
+<div id=3D"dmx_dialog" style=3D"width: 500px; height: 470px; display: none;=
+">
+    <div id=3D"dmx_dialog_title" style=3D"cursor: move;">
+        <div class=3D"dmx_left">
+            <div id=3D"dmx_close"><i class=3D"dmx-icon dmx-icon-close"></i>=
+</div>
+            <div id=3D"dmx_pin" class=3D"dmx-icon"></div>
+            <div id=3D"dmx_fullscreen" class=3D"dmx-icon"></div>
+            <div id=3D"dmx_history">
+                <i class=3D"dmx-icon disabled dmx-icon-left"></i>
+                <i class=3D"dmx-icon disabled dmx-icon-right"></i>
+            </div>
+            <div id=3D"dmx_navigate">
+                <u class=3D"dmx-icon active" action=3D"translate">=E7=BF=BB=
+=E8=AF=91</u>
+                <u class=3D"dmx-icon" action=3D"dictionary">=E8=AF=8D=E5=85=
+=B8</u>
+                <u class=3D"dmx-icon" action=3D"search">=E6=90=9C=E7=B4=A2<=
+/u>
+            </div>
+        </div>
+        <div class=3D"dmx_right">
+            <div id=3D"dmx_setting"><i class=3D"dmx-icon dmx-icon-setting">=
+</i></div>
+            <div id=3D"dmx_more"><i class=3D"dmx-icon dmx-icon-more"></i></=
+div>
+            <div id=3D"dmx_voice" class=3D"dmx_hide"><i class=3D"dmx-icon d=
+mx-icon-voice"></i></div>
+            <div id=3D"dmx_heart" class=3D"dmx_hide"><i class=3D"dmx-icon d=
+mx-icon-heart"></i></div>
+        </div>
+    </div>
+    <div id=3D"dmx_dialog_content"><div class=3D"dmx_main dmx_main_trans">
+    <div class=3D"case" id=3D"translate_input" contenteditable=3D"true"></d=
+iv>
+    <div class=3D"language_box fx">
+        <div id=3D"language_source" class=3D"language_button dmx-icon" valu=
+e=3D"auto">=E8=87=AA=E5=8A=A8=E6=A3=80=E6=B5=8B</div>
+        <div id=3D"language_exchange" class=3D"disabled"><i class=3D"dmx-ic=
+on dmx-icon-exchange"></i></div>
+        <div id=3D"language_target" class=3D"language_button dmx-icon" valu=
+e=3D"zh">=E4=B8=AD=E6=96=87(=E7=AE=80=E4=BD=93)</div>
+        <div id=3D"translate_button">=E7=BF=BB =E8=AF=91</div>
+        <div id=3D"translate_crop"><i class=3D"dmx-icon dmx-icon-crop"></i>=
+</div>
+        <div id=3D"language_dropdown" class=3D"fx"><u value=3D"auto">=E8=87=
+=AA=E5=8A=A8=E6=A3=80=E6=B5=8B</u><u value=3D"zh">=E4=B8=AD=E6=96=87(=E7=AE=
+=80=E4=BD=93)</u><u value=3D"en">=E8=8B=B1=E8=AF=AD</u><u value=3D"jp">=E6=
+=97=A5=E8=AF=AD</u><u value=3D"th">=E6=B3=B0=E8=AF=AD</u><u value=3D"spa">=
+=E8=A5=BF=E7=8F=AD=E7=89=99=E8=AF=AD</u><u value=3D"ara">=E9=98=BF=E6=8B=89=
+=E4=BC=AF=E8=AF=AD</u><u value=3D"fra">=E6=B3=95=E8=AF=AD</u><u value=3D"ko=
+r">=E9=9F=A9=E8=AF=AD</u><u value=3D"ru">=E4=BF=84=E8=AF=AD</u><u value=3D"=
+de">=E5=BE=B7=E8=AF=AD</u><u value=3D"pt">=E8=91=A1=E8=90=84=E7=89=99=E8=AF=
+=AD</u><u value=3D"it">=E6=84=8F=E5=A4=A7=E5=88=A9=E8=AF=AD</u><u value=3D"=
+el">=E5=B8=8C=E8=85=8A=E8=AF=AD</u><u value=3D"nl">=E8=8D=B7=E5=85=B0=E8=AF=
+=AD</u><u value=3D"pl">=E6=B3=A2=E5=85=B0=E8=AF=AD</u><u value=3D"fin">=E8=
+=8A=AC=E5=85=B0=E8=AF=AD</u><u value=3D"cs">=E6=8D=B7=E5=85=8B=E8=AF=AD</u>=
+<u value=3D"bul">=E4=BF=9D=E5=8A=A0=E5=88=A9=E4=BA=9A=E8=AF=AD</u><u value=
+=3D"dan">=E4=B8=B9=E9=BA=A6=E8=AF=AD</u><u value=3D"est">=E7=88=B1=E6=B2=99=
+=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"hu">=E5=8C=88=E7=89=99=E5=88=A9=
+=E8=AF=AD</u><u value=3D"rom">=E7=BD=97=E9=A9=AC=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"slo">=E6=96=AF=E6=B4=9B=E6=96=87=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"swe">=E7=91=9E=E5=85=B8=E8=AF=AD</u><u value=3D"vie">=E8=B6=
+=8A=E5=8D=97=E8=AF=AD</u><u value=3D"yue">=E4=B8=AD=E6=96=87(=E7=B2=A4=E8=
+=AF=AD)</u><u value=3D"cht">=E4=B8=AD=E6=96=87(=E7=B9=81=E4=BD=93)</u><u va=
+lue=3D"wyw">=E4=B8=AD=E6=96=87(=E6=96=87=E8=A8=80=E6=96=87)</u><u value=3D"=
+afr">=E5=8D=97=E9=9D=9E=E8=8D=B7=E5=85=B0=E8=AF=AD</u><u value=3D"alb">=E9=
+=98=BF=E5=B0=94=E5=B7=B4=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"amh">=E9=
+=98=BF=E5=A7=86=E5=93=88=E6=8B=89=E8=AF=AD</u><u value=3D"arm">=E4=BA=9A=E7=
+=BE=8E=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"asm">=E9=98=BF=E8=90=A8=E5=
+=A7=86=E8=AF=AD</u><u value=3D"ast">=E9=98=BF=E6=96=AF=E5=9B=BE=E9=87=8C=E4=
+=BA=9A=E6=96=AF=E8=AF=AD</u><u value=3D"aze">=E9=98=BF=E5=A1=9E=E6=8B=9C=E7=
+=96=86=E8=AF=AD</u><u value=3D"baq">=E5=B7=B4=E6=96=AF=E5=85=8B=E8=AF=AD</u=
+><u value=3D"bel">=E7=99=BD=E4=BF=84=E7=BD=97=E6=96=AF=E8=AF=AD</u><u value=
+=3D"ben">=E5=AD=9F=E5=8A=A0=E6=8B=89=E8=AF=AD</u><u value=3D"bos">=E6=B3=A2=
+=E6=96=AF=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"bur">=E7=BC=85=E7=94=B8=
+=E8=AF=AD</u><u value=3D"cat">=E5=8A=A0=E6=B3=B0=E7=BD=97=E5=B0=BC=E4=BA=9A=
+=E8=AF=AD</u><u value=3D"ceb">=E5=AE=BF=E5=8A=A1=E8=AF=AD</u><u value=3D"hr=
+v">=E5=85=8B=E7=BD=97=E5=9C=B0=E4=BA=9A=E8=AF=AD</u><u value=3D"epo">=E4=B8=
+=96=E7=95=8C=E8=AF=AD</u><u value=3D"fao">=E6=B3=95=E7=BD=97=E8=AF=AD</u><u=
+ value=3D"fil">=E8=8F=B2=E5=BE=8B=E5=AE=BE=E8=AF=AD</u><u value=3D"glg">=E5=
+=8A=A0=E5=88=A9=E8=A5=BF=E4=BA=9A=E8=AF=AD</u><u value=3D"geo">=E6=A0=BC=E9=
+=B2=81=E5=90=89=E4=BA=9A=E8=AF=AD</u><u value=3D"guj">=E5=8F=A4=E5=90=89=E6=
+=8B=89=E7=89=B9=E8=AF=AD</u><u value=3D"hau">=E8=B1=AA=E8=90=A8=E8=AF=AD</u=
+><u value=3D"heb">=E5=B8=8C=E4=BC=AF=E6=9D=A5=E8=AF=AD</u><u value=3D"hi">=
+=E5=8D=B0=E5=9C=B0=E8=AF=AD</u><u value=3D"ice">=E5=86=B0=E5=B2=9B=E8=AF=AD=
+</u><u value=3D"ibo">=E4=BC=8A=E5=8D=9A=E8=AF=AD</u><u value=3D"id">=E5=8D=
+=B0=E5=B0=BC=E8=AF=AD</u><u value=3D"gle">=E7=88=B1=E5=B0=94=E5=85=B0=E8=AF=
+=AD</u><u value=3D"kan">=E5=8D=A1=E7=BA=B3=E8=BE=BE=E8=AF=AD</u><u value=3D=
+"kaz">=E5=93=88=E8=90=A8=E5=85=8B=E8=AF=AD</u><u value=3D"kli">=E5=85=8B=E6=
+=9E=97=E8=B4=A1=E8=AF=AD</u><u value=3D"kur">=E5=BA=93=E5=B0=94=E5=BE=B7=E8=
+=AF=AD</u><u value=3D"lao">=E8=80=81=E6=8C=9D=E8=AF=AD</u><u value=3D"lat">=
+=E6=8B=89=E4=B8=81=E8=AF=AD</u><u value=3D"lav">=E6=8B=89=E8=84=B1=E7=BB=B4=
+=E4=BA=9A=E8=AF=AD</u><u value=3D"lit">=E7=AB=8B=E9=99=B6=E5=AE=9B=E8=AF=AD=
+</u><u value=3D"ltz">=E5=8D=A2=E6=A3=AE=E5=A0=A1=E8=AF=AD</u><u value=3D"ma=
+c">=E9=A9=AC=E5=85=B6=E9=A1=BF=E8=AF=AD</u><u value=3D"mg">=E9=A9=AC=E6=8B=
+=89=E5=8A=A0=E6=96=AF=E8=AF=AD</u><u value=3D"may">=E9=A9=AC=E6=9D=A5=E8=AF=
+=AD</u><u value=3D"mal">=E9=A9=AC=E6=8B=89=E9=9B=85=E6=8B=89=E5=A7=86=E8=AF=
+=AD</u><u value=3D"mlt">=E9=A9=AC=E8=80=B3=E4=BB=96=E8=AF=AD</u><u value=3D=
+"mar">=E9=A9=AC=E6=8B=89=E5=9C=B0=E8=AF=AD</u><u value=3D"nep">=E5=B0=BC=E6=
+=B3=8A=E5=B0=94=E8=AF=AD</u><u value=3D"nno">=E6=96=B0=E6=8C=AA=E5=A8=81=E8=
+=AF=AD</u><u value=3D"per">=E6=B3=A2=E6=96=AF=E8=AF=AD</u><u value=3D"srd">=
+=E8=90=A8=E4=B8=81=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"srp">=E5=A1=9E=
+=E5=B0=94=E7=BB=B4=E4=BA=9A=E8=AF=AD(=E6=8B=89=E4=B8=81=E6=96=87)</u><u val=
+ue=3D"sin">=E5=83=A7=E4=BC=BD=E7=BD=97=E8=AF=AD</u><u value=3D"sk">=E6=96=
+=AF=E6=B4=9B=E4=BC=90=E5=85=8B=E8=AF=AD</u><u value=3D"som">=E7=B4=A2=E9=A9=
+=AC=E9=87=8C=E8=AF=AD</u><u value=3D"swa">=E6=96=AF=E7=93=A6=E5=B8=8C=E9=87=
+=8C=E8=AF=AD</u><u value=3D"tgl">=E4=BB=96=E5=8A=A0=E7=A6=84=E8=AF=AD</u><u=
+ value=3D"tgk">=E5=A1=94=E5=90=89=E5=85=8B=E8=AF=AD</u><u value=3D"tam">=E6=
+=B3=B0=E7=B1=B3=E5=B0=94=E8=AF=AD</u><u value=3D"tat">=E9=9E=91=E9=9D=BC=E8=
+=AF=AD</u><u value=3D"tel">=E6=B3=B0=E5=8D=A2=E5=9B=BA=E8=AF=AD</u><u value=
+=3D"tr">=E5=9C=9F=E8=80=B3=E5=85=B6=E8=AF=AD</u><u value=3D"tuk">=E5=9C=9F=
+=E5=BA=93=E6=9B=BC=E8=AF=AD</u><u value=3D"ukr">=E4=B9=8C=E5=85=8B=E5=85=B0=
+=E8=AF=AD</u><u value=3D"urd">=E4=B9=8C=E5=B0=94=E9=83=BD=E8=AF=AD</u><u va=
+lue=3D"uzb">=E4=B9=8C=E5=85=B9=E5=88=AB=E5=85=8B=E8=AF=AD</u><u value=3D"oc=
+i">=E5=A5=A5=E5=85=8B=E8=AF=AD</u><u value=3D"kir">=E5=90=89=E5=B0=94=E5=90=
+=89=E6=96=AF=E8=AF=AD</u><u value=3D"pus">=E6=99=AE=E4=BB=80=E5=9B=BE=E8=AF=
+=AD</u><u value=3D"hkm">=E9=AB=98=E6=A3=89=E8=AF=AD</u><u value=3D"ht">=E6=
+=B5=B7=E5=9C=B0=E8=AF=AD</u><u value=3D"nob">=E4=B9=A6=E9=9D=A2=E6=8C=AA=E5=
+=A8=81=E8=AF=AD</u><u value=3D"pan">=E6=97=81=E9=81=AE=E6=99=AE=E8=AF=AD</u=
+><u value=3D"arq">=E9=98=BF=E5=B0=94=E5=8F=8A=E5=88=A9=E4=BA=9A=E9=98=BF=E6=
+=8B=89=E4=BC=AF=E8=AF=AD</u><u value=3D"bis">=E6=AF=94=E6=96=AF=E6=8B=89=E9=
+=A9=AC=E8=AF=AD</u><u value=3D"frn">=E5=8A=A0=E6=8B=BF=E5=A4=A7=E6=B3=95=E8=
+=AF=AD</u><u value=3D"hak">=E5=93=88=E5=8D=A1=E9=92=A6=E8=AF=AD</u><u value=
+=3D"hup">=E8=83=A1=E5=B8=95=E8=AF=AD</u><u value=3D"ing">=E5=8D=B0=E5=8F=A4=
+=E4=BB=80=E8=AF=AD</u><u value=3D"lag">=E6=8B=89=E7=89=B9=E5=8A=A0=E8=8E=B1=
+=E8=AF=AD</u><u value=3D"mau">=E6=AF=9B=E9=87=8C=E6=B1=82=E6=96=AF=E5=85=8B=
+=E9=87=8C=E5=A5=A5=E5=B0=94=E8=AF=AD</u><u value=3D"mot">=E9=BB=91=E5=B1=B1=
+=E8=AF=AD</u><u value=3D"pot">=E5=B7=B4=E8=A5=BF=E8=91=A1=E8=90=84=E7=89=99=
+=E8=AF=AD</u><u value=3D"ruy">=E5=8D=A2=E6=A3=AE=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"sec">=E5=A1=9E=E5=B0=94=E7=BB=B4=E4=BA=9A-=E5=85=8B=E7=BD=
+=97=E5=9C=B0=E4=BA=9A=E8=AF=AD</u><u value=3D"sil">=E8=A5=BF=E9=87=8C=E8=A5=
+=BF=E4=BA=9A=E8=AF=AD</u><u value=3D"tua">=E7=AA=81=E5=B0=BC=E6=96=AF=E9=98=
+=BF=E6=8B=89=E4=BC=AF=E8=AF=AD</u><u value=3D"ach">=E4=BA=9A=E9=BD=90=E8=AF=
+=AD</u><u value=3D"aka">=E9=98=BF=E8=82=AF=E8=AF=AD</u><u value=3D"arg">=E9=
+=98=BF=E6=8B=89=E8=B4=A1=E8=AF=AD</u><u value=3D"aym">=E8=89=BE=E9=A9=AC=E6=
+=8B=89=E8=AF=AD</u><u value=3D"bal">=E4=BF=BE=E8=B7=AF=E6=94=AF=E8=AF=AD</u=
+><u value=3D"bak">=E5=B7=B4=E4=BB=80=E5=9F=BA=E5=B0=94=E8=AF=AD</u><u value=
+=3D"bem">=E6=9C=AC=E5=B7=B4=E8=AF=AD</u><u value=3D"ber">=E6=9F=8F=E6=9F=8F=
+=E5=B0=94=E8=AF=AD</u><u value=3D"bho">=E5=8D=9A=E6=9D=B0=E6=99=AE=E5=B0=94=
+=E8=AF=AD</u><u value=3D"bli">=E6=AF=94=E6=9E=97=E8=AF=AD</u><u value=3D"br=
+e">=E5=B8=83=E5=88=97=E5=A1=94=E5=B0=BC=E8=AF=AD</u><u value=3D"chr">=E5=88=
+=87=E7=BD=97=E5=9F=BA=E8=AF=AD</u><u value=3D"nya">=E9=BD=90=E5=88=87=E7=93=
+=A6=E8=AF=AD</u><u value=3D"chv">=E6=A5=9A=E7=93=A6=E4=BB=80=E8=AF=AD</u><u=
+ value=3D"cor">=E5=BA=B7=E7=93=A6=E5=B0=94=E8=AF=AD</u><u value=3D"cos">=E7=
+=A7=91=E8=A5=BF=E5=98=89=E8=AF=AD</u><u value=3D"cre">=E5=85=8B=E9=87=8C=E5=
+=85=8B=E8=AF=AD</u><u value=3D"cri">=E5=85=8B=E9=87=8C=E7=B1=B3=E4=BA=9A=E9=
+=9E=91=E9=9D=BC=E8=AF=AD</u><u value=3D"div">=E8=BF=AA=E7=BB=B4=E5=B8=8C=E8=
+=AF=AD</u><u value=3D"eno">=E5=8F=A4=E8=8B=B1=E8=AF=AD</u><u value=3D"frm">=
+=E4=B8=AD=E5=8F=A4=E6=B3=95=E8=AF=AD</u><u value=3D"fri">=E5=BC=97=E7=95=99=
+=E5=88=A9=E8=AF=AD</u><u value=3D"ful">=E5=AF=8C=E6=8B=89=E5=B0=BC=E8=AF=AD=
+</u><u value=3D"gla">=E7=9B=96=E5=B0=94=E8=AF=AD</u><u value=3D"lug">=E5=8D=
+=A2=E5=B9=B2=E8=BE=BE=E8=AF=AD</u><u value=3D"gra">=E5=8F=A4=E5=B8=8C=E8=85=
+=8A=E8=AF=AD</u><u value=3D"grn">=E7=93=9C=E6=8B=89=E5=B0=BC=E8=AF=AD</u><u=
+ value=3D"haw">=E5=A4=8F=E5=A8=81=E5=A4=B7=E8=AF=AD</u><u value=3D"hil">=E5=
+=B8=8C=E5=88=A9=E7=9B=96=E5=86=9C=E8=AF=AD</u><u value=3D"ido">=E4=BC=8A=E5=
+=A4=9A=E8=AF=AD</u><u value=3D"ina">=E5=9B=A0=E7=89=B9=E8=AF=AD</u><u value=
+=3D"iku">=E4=BC=8A=E5=8A=AA=E5=85=8B=E6=8F=90=E5=9B=BE=E7=89=B9=E8=AF=AD</u=
+><u value=3D"jav">=E7=88=AA=E5=93=87=E8=AF=AD</u><u value=3D"kab">=E5=8D=A1=
+=E6=8B=9C=E5=B0=94=E8=AF=AD</u><u value=3D"kal">=E6=A0=BC=E9=99=B5=E5=85=B0=
+=E8=AF=AD</u><u value=3D"kau">=E5=8D=A1=E5=8A=AA=E9=87=8C=E8=AF=AD</u><u va=
+lue=3D"kas">=E5=85=8B=E4=BB=80=E7=B1=B3=E5=B0=94=E8=AF=AD</u><u value=3D"ka=
+h">=E5=8D=A1=E8=88=92=E6=AF=94=E8=AF=AD</u><u value=3D"kin">=E5=8D=A2=E6=97=
+=BA=E8=BE=BE=E8=AF=AD</u><u value=3D"kon">=E5=88=9A=E6=9E=9C=E8=AF=AD</u><u=
+ value=3D"kok">=E5=AD=94=E5=8D=A1=E5=B0=BC=E8=AF=AD</u><u value=3D"lim">=E6=
+=9E=97=E5=A0=A1=E8=AF=AD</u><u value=3D"lin">=E6=9E=97=E5=8A=A0=E6=8B=89=E8=
+=AF=AD</u><u value=3D"loj">=E9=80=BB=E8=BE=91=E8=AF=AD</u><u value=3D"log">=
+=E4=BD=8E=E5=9C=B0=E5=BE=B7=E8=AF=AD</u><u value=3D"los">=E4=B8=8B=E7=B4=A2=
+=E5=B8=83=E8=AF=AD</u><u value=3D"mai">=E8=BF=88=E8=92=82=E5=88=A9=E8=AF=AD=
+</u><u value=3D"glv">=E6=9B=BC=E5=85=8B=E6=96=AF=E8=AF=AD</u><u value=3D"ma=
+o">=E6=AF=9B=E5=88=A9=E8=AF=AD</u><u value=3D"mah">=E9=A9=AC=E7=BB=8D=E5=B0=
+=94=E8=AF=AD</u><u value=3D"nbl">=E5=8D=97=E6=81=A9=E5=BE=B7=E8=B4=9D=E8=8E=
+=B1=E8=AF=AD</u><u value=3D"nea">=E9=82=A3=E4=B8=8D=E5=8B=92=E6=96=AF=E8=AF=
+=AD</u><u value=3D"nqo">=E8=A5=BF=E9=9D=9E=E4=B9=A6=E9=9D=A2=E8=AF=AD</u><u=
+ value=3D"sme">=E5=8C=97=E6=96=B9=E8=90=A8=E7=B1=B3=E8=AF=AD</u><u value=3D=
+"nor">=E6=8C=AA=E5=A8=81=E8=AF=AD</u><u value=3D"oji">=E5=A5=A5=E6=9D=B0=E5=
+=B8=83=E7=93=A6=E8=AF=AD</u><u value=3D"ori">=E5=A5=A5=E9=87=8C=E4=BA=9A=E8=
+=AF=AD</u><u value=3D"orm">=E5=A5=A5=E7=BD=97=E8=8E=AB=E8=AF=AD</u><u value=
+=3D"oss">=E5=A5=A5=E5=A1=9E=E6=A2=AF=E8=AF=AD</u><u value=3D"pam">=E9=82=A6=
+=E6=9D=BF=E7=89=99=E8=AF=AD</u><u value=3D"pap">=E5=B8=95=E7=9A=AE=E9=98=BF=
+=E9=97=A8=E6=89=98=E8=AF=AD</u><u value=3D"ped">=E5=8C=97=E7=B4=A2=E6=89=98=
+=E8=AF=AD</u><u value=3D"que">=E5=85=8B=E4=B8=98=E4=BA=9A=E8=AF=AD</u><u va=
+lue=3D"roh">=E7=BD=97=E6=9B=BC=E4=BB=80=E8=AF=AD</u><u value=3D"ro">=E7=BD=
+=97=E5=A7=86=E8=AF=AD</u><u value=3D"sm">=E8=90=A8=E6=91=A9=E4=BA=9A=E8=AF=
+=AD</u><u value=3D"san">=E6=A2=B5=E8=AF=AD</u><u value=3D"sco">=E8=8B=8F=E6=
+=A0=BC=E5=85=B0=E8=AF=AD</u><u value=3D"sha">=E6=8E=B8=E8=AF=AD</u><u value=
+=3D"sna">=E4=BF=AE=E7=BA=B3=E8=AF=AD</u><u value=3D"snd">=E4=BF=A1=E5=BE=B7=
+=E8=AF=AD</u><u value=3D"sol">=E6=A1=91=E6=B5=B7=E8=AF=AD</u><u value=3D"so=
+t">=E5=8D=97=E7=B4=A2=E6=89=98=E8=AF=AD</u><u value=3D"syr">=E5=8F=99=E5=88=
+=A9=E4=BA=9A=E8=AF=AD</u><u value=3D"tet">=E5=BE=B7=E9=A1=BF=E8=AF=AD</u><u=
+ value=3D"tir">=E6=8F=90=E6=A0=BC=E5=88=A9=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u=
+ value=3D"tso">=E8=81=AA=E5=8A=A0=E8=AF=AD</u><u value=3D"twi">=E5=A5=91=E7=
+=BB=B4=E8=AF=AD</u><u value=3D"ups">=E9=AB=98=E5=9C=B0=E7=B4=A2=E5=B8=83=E8=
+=AF=AD</u><u value=3D"ven">=E6=96=87=E8=BE=BE=E8=AF=AD</u><u value=3D"wln">=
+=E7=93=A6=E9=9A=86=E8=AF=AD</u><u value=3D"wel">=E5=A8=81=E5=B0=94=E5=A3=AB=
+=E8=AF=AD</u><u value=3D"fry">=E8=A5=BF=E5=BC=97=E9=87=8C=E6=96=AF=E8=AF=AD=
+</u><u value=3D"wol">=E6=B2=83=E6=B4=9B=E5=A4=AB=E8=AF=AD</u><u value=3D"xh=
+o">=E7=A7=91=E8=90=A8=E8=AF=AD</u><u value=3D"yid">=E6=84=8F=E7=AC=AC=E7=BB=
+=AA=E8=AF=AD</u><u value=3D"yor">=E7=BA=A6=E9=B2=81=E5=B7=B4=E8=AF=AD</u><u=
+ value=3D"zaz">=E6=89=8E=E6=89=8E=E5=85=B6=E8=AF=AD</u><u value=3D"zul">=E7=
+=A5=96=E9=B2=81=E8=AF=AD</u><u value=3D"sun">=E5=B7=BD=E4=BB=96=E8=AF=AD</u=
+><u value=3D"hmn">=E8=8B=97=E8=AF=AD</u><u value=3D"src">=E5=A1=9E=E5=B0=94=
+=E7=BB=B4=E4=BA=9A=E8=AF=AD(=E8=A5=BF=E9=87=8C=E5=B0=94=E6=96=87)</u></div>
+    </div>
+</div>
+<div id=3D"case_list" class=3D"dmx_main fx"></div></div>
+    <div id=3D"dmx_dialog_resize_n"></div>
+    <div id=3D"dmx_dialog_resize_e"></div>
+    <div id=3D"dmx_dialog_resize_s"></div>
+    <div id=3D"dmx_dialog_resize_w"></div>
+    <div id=3D"dmx_dialog_resize_nw"></div>
+    <div id=3D"dmx_dialog_resize_ne"></div>
+    <div id=3D"dmx_dialog_resize_sw"></div>
+    <div id=3D"dmx_dialog_resize_se"></div>
+    <div id=3D"dmx_dialog_left"></div>
+</div>
+<div id=3D"dmx_mouse_icon" style=3D"display: none;"></div>
+<div id=3D"dmx_crop_bg"></div>
+<div id=3D"dmx_crop_fg"></div></template></div></html>
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-3e65da9c-21ce-4cd0-b985-fa58f0bd0816@mhtml.blink
+
+@charset "utf-8";
+
+.ace-tomorrow-night .ace_gutter { background: rgb(37, 40, 44); color: rgb(1=
+97, 200, 198); }
+
+.ace-tomorrow-night .ace_print-margin { width: 1px; background: rgb(37, 40,=
+ 44); }
+
+.ace-tomorrow-night { background-color: rgb(29, 31, 33); color: rgb(197, 20=
+0, 198); }
+
+.ace-tomorrow-night .ace_cursor { color: rgb(174, 175, 173); }
+
+.ace-tomorrow-night .ace_marker-layer .ace_selection { background: rgb(55, =
+59, 65); }
+
+.ace-tomorrow-night.ace_multiselect .ace_selection.ace_start { box-shadow: =
+rgb(29, 31, 33) 0px 0px 3px 0px; }
+
+.ace-tomorrow-night .ace_marker-layer .ace_step { background: rgb(102, 82, =
+0); }
+
+.ace-tomorrow-night .ace_marker-layer .ace_bracket { margin: -1px 0px 0px -=
+1px; border: 1px solid rgb(75, 78, 85); }
+
+.ace-tomorrow-night .ace_marker-layer .ace_active-line { background: rgb(40=
+, 42, 46); }
+
+.ace-tomorrow-night .ace_gutter-active-line { background-color: rgb(40, 42,=
+ 46); }
+
+.ace-tomorrow-night .ace_marker-layer .ace_selected-word { border: 1px soli=
+d rgb(55, 59, 65); }
+
+.ace-tomorrow-night .ace_invisible { color: rgb(75, 78, 85); }
+
+.ace-tomorrow-night .ace_keyword, .ace-tomorrow-night .ace_meta, .ace-tomor=
+row-night .ace_storage, .ace-tomorrow-night .ace_storage.ace_type, .ace-tom=
+orrow-night .ace_support.ace_type { color: rgb(178, 148, 187); }
+
+.ace-tomorrow-night .ace_keyword.ace_operator { color: rgb(138, 190, 183); =
+}
+
+.ace-tomorrow-night .ace_constant.ace_character, .ace-tomorrow-night .ace_c=
+onstant.ace_language, .ace-tomorrow-night .ace_constant.ace_numeric, .ace-t=
+omorrow-night .ace_keyword.ace_other.ace_unit, .ace-tomorrow-night .ace_sup=
+port.ace_constant, .ace-tomorrow-night .ace_variable.ace_parameter { color:=
+ rgb(222, 147, 95); }
+
+.ace-tomorrow-night .ace_constant.ace_other { color: rgb(206, 209, 207); }
+
+.ace-tomorrow-night .ace_invalid { color: rgb(206, 210, 207); background-co=
+lor: rgb(223, 95, 95); }
+
+.ace-tomorrow-night .ace_invalid.ace_deprecated { color: rgb(206, 210, 207)=
+; background-color: rgb(183, 152, 191); }
+
+.ace-tomorrow-night .ace_fold { background-color: rgb(129, 162, 190); borde=
+r-color: rgb(197, 200, 198); }
+
+.ace-tomorrow-night .ace_entity.ace_name.ace_function, .ace-tomorrow-night =
+.ace_support.ace_function, .ace-tomorrow-night .ace_variable { color: rgb(1=
+29, 162, 190); }
+
+.ace-tomorrow-night .ace_support.ace_class, .ace-tomorrow-night .ace_suppor=
+t.ace_type { color: rgb(240, 198, 116); }
+
+.ace-tomorrow-night .ace_heading, .ace-tomorrow-night .ace_markup.ace_headi=
+ng, .ace-tomorrow-night .ace_string { color: rgb(181, 189, 104); }
+
+.ace-tomorrow-night .ace_entity.ace_name.ace_tag, .ace-tomorrow-night .ace_=
+entity.ace_other.ace_attribute-name, .ace-tomorrow-night .ace_meta.ace_tag,=
+ .ace-tomorrow-night .ace_string.ace_regexp, .ace-tomorrow-night .ace_varia=
+ble { color: rgb(204, 102, 102); }
+
+.ace-tomorrow-night .ace_comment { color: rgb(150, 152, 150); }
+
+.ace-tomorrow-night .ace_indent-guide { background: url("data:image/png;bas=
+e64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYHB3d/8=
+PAAOIAdULw8qMAAAAAElFTkSuQmCC") right center repeat-y; }
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-9ae01ddd-5490-49fe-840d-c3b969fc9d73@mhtml.blink
+
+@charset "utf-8";
+
+.ace-dawn .ace_gutter { background: rgb(235, 235, 235); color: rgb(51, 51, =
+51); }
+
+.ace-dawn .ace_print-margin { width: 1px; background: rgb(232, 232, 232); }
+
+.ace-dawn { background-color: rgb(249, 249, 249); color: rgb(8, 8, 8); }
+
+.ace-dawn .ace_cursor { color: rgb(0, 0, 0); }
+
+.ace-dawn .ace_marker-layer .ace_selection { background: rgba(39, 95, 255, =
+0.3); }
+
+.ace-dawn.ace_multiselect .ace_selection.ace_start { box-shadow: rgb(249, 2=
+49, 249) 0px 0px 3px 0px; }
+
+.ace-dawn .ace_marker-layer .ace_step { background: rgb(255, 255, 0); }
+
+.ace-dawn .ace_marker-layer .ace_bracket { margin: -1px 0px 0px -1px; borde=
+r: 1px solid rgba(75, 75, 126, 0.5); }
+
+.ace-dawn .ace_marker-layer .ace_active-line { background: rgba(36, 99, 180=
+, 0.12); }
+
+.ace-dawn .ace_gutter-active-line { background-color: rgb(220, 220, 220); }
+
+.ace-dawn .ace_marker-layer .ace_selected-word { border: 1px solid rgba(39,=
+ 95, 255, 0.3); }
+
+.ace-dawn .ace_invisible { color: rgba(75, 75, 126, 0.5); }
+
+.ace-dawn .ace_keyword, .ace-dawn .ace_meta { color: rgb(121, 73, 56); }
+
+.ace-dawn .ace_constant, .ace-dawn .ace_constant.ace_character, .ace-dawn .=
+ace_constant.ace_character.ace_escape, .ace-dawn .ace_constant.ace_other { =
+color: rgb(129, 31, 36); }
+
+.ace-dawn .ace_invalid.ace_illegal { text-decoration: underline; font-style=
+: italic; color: rgb(248, 248, 248); background-color: rgb(181, 42, 29); }
+
+.ace-dawn .ace_invalid.ace_deprecated { text-decoration: underline; font-st=
+yle: italic; color: rgb(181, 42, 29); }
+
+.ace-dawn .ace_support { color: rgb(105, 28, 151); }
+
+.ace-dawn .ace_support.ace_constant { color: rgb(180, 55, 31); }
+
+.ace-dawn .ace_fold { background-color: rgb(121, 73, 56); border-color: rgb=
+(8, 8, 8); }
+
+.ace-dawn .ace_list, .ace-dawn .ace_markup.ace_list, .ace-dawn .ace_support=
+.ace_function { color: rgb(105, 58, 23); }
+
+.ace-dawn .ace_storage { font-style: italic; color: rgb(167, 29, 93); }
+
+.ace-dawn .ace_string { color: rgb(11, 97, 37); }
+
+.ace-dawn .ace_string.ace_regexp { color: rgb(207, 86, 40); }
+
+.ace-dawn .ace_comment { font-style: italic; color: rgb(90, 82, 95); }
+
+.ace-dawn .ace_heading, .ace-dawn .ace_markup.ace_heading { color: rgb(25, =
+53, 109); }
+
+.ace-dawn .ace_variable { color: rgb(35, 74, 151); }
+
+.ace-dawn .ace_indent-guide { background: url("data:image/png;base64,iVBORw=
+0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWNgYGBgYLh/5+x/AAizA4hxN=
+NsZAAAAAElFTkSuQmCC") right center repeat-y; }
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-b5f336c3-c5ba-44e1-90b5-e6db20f4ad76@mhtml.blink
+
+@charset "utf-8";
+
+.error_widget_wrapper { background: inherit; color: inherit; border: none; =
+}
+
+.error_widget { border-top: 2px solid; border-bottom: 2px solid; margin: 5p=
+x 0px; padding: 10px 40px; white-space: pre-wrap; }
+
+.error_widget.ace_error, .error_widget_arrow.ace_error { border-color: rgb(=
+255, 90, 90); }
+
+.error_widget.ace_warning, .error_widget_arrow.ace_warning { border-color: =
+rgb(241, 216, 23); }
+
+.error_widget.ace_info, .error_widget_arrow.ace_info { border-color: rgb(90=
+, 90, 90); }
+
+.error_widget.ace_ok, .error_widget_arrow.ace_ok { border-color: rgb(90, 17=
+0, 90); }
+
+.error_widget_arrow { position: absolute; border-width: 5px; border-style: =
+solid; border-bottom-color: initial; border-image: initial; top: -5px; bord=
+er-top-color: transparent !important; border-right-color: transparent !impo=
+rtant; border-left-color: transparent !important; }
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-6b45b6b8-83f1-4bf5-bf7c-b0292cecaade@mhtml.blink
+
+@charset "utf-8";
+
+.ace-tm .ace_gutter { background: rgb(240, 240, 240); color: rgb(51, 51, 51=
+); }
+
+.ace-tm .ace_print-margin { width: 1px; background: rgb(232, 232, 232); }
+
+.ace-tm .ace_fold { background-color: rgb(107, 114, 230); }
+
+.ace-tm { background-color: rgb(255, 255, 255); color: black; }
+
+.ace-tm .ace_cursor { color: black; }
+
+.ace-tm .ace_invisible { color: rgb(191, 191, 191); }
+
+.ace-tm .ace_storage, .ace-tm .ace_keyword { color: blue; }
+
+.ace-tm .ace_constant { color: rgb(197, 6, 11); }
+
+.ace-tm .ace_constant.ace_buildin { color: rgb(88, 72, 246); }
+
+.ace-tm .ace_constant.ace_language { color: rgb(88, 92, 246); }
+
+.ace-tm .ace_constant.ace_library { color: rgb(6, 150, 14); }
+
+.ace-tm .ace_invalid { background-color: rgba(255, 0, 0, 0.1); color: red; =
+}
+
+.ace-tm .ace_support.ace_function { color: rgb(60, 76, 114); }
+
+.ace-tm .ace_support.ace_constant { color: rgb(6, 150, 14); }
+
+.ace-tm .ace_support.ace_type, .ace-tm .ace_support.ace_class { color: rgb(=
+109, 121, 222); }
+
+.ace-tm .ace_keyword.ace_operator { color: rgb(104, 118, 135); }
+
+.ace-tm .ace_string { color: rgb(3, 106, 7); }
+
+.ace-tm .ace_comment { color: rgb(76, 136, 107); }
+
+.ace-tm .ace_comment.ace_doc { color: rgb(0, 102, 255); }
+
+.ace-tm .ace_comment.ace_doc.ace_tag { color: rgb(128, 159, 191); }
+
+.ace-tm .ace_constant.ace_numeric { color: rgb(0, 0, 205); }
+
+.ace-tm .ace_variable { color: rgb(49, 132, 149); }
+
+.ace-tm .ace_xml-pe { color: rgb(104, 104, 91); }
+
+.ace-tm .ace_entity.ace_name.ace_function { color: rgb(0, 0, 162); }
+
+.ace-tm .ace_heading { color: rgb(12, 7, 255); }
+
+.ace-tm .ace_list { color: rgb(185, 6, 144); }
+
+.ace-tm .ace_meta.ace_tag { color: rgb(0, 22, 142); }
+
+.ace-tm .ace_string.ace_regex { color: rgb(255, 0, 0); }
+
+.ace-tm .ace_marker-layer .ace_selection { background: rgb(181, 213, 255); =
+}
+
+.ace-tm.ace_multiselect .ace_selection.ace_start { box-shadow: white 0px 0p=
+x 3px 0px; }
+
+.ace-tm .ace_marker-layer .ace_step { background: rgb(252, 255, 0); }
+
+.ace-tm .ace_marker-layer .ace_stack { background: rgb(164, 229, 101); }
+
+.ace-tm .ace_marker-layer .ace_bracket { margin: -1px 0px 0px -1px; border:=
+ 1px solid rgb(192, 192, 192); }
+
+.ace-tm .ace_marker-layer .ace_active-line { background: rgba(0, 0, 0, 0.07=
+); }
+
+.ace-tm .ace_gutter-active-line { background-color: rgb(220, 220, 220); }
+
+.ace-tm .ace_marker-layer .ace_selected-word { background: rgb(250, 250, 25=
+5); border: 1px solid rgb(200, 200, 250); }
+
+.ace-tm .ace_indent-guide { background: url("data:image/png;base64,iVBORw0K=
+GgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w1=
+1/gAAAABJRU5ErkJggg=3D=3D") right center repeat-y; }
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-cee8c559-bb3b-4fde-9955-fea049f0292c@mhtml.blink
+
+@charset "utf-8";
+
+.ace_br1 { border-top-left-radius: 3px; }
+
+.ace_br2 { border-top-right-radius: 3px; }
+
+.ace_br3 { border-top-left-radius: 3px; border-top-right-radius: 3px; }
+
+.ace_br4 { border-bottom-right-radius: 3px; }
+
+.ace_br5 { border-top-left-radius: 3px; border-bottom-right-radius: 3px; }
+
+.ace_br6 { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
+
+.ace_br7 { border-top-left-radius: 3px; border-top-right-radius: 3px; borde=
+r-bottom-right-radius: 3px; }
+
+.ace_br8 { border-bottom-left-radius: 3px; }
+
+.ace_br9 { border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
+
+.ace_br10 { border-top-right-radius: 3px; border-bottom-left-radius: 3px; }
+
+.ace_br11 { border-top-left-radius: 3px; border-top-right-radius: 3px; bord=
+er-bottom-left-radius: 3px; }
+
+.ace_br12 { border-bottom-right-radius: 3px; border-bottom-left-radius: 3px=
+; }
+
+.ace_br13 { border-top-left-radius: 3px; border-bottom-right-radius: 3px; b=
+order-bottom-left-radius: 3px; }
+
+.ace_br14 { border-top-right-radius: 3px; border-bottom-right-radius: 3px; =
+border-bottom-left-radius: 3px; }
+
+.ace_br15 { border-radius: 3px; }
+
+.ace_editor { position: relative; overflow: hidden; font: 12px Monaco, Menl=
+o, "Ubuntu Mono", Consolas, source-code-pro, monospace; direction: ltr; tex=
+t-align: left; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+.ace_scroller { position: absolute; overflow: hidden; top: 0px; bottom: 0px=
+; background-color: inherit; user-select: none; cursor: text; }
+
+.ace_content { position: absolute; box-sizing: border-box; min-width: 100%;=
+ contain: size layout style; }
+
+.ace_dragging .ace_scroller::before { position: absolute; inset: 0px; conte=
+nt: ""; background: rgba(250, 250, 250, 0.01); z-index: 1000; }
+
+.ace_dragging.ace_dark .ace_scroller::before { background: rgba(0, 0, 0, 0.=
+01); }
+
+.ace_selecting, .ace_selecting * { cursor: text !important; }
+
+.ace_gutter { position: absolute; overflow: hidden; width: auto; top: 0px; =
+bottom: 0px; left: 0px; cursor: default; z-index: 4; user-select: none; con=
+tain: size layout style; }
+
+.ace_gutter-active-line { position: absolute; left: 0px; right: 0px; }
+
+.ace_scroller.ace_scroll-left { box-shadow: rgba(0, 0, 0, 0.4) 17px 0px 16p=
+x -16px inset; }
+
+.ace_gutter-cell { position: absolute; top: 0px; left: 0px; right: 0px; pad=
+ding-left: 19px; padding-right: 6px; background-repeat: no-repeat; }
+
+.ace_gutter-cell.ace_error { background-image: url("data:image/png;base64,i=
+VBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4w=
+FAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir=
++Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg=
+8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/Q=
+RzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm=
+1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6ej=
+u5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99N=
+fg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24=
+eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78D=
+Pokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMg=
+HFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIO=
+zgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kf=
+R+MMMDGOQAAAABJRU5ErkJggg=3D=3D"); background-repeat: no-repeat; background=
+-position: 2px center; }
+
+.ace_gutter-cell.ace_warning { background-image: url("data:image/png;base64=
+,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAA=
+BPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf//=
+//e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIA=
+AAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neX=
+e5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYE=
+wboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJa=
+UrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLg=
+upWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg=3D=3D"); background-position=
+: 2px center; }
+
+.ace_gutter-cell.ace_info { background-image: url("data:image/png;base64,iV=
+BORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJb=
+WFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDb=
+MegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=
+=3D"); background-position: 2px center; }
+
+.ace_dark .ace_gutter-cell.ace_info { background-image: url("data:image/png=
+;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIA=
+qKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYM=
+APdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC"); }
+
+.ace_scrollbar { contain: strict; position: absolute; right: 0px; bottom: 0=
+px; z-index: 6; }
+
+.ace_scrollbar-inner { position: absolute; cursor: text; left: 0px; top: 0p=
+x; }
+
+.ace_scrollbar-v { overflow: hidden scroll; top: 0px; }
+
+.ace_scrollbar-h { overflow: scroll hidden; left: 0px; }
+
+.ace_print-margin { position: absolute; height: 100%; }
+
+.ace_text-input { position: absolute; z-index: 0; width: 0.5em; height: 1em=
+; opacity: 0; background: transparent; appearance: none; border: none; resi=
+ze: none; outline: none; overflow: hidden; font: inherit; padding: 0px 1px;=
+ margin: 0px -1px; contain: strict; user-select: text; white-space: pre !im=
+portant; }
+
+.ace_text-input.ace_composition { background: transparent; color: inherit; =
+z-index: 1000; opacity: 1; }
+
+.ace_composition_placeholder { color: transparent; }
+
+.ace_composition_marker { border-bottom: 1px solid; position: absolute; bor=
+der-radius: 0px; margin-top: 1px; }
+
+[ace_nocontext=3D"true"] { z-index: auto; transform: none !important; filte=
+r: none !important; clip-path: none !important; mask: none !important; cont=
+ain: none !important; perspective: none !important; mix-blend-mode: initial=
+ !important; }
+
+.ace_layer { z-index: 1; position: absolute; overflow: hidden; overflow-wra=
+p: normal; white-space: pre; height: 100%; width: 100%; box-sizing: border-=
+box; pointer-events: none; }
+
+.ace_gutter-layer { position: relative; width: auto; text-align: right; poi=
+nter-events: auto; height: 1e+06px; contain: size layout style; }
+
+.ace_text-layer { position: absolute; height: 1e+06px; width: 1e+06px; cont=
+ain: size layout style; font: inherit !important; }
+
+.ace_text-layer > .ace_line, .ace_text-layer > .ace_line_group { contain: s=
+ize layout style; position: absolute; top: 0px; left: 0px; right: 0px; }
+
+.ace_hidpi .ace_text-layer, .ace_hidpi .ace_gutter-layer, .ace_hidpi .ace_c=
+ontent, .ace_hidpi .ace_gutter { contain: strict; will-change: transform; }
+
+.ace_hidpi .ace_text-layer > .ace_line, .ace_hidpi .ace_text-layer > .ace_l=
+ine_group { contain: strict; }
+
+.ace_cjk { display: inline-block; text-align: center; }
+
+.ace_cursor-layer { z-index: 4; }
+
+.ace_cursor { z-index: 4; position: absolute; box-sizing: border-box; borde=
+r-left: 2px solid; transform: translateZ(0px); }
+
+.ace_multiselect .ace_cursor { border-left-width: 1px; }
+
+.ace_slim-cursors .ace_cursor { border-left-width: 1px; }
+
+.ace_overwrite-cursors .ace_cursor { border-left-width: 0px; border-bottom:=
+ 1px solid; }
+
+.ace_hidden-cursors .ace_cursor { opacity: 0.2; }
+
+.ace_smooth-blinking .ace_cursor { transition: opacity 0.18s; }
+
+.ace_animate-blinking .ace_cursor { animation-duration: 1000ms; animation-t=
+iming-function: step-end; animation-name: blink-ace-animate; animation-iter=
+ation-count: infinite; }
+
+.ace_animate-blinking.ace_smooth-blinking .ace_cursor { animation-duration:=
+ 1000ms; animation-timing-function: ease-in-out; animation-name: blink-ace-=
+animate-smooth; }
+
+@keyframes blink-ace-animate {=20
+  0%, 100% { opacity: 1; }
+  60% { opacity: 0; }
+}
+
+@keyframes blink-ace-animate-smooth {=20
+  0%, 100% { opacity: 1; }
+  45% { opacity: 1; }
+  60% { opacity: 0; }
+  85% { opacity: 0; }
+}
+
+.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack { position: absol=
+ute; z-index: 3; }
+
+.ace_marker-layer .ace_selection { position: absolute; z-index: 5; }
+
+.ace_marker-layer .ace_bracket { position: absolute; z-index: 6; }
+
+.ace_marker-layer .ace_active-line { position: absolute; z-index: 2; }
+
+.ace_marker-layer .ace_selected-word { position: absolute; z-index: 4; box-=
+sizing: border-box; }
+
+.ace_line .ace_fold { box-sizing: border-box; display: inline-block; height=
+: 11px; margin-top: -2px; vertical-align: middle; background-image: url("da=
+ta:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHR=
+Tb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSok=
+D8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErI=
+H0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqN=
+rA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII=3D"), url("data:image/p=
+ng;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZ=
+QBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMC=
+IMAAI3INmXiwf2YAAAAASUVORK5CYII=3D"); background-repeat: no-repeat, repeat-=
+x; background-position: center center, left top; color: transparent; border=
+: 1px solid black; border-radius: 2px; cursor: pointer; pointer-events: aut=
+o; }
+
+.ace_dark .ace_fold { }
+
+.ace_fold:hover { background-image: url("data:image/png;base64,iVBORw0KGgoA=
+AAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR=
+5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQ=
+yMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIa=
+l8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXv=
+gnYAAAAASUVORK5CYII=3D"), url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUg=
+AAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA=
+CBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC"); =
+}
+
+.ace_tooltip { background-color: rgb(255, 255, 255); background-image: line=
+ar-gradient(transparent, rgba(0, 0, 0, 0.1)); border: 1px solid gray; borde=
+r-radius: 1px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px; color: black; ma=
+x-width: 100%; padding: 3px 4px; position: fixed; z-index: 999999; box-sizi=
+ng: border-box; cursor: default; white-space: pre; overflow-wrap: break-wor=
+d; line-height: normal; font-style: normal; font-weight: normal; letter-spa=
+cing: normal; pointer-events: none; }
+
+.ace_folding-enabled > .ace_gutter-cell { padding-right: 13px; }
+
+.ace_fold-widget { box-sizing: border-box; margin: 0px -12px 0px 1px; displ=
+ay: none; width: 11px; vertical-align: top; background-image: url("data:ima=
+ge/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKs=
+Q0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJ=
+RU5ErkJggg=3D=3D"); background-repeat: no-repeat; background-position: cent=
+er center; border-radius: 3px; border: 1px solid transparent; cursor: point=
+er; }
+
+.ace_folding-enabled .ace_fold-widget { display: inline-block; }
+
+.ace_fold-widget.ace_end { background-image: url("data:image/png;base64,iVB=
+ORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI=
+7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg=3D=3D"=
+); }
+
+.ace_fold-widget.ace_closed { background-image: url("data:image/png;base64,=
+iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4=
+EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQm=
+CCXA=3D=3D"); }
+
+.ace_fold-widget:hover { border: 1px solid rgba(0, 0, 0, 0.3); background-c=
+olor: rgba(255, 255, 255, 0.2); box-shadow: rgba(255, 255, 255, 0.7) 0px 1p=
+x 1px; }
+
+.ace_fold-widget:active { border: 1px solid rgba(0, 0, 0, 0.4); background-=
+color: rgba(0, 0, 0, 0.05); box-shadow: rgba(255, 255, 255, 0.8) 0px 1px 1p=
+x; }
+
+.ace_dark .ace_fold-widget { background-image: url("data:image/png;base64,i=
+VBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaL=
+LAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC"); }
+
+.ace_dark .ace_fold-widget.ace_end { background-image: url("data:image/png;=
+base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7=
+wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg=3D=3D"); }
+
+.ace_dark .ace_fold-widget.ace_closed { background-image: url("data:image/p=
+ng;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/A=
+xAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg=3D=3D"); }
+
+.ace_dark .ace_fold-widget:hover { box-shadow: rgba(255, 255, 255, 0.2) 0px=
+ 1px 1px; background-color: rgba(255, 255, 255, 0.1); }
+
+.ace_dark .ace_fold-widget:active { box-shadow: rgba(255, 255, 255, 0.2) 0p=
+x 1px 1px; }
+
+.ace_inline_button { border: 1px solid lightgray; display: inline-block; ma=
+rgin: -1px 8px; padding: 0px 5px; pointer-events: auto; cursor: pointer; }
+
+.ace_inline_button:hover { border-color: gray; background: rgba(200, 200, 2=
+00, 0.2); display: inline-block; pointer-events: auto; }
+
+.ace_fold-widget.ace_invalid { background-color: rgb(255, 180, 180); border=
+-color: rgb(222, 85, 85); }
+
+.ace_fade-fold-widgets .ace_fold-widget { transition: opacity 0.4s 0.05s; o=
+pacity: 0; }
+
+.ace_fade-fold-widgets:hover .ace_fold-widget { transition: opacity 0.05s 0=
+.05s; opacity: 1; }
+
+.ace_underline { text-decoration: underline; }
+
+.ace_bold { font-weight: bold; }
+
+.ace_nobold .ace_bold { font-weight: normal; }
+
+.ace_italic { font-style: italic; }
+
+.ace_error-marker { background-color: rgba(255, 0, 0, 0.2); position: absol=
+ute; z-index: 9; }
+
+.ace_highlight-marker { background-color: rgba(255, 255, 0, 0.2); position:=
+ absolute; z-index: 8; }
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://rustwiki.org/zh-CN/rust-by-example/css/variables.css
+
+@charset "utf-8";
+
+:root { --sidebar-width: 300px; --page-padding: 15px; --content-max-width: =
+750px; --menu-bar-height: 50px; }
+
+.ayu { --bg: hsl(210, 25%, 8%); --fg: #c5c5c5; --sidebar-bg: #14191f; --sid=
+ebar-fg: #c8c9db; --sidebar-non-existant: #5c6773; --sidebar-active: #ffb45=
+4; --sidebar-spacer: #2d334f; --scrollbar: var(--sidebar-fg); --icons: #737=
+480; --icons-hover: #b7b9cc; --links: #0096cf; --inline-code-color: #ffb454=
+; --theme-popup-bg: #14191f; --theme-popup-border: #5c6773; --theme-hover: =
+#191f26; --quote-bg: hsl(226, 15%, 17%); --quote-border: hsl(226, 15%, 22%)=
+; --table-border-color: hsl(210, 25%, 13%); --table-header-bg: hsl(210, 25%=
+, 28%); --table-alternate-bg: hsl(210, 25%, 11%); --searchbar-border-color:=
+ #848484; --searchbar-bg: #424242; --searchbar-fg: #fff; --searchbar-shadow=
+-color: #d4c89f; --searchresults-header-fg: #666; --searchresults-border-co=
+lor: #888; --searchresults-li-bg: #252932; --search-mark-bg: #e3b171; }
+
+.coal { --bg: hsl(200, 7%, 8%); --fg: #98a3ad; --sidebar-bg: #292c2f; --sid=
+ebar-fg: #a1adb8; --sidebar-non-existant: #505254; --sidebar-active: #3473a=
+d; --sidebar-spacer: #393939; --scrollbar: var(--sidebar-fg); --icons: #434=
+84d; --icons-hover: #b3c0cc; --links: #2b79a2; --inline-code-color: #c5c8c6=
+; --theme-popup-bg: #141617; --theme-popup-border: #43484d; --theme-hover: =
+#1f2124; --quote-bg: hsl(234, 21%, 18%); --quote-border: hsl(234, 21%, 23%)=
+; --table-border-color: hsl(200, 7%, 13%); --table-header-bg: hsl(200, 7%, =
+28%); --table-alternate-bg: hsl(200, 7%, 11%); --searchbar-border-color: #a=
+aa; --searchbar-bg: #b7b7b7; --searchbar-fg: #000; --searchbar-shadow-color=
+: #aaa; --searchresults-header-fg: #666; --searchresults-border-color: #98a=
+3ad; --searchresults-li-bg: #2b2b2f; --search-mark-bg: #355c7d; }
+
+.light { --bg: hsl(0, 0%, 100%); --fg: hsl(0, 0%, 0%); --sidebar-bg: #fafaf=
+a; --sidebar-fg: hsl(0, 0%, 0%); --sidebar-non-existant: #aaaaaa; --sidebar=
+-active: #1f1fff; --sidebar-spacer: #f4f4f4; --scrollbar: #8F8F8F; --icons:=
+ #747474; --icons-hover: #000000; --links: #20609f; --inline-code-color: #3=
+01900; --theme-popup-bg: #fafafa; --theme-popup-border: #cccccc; --theme-ho=
+ver: #e6e6e6; --quote-bg: hsl(197, 37%, 96%); --quote-border: hsl(197, 37%,=
+ 91%); --table-border-color: hsl(0, 0%, 95%); --table-header-bg: hsl(0, 0%,=
+ 80%); --table-alternate-bg: hsl(0, 0%, 97%); --searchbar-border-color: #aa=
+a; --searchbar-bg: #fafafa; --searchbar-fg: #000; --searchbar-shadow-color:=
+ #aaa; --searchresults-header-fg: #666; --searchresults-border-color: #888;=
+ --searchresults-li-bg: #e4f2fe; --search-mark-bg: #a2cff5; }
+
+.navy { --bg: hsl(226, 23%, 11%); --fg: #bcbdd0; --sidebar-bg: #282d3f; --s=
+idebar-fg: #c8c9db; --sidebar-non-existant: #505274; --sidebar-active: #2b7=
+9a2; --sidebar-spacer: #2d334f; --scrollbar: var(--sidebar-fg); --icons: #7=
+37480; --icons-hover: #b7b9cc; --links: #2b79a2; --inline-code-color: #c5c8=
+c6; --theme-popup-bg: #161923; --theme-popup-border: #737480; --theme-hover=
+: #282e40; --quote-bg: hsl(226, 15%, 17%); --quote-border: hsl(226, 15%, 22=
+%); --table-border-color: hsl(226, 23%, 16%); --table-header-bg: hsl(226, 2=
+3%, 31%); --table-alternate-bg: hsl(226, 23%, 14%); --searchbar-border-colo=
+r: #aaa; --searchbar-bg: #aeaec6; --searchbar-fg: #000; --searchbar-shadow-=
+color: #aaa; --searchresults-header-fg: #5f5f71; --searchresults-border-col=
+or: #5c5c68; --searchresults-li-bg: #242430; --search-mark-bg: #a2cff5; }
+
+.rust { --bg: hsl(60, 9%, 87%); --fg: #262625; --sidebar-bg: #3b2e2a; --sid=
+ebar-fg: #c8c9db; --sidebar-non-existant: #505254; --sidebar-active: #e69f6=
+7; --sidebar-spacer: #45373a; --scrollbar: var(--sidebar-fg); --icons: #737=
+480; --icons-hover: #262625; --links: #2b79a2; --inline-code-color: #6e6b5e=
+; --theme-popup-bg: #e1e1db; --theme-popup-border: #b38f6b; --theme-hover: =
+#99908a; --quote-bg: hsl(60, 5%, 75%); --quote-border: hsl(60, 5%, 70%); --=
+table-border-color: hsl(60, 9%, 82%); --table-header-bg: #b3a497; --table-a=
+lternate-bg: hsl(60, 9%, 84%); --searchbar-border-color: #aaa; --searchbar-=
+bg: #fafafa; --searchbar-fg: #000; --searchbar-shadow-color: #aaa; --search=
+results-header-fg: #666; --searchresults-border-color: #888; --searchresult=
+s-li-bg: #dec2a2; --search-mark-bg: #e69f67; }
+
+@media (prefers-color-scheme: dark) {
+  .light.no-js { --bg: hsl(200, 7%, 8%); --fg: #98a3ad; --sidebar-bg: #292c=
+2f; --sidebar-fg: #a1adb8; --sidebar-non-existant: #505254; --sidebar-activ=
+e: #3473ad; --sidebar-spacer: #393939; --scrollbar: var(--sidebar-fg); --ic=
+ons: #43484d; --icons-hover: #b3c0cc; --links: #2b79a2; --inline-code-color=
+: #c5c8c6; --theme-popup-bg: #141617; --theme-popup-border: #43484d; --them=
+e-hover: #1f2124; --quote-bg: hsl(234, 21%, 18%); --quote-border: hsl(234, =
+21%, 23%); --table-border-color: hsl(200, 7%, 13%); --table-header-bg: hsl(=
+200, 7%, 28%); --table-alternate-bg: hsl(200, 7%, 11%); --searchbar-border-=
+color: #aaa; --searchbar-bg: #b7b7b7; --searchbar-fg: #000; --searchbar-sha=
+dow-color: #aaa; --searchresults-header-fg: #666; --searchresults-border-co=
+lor: #98a3ad; --searchresults-li-bg: #2b2b2f; --search-mark-bg: #355c7d; }
+}
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://rustwiki.org/zh-CN/rust-by-example/css/general.css
+
+@charset "utf-8";
+
+@import url("variables.css");
+
+:root { font-size: 62.5%; }
+
+html { font-family: "open sans", sans-serif; color: var(--fg); background-c=
+olor: var(--bg); text-size-adjust: none; }
+
+body { margin: 0px; font-size: 1.6rem; overflow-x: hidden; }
+
+code { font-family: "source code pro", Consolas, "ubuntu mono", Menlo, "dej=
+avu sans mono", monospace, monospace !important; font-size: 0.875em; }
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: unset; }
+
+.left { float: left; }
+
+.right { float: right; }
+
+.boring { opacity: 0.6; }
+
+.hide-boring .boring { display: none; }
+
+.hidden { display: none !important; }
+
+h2, h3 { margin-top: 2.5em; }
+
+h4, h5 { margin-top: 2em; }
+
+.header + .header h3, .header + .header h4, .header + .header h5 { margin-t=
+op: 1em; }
+
+h1:target::before, h2:target::before, h3:target::before, h4:target::before,=
+ h5:target::before, h6:target::before { display: inline-block; content: "=
+=C2=BB"; margin-left: -30px; width: 30px; }
+
+:target { scroll-margin-top: calc(var(--menu-bar-height) + 0.5em); }
+
+.page { outline: 0px; padding: 0 var(--page-padding); margin-top: calc(0px =
+- var(--menu-bar-height)); }
+
+.page-wrapper { box-sizing: border-box; }
+
+.js:not(.sidebar-resizing) .page-wrapper { transition: margin-left 0.3s, tr=
+ansform 0.3s; }
+
+.content { overflow-y: auto; padding: 0px 15px 50px; }
+
+.content main { margin-left: auto; margin-right: auto; max-width: var(--con=
+tent-max-width); }
+
+.content p { line-height: 1.45em; }
+
+.content ol { line-height: 1.45em; }
+
+.content ul { line-height: 1.45em; }
+
+.content a { text-decoration: none; }
+
+.content a:hover { text-decoration: underline; }
+
+.content img, .content video { max-width: 100%; }
+
+.content .header:link, .content .header:visited { color: var(--fg); }
+
+.content .header:link, .content .header:visited:hover { text-decoration: no=
+ne; }
+
+table { margin: 0px auto; border-collapse: collapse; }
+
+table td { padding: 3px 20px; border: 1px var(--table-border-color) solid; =
+}
+
+table thead { background: var(--table-header-bg); }
+
+table thead td { font-weight: 700; border: none; }
+
+table thead th { padding: 3px 20px; }
+
+table thead tr { border: 1px var(--table-header-bg) solid; }
+
+table tbody tr:nth-child(2n) { background: var(--table-alternate-bg); }
+
+blockquote { margin: 20px 0px; padding: 0px 20px; color: var(--fg); backgro=
+und-color: var(--quote-bg); border-top: .1em solid var(--quote-border); bor=
+der-bottom: .1em solid var(--quote-border); }
+
+:not(.footnote-definition) + .footnote-definition, .footnote-definition + :=
+not(.footnote-definition) { margin-top: 2em; }
+
+.footnote-definition { font-size: 0.9em; margin: 0.5em 0px; }
+
+.footnote-definition p { display: inline; }
+
+.tooltiptext { position: absolute; visibility: hidden; color: rgb(255, 255,=
+ 255); background-color: rgb(51, 51, 51); transform: translateX(-50%); left=
+: -8px; top: -35px; font-size: 0.8em; text-align: center; border-radius: 6p=
+x; padding: 5px 8px; margin: 5px; z-index: 1000; }
+
+.tooltipped .tooltiptext { visibility: visible; }
+
+.chapter li.part-title { color: var(--sidebar-fg); margin: 5px 0px; font-we=
+ight: 700; }
+
+.result-no-output { font-style: italic; }
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://rustwiki.org/zh-CN/rust-by-example/css/chrome.css
+
+@charset "utf-8";
+
+@import url("variables.css");
+
+::-webkit-scrollbar { background: var(--bg); }
+
+::-webkit-scrollbar-thumb { background: var(--scrollbar); }
+
+html { scrollbar-color: var(--scrollbar) var(--bg); }
+
+#searchresults a, .content a:link, a:visited, a > .hljs { color: var(--link=
+s); }
+
+#menu-bar, #menu-bar-hover-placeholder { z-index: 101; margin: auto calc(0p=
+x - var(--page-padding)); }
+
+#menu-bar { position: relative; display: flex; flex-wrap: wrap; background-=
+color: var(--bg); border-bottom-color: var(--bg); border-bottom-width: 1px;=
+ border-bottom-style: solid; }
+
+#menu-bar.sticky, .js #menu-bar-hover-placeholder:hover + #menu-bar, .js #m=
+enu-bar:hover, .js.sidebar-visible #menu-bar { position: sticky; top: 0px !=
+important; }
+
+#menu-bar-hover-placeholder { position: sticky; top: 0px; height: var(--men=
+u-bar-height); }
+
+#menu-bar.bordered { border-bottom-color: var(--table-border-color); }
+
+#menu-bar i, #menu-bar .icon-button { position: relative; padding: 0px 8px;=
+ z-index: 10; line-height: var(--menu-bar-height); cursor: pointer; transit=
+ion: color 0.5s; }
+
+@media only screen and (max-width: 420px) {
+  #menu-bar i, #menu-bar .icon-button { padding: 0px 5px; }
+}
+
+.icon-button { border: none; background: none; padding: 0px; color: inherit=
+; }
+
+.icon-button i { margin: 0px; }
+
+.right-buttons { margin: 0px 15px; }
+
+.right-buttons a { text-decoration: none; }
+
+.left-buttons { display: flex; margin: 0px 5px; }
+
+.no-js .left-buttons { display: none; }
+
+.menu-title { display: inline-block; font-weight: 200; font-size: 2.4rem; l=
+ine-height: var(--menu-bar-height); text-align: center; margin: 0px; flex: =
+1 1 0%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.js .menu-title { cursor: pointer; }
+
+.menu-bar, .menu-bar:visited, .nav-chapters, .nav-chapters:visited, .mobile=
+-nav-chapters, .mobile-nav-chapters:visited, .menu-bar .icon-button, .menu-=
+bar a i { color: var(--icons); }
+
+.menu-bar i:hover, .menu-bar .icon-button:hover, .nav-chapters:hover, .mobi=
+le-nav-chapters i:hover { color: var(--icons-hover); }
+
+.nav-chapters { font-size: 2.5em; text-align: center; text-decoration: none=
+; position: fixed; top: 0px; bottom: 0px; margin: 0px; max-width: 150px; mi=
+n-width: 90px; display: flex; place-content: center; flex-direction: column=
+; transition: color 0.5s, background-color 0.5s; }
+
+.nav-chapters:hover { text-decoration: none; background-color: var(--theme-=
+hover); transition: background-color 0.15s, color 0.15s; }
+
+.nav-wrapper { margin-top: 50px; display: none; }
+
+.mobile-nav-chapters { font-size: 2.5em; text-align: center; text-decoratio=
+n: none; width: 90px; border-radius: 5px; background-color: var(--sidebar-b=
+g); }
+
+.previous { float: left; }
+
+.next { float: right; right: var(--page-padding); }
+
+@media only screen and (max-width: 1080px) {
+  .nav-wide-wrapper { display: none; }
+  .nav-wrapper { display: block; }
+}
+
+@media only screen and (max-width: 1380px) {
+  .sidebar-visible .nav-wide-wrapper { display: none; }
+  .sidebar-visible .nav-wrapper { display: block; }
+}
+
+:not(pre) > .hljs { display: inline; padding: 0.1em 0.3em; border-radius: 3=
+px; }
+
+:not(pre):not(a) > .hljs { color: var(--inline-code-color); overflow-x: ini=
+tial; }
+
+a:hover > .hljs { text-decoration: underline; }
+
+pre { position: relative; }
+
+pre > .buttons { position: absolute; z-index: 100; right: 5px; top: 5px; co=
+lor: var(--sidebar-fg); cursor: pointer; }
+
+pre > .buttons :hover { color: var(--sidebar-active); }
+
+pre > .buttons i { margin-left: 8px; }
+
+pre > .buttons button { color: inherit; background: transparent; border: no=
+ne; cursor: inherit; }
+
+pre > .result { margin-top: 10px; }
+
+#searchresults a { text-decoration: none; }
+
+mark { border-radius: 2px; padding: 0px 3px 1px; margin: 0px -3px -1px; bac=
+kground-color: var(--search-mark-bg); transition: background-color 300ms li=
+near; cursor: pointer; }
+
+mark.fade-out { background-color: rgba(0, 0, 0, 0) !important; cursor: auto=
+; }
+
+.searchbar-outer { margin-left: auto; margin-right: auto; max-width: var(--=
+content-max-width); }
+
+#searchbar { width: 100%; margin: 5px auto 0px; padding: 10px 16px; transit=
+ion: box-shadow 300ms ease-in-out; border: 1px solid var(--searchbar-border=
+-color); border-radius: 3px; background-color: var(--searchbar-bg); color: =
+var(--searchbar-fg); }
+
+#searchbar:focus, #searchbar.active { box-shadow: 0 0 3px var(--searchbar-s=
+hadow-color); }
+
+.searchresults-header { font-weight: bold; font-size: 1em; padding: 18px 0p=
+x 0px 5px; color: var(--searchresults-header-fg); }
+
+.searchresults-outer { margin-left: auto; margin-right: auto; max-width: va=
+r(--content-max-width); border-bottom: 1px dashed var(--searchresults-borde=
+r-color); }
+
+ul#searchresults { list-style: none; padding-left: 20px; }
+
+ul#searchresults li { margin: 10px 0px; padding: 2px; border-radius: 2px; }
+
+ul#searchresults li.focus { background-color: var(--searchresults-li-bg); }
+
+ul#searchresults span.teaser { display: block; clear: both; margin: 5px 0px=
+ 0px 20px; font-size: 0.8em; }
+
+ul#searchresults span.teaser em { font-weight: bold; font-style: normal; }
+
+.sidebar { position: fixed; left: 0px; top: 0px; bottom: 0px; width: var(--=
+sidebar-width); font-size: 0.875em; box-sizing: border-box; overscroll-beha=
+vior-y: contain; background-color: var(--sidebar-bg); color: var(--sidebar-=
+fg); }
+
+.sidebar-resizing { user-select: none; }
+
+.js:not(.sidebar-resizing) .sidebar { transition: transform 0.3s; }
+
+.sidebar code { line-height: 2em; }
+
+.sidebar .sidebar-scrollbox { overflow-y: auto; position: absolute; inset: =
+0px; padding: 10px; }
+
+.sidebar .sidebar-resize-handle { position: absolute; cursor: col-resize; w=
+idth: 0px; right: 0px; top: 0px; bottom: 0px; }
+
+.js .sidebar .sidebar-resize-handle { cursor: col-resize; width: 5px; }
+
+.sidebar-hidden .sidebar { transform: translateX(calc(0px - var(--sidebar-w=
+idth))); }
+
+.sidebar::-webkit-scrollbar { background: var(--sidebar-bg); }
+
+.sidebar::-webkit-scrollbar-thumb { background: var(--scrollbar); }
+
+.sidebar-visible .page-wrapper { transform: translateX(var(--sidebar-width)=
+); }
+
+@media only screen and (min-width: 620px) {
+  .sidebar-visible .page-wrapper { transform: none; margin-left: var(--side=
+bar-width); }
+}
+
+.chapter { list-style: outside none none; padding-left: 0px; line-height: 2=
+.2em; }
+
+.chapter ol { width: 100%; }
+
+.chapter li { display: flex; color: var(--sidebar-non-existant); }
+
+.chapter li a { display: block; padding: 0px; text-decoration: none; color:=
+ var(--sidebar-fg); }
+
+.chapter li a:hover { color: var(--sidebar-active); }
+
+.chapter li a.active { color: var(--sidebar-active); }
+
+.chapter li > a.toggle { cursor: pointer; display: block; margin-left: auto=
+; padding: 0px 10px; user-select: none; opacity: 0.68; }
+
+.chapter li > a.toggle div { transition: transform 0.5s; }
+
+.chapter li:not(.expanded) + li > ol { display: none; }
+
+.chapter li.chapter-item { line-height: 1.5em; margin-top: 0.6em; }
+
+.chapter li.expanded > a.toggle div { transform: rotate(90deg); }
+
+.spacer { width: 100%; height: 3px; margin: 5px 0px; }
+
+.chapter .spacer { background-color: var(--sidebar-spacer); }
+
+@media (-moz-touch-enabled: 1), (pointer: coarse) {
+  .chapter li a { padding: 5px 0px; }
+  .spacer { margin: 10px 0px; }
+}
+
+.section { list-style: outside none none; padding-left: 20px; line-height: =
+1.9em; }
+
+.theme-popup { position: absolute; left: 10px; top: var(--menu-bar-height);=
+ z-index: 1000; border-radius: 4px; font-size: 0.7em; color: var(--fg); bac=
+kground: var(--theme-popup-bg); border: 1px solid var(--theme-popup-border)=
+; margin: 0px; padding: 0px; list-style: none; display: none; }
+
+.theme-popup .default { color: var(--icons); }
+
+.theme-popup .theme { width: 100%; border: 0px; margin: 0px; padding: 2px 1=
+0px; line-height: 25px; white-space: nowrap; text-align: left; cursor: poin=
+ter; color: inherit; background: inherit; font-size: inherit; }
+
+.theme-popup .theme:hover { background-color: var(--theme-hover); }
+
+.theme-popup .theme:hover:first-child, .theme-popup .theme:hover:last-child=
+ { border-top-left-radius: inherit; border-top-right-radius: inherit; }
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://rustwiki.org/zh-CN/rust-by-example/css/print.css
+
+@charset "utf-8";
+
+#sidebar, #menu-bar, .nav-chapters, .mobile-nav-chapters { display: none; }
+
+#page-wrapper.page-wrapper { transform: none; margin-left: 0px; overflow-y:=
+ initial; }
+
+#content { max-width: none; margin: 0px; padding: 0px; }
+
+.page { overflow-y: initial; }
+
+code { background-color: rgb(102, 102, 102); border-radius: 5px; -webkit-pr=
+int-color-adjust: exact; }
+
+pre > .buttons { z-index: 2; }
+
+a, a:visited, a:active, a:hover { color: rgb(65, 131, 196); text-decoration=
+: none; }
+
+h1, h2, h3, h4, h5, h6 { break-inside: avoid; break-after: avoid; }
+
+pre, code { break-inside: avoid; white-space: pre-wrap; }
+
+.fa { display: none !important; }
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://rustwiki.org/zh-CN/rust-by-example/FontAwesome/css/font-awesome.css
+
+@charset "utf-8";
+
+@font-face { font-family: FontAwesome; src: url("../fonts/fontawesome-webfo=
+nt.woff2?v=3D4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.wof=
+f?v=3D4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=3D4.7=
+.0") format("truetype"); font-weight: normal; font-style: normal; }
+
+.fa { display: inline-block; font-style: normal; font-variant: normal; font=
+-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-fea=
+ture-settings: normal; font-variation-settings: normal; font-weight: normal=
+; font-stretch: normal; line-height: 1; font-family: FontAwesome; font-size=
+: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; }
+
+.fa-lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -15%; }
+
+.fa-2x { font-size: 2em; }
+
+.fa-3x { font-size: 3em; }
+
+.fa-4x { font-size: 4em; }
+
+.fa-5x { font-size: 5em; }
+
+.fa-fw { width: 1.28571em; text-align: center; }
+
+.fa-ul { padding-left: 0px; margin-left: 2.14286em; list-style-type: none; =
+}
+
+.fa-ul > li { position: relative; }
+
+.fa-li { position: absolute; left: -2.14286em; width: 2.14286em; top: 0.142=
+857em; text-align: center; }
+
+.fa-li.fa-lg { left: -1.85714em; }
+
+.fa-border { padding: 0.2em 0.25em 0.15em; border: 0.08em solid rgb(238, 23=
+8, 238); border-radius: 0.1em; }
+
+.fa-pull-left { float: left; }
+
+.fa-pull-right { float: right; }
+
+.fa.fa-pull-left { margin-right: 0.3em; }
+
+.fa.fa-pull-right { margin-left: 0.3em; }
+
+.pull-right { float: right; }
+
+.pull-left { float: left; }
+
+.fa.pull-left { margin-right: 0.3em; }
+
+.fa.pull-right { margin-left: 0.3em; }
+
+.fa-spin { animation: 2s linear 0s infinite normal none running fa-spin; }
+
+.fa-pulse { animation: 1s steps(8) 0s infinite normal none running fa-spin;=
+ }
+
+@-webkit-keyframes fa-spin {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+@keyframes fa-spin {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+.fa-rotate-90 { transform: rotate(90deg); }
+
+.fa-rotate-180 { transform: rotate(180deg); }
+
+.fa-rotate-270 { transform: rotate(270deg); }
+
+.fa-flip-horizontal { transform: scale(-1, 1); }
+
+.fa-flip-vertical { transform: scale(1, -1); }
+
+:root .fa-rotate-90, :root .fa-rotate-180, :root .fa-rotate-270, :root .fa-=
+flip-horizontal, :root .fa-flip-vertical { filter: none; }
+
+.fa-stack { position: relative; display: inline-block; width: 2em; height: =
+2em; line-height: 2em; vertical-align: middle; }
+
+.fa-stack-1x, .fa-stack-2x { position: absolute; left: 0px; width: 100%; te=
+xt-align: center; }
+
+.fa-stack-1x { line-height: inherit; }
+
+.fa-stack-2x { font-size: 2em; }
+
+.fa-inverse { color: rgb(255, 255, 255); }
+
+.fa-glass::before { content: "=EF=80=80"; }
+
+.fa-music::before { content: "=EF=80=81"; }
+
+.fa-search::before { content: "=EF=80=82"; }
+
+.fa-envelope-o::before { content: "=EF=80=83"; }
+
+.fa-heart::before { content: "=EF=80=84"; }
+
+.fa-star::before { content: "=EF=80=85"; }
+
+.fa-star-o::before { content: "=EF=80=86"; }
+
+.fa-user::before { content: "=EF=80=87"; }
+
+.fa-film::before { content: "=EF=80=88"; }
+
+.fa-th-large::before { content: "=EF=80=89"; }
+
+.fa-th::before { content: "=EF=80=8A"; }
+
+.fa-th-list::before { content: "=EF=80=8B"; }
+
+.fa-check::before { content: "=EF=80=8C"; }
+
+.fa-remove::before, .fa-close::before, .fa-times::before { content: "=EF=80=
+=8D"; }
+
+.fa-search-plus::before { content: "=EF=80=8E"; }
+
+.fa-search-minus::before { content: "=EF=80=90"; }
+
+.fa-power-off::before { content: "=EF=80=91"; }
+
+.fa-signal::before { content: "=EF=80=92"; }
+
+.fa-gear::before, .fa-cog::before { content: "=EF=80=93"; }
+
+.fa-trash-o::before { content: "=EF=80=94"; }
+
+.fa-home::before { content: "=EF=80=95"; }
+
+.fa-file-o::before { content: "=EF=80=96"; }
+
+.fa-clock-o::before { content: "=EF=80=97"; }
+
+.fa-road::before { content: "=EF=80=98"; }
+
+.fa-download::before { content: "=EF=80=99"; }
+
+.fa-arrow-circle-o-down::before { content: "=EF=80=9A"; }
+
+.fa-arrow-circle-o-up::before { content: "=EF=80=9B"; }
+
+.fa-inbox::before { content: "=EF=80=9C"; }
+
+.fa-play-circle-o::before { content: "=EF=80=9D"; }
+
+.fa-rotate-right::before, .fa-repeat::before { content: "=EF=80=9E"; }
+
+.fa-refresh::before { content: "=EF=80=A1"; }
+
+.fa-list-alt::before { content: "=EF=80=A2"; }
+
+.fa-lock::before { content: "=EF=80=A3"; }
+
+.fa-flag::before { content: "=EF=80=A4"; }
+
+.fa-headphones::before { content: "=EF=80=A5"; }
+
+.fa-volume-off::before { content: "=EF=80=A6"; }
+
+.fa-volume-down::before { content: "=EF=80=A7"; }
+
+.fa-volume-up::before { content: "=EF=80=A8"; }
+
+.fa-qrcode::before { content: "=EF=80=A9"; }
+
+.fa-barcode::before { content: "=EF=80=AA"; }
+
+.fa-tag::before { content: "=EF=80=AB"; }
+
+.fa-tags::before { content: "=EF=80=AC"; }
+
+.fa-book::before { content: "=EF=80=AD"; }
+
+.fa-bookmark::before { content: "=EF=80=AE"; }
+
+.fa-print::before { content: "=EF=80=AF"; }
+
+.fa-camera::before { content: "=EF=80=B0"; }
+
+.fa-font::before { content: "=EF=80=B1"; }
+
+.fa-bold::before { content: "=EF=80=B2"; }
+
+.fa-italic::before { content: "=EF=80=B3"; }
+
+.fa-text-height::before { content: "=EF=80=B4"; }
+
+.fa-text-width::before { content: "=EF=80=B5"; }
+
+.fa-align-left::before { content: "=EF=80=B6"; }
+
+.fa-align-center::before { content: "=EF=80=B7"; }
+
+.fa-align-right::before { content: "=EF=80=B8"; }
+
+.fa-align-justify::before { content: "=EF=80=B9"; }
+
+.fa-list::before { content: "=EF=80=BA"; }
+
+.fa-dedent::before, .fa-outdent::before { content: "=EF=80=BB"; }
+
+.fa-indent::before { content: "=EF=80=BC"; }
+
+.fa-video-camera::before { content: "=EF=80=BD"; }
+
+.fa-photo::before, .fa-image::before, .fa-picture-o::before { content: "=EF=
+=80=BE"; }
+
+.fa-pencil::before { content: "=EF=81=80"; }
+
+.fa-map-marker::before { content: "=EF=81=81"; }
+
+.fa-adjust::before { content: "=EF=81=82"; }
+
+.fa-tint::before { content: "=EF=81=83"; }
+
+.fa-edit::before, .fa-pencil-square-o::before { content: "=EF=81=84"; }
+
+.fa-share-square-o::before { content: "=EF=81=85"; }
+
+.fa-check-square-o::before { content: "=EF=81=86"; }
+
+.fa-arrows::before { content: "=EF=81=87"; }
+
+.fa-step-backward::before { content: "=EF=81=88"; }
+
+.fa-fast-backward::before { content: "=EF=81=89"; }
+
+.fa-backward::before { content: "=EF=81=8A"; }
+
+.fa-play::before { content: "=EF=81=8B"; }
+
+.fa-pause::before { content: "=EF=81=8C"; }
+
+.fa-stop::before { content: "=EF=81=8D"; }
+
+.fa-forward::before { content: "=EF=81=8E"; }
+
+.fa-fast-forward::before { content: "=EF=81=90"; }
+
+.fa-step-forward::before { content: "=EF=81=91"; }
+
+.fa-eject::before { content: "=EF=81=92"; }
+
+.fa-chevron-left::before { content: "=EF=81=93"; }
+
+.fa-chevron-right::before { content: "=EF=81=94"; }
+
+.fa-plus-circle::before { content: "=EF=81=95"; }
+
+.fa-minus-circle::before { content: "=EF=81=96"; }
+
+.fa-times-circle::before { content: "=EF=81=97"; }
+
+.fa-check-circle::before { content: "=EF=81=98"; }
+
+.fa-question-circle::before { content: "=EF=81=99"; }
+
+.fa-info-circle::before { content: "=EF=81=9A"; }
+
+.fa-crosshairs::before { content: "=EF=81=9B"; }
+
+.fa-times-circle-o::before { content: "=EF=81=9C"; }
+
+.fa-check-circle-o::before { content: "=EF=81=9D"; }
+
+.fa-ban::before { content: "=EF=81=9E"; }
+
+.fa-arrow-left::before { content: "=EF=81=A0"; }
+
+.fa-arrow-right::before { content: "=EF=81=A1"; }
+
+.fa-arrow-up::before { content: "=EF=81=A2"; }
+
+.fa-arrow-down::before { content: "=EF=81=A3"; }
+
+.fa-mail-forward::before, .fa-share::before { content: "=EF=81=A4"; }
+
+.fa-expand::before { content: "=EF=81=A5"; }
+
+.fa-compress::before { content: "=EF=81=A6"; }
+
+.fa-plus::before { content: "=EF=81=A7"; }
+
+.fa-minus::before { content: "=EF=81=A8"; }
+
+.fa-asterisk::before { content: "=EF=81=A9"; }
+
+.fa-exclamation-circle::before { content: "=EF=81=AA"; }
+
+.fa-gift::before { content: "=EF=81=AB"; }
+
+.fa-leaf::before { content: "=EF=81=AC"; }
+
+.fa-fire::before { content: "=EF=81=AD"; }
+
+.fa-eye::before { content: "=EF=81=AE"; }
+
+.fa-eye-slash::before { content: "=EF=81=B0"; }
+
+.fa-warning::before, .fa-exclamation-triangle::before { content: "=EF=81=B1=
+"; }
+
+.fa-plane::before { content: "=EF=81=B2"; }
+
+.fa-calendar::before { content: "=EF=81=B3"; }
+
+.fa-random::before { content: "=EF=81=B4"; }
+
+.fa-comment::before { content: "=EF=81=B5"; }
+
+.fa-magnet::before { content: "=EF=81=B6"; }
+
+.fa-chevron-up::before { content: "=EF=81=B7"; }
+
+.fa-chevron-down::before { content: "=EF=81=B8"; }
+
+.fa-retweet::before { content: "=EF=81=B9"; }
+
+.fa-shopping-cart::before { content: "=EF=81=BA"; }
+
+.fa-folder::before { content: "=EF=81=BB"; }
+
+.fa-folder-open::before { content: "=EF=81=BC"; }
+
+.fa-arrows-v::before { content: "=EF=81=BD"; }
+
+.fa-arrows-h::before { content: "=EF=81=BE"; }
+
+.fa-bar-chart-o::before, .fa-bar-chart::before { content: "=EF=82=80"; }
+
+.fa-twitter-square::before { content: "=EF=82=81"; }
+
+.fa-facebook-square::before { content: "=EF=82=82"; }
+
+.fa-camera-retro::before { content: "=EF=82=83"; }
+
+.fa-key::before { content: "=EF=82=84"; }
+
+.fa-gears::before, .fa-cogs::before { content: "=EF=82=85"; }
+
+.fa-comments::before { content: "=EF=82=86"; }
+
+.fa-thumbs-o-up::before { content: "=EF=82=87"; }
+
+.fa-thumbs-o-down::before { content: "=EF=82=88"; }
+
+.fa-star-half::before { content: "=EF=82=89"; }
+
+.fa-heart-o::before { content: "=EF=82=8A"; }
+
+.fa-sign-out::before { content: "=EF=82=8B"; }
+
+.fa-linkedin-square::before { content: "=EF=82=8C"; }
+
+.fa-thumb-tack::before { content: "=EF=82=8D"; }
+
+.fa-external-link::before { content: "=EF=82=8E"; }
+
+.fa-sign-in::before { content: "=EF=82=90"; }
+
+.fa-trophy::before { content: "=EF=82=91"; }
+
+.fa-github-square::before { content: "=EF=82=92"; }
+
+.fa-upload::before { content: "=EF=82=93"; }
+
+.fa-lemon-o::before { content: "=EF=82=94"; }
+
+.fa-phone::before { content: "=EF=82=95"; }
+
+.fa-square-o::before { content: "=EF=82=96"; }
+
+.fa-bookmark-o::before { content: "=EF=82=97"; }
+
+.fa-phone-square::before { content: "=EF=82=98"; }
+
+.fa-twitter::before { content: "=EF=82=99"; }
+
+.fa-facebook-f::before, .fa-facebook::before { content: "=EF=82=9A"; }
+
+.fa-github::before { content: "=EF=82=9B"; }
+
+.fa-unlock::before { content: "=EF=82=9C"; }
+
+.fa-credit-card::before { content: "=EF=82=9D"; }
+
+.fa-feed::before, .fa-rss::before { content: "=EF=82=9E"; }
+
+.fa-hdd-o::before { content: "=EF=82=A0"; }
+
+.fa-bullhorn::before { content: "=EF=82=A1"; }
+
+.fa-bell::before { content: "=EF=83=B3"; }
+
+.fa-certificate::before { content: "=EF=82=A3"; }
+
+.fa-hand-o-right::before { content: "=EF=82=A4"; }
+
+.fa-hand-o-left::before { content: "=EF=82=A5"; }
+
+.fa-hand-o-up::before { content: "=EF=82=A6"; }
+
+.fa-hand-o-down::before { content: "=EF=82=A7"; }
+
+.fa-arrow-circle-left::before { content: "=EF=82=A8"; }
+
+.fa-arrow-circle-right::before { content: "=EF=82=A9"; }
+
+.fa-arrow-circle-up::before { content: "=EF=82=AA"; }
+
+.fa-arrow-circle-down::before { content: "=EF=82=AB"; }
+
+.fa-globe::before { content: "=EF=82=AC"; }
+
+.fa-wrench::before { content: "=EF=82=AD"; }
+
+.fa-tasks::before { content: "=EF=82=AE"; }
+
+.fa-filter::before { content: "=EF=82=B0"; }
+
+.fa-briefcase::before { content: "=EF=82=B1"; }
+
+.fa-arrows-alt::before { content: "=EF=82=B2"; }
+
+.fa-group::before, .fa-users::before { content: "=EF=83=80"; }
+
+.fa-chain::before, .fa-link::before { content: "=EF=83=81"; }
+
+.fa-cloud::before { content: "=EF=83=82"; }
+
+.fa-flask::before { content: "=EF=83=83"; }
+
+.fa-cut::before, .fa-scissors::before { content: "=EF=83=84"; }
+
+.fa-copy::before, .fa-files-o::before { content: "=EF=83=85"; }
+
+.fa-paperclip::before { content: "=EF=83=86"; }
+
+.fa-save::before, .fa-floppy-o::before { content: "=EF=83=87"; }
+
+.fa-square::before { content: "=EF=83=88"; }
+
+.fa-navicon::before, .fa-reorder::before, .fa-bars::before { content: "=EF=
+=83=89"; }
+
+.fa-list-ul::before { content: "=EF=83=8A"; }
+
+.fa-list-ol::before { content: "=EF=83=8B"; }
+
+.fa-strikethrough::before { content: "=EF=83=8C"; }
+
+.fa-underline::before { content: "=EF=83=8D"; }
+
+.fa-table::before { content: "=EF=83=8E"; }
+
+.fa-magic::before { content: "=EF=83=90"; }
+
+.fa-truck::before { content: "=EF=83=91"; }
+
+.fa-pinterest::before { content: "=EF=83=92"; }
+
+.fa-pinterest-square::before { content: "=EF=83=93"; }
+
+.fa-google-plus-square::before { content: "=EF=83=94"; }
+
+.fa-google-plus::before { content: "=EF=83=95"; }
+
+.fa-money::before { content: "=EF=83=96"; }
+
+.fa-caret-down::before { content: "=EF=83=97"; }
+
+.fa-caret-up::before { content: "=EF=83=98"; }
+
+.fa-caret-left::before { content: "=EF=83=99"; }
+
+.fa-caret-right::before { content: "=EF=83=9A"; }
+
+.fa-columns::before { content: "=EF=83=9B"; }
+
+.fa-unsorted::before, .fa-sort::before { content: "=EF=83=9C"; }
+
+.fa-sort-down::before, .fa-sort-desc::before { content: "=EF=83=9D"; }
+
+.fa-sort-up::before, .fa-sort-asc::before { content: "=EF=83=9E"; }
+
+.fa-envelope::before { content: "=EF=83=A0"; }
+
+.fa-linkedin::before { content: "=EF=83=A1"; }
+
+.fa-rotate-left::before, .fa-undo::before { content: "=EF=83=A2"; }
+
+.fa-legal::before, .fa-gavel::before { content: "=EF=83=A3"; }
+
+.fa-dashboard::before, .fa-tachometer::before { content: "=EF=83=A4"; }
+
+.fa-comment-o::before { content: "=EF=83=A5"; }
+
+.fa-comments-o::before { content: "=EF=83=A6"; }
+
+.fa-flash::before, .fa-bolt::before { content: "=EF=83=A7"; }
+
+.fa-sitemap::before { content: "=EF=83=A8"; }
+
+.fa-umbrella::before { content: "=EF=83=A9"; }
+
+.fa-paste::before, .fa-clipboard::before { content: "=EF=83=AA"; }
+
+.fa-lightbulb-o::before { content: "=EF=83=AB"; }
+
+.fa-exchange::before { content: "=EF=83=AC"; }
+
+.fa-cloud-download::before { content: "=EF=83=AD"; }
+
+.fa-cloud-upload::before { content: "=EF=83=AE"; }
+
+.fa-user-md::before { content: "=EF=83=B0"; }
+
+.fa-stethoscope::before { content: "=EF=83=B1"; }
+
+.fa-suitcase::before { content: "=EF=83=B2"; }
+
+.fa-bell-o::before { content: "=EF=82=A2"; }
+
+.fa-coffee::before { content: "=EF=83=B4"; }
+
+.fa-cutlery::before { content: "=EF=83=B5"; }
+
+.fa-file-text-o::before { content: "=EF=83=B6"; }
+
+.fa-building-o::before { content: "=EF=83=B7"; }
+
+.fa-hospital-o::before { content: "=EF=83=B8"; }
+
+.fa-ambulance::before { content: "=EF=83=B9"; }
+
+.fa-medkit::before { content: "=EF=83=BA"; }
+
+.fa-fighter-jet::before { content: "=EF=83=BB"; }
+
+.fa-beer::before { content: "=EF=83=BC"; }
+
+.fa-h-square::before { content: "=EF=83=BD"; }
+
+.fa-plus-square::before { content: "=EF=83=BE"; }
+
+.fa-angle-double-left::before { content: "=EF=84=80"; }
+
+.fa-angle-double-right::before { content: "=EF=84=81"; }
+
+.fa-angle-double-up::before { content: "=EF=84=82"; }
+
+.fa-angle-double-down::before { content: "=EF=84=83"; }
+
+.fa-angle-left::before { content: "=EF=84=84"; }
+
+.fa-angle-right::before { content: "=EF=84=85"; }
+
+.fa-angle-up::before { content: "=EF=84=86"; }
+
+.fa-angle-down::before { content: "=EF=84=87"; }
+
+.fa-desktop::before { content: "=EF=84=88"; }
+
+.fa-laptop::before { content: "=EF=84=89"; }
+
+.fa-tablet::before { content: "=EF=84=8A"; }
+
+.fa-mobile-phone::before, .fa-mobile::before { content: "=EF=84=8B"; }
+
+.fa-circle-o::before { content: "=EF=84=8C"; }
+
+.fa-quote-left::before { content: "=EF=84=8D"; }
+
+.fa-quote-right::before { content: "=EF=84=8E"; }
+
+.fa-spinner::before { content: "=EF=84=90"; }
+
+.fa-circle::before { content: "=EF=84=91"; }
+
+.fa-mail-reply::before, .fa-reply::before { content: "=EF=84=92"; }
+
+.fa-github-alt::before { content: "=EF=84=93"; }
+
+.fa-folder-o::before { content: "=EF=84=94"; }
+
+.fa-folder-open-o::before { content: "=EF=84=95"; }
+
+.fa-smile-o::before { content: "=EF=84=98"; }
+
+.fa-frown-o::before { content: "=EF=84=99"; }
+
+.fa-meh-o::before { content: "=EF=84=9A"; }
+
+.fa-gamepad::before { content: "=EF=84=9B"; }
+
+.fa-keyboard-o::before { content: "=EF=84=9C"; }
+
+.fa-flag-o::before { content: "=EF=84=9D"; }
+
+.fa-flag-checkered::before { content: "=EF=84=9E"; }
+
+.fa-terminal::before { content: "=EF=84=A0"; }
+
+.fa-code::before { content: "=EF=84=A1"; }
+
+.fa-mail-reply-all::before, .fa-reply-all::before { content: "=EF=84=A2"; }
+
+.fa-star-half-empty::before, .fa-star-half-full::before, .fa-star-half-o::b=
+efore { content: "=EF=84=A3"; }
+
+.fa-location-arrow::before { content: "=EF=84=A4"; }
+
+.fa-crop::before { content: "=EF=84=A5"; }
+
+.fa-code-fork::before { content: "=EF=84=A6"; }
+
+.fa-unlink::before, .fa-chain-broken::before { content: "=EF=84=A7"; }
+
+.fa-question::before { content: "=EF=84=A8"; }
+
+.fa-info::before { content: "=EF=84=A9"; }
+
+.fa-exclamation::before { content: "=EF=84=AA"; }
+
+.fa-superscript::before { content: "=EF=84=AB"; }
+
+.fa-subscript::before { content: "=EF=84=AC"; }
+
+.fa-eraser::before { content: "=EF=84=AD"; }
+
+.fa-puzzle-piece::before { content: "=EF=84=AE"; }
+
+.fa-microphone::before { content: "=EF=84=B0"; }
+
+.fa-microphone-slash::before { content: "=EF=84=B1"; }
+
+.fa-shield::before { content: "=EF=84=B2"; }
+
+.fa-calendar-o::before { content: "=EF=84=B3"; }
+
+.fa-fire-extinguisher::before { content: "=EF=84=B4"; }
+
+.fa-rocket::before { content: "=EF=84=B5"; }
+
+.fa-maxcdn::before { content: "=EF=84=B6"; }
+
+.fa-chevron-circle-left::before { content: "=EF=84=B7"; }
+
+.fa-chevron-circle-right::before { content: "=EF=84=B8"; }
+
+.fa-chevron-circle-up::before { content: "=EF=84=B9"; }
+
+.fa-chevron-circle-down::before { content: "=EF=84=BA"; }
+
+.fa-html5::before { content: "=EF=84=BB"; }
+
+.fa-css3::before { content: "=EF=84=BC"; }
+
+.fa-anchor::before { content: "=EF=84=BD"; }
+
+.fa-unlock-alt::before { content: "=EF=84=BE"; }
+
+.fa-bullseye::before { content: "=EF=85=80"; }
+
+.fa-ellipsis-h::before { content: "=EF=85=81"; }
+
+.fa-ellipsis-v::before { content: "=EF=85=82"; }
+
+.fa-rss-square::before { content: "=EF=85=83"; }
+
+.fa-play-circle::before { content: "=EF=85=84"; }
+
+.fa-ticket::before { content: "=EF=85=85"; }
+
+.fa-minus-square::before { content: "=EF=85=86"; }
+
+.fa-minus-square-o::before { content: "=EF=85=87"; }
+
+.fa-level-up::before { content: "=EF=85=88"; }
+
+.fa-level-down::before { content: "=EF=85=89"; }
+
+.fa-check-square::before { content: "=EF=85=8A"; }
+
+.fa-pencil-square::before { content: "=EF=85=8B"; }
+
+.fa-external-link-square::before { content: "=EF=85=8C"; }
+
+.fa-share-square::before { content: "=EF=85=8D"; }
+
+.fa-compass::before { content: "=EF=85=8E"; }
+
+.fa-toggle-down::before, .fa-caret-square-o-down::before { content: "=EF=85=
+=90"; }
+
+.fa-toggle-up::before, .fa-caret-square-o-up::before { content: "=EF=85=91"=
+; }
+
+.fa-toggle-right::before, .fa-caret-square-o-right::before { content: "=EF=
+=85=92"; }
+
+.fa-euro::before, .fa-eur::before { content: "=EF=85=93"; }
+
+.fa-gbp::before { content: "=EF=85=94"; }
+
+.fa-dollar::before, .fa-usd::before { content: "=EF=85=95"; }
+
+.fa-rupee::before, .fa-inr::before { content: "=EF=85=96"; }
+
+.fa-cny::before, .fa-rmb::before, .fa-yen::before, .fa-jpy::before { conten=
+t: "=EF=85=97"; }
+
+.fa-ruble::before, .fa-rouble::before, .fa-rub::before { content: "=EF=85=
+=98"; }
+
+.fa-won::before, .fa-krw::before { content: "=EF=85=99"; }
+
+.fa-bitcoin::before, .fa-btc::before { content: "=EF=85=9A"; }
+
+.fa-file::before { content: "=EF=85=9B"; }
+
+.fa-file-text::before { content: "=EF=85=9C"; }
+
+.fa-sort-alpha-asc::before { content: "=EF=85=9D"; }
+
+.fa-sort-alpha-desc::before { content: "=EF=85=9E"; }
+
+.fa-sort-amount-asc::before { content: "=EF=85=A0"; }
+
+.fa-sort-amount-desc::before { content: "=EF=85=A1"; }
+
+.fa-sort-numeric-asc::before { content: "=EF=85=A2"; }
+
+.fa-sort-numeric-desc::before { content: "=EF=85=A3"; }
+
+.fa-thumbs-up::before { content: "=EF=85=A4"; }
+
+.fa-thumbs-down::before { content: "=EF=85=A5"; }
+
+.fa-youtube-square::before { content: "=EF=85=A6"; }
+
+.fa-youtube::before { content: "=EF=85=A7"; }
+
+.fa-xing::before { content: "=EF=85=A8"; }
+
+.fa-xing-square::before { content: "=EF=85=A9"; }
+
+.fa-youtube-play::before { content: "=EF=85=AA"; }
+
+.fa-dropbox::before { content: "=EF=85=AB"; }
+
+.fa-stack-overflow::before { content: "=EF=85=AC"; }
+
+.fa-instagram::before { content: "=EF=85=AD"; }
+
+.fa-flickr::before { content: "=EF=85=AE"; }
+
+.fa-adn::before { content: "=EF=85=B0"; }
+
+.fa-bitbucket::before { content: "=EF=85=B1"; }
+
+.fa-bitbucket-square::before { content: "=EF=85=B2"; }
+
+.fa-tumblr::before { content: "=EF=85=B3"; }
+
+.fa-tumblr-square::before { content: "=EF=85=B4"; }
+
+.fa-long-arrow-down::before { content: "=EF=85=B5"; }
+
+.fa-long-arrow-up::before { content: "=EF=85=B6"; }
+
+.fa-long-arrow-left::before { content: "=EF=85=B7"; }
+
+.fa-long-arrow-right::before { content: "=EF=85=B8"; }
+
+.fa-apple::before { content: "=EF=85=B9"; }
+
+.fa-windows::before { content: "=EF=85=BA"; }
+
+.fa-android::before { content: "=EF=85=BB"; }
+
+.fa-linux::before { content: "=EF=85=BC"; }
+
+.fa-dribbble::before { content: "=EF=85=BD"; }
+
+.fa-skype::before { content: "=EF=85=BE"; }
+
+.fa-foursquare::before { content: "=EF=86=80"; }
+
+.fa-trello::before { content: "=EF=86=81"; }
+
+.fa-female::before { content: "=EF=86=82"; }
+
+.fa-male::before { content: "=EF=86=83"; }
+
+.fa-gittip::before, .fa-gratipay::before { content: "=EF=86=84"; }
+
+.fa-sun-o::before { content: "=EF=86=85"; }
+
+.fa-moon-o::before { content: "=EF=86=86"; }
+
+.fa-archive::before { content: "=EF=86=87"; }
+
+.fa-bug::before { content: "=EF=86=88"; }
+
+.fa-vk::before { content: "=EF=86=89"; }
+
+.fa-weibo::before { content: "=EF=86=8A"; }
+
+.fa-renren::before { content: "=EF=86=8B"; }
+
+.fa-pagelines::before { content: "=EF=86=8C"; }
+
+.fa-stack-exchange::before { content: "=EF=86=8D"; }
+
+.fa-arrow-circle-o-right::before { content: "=EF=86=8E"; }
+
+.fa-arrow-circle-o-left::before { content: "=EF=86=90"; }
+
+.fa-toggle-left::before, .fa-caret-square-o-left::before { content: "=EF=86=
+=91"; }
+
+.fa-dot-circle-o::before { content: "=EF=86=92"; }
+
+.fa-wheelchair::before { content: "=EF=86=93"; }
+
+.fa-vimeo-square::before { content: "=EF=86=94"; }
+
+.fa-turkish-lira::before, .fa-try::before { content: "=EF=86=95"; }
+
+.fa-plus-square-o::before { content: "=EF=86=96"; }
+
+.fa-space-shuttle::before { content: "=EF=86=97"; }
+
+.fa-slack::before { content: "=EF=86=98"; }
+
+.fa-envelope-square::before { content: "=EF=86=99"; }
+
+.fa-wordpress::before { content: "=EF=86=9A"; }
+
+.fa-openid::before { content: "=EF=86=9B"; }
+
+.fa-institution::before, .fa-bank::before, .fa-university::before { content=
+: "=EF=86=9C"; }
+
+.fa-mortar-board::before, .fa-graduation-cap::before { content: "=EF=86=9D"=
+; }
+
+.fa-yahoo::before { content: "=EF=86=9E"; }
+
+.fa-google::before { content: "=EF=86=A0"; }
+
+.fa-reddit::before { content: "=EF=86=A1"; }
+
+.fa-reddit-square::before { content: "=EF=86=A2"; }
+
+.fa-stumbleupon-circle::before { content: "=EF=86=A3"; }
+
+.fa-stumbleupon::before { content: "=EF=86=A4"; }
+
+.fa-delicious::before { content: "=EF=86=A5"; }
+
+.fa-digg::before { content: "=EF=86=A6"; }
+
+.fa-pied-piper-pp::before { content: "=EF=86=A7"; }
+
+.fa-pied-piper-alt::before { content: "=EF=86=A8"; }
+
+.fa-drupal::before { content: "=EF=86=A9"; }
+
+.fa-joomla::before { content: "=EF=86=AA"; }
+
+.fa-language::before { content: "=EF=86=AB"; }
+
+.fa-fax::before { content: "=EF=86=AC"; }
+
+.fa-building::before { content: "=EF=86=AD"; }
+
+.fa-child::before { content: "=EF=86=AE"; }
+
+.fa-paw::before { content: "=EF=86=B0"; }
+
+.fa-spoon::before { content: "=EF=86=B1"; }
+
+.fa-cube::before { content: "=EF=86=B2"; }
+
+.fa-cubes::before { content: "=EF=86=B3"; }
+
+.fa-behance::before { content: "=EF=86=B4"; }
+
+.fa-behance-square::before { content: "=EF=86=B5"; }
+
+.fa-steam::before { content: "=EF=86=B6"; }
+
+.fa-steam-square::before { content: "=EF=86=B7"; }
+
+.fa-recycle::before { content: "=EF=86=B8"; }
+
+.fa-automobile::before, .fa-car::before { content: "=EF=86=B9"; }
+
+.fa-cab::before, .fa-taxi::before { content: "=EF=86=BA"; }
+
+.fa-tree::before { content: "=EF=86=BB"; }
+
+.fa-spotify::before { content: "=EF=86=BC"; }
+
+.fa-deviantart::before { content: "=EF=86=BD"; }
+
+.fa-soundcloud::before { content: "=EF=86=BE"; }
+
+.fa-database::before { content: "=EF=87=80"; }
+
+.fa-file-pdf-o::before { content: "=EF=87=81"; }
+
+.fa-file-word-o::before { content: "=EF=87=82"; }
+
+.fa-file-excel-o::before { content: "=EF=87=83"; }
+
+.fa-file-powerpoint-o::before { content: "=EF=87=84"; }
+
+.fa-file-photo-o::before, .fa-file-picture-o::before, .fa-file-image-o::bef=
+ore { content: "=EF=87=85"; }
+
+.fa-file-zip-o::before, .fa-file-archive-o::before { content: "=EF=87=86"; =
+}
+
+.fa-file-sound-o::before, .fa-file-audio-o::before { content: "=EF=87=87"; =
+}
+
+.fa-file-movie-o::before, .fa-file-video-o::before { content: "=EF=87=88"; =
+}
+
+.fa-file-code-o::before { content: "=EF=87=89"; }
+
+.fa-vine::before { content: "=EF=87=8A"; }
+
+.fa-codepen::before { content: "=EF=87=8B"; }
+
+.fa-jsfiddle::before { content: "=EF=87=8C"; }
+
+.fa-life-bouy::before, .fa-life-buoy::before, .fa-life-saver::before, .fa-s=
+upport::before, .fa-life-ring::before { content: "=EF=87=8D"; }
+
+.fa-circle-o-notch::before { content: "=EF=87=8E"; }
+
+.fa-ra::before, .fa-resistance::before, .fa-rebel::before { content: "=EF=
+=87=90"; }
+
+.fa-ge::before, .fa-empire::before { content: "=EF=87=91"; }
+
+.fa-git-square::before { content: "=EF=87=92"; }
+
+.fa-git::before { content: "=EF=87=93"; }
+
+.fa-y-combinator-square::before, .fa-yc-square::before, .fa-hacker-news::be=
+fore { content: "=EF=87=94"; }
+
+.fa-tencent-weibo::before { content: "=EF=87=95"; }
+
+.fa-qq::before { content: "=EF=87=96"; }
+
+.fa-wechat::before, .fa-weixin::before { content: "=EF=87=97"; }
+
+.fa-send::before, .fa-paper-plane::before { content: "=EF=87=98"; }
+
+.fa-send-o::before, .fa-paper-plane-o::before { content: "=EF=87=99"; }
+
+.fa-history::before { content: "=EF=87=9A"; }
+
+.fa-circle-thin::before { content: "=EF=87=9B"; }
+
+.fa-header::before { content: "=EF=87=9C"; }
+
+.fa-paragraph::before { content: "=EF=87=9D"; }
+
+.fa-sliders::before { content: "=EF=87=9E"; }
+
+.fa-share-alt::before { content: "=EF=87=A0"; }
+
+.fa-share-alt-square::before { content: "=EF=87=A1"; }
+
+.fa-bomb::before { content: "=EF=87=A2"; }
+
+.fa-soccer-ball-o::before, .fa-futbol-o::before { content: "=EF=87=A3"; }
+
+.fa-tty::before { content: "=EF=87=A4"; }
+
+.fa-binoculars::before { content: "=EF=87=A5"; }
+
+.fa-plug::before { content: "=EF=87=A6"; }
+
+.fa-slideshare::before { content: "=EF=87=A7"; }
+
+.fa-twitch::before { content: "=EF=87=A8"; }
+
+.fa-yelp::before { content: "=EF=87=A9"; }
+
+.fa-newspaper-o::before { content: "=EF=87=AA"; }
+
+.fa-wifi::before { content: "=EF=87=AB"; }
+
+.fa-calculator::before { content: "=EF=87=AC"; }
+
+.fa-paypal::before { content: "=EF=87=AD"; }
+
+.fa-google-wallet::before { content: "=EF=87=AE"; }
+
+.fa-cc-visa::before { content: "=EF=87=B0"; }
+
+.fa-cc-mastercard::before { content: "=EF=87=B1"; }
+
+.fa-cc-discover::before { content: "=EF=87=B2"; }
+
+.fa-cc-amex::before { content: "=EF=87=B3"; }
+
+.fa-cc-paypal::before { content: "=EF=87=B4"; }
+
+.fa-cc-stripe::before { content: "=EF=87=B5"; }
+
+.fa-bell-slash::before { content: "=EF=87=B6"; }
+
+.fa-bell-slash-o::before { content: "=EF=87=B7"; }
+
+.fa-trash::before { content: "=EF=87=B8"; }
+
+.fa-copyright::before { content: "=EF=87=B9"; }
+
+.fa-at::before { content: "=EF=87=BA"; }
+
+.fa-eyedropper::before { content: "=EF=87=BB"; }
+
+.fa-paint-brush::before { content: "=EF=87=BC"; }
+
+.fa-birthday-cake::before { content: "=EF=87=BD"; }
+
+.fa-area-chart::before { content: "=EF=87=BE"; }
+
+.fa-pie-chart::before { content: "=EF=88=80"; }
+
+.fa-line-chart::before { content: "=EF=88=81"; }
+
+.fa-lastfm::before { content: "=EF=88=82"; }
+
+.fa-lastfm-square::before { content: "=EF=88=83"; }
+
+.fa-toggle-off::before { content: "=EF=88=84"; }
+
+.fa-toggle-on::before { content: "=EF=88=85"; }
+
+.fa-bicycle::before { content: "=EF=88=86"; }
+
+.fa-bus::before { content: "=EF=88=87"; }
+
+.fa-ioxhost::before { content: "=EF=88=88"; }
+
+.fa-angellist::before { content: "=EF=88=89"; }
+
+.fa-cc::before { content: "=EF=88=8A"; }
+
+.fa-shekel::before, .fa-sheqel::before, .fa-ils::before { content: "=EF=88=
+=8B"; }
+
+.fa-meanpath::before { content: "=EF=88=8C"; }
+
+.fa-buysellads::before { content: "=EF=88=8D"; }
+
+.fa-connectdevelop::before { content: "=EF=88=8E"; }
+
+.fa-dashcube::before { content: "=EF=88=90"; }
+
+.fa-forumbee::before { content: "=EF=88=91"; }
+
+.fa-leanpub::before { content: "=EF=88=92"; }
+
+.fa-sellsy::before { content: "=EF=88=93"; }
+
+.fa-shirtsinbulk::before { content: "=EF=88=94"; }
+
+.fa-simplybuilt::before { content: "=EF=88=95"; }
+
+.fa-skyatlas::before { content: "=EF=88=96"; }
+
+.fa-cart-plus::before { content: "=EF=88=97"; }
+
+.fa-cart-arrow-down::before { content: "=EF=88=98"; }
+
+.fa-diamond::before { content: "=EF=88=99"; }
+
+.fa-ship::before { content: "=EF=88=9A"; }
+
+.fa-user-secret::before { content: "=EF=88=9B"; }
+
+.fa-motorcycle::before { content: "=EF=88=9C"; }
+
+.fa-street-view::before { content: "=EF=88=9D"; }
+
+.fa-heartbeat::before { content: "=EF=88=9E"; }
+
+.fa-venus::before { content: "=EF=88=A1"; }
+
+.fa-mars::before { content: "=EF=88=A2"; }
+
+.fa-mercury::before { content: "=EF=88=A3"; }
+
+.fa-intersex::before, .fa-transgender::before { content: "=EF=88=A4"; }
+
+.fa-transgender-alt::before { content: "=EF=88=A5"; }
+
+.fa-venus-double::before { content: "=EF=88=A6"; }
+
+.fa-mars-double::before { content: "=EF=88=A7"; }
+
+.fa-venus-mars::before { content: "=EF=88=A8"; }
+
+.fa-mars-stroke::before { content: "=EF=88=A9"; }
+
+.fa-mars-stroke-v::before { content: "=EF=88=AA"; }
+
+.fa-mars-stroke-h::before { content: "=EF=88=AB"; }
+
+.fa-neuter::before { content: "=EF=88=AC"; }
+
+.fa-genderless::before { content: "=EF=88=AD"; }
+
+.fa-facebook-official::before { content: "=EF=88=B0"; }
+
+.fa-pinterest-p::before { content: "=EF=88=B1"; }
+
+.fa-whatsapp::before { content: "=EF=88=B2"; }
+
+.fa-server::before { content: "=EF=88=B3"; }
+
+.fa-user-plus::before { content: "=EF=88=B4"; }
+
+.fa-user-times::before { content: "=EF=88=B5"; }
+
+.fa-hotel::before, .fa-bed::before { content: "=EF=88=B6"; }
+
+.fa-viacoin::before { content: "=EF=88=B7"; }
+
+.fa-train::before { content: "=EF=88=B8"; }
+
+.fa-subway::before { content: "=EF=88=B9"; }
+
+.fa-medium::before { content: "=EF=88=BA"; }
+
+.fa-yc::before, .fa-y-combinator::before { content: "=EF=88=BB"; }
+
+.fa-optin-monster::before { content: "=EF=88=BC"; }
+
+.fa-opencart::before { content: "=EF=88=BD"; }
+
+.fa-expeditedssl::before { content: "=EF=88=BE"; }
+
+.fa-battery-4::before, .fa-battery::before, .fa-battery-full::before { cont=
+ent: "=EF=89=80"; }
+
+.fa-battery-3::before, .fa-battery-three-quarters::before { content: "=EF=
+=89=81"; }
+
+.fa-battery-2::before, .fa-battery-half::before { content: "=EF=89=82"; }
+
+.fa-battery-1::before, .fa-battery-quarter::before { content: "=EF=89=83"; =
+}
+
+.fa-battery-0::before, .fa-battery-empty::before { content: "=EF=89=84"; }
+
+.fa-mouse-pointer::before { content: "=EF=89=85"; }
+
+.fa-i-cursor::before { content: "=EF=89=86"; }
+
+.fa-object-group::before { content: "=EF=89=87"; }
+
+.fa-object-ungroup::before { content: "=EF=89=88"; }
+
+.fa-sticky-note::before { content: "=EF=89=89"; }
+
+.fa-sticky-note-o::before { content: "=EF=89=8A"; }
+
+.fa-cc-jcb::before { content: "=EF=89=8B"; }
+
+.fa-cc-diners-club::before { content: "=EF=89=8C"; }
+
+.fa-clone::before { content: "=EF=89=8D"; }
+
+.fa-balance-scale::before { content: "=EF=89=8E"; }
+
+.fa-hourglass-o::before { content: "=EF=89=90"; }
+
+.fa-hourglass-1::before, .fa-hourglass-start::before { content: "=EF=89=91"=
+; }
+
+.fa-hourglass-2::before, .fa-hourglass-half::before { content: "=EF=89=92";=
+ }
+
+.fa-hourglass-3::before, .fa-hourglass-end::before { content: "=EF=89=93"; =
+}
+
+.fa-hourglass::before { content: "=EF=89=94"; }
+
+.fa-hand-grab-o::before, .fa-hand-rock-o::before { content: "=EF=89=95"; }
+
+.fa-hand-stop-o::before, .fa-hand-paper-o::before { content: "=EF=89=96"; }
+
+.fa-hand-scissors-o::before { content: "=EF=89=97"; }
+
+.fa-hand-lizard-o::before { content: "=EF=89=98"; }
+
+.fa-hand-spock-o::before { content: "=EF=89=99"; }
+
+.fa-hand-pointer-o::before { content: "=EF=89=9A"; }
+
+.fa-hand-peace-o::before { content: "=EF=89=9B"; }
+
+.fa-trademark::before { content: "=EF=89=9C"; }
+
+.fa-registered::before { content: "=EF=89=9D"; }
+
+.fa-creative-commons::before { content: "=EF=89=9E"; }
+
+.fa-gg::before { content: "=EF=89=A0"; }
+
+.fa-gg-circle::before { content: "=EF=89=A1"; }
+
+.fa-tripadvisor::before { content: "=EF=89=A2"; }
+
+.fa-odnoklassniki::before { content: "=EF=89=A3"; }
+
+.fa-odnoklassniki-square::before { content: "=EF=89=A4"; }
+
+.fa-get-pocket::before { content: "=EF=89=A5"; }
+
+.fa-wikipedia-w::before { content: "=EF=89=A6"; }
+
+.fa-safari::before { content: "=EF=89=A7"; }
+
+.fa-chrome::before { content: "=EF=89=A8"; }
+
+.fa-firefox::before { content: "=EF=89=A9"; }
+
+.fa-opera::before { content: "=EF=89=AA"; }
+
+.fa-internet-explorer::before { content: "=EF=89=AB"; }
+
+.fa-tv::before, .fa-television::before { content: "=EF=89=AC"; }
+
+.fa-contao::before { content: "=EF=89=AD"; }
+
+.fa-500px::before { content: "=EF=89=AE"; }
+
+.fa-amazon::before { content: "=EF=89=B0"; }
+
+.fa-calendar-plus-o::before { content: "=EF=89=B1"; }
+
+.fa-calendar-minus-o::before { content: "=EF=89=B2"; }
+
+.fa-calendar-times-o::before { content: "=EF=89=B3"; }
+
+.fa-calendar-check-o::before { content: "=EF=89=B4"; }
+
+.fa-industry::before { content: "=EF=89=B5"; }
+
+.fa-map-pin::before { content: "=EF=89=B6"; }
+
+.fa-map-signs::before { content: "=EF=89=B7"; }
+
+.fa-map-o::before { content: "=EF=89=B8"; }
+
+.fa-map::before { content: "=EF=89=B9"; }
+
+.fa-commenting::before { content: "=EF=89=BA"; }
+
+.fa-commenting-o::before { content: "=EF=89=BB"; }
+
+.fa-houzz::before { content: "=EF=89=BC"; }
+
+.fa-vimeo::before { content: "=EF=89=BD"; }
+
+.fa-black-tie::before { content: "=EF=89=BE"; }
+
+.fa-fonticons::before { content: "=EF=8A=80"; }
+
+.fa-reddit-alien::before { content: "=EF=8A=81"; }
+
+.fa-edge::before { content: "=EF=8A=82"; }
+
+.fa-credit-card-alt::before { content: "=EF=8A=83"; }
+
+.fa-codiepie::before { content: "=EF=8A=84"; }
+
+.fa-modx::before { content: "=EF=8A=85"; }
+
+.fa-fort-awesome::before { content: "=EF=8A=86"; }
+
+.fa-usb::before { content: "=EF=8A=87"; }
+
+.fa-product-hunt::before { content: "=EF=8A=88"; }
+
+.fa-mixcloud::before { content: "=EF=8A=89"; }
+
+.fa-scribd::before { content: "=EF=8A=8A"; }
+
+.fa-pause-circle::before { content: "=EF=8A=8B"; }
+
+.fa-pause-circle-o::before { content: "=EF=8A=8C"; }
+
+.fa-stop-circle::before { content: "=EF=8A=8D"; }
+
+.fa-stop-circle-o::before { content: "=EF=8A=8E"; }
+
+.fa-shopping-bag::before { content: "=EF=8A=90"; }
+
+.fa-shopping-basket::before { content: "=EF=8A=91"; }
+
+.fa-hashtag::before { content: "=EF=8A=92"; }
+
+.fa-bluetooth::before { content: "=EF=8A=93"; }
+
+.fa-bluetooth-b::before { content: "=EF=8A=94"; }
+
+.fa-percent::before { content: "=EF=8A=95"; }
+
+.fa-gitlab::before { content: "=EF=8A=96"; }
+
+.fa-wpbeginner::before { content: "=EF=8A=97"; }
+
+.fa-wpforms::before { content: "=EF=8A=98"; }
+
+.fa-envira::before { content: "=EF=8A=99"; }
+
+.fa-universal-access::before { content: "=EF=8A=9A"; }
+
+.fa-wheelchair-alt::before { content: "=EF=8A=9B"; }
+
+.fa-question-circle-o::before { content: "=EF=8A=9C"; }
+
+.fa-blind::before { content: "=EF=8A=9D"; }
+
+.fa-audio-description::before { content: "=EF=8A=9E"; }
+
+.fa-volume-control-phone::before { content: "=EF=8A=A0"; }
+
+.fa-braille::before { content: "=EF=8A=A1"; }
+
+.fa-assistive-listening-systems::before { content: "=EF=8A=A2"; }
+
+.fa-asl-interpreting::before, .fa-american-sign-language-interpreting::befo=
+re { content: "=EF=8A=A3"; }
+
+.fa-deafness::before, .fa-hard-of-hearing::before, .fa-deaf::before { conte=
+nt: "=EF=8A=A4"; }
+
+.fa-glide::before { content: "=EF=8A=A5"; }
+
+.fa-glide-g::before { content: "=EF=8A=A6"; }
+
+.fa-signing::before, .fa-sign-language::before { content: "=EF=8A=A7"; }
+
+.fa-low-vision::before { content: "=EF=8A=A8"; }
+
+.fa-viadeo::before { content: "=EF=8A=A9"; }
+
+.fa-viadeo-square::before { content: "=EF=8A=AA"; }
+
+.fa-snapchat::before { content: "=EF=8A=AB"; }
+
+.fa-snapchat-ghost::before { content: "=EF=8A=AC"; }
+
+.fa-snapchat-square::before { content: "=EF=8A=AD"; }
+
+.fa-pied-piper::before { content: "=EF=8A=AE"; }
+
+.fa-first-order::before { content: "=EF=8A=B0"; }
+
+.fa-yoast::before { content: "=EF=8A=B1"; }
+
+.fa-themeisle::before { content: "=EF=8A=B2"; }
+
+.fa-google-plus-circle::before, .fa-google-plus-official::before { content:=
+ "=EF=8A=B3"; }
+
+.fa-fa::before, .fa-font-awesome::before { content: "=EF=8A=B4"; }
+
+.fa-handshake-o::before { content: "=EF=8A=B5"; }
+
+.fa-envelope-open::before { content: "=EF=8A=B6"; }
+
+.fa-envelope-open-o::before { content: "=EF=8A=B7"; }
+
+.fa-linode::before { content: "=EF=8A=B8"; }
+
+.fa-address-book::before { content: "=EF=8A=B9"; }
+
+.fa-address-book-o::before { content: "=EF=8A=BA"; }
+
+.fa-vcard::before, .fa-address-card::before { content: "=EF=8A=BB"; }
+
+.fa-vcard-o::before, .fa-address-card-o::before { content: "=EF=8A=BC"; }
+
+.fa-user-circle::before { content: "=EF=8A=BD"; }
+
+.fa-user-circle-o::before { content: "=EF=8A=BE"; }
+
+.fa-user-o::before { content: "=EF=8B=80"; }
+
+.fa-id-badge::before { content: "=EF=8B=81"; }
+
+.fa-drivers-license::before, .fa-id-card::before { content: "=EF=8B=82"; }
+
+.fa-drivers-license-o::before, .fa-id-card-o::before { content: "=EF=8B=83"=
+; }
+
+.fa-quora::before { content: "=EF=8B=84"; }
+
+.fa-free-code-camp::before { content: "=EF=8B=85"; }
+
+.fa-telegram::before { content: "=EF=8B=86"; }
+
+.fa-thermometer-4::before, .fa-thermometer::before, .fa-thermometer-full::b=
+efore { content: "=EF=8B=87"; }
+
+.fa-thermometer-3::before, .fa-thermometer-three-quarters::before { content=
+: "=EF=8B=88"; }
+
+.fa-thermometer-2::before, .fa-thermometer-half::before { content: "=EF=8B=
+=89"; }
+
+.fa-thermometer-1::before, .fa-thermometer-quarter::before { content: "=EF=
+=8B=8A"; }
+
+.fa-thermometer-0::before, .fa-thermometer-empty::before { content: "=EF=8B=
+=8B"; }
+
+.fa-shower::before { content: "=EF=8B=8C"; }
+
+.fa-bathtub::before, .fa-s15::before, .fa-bath::before { content: "=EF=8B=
+=8D"; }
+
+.fa-podcast::before { content: "=EF=8B=8E"; }
+
+.fa-window-maximize::before { content: "=EF=8B=90"; }
+
+.fa-window-minimize::before { content: "=EF=8B=91"; }
+
+.fa-window-restore::before { content: "=EF=8B=92"; }
+
+.fa-times-rectangle::before, .fa-window-close::before { content: "=EF=8B=93=
+"; }
+
+.fa-times-rectangle-o::before, .fa-window-close-o::before { content: "=EF=
+=8B=94"; }
+
+.fa-bandcamp::before { content: "=EF=8B=95"; }
+
+.fa-grav::before { content: "=EF=8B=96"; }
+
+.fa-etsy::before { content: "=EF=8B=97"; }
+
+.fa-imdb::before { content: "=EF=8B=98"; }
+
+.fa-ravelry::before { content: "=EF=8B=99"; }
+
+.fa-eercast::before { content: "=EF=8B=9A"; }
+
+.fa-microchip::before { content: "=EF=8B=9B"; }
+
+.fa-snowflake-o::before { content: "=EF=8B=9C"; }
+
+.fa-superpowers::before { content: "=EF=8B=9D"; }
+
+.fa-wpexplorer::before { content: "=EF=8B=9E"; }
+
+.fa-meetup::before { content: "=EF=8B=A0"; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0px; margi=
+n: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); border: 0px; }
+
+.sr-only-focusable:active, .sr-only-focusable:focus { position: static; wid=
+th: auto; height: auto; margin: 0px; overflow: visible; clip: auto; }
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://rustwiki.org/zh-CN/rust-by-example/fonts/fonts.css
+
+@charset "utf-8";
+
+@font-face { font-family: "open sans"; font-style: normal; font-weight: 300=
+; src: local("Open Sans Light"), local("OpenSans-Light"), url("open-sans-v1=
+7-all-charsets-300.woff2") format("woff2"); }
+
+@font-face { font-family: "open sans"; font-style: italic; font-weight: 300=
+; src: local("Open Sans Light Italic"), local("OpenSans-LightItalic"), url(=
+"open-sans-v17-all-charsets-300italic.woff2") format("woff2"); }
+
+@font-face { font-family: "open sans"; font-style: normal; font-weight: 400=
+; src: local("Open Sans Regular"), local("OpenSans-Regular"), url("open-san=
+s-v17-all-charsets-regular.woff2") format("woff2"); }
+
+@font-face { font-family: "open sans"; font-style: italic; font-weight: 400=
+; src: local("Open Sans Italic"), local("OpenSans-Italic"), url("open-sans-=
+v17-all-charsets-italic.woff2") format("woff2"); }
+
+@font-face { font-family: "open sans"; font-style: normal; font-weight: 600=
+; src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("open-s=
+ans-v17-all-charsets-600.woff2") format("woff2"); }
+
+@font-face { font-family: "open sans"; font-style: italic; font-weight: 600=
+; src: local("Open Sans SemiBold Italic"), local("OpenSans-SemiBoldItalic")=
+, url("open-sans-v17-all-charsets-600italic.woff2") format("woff2"); }
+
+@font-face { font-family: "open sans"; font-style: normal; font-weight: 700=
+; src: local("Open Sans Bold"), local("OpenSans-Bold"), url("open-sans-v17-=
+all-charsets-700.woff2") format("woff2"); }
+
+@font-face { font-family: "open sans"; font-style: italic; font-weight: 700=
+; src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url("o=
+pen-sans-v17-all-charsets-700italic.woff2") format("woff2"); }
+
+@font-face { font-family: "open sans"; font-style: normal; font-weight: 800=
+; src: local("Open Sans ExtraBold"), local("OpenSans-ExtraBold"), url("open=
+-sans-v17-all-charsets-800.woff2") format("woff2"); }
+
+@font-face { font-family: "open sans"; font-style: italic; font-weight: 800=
+; src: local("Open Sans ExtraBold Italic"), local("OpenSans-ExtraBoldItalic=
+"), url("open-sans-v17-all-charsets-800italic.woff2") format("woff2"); }
+
+@font-face { font-family: "source code pro"; font-style: normal; font-weigh=
+t: 500; src: url("source-code-pro-v11-all-charsets-500.woff2") format("woff=
+2"); }
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://rustwiki.org/zh-CN/rust-by-example/highlight.css
+
+@charset "utf-8";
+
+.hljs-comment, .hljs-quote { color: rgb(87, 87, 87); }
+
+.hljs-variable, .hljs-template-variable, .hljs-attribute, .hljs-tag, .hljs-=
+name, .hljs-regexp, .hljs-link, .hljs-name, .hljs-selector-id, .hljs-select=
+or-class { color: rgb(215, 0, 37); }
+
+.hljs-number, .hljs-meta, .hljs-built_in, .hljs-builtin-name, .hljs-literal=
+, .hljs-type, .hljs-params { color: rgb(178, 30, 0); }
+
+.hljs-string, .hljs-symbol, .hljs-bullet { color: rgb(0, 130, 0); }
+
+.hljs-title, .hljs-section { color: rgb(0, 48, 242); }
+
+.hljs-keyword, .hljs-selector-tag { color: rgb(157, 0, 236); }
+
+.hljs { display: block; overflow-x: auto; background: rgb(246, 247, 246); c=
+olor: rgb(0, 0, 0); padding: 0.5em; }
+
+.hljs-emphasis { font-style: italic; }
+
+.hljs-strong { font-weight: bold; }
+
+.hljs-addition { color: rgb(34, 134, 58); background-color: rgb(240, 255, 2=
+44); }
+
+.hljs-deletion { color: rgb(179, 29, 40); background-color: rgb(255, 238, 2=
+40); }
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: chrome-extension://ogleeipbbcokpeabliinildngejmdneg/css/content.css
+
+@charset "utf-8";
+
+.dmx_unselectable { user-select: none !important; }
+
+.dmx_overflow_hidden { overflow: hidden; }
+
+div[mx-name=3D"dream-translation"] { all: initial; }
+
+@font-face { font-family: dmx-icon; src: url("chrome-extension://ogleeipbbc=
+okpeabliinildngejmdneg/css/dmx_icon.woff2") format("woff2"); }
+
+.dmx-icon { font-size: 16px; font-style: normal; -webkit-font-smoothing: an=
+tialiased; user-select: none; font-family: dmx-icon, serif !important; }
+
+.dmx-icon-crop::before { content: "=EE=9B=88"; }
+
+.dmx-icon-logo::before { content: "=EE=9B=87"; }
+
+.dmx-icon-move::before { content: "=EE=9B=86"; }
+
+.dmx-icon-folder::before { content: "=EE=9B=84"; }
+
+.dmx-icon-folder-open::before { content: "=EE=9B=85"; }
+
+.dmx-icon-delete::before { content: "=EE=9B=82"; }
+
+.dmx-icon-edit::before { content: "=EE=9B=83"; }
+
+.dmx-icon-export::before { content: "=EE=9B=80"; }
+
+.dmx-icon-import::before { content: "=EE=9B=81"; }
+
+.dmx-icon-history::before { content: "=EE=9A=BF"; }
+
+.dmx-icon-oxford::before { content: "=EE=9A=BE"; }
+
+.dmx-icon-thefree::before { content: "=EE=9A=BD"; }
+
+.dmx-icon-wikipedia::before { content: "=EE=9A=B0"; }
+
+.dmx-icon-dreye::before { content: "=EE=9A=BC"; }
+
+.dmx-icon-eudic::before { content: "=EE=9A=BB"; }
+
+.dmx-icon-etymonline::before { content: "=EE=9A=B1"; }
+
+.dmx-icon-rrdict::before { content: "=EE=9A=B9"; }
+
+.dmx-icon-lexico::before { content: "=EE=9A=BA"; }
+
+.dmx-icon-urban::before { content: "=EE=9A=B8"; }
+
+.dmx-icon-macmillan::before { content: "=EE=9A=B7"; }
+
+.dmx-icon-vocabulary::before { content: "=EE=9A=B6"; }
+
+.dmx-icon-wordreference::before { content: "=EE=9A=B5"; }
+
+.dmx-icon-collins::before { content: "=EE=9A=B4"; }
+
+.dmx-icon-iciba::before { content: "=EE=9A=B3"; }
+
+.dmx-icon-hjdict::before { content: "=EE=9A=B2"; }
+
+.dmx-icon-dictionary::before { content: "=EE=9A=AF"; }
+
+.dmx-icon-so::before { content: "=EE=9A=AA"; }
+
+.dmx-icon-merriam::before { content: "=EE=9A=AB"; }
+
+.dmx-icon-longman::before { content: "=EE=9A=AC"; }
+
+.dmx-icon-cambridge::before { content: "=EE=9A=AD"; }
+
+.dmx-icon-dictcn::before { content: "=EE=9A=AE"; }
+
+.dmx-icon-sound-us::before { content: "=EE=99=B4"; }
+
+.dmx-icon-sound-zh::before { content: "=EE=99=B5"; }
+
+.dmx-icon-sound-fr::before { content: "=EE=99=B6"; }
+
+.dmx-icon-sound-de::before { content: "=EE=99=B7"; }
+
+.dmx-icon-sound-th::before { content: "=EE=9A=9C"; }
+
+.dmx-icon-sound-ru::before { content: "=EE=9A=9D"; }
+
+.dmx-icon-sound-pt::before { content: "=EE=9A=9E"; }
+
+.dmx-icon-sound-uk::before { content: "=EE=9A=9F"; }
+
+.dmx-icon-sound-jp::before { content: "=EE=9A=A0"; }
+
+.dmx-icon-sound-el::before { content: "=EE=9A=A1"; }
+
+.dmx-icon-sound-cn::before { content: "=EE=9A=A2"; }
+
+.dmx-icon-sound-nl::before { content: "=EE=9A=A3"; }
+
+.dmx-icon-sound-it::before { content: "=EE=9A=A4"; }
+
+.dmx-icon-sound-sp::before { content: "=EE=9A=A5"; }
+
+.dmx-icon-sound-ko::before { content: "=EE=9A=A6"; }
+
+.dmx-icon-sound-ar::before { content: "=EE=9A=A7"; }
+
+.dmx-icon-sound-en::before { content: "=EE=9A=A8"; }
+
+.dmx-icon-sound-pl::before { content: "=EE=9A=A9"; }
+
+.dmx-icon-youdao::before { content: "=EE=9A=93"; }
+
+.dmx-icon-sound-square::before { content: "=EE=9A=9B"; }
+
+.dmx-icon-sound::before { content: "=EE=99=BA"; }
+
+.dmx-icon-user::before { content: "=EE=9A=99"; }
+
+.dmx-icon-angle-double-right::before { content: "=EE=9A=96"; }
+
+.dmx-icon-angle-double-left::before { content: "=EE=9A=97"; }
+
+.dmx-icon-angle-double-up::before { content: "=EE=9A=98"; }
+
+.dmx-icon-angle-double-down::before { content: "=EE=9A=9A"; }
+
+.dmx-icon-youdaonote::before { content: "=EE=9A=91"; }
+
+.dmx-icon-youtube::before { content: "=EE=9A=92"; }
+
+.dmx-icon-windows::before { content: "=EE=9A=94"; }
+
+.dmx-icon-yahoo::before { content: "=EE=9A=95"; }
+
+.dmx-icon-voice-off::before { content: "=EE=9A=8A"; }
+
+.dmx-icon-voice-on::before { content: "=EE=9A=8B"; }
+
+.dmx-icon-voice::before { content: "=EE=9A=8C"; }
+
+.dmx-icon-video::before { content: "=EE=9A=8D"; }
+
+.dmx-icon-vip-crown::before { content: "=EE=9A=8E"; }
+
+.dmx-icon-vip-fill::before { content: "=EE=9A=8F"; }
+
+.dmx-icon-vip-card::before { content: "=EE=9A=90"; }
+
+.dmx-icon-up::before { content: "=EE=9A=88"; }
+
+.dmx-icon-up-circle::before { content: "=EE=9A=89"; }
+
+.dmx-icon-trash::before { content: "=EE=9A=82"; }
+
+.dmx-icon-twitter::before { content: "=EE=9A=83"; }
+
+.dmx-icon-tool::before { content: "=EE=9A=84"; }
+
+.dmx-icon-telegram::before { content: "=EE=9A=85"; }
+
+.dmx-icon-tinder::before { content: "=EE=9A=86"; }
+
+.dmx-icon-twitter-circle::before { content: "=EE=9A=87"; }
+
+.dmx-icon-switch::before { content: "=EE=99=BF"; }
+
+.dmx-icon-switch-on::before { content: "=EE=9A=80"; }
+
+.dmx-icon-switch-off::before { content: "=EE=9A=81"; }
+
+.dmx-icon-success::before { content: "=EE=99=BD"; }
+
+.dmx-icon-suse::before { content: "=EE=99=BE"; }
+
+.dmx-icon-star::before { content: "=EE=99=BB"; }
+
+.dmx-icon-stop::before { content: "=EE=99=BC"; }
+
+.dmx-icon-sound-big::before { content: "=EE=99=B3"; }
+
+.dmx-icon-sound-line::before { content: "=EE=99=B8"; }
+
+.dmx-icon-sound-horn::before { content: "=EE=99=B9"; }
+
+.dmx-icon-sogou::before { content: "=EE=99=AD"; }
+
+.dmx-icon-smile::before { content: "=EE=99=AE"; }
+
+.dmx-icon-skull::before { content: "=EE=99=AF"; }
+
+.dmx-icon-search::before { content: "=EE=99=B0"; }
+
+.dmx-icon-s::before { content: "=EE=99=B1"; }
+
+.dmx-icon-setting::before { content: "=EE=99=B2"; }
+
+.dmx-icon-reply::before { content: "=EE=99=A8"; }
+
+.dmx-icon-redhat::before { content: "=EE=99=A9"; }
+
+.dmx-icon-right::before { content: "=EE=99=AA"; }
+
+.dmx-icon-reload::before { content: "=EE=99=AB"; }
+
+.dmx-icon-refresh::before { content: "=EE=99=AC"; }
+
+.dmx-icon-plus::before { content: "=EE=99=A5"; }
+
+.dmx-icon-play::before { content: "=EE=99=A6"; }
+
+.dmx-icon-qq::before { content: "=EE=99=A7"; }
+
+.dmx-icon-plane-send::before { content: "=EE=99=9C"; }
+
+.dmx-icon-plane-departure::before { content: "=EE=99=9D"; }
+
+.dmx-icon-plane-up::before { content: "=EE=99=9E"; }
+
+.dmx-icon-plane-paper::before { content: "=EE=99=9F"; }
+
+.dmx-icon-plane::before { content: "=EE=99=A0"; }
+
+.dmx-icon-plane-fly::before { content: "=EE=99=A1"; }
+
+.dmx-icon-plane-up-fill::before { content: "=EE=99=A2"; }
+
+.dmx-icon-plane-send-fill::before { content: "=EE=99=A3"; }
+
+.dmx-icon-plane-takeoff::before { content: "=EE=99=A4"; }
+
+.dmx-icon-picture-fill::before { content: "=EE=99=98"; }
+
+.dmx-icon-pin::before { content: "=EE=99=99"; }
+
+.dmx-icon-pin-left::before { content: "=EE=99=9A"; }
+
+.dmx-icon-picture::before { content: "=EE=99=9B"; }
+
+.dmx-icon-microsoft::before { content: "=EE=99=91"; }
+
+.dmx-icon-m::before { content: "=EE=99=92"; }
+
+.dmx-icon-modx::before { content: "=EE=99=93"; }
+
+.dmx-icon-meetup::before { content: "=EE=99=94"; }
+
+.dmx-icon-mule::before { content: "=EE=99=95"; }
+
+.dmx-icon-music::before { content: "=EE=99=96"; }
+
+.dmx-icon-more::before { content: "=EE=99=97"; }
+
+.dmx-icon-loading::before { content: "=EE=99=90"; }
+
+.dmx-icon-l::before { content: "=EE=99=8A"; }
+
+.dmx-icon-itunes::before { content: "=EE=99=8B"; }
+
+.dmx-icon-info::before { content: "=EE=99=8C"; }
+
+.dmx-icon-laugh::before { content: "=EE=99=8D"; }
+
+.dmx-icon-left::before { content: "=EE=99=8E"; }
+
+.dmx-icon-list::before { content: "=EE=99=8F"; }
+
+.dmx-icon-help::before { content: "=EE=99=87"; }
+
+.dmx-icon-horn::before { content: "=EE=99=88"; }
+
+.dmx-icon-home::before { content: "=EE=99=89"; }
+
+.dmx-icon-headset::before { content: "=EE=99=84"; }
+
+.dmx-icon-headset-c::before { content: "=EE=99=85"; }
+
+.dmx-icon-heart::before { content: "=EE=99=86"; }
+
+.dmx-icon-good::before { content: "=EE=99=82"; }
+
+.dmx-icon-google::before { content: "=EE=99=83"; }
+
+.dmx-icon-fullscreen-exit::before { content: "=EE=98=BE"; }
+
+.dmx-icon-fullscreen::before { content: "=EE=98=BF"; }
+
+.dmx-icon-fan::before { content: "=EE=99=80"; }
+
+.dmx-icon-flag::before { content: "=EE=99=81"; }
+
+.dmx-icon-eye-left::before { content: "=EE=98=B9"; }
+
+.dmx-icon-error::before { content: "=EE=98=BA"; }
+
+.dmx-icon-eye-right::before { content: "=EE=98=BB"; }
+
+.dmx-icon-exchange::before { content: "=EE=98=BC"; }
+
+.dmx-icon-edge::before { content: "=EE=98=BD"; }
+
+.dmx-icon-down::before { content: "=EE=98=B4"; }
+
+.dmx-icon-diaspora::before { content: "=EE=98=B5"; }
+
+.dmx-icon-devil::before { content: "=EE=98=B6"; }
+
+.dmx-icon-degree::before { content: "=EE=98=B7"; }
+
+.dmx-icon-d::before { content: "=EE=98=B8"; }
+
+.dmx-icon-close::before { content: "=EE=98=AE"; }
+
+.dmx-icon-circle::before { content: "=EE=98=AF"; }
+
+.dmx-icon-cry-fill::before { content: "=EE=98=B0"; }
+
+.dmx-icon-copy::before { content: "=EE=98=B1"; }
+
+.dmx-icon-cry::before { content: "=EE=98=B2"; }
+
+.dmx-icon-close-bg::before { content: "=EE=98=B3"; }
+
+.dmx-icon-bing::before { content: "=EE=98=AB"; }
+
+.dmx-icon-bell::before { content: "=EE=98=AC"; }
+
+.dmx-icon-baidu::before { content: "=EE=98=AD"; }
+
+.dmx-icon-arrow-right::before { content: "=EE=98=A5"; }
+
+.dmx-icon-arrow-left::before { content: "=EE=98=A6"; }
+
+.dmx-icon-arrow-up::before { content: "=EE=98=A7"; }
+
+.dmx-icon-arrow-down::before { content: "=EE=98=A8"; }
+
+.dmx-icon-arrow-thin-down::before { content: "=EE=98=A9"; }
+
+.dmx-icon-arrow-thin-up::before { content: "=EE=98=AA"; }
+
+.dmx-icon-android::before { content: "=EE=98=A2"; }
+
+.dmx-icon-apple::before { content: "=EE=98=A3"; }
+
+.dmx-icon-angular::before { content: "=EE=98=A4"; }
+
+.dmx-icon-alibaba::before { content: "=EE=98=A1"; }
+------MultipartBoundary--OUDkdHa1pkkwmvrgq5xC4t045PbhTfncDb60OwwPGA------

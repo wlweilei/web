@@ -1,0 +1,1790 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://thinbug.com/q/28655362#google_vignette
+Subject: =?utf-8?Q?rust=20-=20=E5=A6=82=E4=BD=95=E5=B0=86=E6=B5=AE=E7=82=B9=E6=95?=
+ =?utf-8?Q?=B0=E8=88=8D=E5=85=A5=E5=88=B0=E6=8C=87=E5=AE=9A=E7=9A=84=E4=BD?=
+ =?utf-8?Q?=8D=E6=95=B0=EF=BC=9F=20-=20Thinbug?=
+Date: Mon, 4 Nov 2024 12:16:49 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--Wt861lkcbT6mc6IhAANbrjHuNpb07hdhjOKDdRYebF----"
+
+
+------MultipartBoundary--Wt861lkcbT6mc6IhAANbrjHuNpb07hdhjOKDdRYebF----
+Content-Type: text/html
+Content-ID: <frame-9B01B0261F76CA43F98743ED29A761C2@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://thinbug.com/q/28655362#google_vignette
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8"><link rel=3D"stylesheet" type=3D"text/css" href=3D=
+"cid:css-05d52e84-bd7c-4b8b-b691-6756dc403647@mhtml.blink" />
+    <meta name=3D"sogou_site_verification" content=3D"EEplM9r5SR">
+    <meta name=3D"baidu-site-verification" content=3D"CF3iexlYQz">
+    <meta name=3D"360-site-verification" content=3D"b0078e7022efd96ef92ebfb=
+94320309f">
+   =20
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1">
+    <meta name=3D"keywords" content=3D"rust">
+    <meta name=3D"description" content=3D"=E5=A6=82=E4=BD=95=E5=B0=86Rust=
+=E4=B8=AD=E7=9A=84f64=E6=B5=AE=E7=82=B9=E6=95=B0=E8=88=8D=E5=85=A5=E5=88=B0=
+=E6=8C=87=E5=AE=9A=E7=9A=84=E4=BD=8D=E6=95=B0=EF=BC=9F">
+    <title>rust - =E5=A6=82=E4=BD=95=E5=B0=86=E6=B5=AE=E7=82=B9=E6=95=B0=E8=
+=88=8D=E5=85=A5=E5=88=B0=E6=8C=87=E5=AE=9A=E7=9A=84=E4=BD=8D=E6=95=B0=EF=BC=
+=9F - Thinbug</title>
+    <link rel=3D"stylesheet" href=3D"https://thinbug.com/static/reset.css">
+    <link rel=3D"stylesheet" href=3D"https://thinbug.com/static/base.css">
+   =20
+    <link rel=3D"next" href=3D"https://thinbug.com/q/28655362">
+   =20
+
+   =20
+   =20
+
+   =20
+
+
+   =20
+
+  <meta http-equiv=3D"origin-trial" content=3D"AlK2UR5SkAlj8jjdEc9p3F3xuFYl=
+F6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4=
+iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZX=
+N0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0c=
+nVlfQ=3D=3D"><meta http-equiv=3D"origin-trial" content=3D"Amm8/NmvvQfhwCib6=
+I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACC=
+eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjo=
+iV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksIm=
+lzU3ViZG9tYWluIjp0cnVlfQ=3D=3D"><meta http-equiv=3D"origin-trial" content=
+=3D"A9wSqI5i0iwGdf6L1CERNdmsTPgVu44ewj8QxTBYgsv1LCPUVF7YmWOvTappqB1139jAymx=
+UW/RO8zmMqo4zlAAAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLC=
+JmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4M=
+TI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equ=
+iv=3D"origin-trial" content=3D"A+d7vJfYtay4OUbdtRPZA3y7bKQLsxaMEPmxgfhBGqKX=
+NrdkCQeJlUwqa6EBbSfjwFtJWTrWIioXeMW+y8bWAgQAAACTeyJvcmlnaW4iOiJodHRwczovL2d=
+vb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3=
+Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1Roa=
+XJkUGFydHkiOnRydWV9"><meta http-equiv=3D"origin-trial" content=3D"AlK2UR5Sk=
+Alj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1I=
+BQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjo=
+iV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksIm=
+lzU3ViZG9tYWluIjp0cnVlfQ=3D=3D"><meta http-equiv=3D"origin-trial" content=
+=3D"Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69W=
+whPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbT=
+o0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpc=
+nkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=3D=3D"><meta http-equiv=3D"or=
+igin-trial" content=3D"A9wSqI5i0iwGdf6L1CERNdmsTPgVu44ewj8QxTBYgsv1LCPUVF7Y=
+mWOvTappqB1139jAymxUW/RO8zmMqo4zlAAAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWN=
+saWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLC=
+JleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRyd=
+WV9"><meta http-equiv=3D"origin-trial" content=3D"A+d7vJfYtay4OUbdtRPZA3y7b=
+KQLsxaMEPmxgfhBGqKXNrdkCQeJlUwqa6EBbSfjwFtJWTrWIioXeMW+y8bWAgQAAACTeyJvcmln=
+aW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGd=
+lQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYW=
+luIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv=3D"origin-trial" c=
+ontent=3D"AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPo=
+qKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0=
+NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnk=
+iOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=3D=3D"><meta http-equiv=3D"orig=
+in-trial" content=3D"Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQi=
+d6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5b=
+mRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVj=
+YXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=3D=3D"><meta=
+ http-equiv=3D"origin-trial" content=3D"A9wSqI5i0iwGdf6L1CERNdmsTPgVu44ewj8=
+QxTBYgsv1LCPUVF7YmWOvTappqB1139jAymxUW/RO8zmMqo4zlAAAAACNeyJvcmlnaW4iOiJodH=
+RwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y=
+3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1Ro=
+aXJkUGFydHkiOnRydWV9"><meta http-equiv=3D"origin-trial" content=3D"A+d7vJfY=
+tay4OUbdtRPZA3y7bKQLsxaMEPmxgfhBGqKXNrdkCQeJlUwqa6EBbSfjwFtJWTrWIioXeMW+y8b=
+WAgQAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZW=
+F0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4M=
+DAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"></head>
+
+  <body>
+    <nav>
+      <div class=3D"nav-items">
+        <a href=3D"https://thinbug.com/" class=3D"nav-logo">Thinbug</a>
+        <ul class=3D"nav">
+          <li><a href=3D"https://thinbug.com/news">News</a></li>
+        </ul>
+      </div>
+     =20
+    </nav>
+   =20
+<link rel=3D"stylesheet" href=3D"https://thinbug.com/static/github-markdown=
+.css">
+
+<div class=3D"container question-container" style=3D"height: auto !importan=
+t; min-height: 0px !important;">
+  <div class=3D"left" style=3D"height: auto !important;">
+    <h3>
+      <a href=3D"https://thinbug.com/q/28655362">
+        =E5=A6=82=E4=BD=95=E5=B0=86=E6=B5=AE=E7=82=B9=E6=95=B0=E8=88=8D=E5=
+=85=A5=E5=88=B0=E6=8C=87=E5=AE=9A=E7=9A=84=E4=BD=8D=E6=95=B0=EF=BC=9F
+      </a>
+    </h3>
+
+    <div class=3D"meta">
+      <span class=3D"date">=E6=97=B6=E9=97=B4=EF=BC=9A2015-02-22 06:55:56</=
+span>
+     =20
+      <p>
+
+        <span class=3D"tag">
+          =E6=A0=87=E7=AD=BE=EF=BC=9A
+         =20
+          <span class=3D"label">
+            rust
+          </span>
+         =20
+        </span>
+
+       =20
+      </p>
+    </div>
+    <div class=3D"hr-line-dashed"></div>
+   =20
+    <div>
+
+     =20
+     =20
+      <ins class=3D"adsbygoogle" style=3D"display: block; height: 280px;" d=
+ata-ad-client=3D"ca-pub-6263610230477973" data-ad-slot=3D"2678421423" data-=
+ad-format=3D"auto" data-adsbygoogle-status=3D"done"><div id=3D"aswift_1_hos=
+t" style=3D"border: none; height: 280px; width: 700px; margin: 0px; padding=
+: 0px; position: relative; visibility: visible; background-color: transpare=
+nt; display: inline-block; overflow: visible;"><iframe id=3D"aswift_1" name=
+=3D"aswift_1" browsingtopics=3D"true" style=3D"left:0;position:absolute;top=
+:0;border:0;width:700px;height:280px;" sandbox=3D"allow-forms allow-popups =
+allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-na=
+vigation-by-user-activation" width=3D"700" height=3D"280" frameborder=3D"0"=
+ marginwidth=3D"0" marginheight=3D"0" vspace=3D"0" hspace=3D"0" allowtransp=
+arency=3D"true" scrolling=3D"no" allow=3D"attribution-reporting; run-ad-auc=
+tion" src=3D"cid:frame-EA469282EFEA564052344D214F75427B@mhtml.blink" data-g=
+oogle-container-id=3D"a!2" tabindex=3D"0" title=3D"Advertisement" aria-labe=
+l=3D"Advertisement"></iframe></div></ins>
+       =20
+
+    </div>
+    <div class=3D"question-body markdown-body">
+      <p>=E5=A6=82=E4=BD=95=E5=B0=86Rust=E4=B8=AD=E7=9A=84f64=E6=B5=AE=E7=
+=82=B9=E6=95=B0=E8=88=8D=E5=85=A5=E5=88=B0=E6=8C=87=E5=AE=9A=E7=9A=84=E4=BD=
+=8D=E6=95=B0=EF=BC=9F</p>
+    </div>
+
+    <div class=3D"answer-list">
+      <h4>2 =E4=B8=AA=E7=AD=94=E6=A1=88:</h4>
+     =20
+      <div class=3D"hr-line-dashed"></div>
+      <p>=E7=AD=94=E6=A1=88 0 :(=E5=BE=97=E5=88=86=EF=BC=9A22)</p>
+      <div class=3D"answer markdown-body">
+        <p>=E5=A6=82=E6=9E=9C=E6=82=A8=E5=8F=AA=E6=83=B3=E5=B0=86=E5=85=B6=
+=E7=94=A8=E4=BA=8E=E6=98=BE=E7=A4=BA=E7=9B=AE=E7=9A=84=EF=BC=8C=E8=AF=B7=E4=
+=BD=BF=E7=94=A8<a href=3D"https://doc.rust-lang.org/stable/std/fmt/" rel=3D=
+"noreferrer">formatting syntax built into <code>println!()</code></a>=E3=80=
+=82=E4=BE=8B=E5=A6=82=EF=BC=8C=E8=A6=81=E6=89=93=E5=8D=B0=E4=B8=80=E4=B8=AA=
+=E8=88=8D=E5=85=A5=E5=88=B02=E4=BD=8D=E5=B0=8F=E6=95=B0=E7=9A=84=E6=95=B0=
+=E5=AD=97=EF=BC=8C=E8=AF=B7=E4=BD=BF=E7=94=A8<code>{:.2}</code>=E6=A0=BC=E5=
+=BC=8F=E8=AF=B4=E6=98=8E=E7=AC=A6=EF=BC=9A</p>
+
+<pre><code>fn main() {
+    let x =3D 12.34567;
+    println!("{:.2}", x);
+}
+</code></pre>
+
+<p>=E5=A6=82=E6=9E=9C=E8=A6=81=E5=B0=86=E5=9B=9B=E8=88=8D=E4=BA=94=E5=85=A5=
+=E7=9A=84=E6=95=B0=E5=AD=97=E6=94=BE=E5=9C=A8=E5=AD=97=E7=AC=A6=E4=B8=B2=E4=
+=B8=AD=EF=BC=8C=E8=AF=B7=E4=BD=BF=E7=94=A8<a href=3D"https://doc.rust-lang.=
+org/std/macro.format.html" rel=3D"noreferrer"><code>format!()</code> macro<=
+/a>=E3=80=82</p>
+
+<p>=E5=A6=82=E6=9E=9C=E8=A6=81=E5=AF=B9=E6=95=B0=E5=AD=97=E8=BF=9B=E8=A1=8C=
+=E8=88=8D=E5=85=A5=E5=B9=B6=E5=B0=86=E7=BB=93=E6=9E=9C=E4=BD=9C=E4=B8=BA=E5=
+=8F=A6=E4=B8=80=E4=B8=AA=E6=95=B0=E5=AD=97=E8=BF=94=E5=9B=9E=EF=BC=8C=E5=88=
+=99=E5=B0=86=E8=AF=A5=E6=95=B0=E5=AD=97=E4=B9=98=E4=BB=A5=E7=BB=99=E5=AE=9A=
+=E7=9A=8410=E7=9A=84=E5=B9=82=EF=BC=8C=E8=B0=83=E7=94=A8<a href=3D"https://=
+doc.rust-lang.org/std/primitive.f64.html#method.round" rel=3D"noreferrer"><=
+code>round</code></a>=EF=BC=8C=E5=B9=B6=E9=99=A4=E4=BB=A5=E7=9B=B8=E5=90=8C=
+=E7=9A=84=E5=B9=82=EF=BC=8C=E4=BE=8B=E5=A6=82=E8=A6=81=E8=88=8D=E5=85=A5=E5=
+=88=B02=E4=BD=8D=E5=B0=8F=E6=95=B0=EF=BC=8C=E8=AF=B7=E4=BD=BF=E7=94=A810 <s=
+up> 2 </sup> =3D 100=E3=80=82</p>
+
+<pre><code>fn main() {
+    let x =3D 12.34567_f64;
+    let y =3D (x * 100.0).round() / 100.0;
+
+    println!("{:.5} {:.5}", x, y);
+}
+</code></pre>
+
+<p> <a href=3D"https://play.rust-lang.org/?gist=3Db94d0644ccc62a008ad87110b=
+66da5d9&amp;version=3Dstable" rel=3D"noreferrer">playground</a> </p>
+
+<p>=E8=BF=99=E4=BC=9A=E6=89=93=E5=8D=B0<code>12.34567 12.35000</code>=E3=80=
+=82 </p>
+
+<p>=E5=A6=82=E6=9E=9C=E5=9C=A8=E7=BC=96=E8=AF=91=E6=97=B6=E4=B8=8D=E7=9F=A5=
+=E9=81=93=E5=B0=8F=E6=95=B0=E4=BD=8D=E6=95=B0=EF=BC=8C=E5=8F=AF=E4=BB=A5=E4=
+=BD=BF=E7=94=A8<a href=3D"https://doc.rust-lang.org/stable/std/primitive.f6=
+4.html#method.powi" rel=3D"noreferrer"><code>powi</code></a>=E6=9D=A5=E6=9C=
+=89=E6=95=88=E5=9C=B0=E8=AE=A1=E7=AE=97=E7=9B=B8=E5=85=B3=E5=8A=9F=E7=8E=87=
+=E3=80=82 </p>
+
+<p>=E8=AF=B7=E6=B3=A8=E6=84=8F=EF=BC=8C=E8=BF=99=E5=B0=86=E5=88=86=E8=A7=A3=
+=E4=B8=BA=E9=9D=9E=E5=B8=B8=E5=A4=A7=E7=9A=84=E6=95=B0=E5=AD=97;=E5=85=B7=
+=E4=BD=93=E5=9C=B0=E8=AF=B4=EF=BC=8C=E5=A4=A7=E4=BA=8E<code>std::f64::MAX /=
+ power</code>=E7=9A=84=E6=95=B0=E5=AD=97=EF=BC=88=E5=85=B6=E4=B8=AD<code>po=
+wer</code>=E6=98=AF10=E7=9A=84=E5=B9=82=EF=BC=8C=E4=BE=8B=E5=A6=82=E4=B8=8A=
+=E9=9D=A2=E4=BE=8B=E5=AD=90=E4=B8=AD=E7=9A=84100=EF=BC=89=E5=B0=86=E5=9C=A8=
+=E4=B9=98=E6=B3=95=E4=B8=AD=E5=8F=98=E4=B8=BA=E6=97=A0=E7=A9=B7=E5=A4=A7=EF=
+=BC=8C=E5=B9=B6=E4=B8=94=E5=9C=A8=E4=B9=8B=E5=90=8E=E4=BF=9D=E6=8C=81=E6=97=
+=A0=E7=A9=B7=E5=A4=A7=E3=80=82=E4=BD=86=E6=98=AF=EF=BC=8C<code>f64</code>=
+=E4=B8=8D=E8=83=BD=E4=BB=A3=E8=A1=A8=E5=A4=A7=E4=BA=8E2 <sup> 53 </sup>=E7=
+=9A=84=E6=95=B0=E5=AD=97=E7=9A=84=E4=BB=BB=E4=BD=95=E5=B0=8F=E6=95=B0=E4=BD=
+=8D=EF=BC=88=E5=8D=B3=E5=AE=83=E4=BB=AC=E6=80=BB=E6=98=AF=E6=95=B4=E6=95=B0=
+=EF=BC=89=EF=BC=8C=E6=89=80=E4=BB=A5=E5=8F=AF=E4=BB=A5=E9=80=9A=E8=BF=87=E7=
+=89=B9=E6=AE=8A=E6=83=85=E5=86=B5=E5=B0=86=E8=BF=99=E6=A0=B7=E5=A4=A7=E7=9A=
+=84=E6=95=B0=E5=AD=97=E8=BF=94=E5=9B=9E=E7=BB=99=E8=87=AA=E5=B7=B1=E3=80=82=
+</p>
+      </div>
+     =20
+      <div class=3D"hr-line-dashed"></div>
+      <p>=E7=AD=94=E6=A1=88 1 :(=E5=BE=97=E5=88=86=EF=BC=9A10)</p>
+      <div class=3D"answer markdown-body">
+        <p>=E8=A6=81=E6=B7=BB=E5=8A=A0=E5=88=B0@huon=E7=9A=84=E4=B8=80=E4=
+=B8=AA=E5=BE=88=E5=A5=BD=E7=9A=84=E7=AD=94=E6=A1=88=EF=BC=8C=E5=A6=82=E6=9E=
+=9C=E6=82=A8=E6=83=B3=E8=88=8D=E5=85=A5=E4=B8=80=E4=B8=AA=E6=B5=AE=E7=82=B9=
+=E6=95=B0=E7=94=A8=E4=BA=8E=E6=98=BE=E7=A4=BA=E7=9B=AE=E7=9A=84=EF=BC=8C<em=
+>=E4=BD=86=E6=82=A8=E4=B8=8D=E7=9F=A5=E9=81=93=E7=BC=96=E8=AF=91=E6=97=B6=
+=E7=9A=84=E7=B2=BE=E5=BA=A6</em>=EF=BC=8C=E5=88=99=E5=8F=AF=E4=BB=A5=E4=BD=
+=BF=E7=94=A8=E7=B2=BE=E5=BA=A6=E6=A0=BC=E5=BC=8F=E8=AF=AD=E6=B3=95=E5=A6=82=
+=E4=B8=8B=EF=BC=9A</p>
+
+<pre><code>fn main() {
+    let precision =3D 3;
+    let x =3D 12.34567;
+    println!("{:.1$}", x, precision); // prints 12.346 and works with `form=
+at!` as well
+}
+</code></pre>
+
+<p> <a href=3D"https://doc.rust-lang.org/stable/std/fmt/index.html#precisio=
+n" rel=3D"noreferrer">std::fmt</a>=E7=9A=84=E6=96=87=E6=A1=A3=E4=B8=AD=E6=
+=9C=89=E6=9B=B4=E5=A4=9A=E6=9C=89=E5=85=B3=E8=AF=AD=E6=B3=95=E7=9A=84=E7=A4=
+=BA=E4=BE=8B=E3=80=82</p>
+      </div>
+     =20
+    </div>
+
+  </div>
+
+  <div class=3D"right" style=3D"height: auto !important;">
+    <div style=3D"height: auto !important;">
+       =20
+        <ins class=3D"adsbygoogle" style=3D"display: block; height: 280px;"=
+ data-ad-client=3D"ca-pub-6263610230477973" data-ad-slot=3D"2820756182" dat=
+a-ad-format=3D"auto" data-full-width-responsive=3D"true" data-adsbygoogle-s=
+tatus=3D"done"><div id=3D"aswift_2_host" style=3D"border: none; height: 280=
+px; width: 360px; margin: 0px; padding: 0px; position: relative; visibility=
+: visible; background-color: transparent; display: inline-block; overflow: =
+visible;"><iframe id=3D"aswift_2" name=3D"aswift_2" browsingtopics=3D"true"=
+ style=3D"left:0;position:absolute;top:0;border:0;width:360px;height:280px;=
+" sandbox=3D"allow-forms allow-popups allow-popups-to-escape-sandbox allow-=
+same-origin allow-scripts allow-top-navigation-by-user-activation" width=3D=
+"360" height=3D"280" frameborder=3D"0" marginwidth=3D"0" marginheight=3D"0"=
+ vspace=3D"0" hspace=3D"0" allowtransparency=3D"true" scrolling=3D"no" allo=
+w=3D"attribution-reporting; run-ad-auction" src=3D"cid:frame-5B466042B0CF3E=
+BA2BB84FAA2B0FB162@mhtml.blink" data-google-container-id=3D"a!3" tabindex=
+=3D"0" title=3D"Advertisement" aria-label=3D"Advertisement"></iframe></div>=
+</ins>
+       =20
+    </div>
+
+
+    <div style=3D"height:20px"></div>
+
+    <div class=3D"releated-question-wrapper">
+      <div class=3D"header">
+        =E7=9B=B8=E5=85=B3=E9=97=AE=E9=A2=98
+      </div>
+      <div class=3D"hr-line-dashed"></div>
+      <ul>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/8382619">=E5=A6=82=E4=BD=95=E5=
+=B0=86=E6=B5=AE=E7=82=B9=E6=95=B0=E8=88=8D=E5=85=A5=E5=88=B0Ruby=E4=B8=AD=
+=E6=8C=87=E5=AE=9A=E6=95=B0=E9=87=8F=E7=9A=84=E6=9C=89=E6=95=88=E6=95=B0=E5=
+=AD=97=EF=BC=9F</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/9169146">=E5=A6=82=E4=BD=95=E6=
+=98=BE=E7=A4=BA=E6=B5=AE=E7=82=B9=E6=95=B0=E7=9A=84=E9=99=84=E5=8A=A0=E6=95=
+=B0=E5=AD=97=EF=BC=9F</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/12450501">=E8=88=8D=E5=85=A5=E6=
+=95=B0=E5=88=B0=E6=8C=87=E5=AE=9A=E7=9A=84=E4=BD=8D=E6=95=B0</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/12815179">=E6=B5=AE=E7=82=B9=E7=
+=B1=BB=E5=9E=8B=E7=9A=84=E6=9C=89=E6=95=88=E4=BD=8D=E6=95=B0</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/13522670">=E5=A6=82=E4=BD=95=E5=
+=B0=86=E6=B5=AE=E7=82=B9=E6=95=B0=E8=88=8D=E5=85=A5=E5=88=B0=E5=B0=8F=E6=95=
+=B0=E7=82=B9=E5=90=8E=E7=9A=84=E7=89=B9=E5=AE=9A=E4=BD=8D=E6=95=B0=EF=BC=9F=
+</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/28655362">=E5=A6=82=E4=BD=95=E5=
+=B0=86=E6=B5=AE=E7=82=B9=E6=95=B0=E8=88=8D=E5=85=A5=E5=88=B0=E6=8C=87=E5=AE=
+=9A=E7=9A=84=E4=BD=8D=E6=95=B0=EF=BC=9F</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/31124865">=E5=A6=82=E4=BD=95=E5=
+=9C=A8bash=E4=B8=AD=E5=B0=86=E5=B0=8F=E6=95=B0=E7=82=B9=E5=90=8E=E7=9A=84=
+=E6=B5=AE=E7=82=B9=E6=95=B0=E8=88=8D=E5=85=A5=E5=88=B03=E4=BD=8D=E6=95=B0</=
+a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/38121134">=E5=A6=82=E4=BD=95=E5=
+=B0=86=E5=8D=81=E8=BF=9B=E5=88=B6=E6=95=B0=E8=88=8D=E5=85=A5=E5=88=B0=E6=8C=
+=87=E5=AE=9A=E7=9A=84=E4=BD=8D=E6=95=B0=EF=BC=9F</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/40615697">=E8=AE=A1=E7=AE=97=E6=
+=B5=AE=E7=82=B9=E6=95=B0</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/51052417">printf=E5=A6=82=E4=BD=
+=95=E4=BB=8E=E6=B5=AE=E7=82=B9=E6=95=B0=E4=B8=AD=E6=8F=90=E5=8F=96=E6=95=B0=
+=E5=AD=97=EF=BC=9F</a>
+        </li>
+       =20
+      </ul>
+    </div>
+
+
+
+   =20
+
+   =20
+
+    <div class=3D"releated-question-wrapper">
+      <div class=3D"header">
+        =E6=9C=80=E6=96=B0=E9=97=AE=E9=A2=98
+      </div>
+      <div class=3D"hr-line-dashed"></div>
+      <ul>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/68614764">=E6=88=91=E5=86=99=E4=
+=BA=86=E8=BF=99=E6=AE=B5=E4=BB=A3=E7=A0=81=EF=BC=8C=E4=BD=86=E6=88=91=E6=97=
+=A0=E6=B3=95=E7=90=86=E8=A7=A3=E6=88=91=E7=9A=84=E9=94=99=E8=AF=AF</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/68614678">=E6=88=91=E6=97=A0=E6=
+=B3=95=E4=BB=8E=E4=B8=80=E4=B8=AA=E4=BB=A3=E7=A0=81=E5=AE=9E=E4=BE=8B=E7=9A=
+=84=E5=88=97=E8=A1=A8=E4=B8=AD=E5=88=A0=E9=99=A4 None =E5=80=BC=EF=BC=8C=E4=
+=BD=86=E6=88=91=E5=8F=AF=E4=BB=A5=E5=9C=A8=E5=8F=A6=E4=B8=80=E4=B8=AA=E5=AE=
+=9E=E4=BE=8B=E4=B8=AD=E3=80=82=E4=B8=BA=E4=BB=80=E4=B9=88=E5=AE=83=E9=80=82=
+=E7=94=A8=E4=BA=8E=E4=B8=80=E4=B8=AA=E7=BB=86=E5=88=86=E5=B8=82=E5=9C=BA=E8=
+=80=8C=E4=B8=8D=E9=80=82=E7=94=A8=E4=BA=8E=E5=8F=A6=E4=B8=80=E4=B8=AA=E7=BB=
+=86=E5=88=86=E5=B8=82=E5=9C=BA=EF=BC=9F</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/68614175">=E6=98=AF=E5=90=A6=E6=
+=9C=89=E5=8F=AF=E8=83=BD=E4=BD=BF loadstring =E4=B8=8D=E5=8F=AF=E8=83=BD=E7=
+=AD=89=E4=BA=8E=E6=89=93=E5=8D=B0=EF=BC=9F=E5=8D=A2=E9=98=BF</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/68614313">java=E4=B8=AD=E7=9A=84=
+random.expovariate()</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/68614125">Appscript =E9=80=9A=E8=
+=BF=87=E4=BC=9A=E8=AE=AE=E5=9C=A8 Google =E6=97=A5=E5=8E=86=E4=B8=AD=E5=8F=
+=91=E9=80=81=E7=94=B5=E5=AD=90=E9=82=AE=E4=BB=B6=E5=92=8C=E5=88=9B=E5=BB=BA=
+=E6=B4=BB=E5=8A=A8</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/68615109">=E4=B8=BA=E4=BB=80=E4=
+=B9=88=E6=88=91=E7=9A=84 Onclick =E7=AE=AD=E5=A4=B4=E5=8A=9F=E8=83=BD=E5=9C=
+=A8 React =E4=B8=AD=E4=B8=8D=E8=B5=B7=E4=BD=9C=E7=94=A8=EF=BC=9F</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/68615123">=E5=9C=A8=E6=AD=A4=E4=
+=BB=A3=E7=A0=81=E4=B8=AD=E6=98=AF=E5=90=A6=E6=9C=89=E4=BD=BF=E7=94=A8=E2=80=
+=9Cthis=E2=80=9D=E7=9A=84=E6=9B=BF=E4=BB=A3=E6=96=B9=E6=B3=95=EF=BC=9F</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/68614097">=E5=9C=A8 SQL Server =
+=E5=92=8C PostgreSQL =E4=B8=8A=E6=9F=A5=E8=AF=A2=EF=BC=8C=E6=88=91=E5=A6=82=
+=E4=BD=95=E4=BB=8E=E7=AC=AC=E4=B8=80=E4=B8=AA=E8=A1=A8=E8=8E=B7=E5=BE=97=E7=
+=AC=AC=E4=BA=8C=E4=B8=AA=E8=A1=A8=E7=9A=84=E5=8F=AF=E8=A7=86=E5=8C=96</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/68614427">=E6=AF=8F=E5=8D=83=E4=
+=B8=AA=E6=95=B0=E5=AD=97=E5=BE=97=E5=88=B0</a>
+        </li>
+       =20
+        <li>
+          <a href=3D"https://thinbug.com/q/68615239">=E6=9B=B4=E6=96=B0=E4=
+=BA=86=E5=9F=8E=E5=B8=82=E8=BE=B9=E7=95=8C KML =E6=96=87=E4=BB=B6=E7=9A=84=
+=E6=9D=A5=E6=BA=90=EF=BC=9F</a>
+        </li>
+       =20
+      </ul>
+    </div>
+    <div class=3D"">
+    </div>
+  </div>
+</div>
+
+
+    <div>
+     =20
+
+   =20
+
+ =20
+
+</div><ins class=3D"adsbygoogle adsbygoogle-noablate" data-adsbygoogle-stat=
+us=3D"done" style=3D"display: none !important;"><div id=3D"aswift_0_host" s=
+tyle=3D"border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; p=
+osition: relative; visibility: visible; background-color: transparent; disp=
+lay: inline-block;"><iframe id=3D"aswift_0" name=3D"aswift_0" browsingtopic=
+s=3D"true" style=3D"left:0;position:absolute;top:0;border:0;width:undefined=
+px;height:undefinedpx;" sandbox=3D"allow-forms allow-popups allow-popups-to=
+-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-use=
+r-activation" frameborder=3D"0" marginwidth=3D"0" marginheight=3D"0" vspace=
+=3D"0" hspace=3D"0" allowtransparency=3D"true" scrolling=3D"no" allow=3D"at=
+tribution-reporting; run-ad-auction" src=3D"cid:frame-18DBD9D3138F678CB6CDC=
+4FEEFACC0ED@mhtml.blink" data-google-container-id=3D"a!1" tabindex=3D"0" ti=
+tle=3D"Advertisement" aria-label=3D"Advertisement"></iframe></div></ins></b=
+ody><iframe id=3D"google_esf" name=3D"google_esf" src=3D"cid:frame-D6961604=
+E1E658BFA56390319BED9F0D@mhtml.blink" style=3D"display: none;"></iframe><di=
+v mx-name=3D"dream-translation"><template shadowmode=3D"closed"><link rel=
+=3D"stylesheet" href=3D"chrome-extension://ogleeipbbcokpeabliinildngejmdneg=
+/css/content.css">
+
+<div id=3D"dmx_dialog" style=3D"width: 500px; height: 470px; display: none;=
+">
+    <div id=3D"dmx_dialog_title" style=3D"cursor: move;">
+        <div class=3D"dmx_left">
+            <div id=3D"dmx_close"><i class=3D"dmx-icon dmx-icon-close"></i>=
+</div>
+            <div id=3D"dmx_pin" class=3D"dmx-icon"></div>
+            <div id=3D"dmx_fullscreen" class=3D"dmx-icon"></div>
+            <div id=3D"dmx_history">
+                <i class=3D"dmx-icon disabled dmx-icon-left"></i>
+                <i class=3D"dmx-icon disabled dmx-icon-right"></i>
+            </div>
+            <div id=3D"dmx_navigate">
+                <u class=3D"dmx-icon active" action=3D"translate">=E7=BF=BB=
+=E8=AF=91</u>
+                <u class=3D"dmx-icon" action=3D"dictionary">=E8=AF=8D=E5=85=
+=B8</u>
+                <u class=3D"dmx-icon" action=3D"search">=E6=90=9C=E7=B4=A2<=
+/u>
+            </div>
+        </div>
+        <div class=3D"dmx_right">
+            <div id=3D"dmx_setting"><i class=3D"dmx-icon dmx-icon-setting">=
+</i></div>
+            <div id=3D"dmx_more"><i class=3D"dmx-icon dmx-icon-more"></i></=
+div>
+            <div id=3D"dmx_voice" class=3D"dmx_hide"><i class=3D"dmx-icon d=
+mx-icon-voice"></i></div>
+            <div id=3D"dmx_heart" class=3D"dmx_hide"><i class=3D"dmx-icon d=
+mx-icon-heart"></i></div>
+        </div>
+    </div>
+    <div id=3D"dmx_dialog_content"><div class=3D"dmx_main dmx_main_trans">
+    <div class=3D"case" id=3D"translate_input" contenteditable=3D"true"></d=
+iv>
+    <div class=3D"language_box fx">
+        <div id=3D"language_source" class=3D"language_button dmx-icon" valu=
+e=3D"auto">=E8=87=AA=E5=8A=A8=E6=A3=80=E6=B5=8B</div>
+        <div id=3D"language_exchange" class=3D"disabled"><i class=3D"dmx-ic=
+on dmx-icon-exchange"></i></div>
+        <div id=3D"language_target" class=3D"language_button dmx-icon" valu=
+e=3D"zh">=E4=B8=AD=E6=96=87(=E7=AE=80=E4=BD=93)</div>
+        <div id=3D"translate_button">=E7=BF=BB =E8=AF=91</div>
+        <div id=3D"translate_crop"><i class=3D"dmx-icon dmx-icon-crop"></i>=
+</div>
+        <div id=3D"language_dropdown" class=3D"fx"><u value=3D"auto">=E8=87=
+=AA=E5=8A=A8=E6=A3=80=E6=B5=8B</u><u value=3D"zh">=E4=B8=AD=E6=96=87(=E7=AE=
+=80=E4=BD=93)</u><u value=3D"en">=E8=8B=B1=E8=AF=AD</u><u value=3D"jp">=E6=
+=97=A5=E8=AF=AD</u><u value=3D"th">=E6=B3=B0=E8=AF=AD</u><u value=3D"spa">=
+=E8=A5=BF=E7=8F=AD=E7=89=99=E8=AF=AD</u><u value=3D"ara">=E9=98=BF=E6=8B=89=
+=E4=BC=AF=E8=AF=AD</u><u value=3D"fra">=E6=B3=95=E8=AF=AD</u><u value=3D"ko=
+r">=E9=9F=A9=E8=AF=AD</u><u value=3D"ru">=E4=BF=84=E8=AF=AD</u><u value=3D"=
+de">=E5=BE=B7=E8=AF=AD</u><u value=3D"pt">=E8=91=A1=E8=90=84=E7=89=99=E8=AF=
+=AD</u><u value=3D"it">=E6=84=8F=E5=A4=A7=E5=88=A9=E8=AF=AD</u><u value=3D"=
+el">=E5=B8=8C=E8=85=8A=E8=AF=AD</u><u value=3D"nl">=E8=8D=B7=E5=85=B0=E8=AF=
+=AD</u><u value=3D"pl">=E6=B3=A2=E5=85=B0=E8=AF=AD</u><u value=3D"fin">=E8=
+=8A=AC=E5=85=B0=E8=AF=AD</u><u value=3D"cs">=E6=8D=B7=E5=85=8B=E8=AF=AD</u>=
+<u value=3D"bul">=E4=BF=9D=E5=8A=A0=E5=88=A9=E4=BA=9A=E8=AF=AD</u><u value=
+=3D"dan">=E4=B8=B9=E9=BA=A6=E8=AF=AD</u><u value=3D"est">=E7=88=B1=E6=B2=99=
+=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"hu">=E5=8C=88=E7=89=99=E5=88=A9=
+=E8=AF=AD</u><u value=3D"rom">=E7=BD=97=E9=A9=AC=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"slo">=E6=96=AF=E6=B4=9B=E6=96=87=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"swe">=E7=91=9E=E5=85=B8=E8=AF=AD</u><u value=3D"vie">=E8=B6=
+=8A=E5=8D=97=E8=AF=AD</u><u value=3D"yue">=E4=B8=AD=E6=96=87(=E7=B2=A4=E8=
+=AF=AD)</u><u value=3D"cht">=E4=B8=AD=E6=96=87(=E7=B9=81=E4=BD=93)</u><u va=
+lue=3D"wyw">=E4=B8=AD=E6=96=87(=E6=96=87=E8=A8=80=E6=96=87)</u><u value=3D"=
+afr">=E5=8D=97=E9=9D=9E=E8=8D=B7=E5=85=B0=E8=AF=AD</u><u value=3D"alb">=E9=
+=98=BF=E5=B0=94=E5=B7=B4=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"amh">=E9=
+=98=BF=E5=A7=86=E5=93=88=E6=8B=89=E8=AF=AD</u><u value=3D"arm">=E4=BA=9A=E7=
+=BE=8E=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"asm">=E9=98=BF=E8=90=A8=E5=
+=A7=86=E8=AF=AD</u><u value=3D"ast">=E9=98=BF=E6=96=AF=E5=9B=BE=E9=87=8C=E4=
+=BA=9A=E6=96=AF=E8=AF=AD</u><u value=3D"aze">=E9=98=BF=E5=A1=9E=E6=8B=9C=E7=
+=96=86=E8=AF=AD</u><u value=3D"baq">=E5=B7=B4=E6=96=AF=E5=85=8B=E8=AF=AD</u=
+><u value=3D"bel">=E7=99=BD=E4=BF=84=E7=BD=97=E6=96=AF=E8=AF=AD</u><u value=
+=3D"ben">=E5=AD=9F=E5=8A=A0=E6=8B=89=E8=AF=AD</u><u value=3D"bos">=E6=B3=A2=
+=E6=96=AF=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"bur">=E7=BC=85=E7=94=B8=
+=E8=AF=AD</u><u value=3D"cat">=E5=8A=A0=E6=B3=B0=E7=BD=97=E5=B0=BC=E4=BA=9A=
+=E8=AF=AD</u><u value=3D"ceb">=E5=AE=BF=E5=8A=A1=E8=AF=AD</u><u value=3D"hr=
+v">=E5=85=8B=E7=BD=97=E5=9C=B0=E4=BA=9A=E8=AF=AD</u><u value=3D"epo">=E4=B8=
+=96=E7=95=8C=E8=AF=AD</u><u value=3D"fao">=E6=B3=95=E7=BD=97=E8=AF=AD</u><u=
+ value=3D"fil">=E8=8F=B2=E5=BE=8B=E5=AE=BE=E8=AF=AD</u><u value=3D"glg">=E5=
+=8A=A0=E5=88=A9=E8=A5=BF=E4=BA=9A=E8=AF=AD</u><u value=3D"geo">=E6=A0=BC=E9=
+=B2=81=E5=90=89=E4=BA=9A=E8=AF=AD</u><u value=3D"guj">=E5=8F=A4=E5=90=89=E6=
+=8B=89=E7=89=B9=E8=AF=AD</u><u value=3D"hau">=E8=B1=AA=E8=90=A8=E8=AF=AD</u=
+><u value=3D"heb">=E5=B8=8C=E4=BC=AF=E6=9D=A5=E8=AF=AD</u><u value=3D"hi">=
+=E5=8D=B0=E5=9C=B0=E8=AF=AD</u><u value=3D"ice">=E5=86=B0=E5=B2=9B=E8=AF=AD=
+</u><u value=3D"ibo">=E4=BC=8A=E5=8D=9A=E8=AF=AD</u><u value=3D"id">=E5=8D=
+=B0=E5=B0=BC=E8=AF=AD</u><u value=3D"gle">=E7=88=B1=E5=B0=94=E5=85=B0=E8=AF=
+=AD</u><u value=3D"kan">=E5=8D=A1=E7=BA=B3=E8=BE=BE=E8=AF=AD</u><u value=3D=
+"kaz">=E5=93=88=E8=90=A8=E5=85=8B=E8=AF=AD</u><u value=3D"kli">=E5=85=8B=E6=
+=9E=97=E8=B4=A1=E8=AF=AD</u><u value=3D"kur">=E5=BA=93=E5=B0=94=E5=BE=B7=E8=
+=AF=AD</u><u value=3D"lao">=E8=80=81=E6=8C=9D=E8=AF=AD</u><u value=3D"lat">=
+=E6=8B=89=E4=B8=81=E8=AF=AD</u><u value=3D"lav">=E6=8B=89=E8=84=B1=E7=BB=B4=
+=E4=BA=9A=E8=AF=AD</u><u value=3D"lit">=E7=AB=8B=E9=99=B6=E5=AE=9B=E8=AF=AD=
+</u><u value=3D"ltz">=E5=8D=A2=E6=A3=AE=E5=A0=A1=E8=AF=AD</u><u value=3D"ma=
+c">=E9=A9=AC=E5=85=B6=E9=A1=BF=E8=AF=AD</u><u value=3D"mg">=E9=A9=AC=E6=8B=
+=89=E5=8A=A0=E6=96=AF=E8=AF=AD</u><u value=3D"may">=E9=A9=AC=E6=9D=A5=E8=AF=
+=AD</u><u value=3D"mal">=E9=A9=AC=E6=8B=89=E9=9B=85=E6=8B=89=E5=A7=86=E8=AF=
+=AD</u><u value=3D"mlt">=E9=A9=AC=E8=80=B3=E4=BB=96=E8=AF=AD</u><u value=3D=
+"mar">=E9=A9=AC=E6=8B=89=E5=9C=B0=E8=AF=AD</u><u value=3D"nep">=E5=B0=BC=E6=
+=B3=8A=E5=B0=94=E8=AF=AD</u><u value=3D"nno">=E6=96=B0=E6=8C=AA=E5=A8=81=E8=
+=AF=AD</u><u value=3D"per">=E6=B3=A2=E6=96=AF=E8=AF=AD</u><u value=3D"srd">=
+=E8=90=A8=E4=B8=81=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"srp">=E5=A1=9E=
+=E5=B0=94=E7=BB=B4=E4=BA=9A=E8=AF=AD(=E6=8B=89=E4=B8=81=E6=96=87)</u><u val=
+ue=3D"sin">=E5=83=A7=E4=BC=BD=E7=BD=97=E8=AF=AD</u><u value=3D"sk">=E6=96=
+=AF=E6=B4=9B=E4=BC=90=E5=85=8B=E8=AF=AD</u><u value=3D"som">=E7=B4=A2=E9=A9=
+=AC=E9=87=8C=E8=AF=AD</u><u value=3D"swa">=E6=96=AF=E7=93=A6=E5=B8=8C=E9=87=
+=8C=E8=AF=AD</u><u value=3D"tgl">=E4=BB=96=E5=8A=A0=E7=A6=84=E8=AF=AD</u><u=
+ value=3D"tgk">=E5=A1=94=E5=90=89=E5=85=8B=E8=AF=AD</u><u value=3D"tam">=E6=
+=B3=B0=E7=B1=B3=E5=B0=94=E8=AF=AD</u><u value=3D"tat">=E9=9E=91=E9=9D=BC=E8=
+=AF=AD</u><u value=3D"tel">=E6=B3=B0=E5=8D=A2=E5=9B=BA=E8=AF=AD</u><u value=
+=3D"tr">=E5=9C=9F=E8=80=B3=E5=85=B6=E8=AF=AD</u><u value=3D"tuk">=E5=9C=9F=
+=E5=BA=93=E6=9B=BC=E8=AF=AD</u><u value=3D"ukr">=E4=B9=8C=E5=85=8B=E5=85=B0=
+=E8=AF=AD</u><u value=3D"urd">=E4=B9=8C=E5=B0=94=E9=83=BD=E8=AF=AD</u><u va=
+lue=3D"uzb">=E4=B9=8C=E5=85=B9=E5=88=AB=E5=85=8B=E8=AF=AD</u><u value=3D"oc=
+i">=E5=A5=A5=E5=85=8B=E8=AF=AD</u><u value=3D"kir">=E5=90=89=E5=B0=94=E5=90=
+=89=E6=96=AF=E8=AF=AD</u><u value=3D"pus">=E6=99=AE=E4=BB=80=E5=9B=BE=E8=AF=
+=AD</u><u value=3D"hkm">=E9=AB=98=E6=A3=89=E8=AF=AD</u><u value=3D"ht">=E6=
+=B5=B7=E5=9C=B0=E8=AF=AD</u><u value=3D"nob">=E4=B9=A6=E9=9D=A2=E6=8C=AA=E5=
+=A8=81=E8=AF=AD</u><u value=3D"pan">=E6=97=81=E9=81=AE=E6=99=AE=E8=AF=AD</u=
+><u value=3D"arq">=E9=98=BF=E5=B0=94=E5=8F=8A=E5=88=A9=E4=BA=9A=E9=98=BF=E6=
+=8B=89=E4=BC=AF=E8=AF=AD</u><u value=3D"bis">=E6=AF=94=E6=96=AF=E6=8B=89=E9=
+=A9=AC=E8=AF=AD</u><u value=3D"frn">=E5=8A=A0=E6=8B=BF=E5=A4=A7=E6=B3=95=E8=
+=AF=AD</u><u value=3D"hak">=E5=93=88=E5=8D=A1=E9=92=A6=E8=AF=AD</u><u value=
+=3D"hup">=E8=83=A1=E5=B8=95=E8=AF=AD</u><u value=3D"ing">=E5=8D=B0=E5=8F=A4=
+=E4=BB=80=E8=AF=AD</u><u value=3D"lag">=E6=8B=89=E7=89=B9=E5=8A=A0=E8=8E=B1=
+=E8=AF=AD</u><u value=3D"mau">=E6=AF=9B=E9=87=8C=E6=B1=82=E6=96=AF=E5=85=8B=
+=E9=87=8C=E5=A5=A5=E5=B0=94=E8=AF=AD</u><u value=3D"mot">=E9=BB=91=E5=B1=B1=
+=E8=AF=AD</u><u value=3D"pot">=E5=B7=B4=E8=A5=BF=E8=91=A1=E8=90=84=E7=89=99=
+=E8=AF=AD</u><u value=3D"ruy">=E5=8D=A2=E6=A3=AE=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"sec">=E5=A1=9E=E5=B0=94=E7=BB=B4=E4=BA=9A-=E5=85=8B=E7=BD=
+=97=E5=9C=B0=E4=BA=9A=E8=AF=AD</u><u value=3D"sil">=E8=A5=BF=E9=87=8C=E8=A5=
+=BF=E4=BA=9A=E8=AF=AD</u><u value=3D"tua">=E7=AA=81=E5=B0=BC=E6=96=AF=E9=98=
+=BF=E6=8B=89=E4=BC=AF=E8=AF=AD</u><u value=3D"ach">=E4=BA=9A=E9=BD=90=E8=AF=
+=AD</u><u value=3D"aka">=E9=98=BF=E8=82=AF=E8=AF=AD</u><u value=3D"arg">=E9=
+=98=BF=E6=8B=89=E8=B4=A1=E8=AF=AD</u><u value=3D"aym">=E8=89=BE=E9=A9=AC=E6=
+=8B=89=E8=AF=AD</u><u value=3D"bal">=E4=BF=BE=E8=B7=AF=E6=94=AF=E8=AF=AD</u=
+><u value=3D"bak">=E5=B7=B4=E4=BB=80=E5=9F=BA=E5=B0=94=E8=AF=AD</u><u value=
+=3D"bem">=E6=9C=AC=E5=B7=B4=E8=AF=AD</u><u value=3D"ber">=E6=9F=8F=E6=9F=8F=
+=E5=B0=94=E8=AF=AD</u><u value=3D"bho">=E5=8D=9A=E6=9D=B0=E6=99=AE=E5=B0=94=
+=E8=AF=AD</u><u value=3D"bli">=E6=AF=94=E6=9E=97=E8=AF=AD</u><u value=3D"br=
+e">=E5=B8=83=E5=88=97=E5=A1=94=E5=B0=BC=E8=AF=AD</u><u value=3D"chr">=E5=88=
+=87=E7=BD=97=E5=9F=BA=E8=AF=AD</u><u value=3D"nya">=E9=BD=90=E5=88=87=E7=93=
+=A6=E8=AF=AD</u><u value=3D"chv">=E6=A5=9A=E7=93=A6=E4=BB=80=E8=AF=AD</u><u=
+ value=3D"cor">=E5=BA=B7=E7=93=A6=E5=B0=94=E8=AF=AD</u><u value=3D"cos">=E7=
+=A7=91=E8=A5=BF=E5=98=89=E8=AF=AD</u><u value=3D"cre">=E5=85=8B=E9=87=8C=E5=
+=85=8B=E8=AF=AD</u><u value=3D"cri">=E5=85=8B=E9=87=8C=E7=B1=B3=E4=BA=9A=E9=
+=9E=91=E9=9D=BC=E8=AF=AD</u><u value=3D"div">=E8=BF=AA=E7=BB=B4=E5=B8=8C=E8=
+=AF=AD</u><u value=3D"eno">=E5=8F=A4=E8=8B=B1=E8=AF=AD</u><u value=3D"frm">=
+=E4=B8=AD=E5=8F=A4=E6=B3=95=E8=AF=AD</u><u value=3D"fri">=E5=BC=97=E7=95=99=
+=E5=88=A9=E8=AF=AD</u><u value=3D"ful">=E5=AF=8C=E6=8B=89=E5=B0=BC=E8=AF=AD=
+</u><u value=3D"gla">=E7=9B=96=E5=B0=94=E8=AF=AD</u><u value=3D"lug">=E5=8D=
+=A2=E5=B9=B2=E8=BE=BE=E8=AF=AD</u><u value=3D"gra">=E5=8F=A4=E5=B8=8C=E8=85=
+=8A=E8=AF=AD</u><u value=3D"grn">=E7=93=9C=E6=8B=89=E5=B0=BC=E8=AF=AD</u><u=
+ value=3D"haw">=E5=A4=8F=E5=A8=81=E5=A4=B7=E8=AF=AD</u><u value=3D"hil">=E5=
+=B8=8C=E5=88=A9=E7=9B=96=E5=86=9C=E8=AF=AD</u><u value=3D"ido">=E4=BC=8A=E5=
+=A4=9A=E8=AF=AD</u><u value=3D"ina">=E5=9B=A0=E7=89=B9=E8=AF=AD</u><u value=
+=3D"iku">=E4=BC=8A=E5=8A=AA=E5=85=8B=E6=8F=90=E5=9B=BE=E7=89=B9=E8=AF=AD</u=
+><u value=3D"jav">=E7=88=AA=E5=93=87=E8=AF=AD</u><u value=3D"kab">=E5=8D=A1=
+=E6=8B=9C=E5=B0=94=E8=AF=AD</u><u value=3D"kal">=E6=A0=BC=E9=99=B5=E5=85=B0=
+=E8=AF=AD</u><u value=3D"kau">=E5=8D=A1=E5=8A=AA=E9=87=8C=E8=AF=AD</u><u va=
+lue=3D"kas">=E5=85=8B=E4=BB=80=E7=B1=B3=E5=B0=94=E8=AF=AD</u><u value=3D"ka=
+h">=E5=8D=A1=E8=88=92=E6=AF=94=E8=AF=AD</u><u value=3D"kin">=E5=8D=A2=E6=97=
+=BA=E8=BE=BE=E8=AF=AD</u><u value=3D"kon">=E5=88=9A=E6=9E=9C=E8=AF=AD</u><u=
+ value=3D"kok">=E5=AD=94=E5=8D=A1=E5=B0=BC=E8=AF=AD</u><u value=3D"lim">=E6=
+=9E=97=E5=A0=A1=E8=AF=AD</u><u value=3D"lin">=E6=9E=97=E5=8A=A0=E6=8B=89=E8=
+=AF=AD</u><u value=3D"loj">=E9=80=BB=E8=BE=91=E8=AF=AD</u><u value=3D"log">=
+=E4=BD=8E=E5=9C=B0=E5=BE=B7=E8=AF=AD</u><u value=3D"los">=E4=B8=8B=E7=B4=A2=
+=E5=B8=83=E8=AF=AD</u><u value=3D"mai">=E8=BF=88=E8=92=82=E5=88=A9=E8=AF=AD=
+</u><u value=3D"glv">=E6=9B=BC=E5=85=8B=E6=96=AF=E8=AF=AD</u><u value=3D"ma=
+o">=E6=AF=9B=E5=88=A9=E8=AF=AD</u><u value=3D"mah">=E9=A9=AC=E7=BB=8D=E5=B0=
+=94=E8=AF=AD</u><u value=3D"nbl">=E5=8D=97=E6=81=A9=E5=BE=B7=E8=B4=9D=E8=8E=
+=B1=E8=AF=AD</u><u value=3D"nea">=E9=82=A3=E4=B8=8D=E5=8B=92=E6=96=AF=E8=AF=
+=AD</u><u value=3D"nqo">=E8=A5=BF=E9=9D=9E=E4=B9=A6=E9=9D=A2=E8=AF=AD</u><u=
+ value=3D"sme">=E5=8C=97=E6=96=B9=E8=90=A8=E7=B1=B3=E8=AF=AD</u><u value=3D=
+"nor">=E6=8C=AA=E5=A8=81=E8=AF=AD</u><u value=3D"oji">=E5=A5=A5=E6=9D=B0=E5=
+=B8=83=E7=93=A6=E8=AF=AD</u><u value=3D"ori">=E5=A5=A5=E9=87=8C=E4=BA=9A=E8=
+=AF=AD</u><u value=3D"orm">=E5=A5=A5=E7=BD=97=E8=8E=AB=E8=AF=AD</u><u value=
+=3D"oss">=E5=A5=A5=E5=A1=9E=E6=A2=AF=E8=AF=AD</u><u value=3D"pam">=E9=82=A6=
+=E6=9D=BF=E7=89=99=E8=AF=AD</u><u value=3D"pap">=E5=B8=95=E7=9A=AE=E9=98=BF=
+=E9=97=A8=E6=89=98=E8=AF=AD</u><u value=3D"ped">=E5=8C=97=E7=B4=A2=E6=89=98=
+=E8=AF=AD</u><u value=3D"que">=E5=85=8B=E4=B8=98=E4=BA=9A=E8=AF=AD</u><u va=
+lue=3D"roh">=E7=BD=97=E6=9B=BC=E4=BB=80=E8=AF=AD</u><u value=3D"ro">=E7=BD=
+=97=E5=A7=86=E8=AF=AD</u><u value=3D"sm">=E8=90=A8=E6=91=A9=E4=BA=9A=E8=AF=
+=AD</u><u value=3D"san">=E6=A2=B5=E8=AF=AD</u><u value=3D"sco">=E8=8B=8F=E6=
+=A0=BC=E5=85=B0=E8=AF=AD</u><u value=3D"sha">=E6=8E=B8=E8=AF=AD</u><u value=
+=3D"sna">=E4=BF=AE=E7=BA=B3=E8=AF=AD</u><u value=3D"snd">=E4=BF=A1=E5=BE=B7=
+=E8=AF=AD</u><u value=3D"sol">=E6=A1=91=E6=B5=B7=E8=AF=AD</u><u value=3D"so=
+t">=E5=8D=97=E7=B4=A2=E6=89=98=E8=AF=AD</u><u value=3D"syr">=E5=8F=99=E5=88=
+=A9=E4=BA=9A=E8=AF=AD</u><u value=3D"tet">=E5=BE=B7=E9=A1=BF=E8=AF=AD</u><u=
+ value=3D"tir">=E6=8F=90=E6=A0=BC=E5=88=A9=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u=
+ value=3D"tso">=E8=81=AA=E5=8A=A0=E8=AF=AD</u><u value=3D"twi">=E5=A5=91=E7=
+=BB=B4=E8=AF=AD</u><u value=3D"ups">=E9=AB=98=E5=9C=B0=E7=B4=A2=E5=B8=83=E8=
+=AF=AD</u><u value=3D"ven">=E6=96=87=E8=BE=BE=E8=AF=AD</u><u value=3D"wln">=
+=E7=93=A6=E9=9A=86=E8=AF=AD</u><u value=3D"wel">=E5=A8=81=E5=B0=94=E5=A3=AB=
+=E8=AF=AD</u><u value=3D"fry">=E8=A5=BF=E5=BC=97=E9=87=8C=E6=96=AF=E8=AF=AD=
+</u><u value=3D"wol">=E6=B2=83=E6=B4=9B=E5=A4=AB=E8=AF=AD</u><u value=3D"xh=
+o">=E7=A7=91=E8=90=A8=E8=AF=AD</u><u value=3D"yid">=E6=84=8F=E7=AC=AC=E7=BB=
+=AA=E8=AF=AD</u><u value=3D"yor">=E7=BA=A6=E9=B2=81=E5=B7=B4=E8=AF=AD</u><u=
+ value=3D"zaz">=E6=89=8E=E6=89=8E=E5=85=B6=E8=AF=AD</u><u value=3D"zul">=E7=
+=A5=96=E9=B2=81=E8=AF=AD</u><u value=3D"sun">=E5=B7=BD=E4=BB=96=E8=AF=AD</u=
+><u value=3D"hmn">=E8=8B=97=E8=AF=AD</u><u value=3D"src">=E5=A1=9E=E5=B0=94=
+=E7=BB=B4=E4=BA=9A=E8=AF=AD(=E8=A5=BF=E9=87=8C=E5=B0=94=E6=96=87)</u></div>
+    </div>
+</div>
+<div id=3D"case_list" class=3D"dmx_main fx"></div></div>
+    <div id=3D"dmx_dialog_resize_n"></div>
+    <div id=3D"dmx_dialog_resize_e"></div>
+    <div id=3D"dmx_dialog_resize_s"></div>
+    <div id=3D"dmx_dialog_resize_w"></div>
+    <div id=3D"dmx_dialog_resize_nw"></div>
+    <div id=3D"dmx_dialog_resize_ne"></div>
+    <div id=3D"dmx_dialog_resize_sw"></div>
+    <div id=3D"dmx_dialog_resize_se"></div>
+    <div id=3D"dmx_dialog_left"></div>
+</div>
+<div id=3D"dmx_mouse_icon"></div>
+<div id=3D"dmx_crop_bg"></div>
+<div id=3D"dmx_crop_fg"></div></template></div></html>
+------MultipartBoundary--Wt861lkcbT6mc6IhAANbrjHuNpb07hdhjOKDdRYebF----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-05d52e84-bd7c-4b8b-b691-6756dc403647@mhtml.blink
+
+@charset "utf-8";
+
+.question-container { padding: 30px; display: flex; flex-flow: wrap; justif=
+y-content: space-between; min-height: 100vh; }
+
+img { max-width: 100%; }
+
+.left { width: 66.66%; padding: 0px 10px; }
+
+pre { overflow-x: scroll; width: 100%; }
+
+.right { width: 33.33%; min-width: 300px; }
+
+.ad1 { height: 80px; }
+
+.ad2 { margin-top: 92px; }
+
+.tag a { margin-right: 10px; }
+
+.tag span { margin-right: 10px; }
+
+h3 a { color: rgb(68, 68, 68); text-decoration: none; }
+
+.meta, .meta a { color: rgb(102, 102, 102); text-decoration: none; font-siz=
+e: small; }
+
+h3 { color: rgb(0, 0, 0); }
+
+.releated-question-wrapper { border: 1px solid rgb(217, 217, 217); border-r=
+adius: 4px; box-sizing: border-box; margin: 0px; padding: 14px; color: rgba=
+(0, 0, 0, 0.65); font-size: 16px; font-variant: tabular-nums; line-height: =
+2; list-style: none; font-feature-settings: "tnum"; position: relative; }
+
+.releated-question-wrapper .header { font-size: 16px; color: black; font-we=
+ight: bold; }
+
+.releated-question-wrapper ul { margin: 0px; padding: 0px; list-style: none=
+; }
+
+.releated-question-wrapper a { color: rgb(0, 123, 255); font-weight: normal=
+; cursor: pointer; }
+
+@media (max-width: 768px) {
+  .left { width: 100%; }
+  .right { margin-top: 30px; width: 100%; }
+  .question-container { padding: 0px; }
+}
+------MultipartBoundary--Wt861lkcbT6mc6IhAANbrjHuNpb07hdhjOKDdRYebF----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://thinbug.com/static/reset.css
+
+@charset "utf-8";
+
+html { line-height: 1.15; text-size-adjust: 100%; }
+
+body { margin: 0px; }
+
+main { display: block; }
+
+h1 { font-size: 2em; margin: 0.67em 0px; }
+
+hr { box-sizing: content-box; height: 0px; overflow: visible; }
+
+pre { font-family: monospace, monospace; font-size: 1em; }
+
+a { background-color: transparent; }
+
+abbr[title] { border-bottom: none; text-decoration: underline dotted; }
+
+b, strong { font-weight: bolder; }
+
+code, kbd, samp { font-family: monospace, monospace; font-size: 1em; }
+
+small { font-size: 80%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-ali=
+gn: baseline; }
+
+sub { bottom: -0.25em; }
+
+sup { top: -0.5em; }
+
+img { border-style: none; }
+
+button, input, optgroup, select, textarea { font-family: inherit; font-size=
+: 100%; line-height: 1.15; margin: 0px; }
+
+button, input { overflow: visible; }
+
+button, select { text-transform: none; }
+
+button, [type=3D"button"], [type=3D"reset"], [type=3D"submit"] { appearance=
+: button; }
+
+fieldset { padding: 0.35em 0.75em 0.625em; }
+
+legend { box-sizing: border-box; color: inherit; display: table; max-width:=
+ 100%; padding: 0px; white-space: normal; }
+
+progress { vertical-align: baseline; }
+
+textarea { overflow: auto; }
+
+[type=3D"checkbox"], [type=3D"radio"] { box-sizing: border-box; padding: 0p=
+x; }
+
+[type=3D"number"]::-webkit-inner-spin-button, [type=3D"number"]::-webkit-ou=
+ter-spin-button { height: auto; }
+
+[type=3D"search"] { appearance: textfield; outline-offset: -2px; }
+
+[type=3D"search"]::-webkit-search-decoration { appearance: none; }
+
+::-webkit-file-upload-button { appearance: button; font: inherit; }
+
+details { display: block; }
+
+summary { display: list-item; }
+
+template { display: none; }
+
+[hidden] { display: none; }
+
+* { box-sizing: border-box; }
+------MultipartBoundary--Wt861lkcbT6mc6IhAANbrjHuNpb07hdhjOKDdRYebF----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://thinbug.com/static/base.css
+
+@charset "utf-8";
+
+body { color: inherit; }
+
+nav { width: 100%; height: 55px; display: flex; align-items: center; justif=
+y-content: center; border-bottom: 1px solid rgb(231, 234, 236); }
+
+nav a { text-decoration: none; }
+
+.nav-items { height: 100%; width: 100%; max-width: 1000px; display: flex; j=
+ustify-content: space-between; flex-direction: row; align-items: center; }
+
+.nav { display: flex; flex-wrap: wrap; list-style-type: none; margin: 0px; =
+padding: 0px; }
+
+.nav li { margin: auto 20px; }
+
+.nav a { color: rgb(103, 106, 108); }
+
+.nav-logo { color: rgb(26, 179, 148); }
+
+.search-form { height: 40px; display: flex; flex-direction: row; }
+
+.search-form input { background-color: rgb(255, 255, 255); background-image=
+: none; border: 1px solid rgb(229, 230, 231); border-radius: 1px; color: in=
+herit; display: block; padding: 6px 12px; font-size: 0.9rem; outline: none;=
+ flex: 1 1 0%; }
+
+.search-form input:focus { border-color: rgb(26, 179, 148); }
+
+.btn, .btn-primary { color: rgb(255, 255, 255); background-color: rgb(26, 1=
+79, 148); border-radius: 3px; font-size: inherit; padding: 0px 20px; displa=
+y: flex; align-items: center; justify-content: center; border: none; cursor=
+: pointer; }
+
+.home-container { display: flex; flex-direction: column; align-items: cente=
+r; padding-top: 80px; }
+
+.home-container .search-form-wrapper { width: 74%; max-width: 650px; }
+
+.primary { color: rgb(26, 179, 148); }
+
+.btn:hover, .btn-primary:hover { background-color: rgb(24, 166, 137); borde=
+r-color: rgb(24, 166, 137); color: rgb(255, 255, 255); }
+
+.hr-line-dashed { border-top: 1px dashed rgb(231, 234, 236); color: rgb(255=
+, 255, 255); background-color: rgb(255, 255, 255); height: 1px; margin: 20p=
+x 0px; }
+
+.hr-line-solid { border-bottom-width: 1px; border-bottom-color: rgb(231, 23=
+4, 236); background-color: rgba(0, 0, 0, 0); margin-top: 15px; margin-botto=
+m: 15px; border-style: solid !important; }
+
+.container { width: 100%; padding-right: 15px; padding-left: 15px; margin-r=
+ight: auto; margin-left: auto; }
+
+@media (min-width: 576px) {
+  .container { max-width: 540px; }
+}
+
+@media (min-width: 768px) {
+  .container { max-width: 720px; }
+}
+
+@media (min-width: 992px) {
+  .container { max-width: 960px; }
+}
+
+@media (min-width: 1200px) {
+  .container { max-width: 1140px; }
+}
+
+.label { text-align: center; background-color: rgb(35, 198, 200); color: rg=
+b(255, 255, 255); padding: 3px 8px; text-shadow: none; border-radius: 0.25e=
+m; line-height: 1; font-size: small; white-space: nowrap; cursor: pointer; }
+------MultipartBoundary--Wt861lkcbT6mc6IhAANbrjHuNpb07hdhjOKDdRYebF----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://thinbug.com/static/github-markdown.css
+
+@charset "utf-8";
+
+@font-face { font-family: octicons-link; src: url("data:font/woff;charset=
+=3Dutf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB=
+EU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYF=
+YEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyA=
+AABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgA=
+AAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQA=
+AAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG=
+9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJ=
+LYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzs=
+JNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+=
+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/=
+gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctA=
+q2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXH=
+wVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGA=
+A4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAE=
+B42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1=
+AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA=
+4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAk=
+ALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdm=
+dXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kO=
+U1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL=
+1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo=
+5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVu=
+eETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE=
+1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2X=
+u3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C=
+1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5=
+GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW1=
+3/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4q=
+MYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwA=
+KABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA=3D=3D") format("woff"); }
+
+.markdown-body .octicon { display: inline-block; fill: currentcolor; vertic=
+al-align: text-bottom; }
+
+.markdown-body .anchor { float: left; line-height: 1; margin-left: -20px; p=
+adding-right: 4px; }
+
+.markdown-body .anchor:focus { outline: 0px; }
+
+.markdown-body h1 .octicon-link, .markdown-body h2 .octicon-link, .markdown=
+-body h3 .octicon-link, .markdown-body h4 .octicon-link, .markdown-body h5 =
+.octicon-link, .markdown-body h6 .octicon-link { color: rgb(27, 31, 35); ve=
+rtical-align: middle; visibility: hidden; }
+
+.markdown-body h1:hover .anchor, .markdown-body h2:hover .anchor, .markdown=
+-body h3:hover .anchor, .markdown-body h4:hover .anchor, .markdown-body h5:=
+hover .anchor, .markdown-body h6:hover .anchor { text-decoration: none; }
+
+.markdown-body h1:hover .anchor .octicon-link, .markdown-body h2:hover .anc=
+hor .octicon-link, .markdown-body h3:hover .anchor .octicon-link, .markdown=
+-body h4:hover .anchor .octicon-link, .markdown-body h5:hover .anchor .octi=
+con-link, .markdown-body h6:hover .anchor .octicon-link { visibility: visib=
+le; }
+
+.markdown-body { text-size-adjust: 100%; color: rgb(36, 41, 46); font-famil=
+y: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-se=
+rif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 1=
+6px; line-height: 1.5; overflow-wrap: break-word; }
+
+.markdown-body .pl-c { color: rgb(106, 115, 125); }
+
+.markdown-body .pl-c1, .markdown-body .pl-s .pl-v { color: rgb(0, 92, 197);=
+ }
+
+.markdown-body .pl-e, .markdown-body .pl-en { color: rgb(111, 66, 193); }
+
+.markdown-body .pl-s .pl-s1, .markdown-body .pl-smi { color: rgb(36, 41, 46=
+); }
+
+.markdown-body .pl-ent { color: rgb(34, 134, 58); }
+
+.markdown-body .pl-k { color: rgb(215, 58, 73); }
+
+.markdown-body .pl-pds, .markdown-body .pl-s, .markdown-body .pl-s .pl-pse =
+.pl-s1, .markdown-body .pl-sr, .markdown-body .pl-sr .pl-cce, .markdown-bod=
+y .pl-sr .pl-sra, .markdown-body .pl-sr .pl-sre { color: rgb(3, 47, 98); }
+
+.markdown-body .pl-smw, .markdown-body .pl-v { color: rgb(227, 98, 9); }
+
+.markdown-body .pl-bu { color: rgb(179, 29, 40); }
+
+.markdown-body .pl-ii { background-color: rgb(179, 29, 40); color: rgb(250,=
+ 251, 252); }
+
+.markdown-body .pl-c2 { background-color: rgb(215, 58, 73); color: rgb(250,=
+ 251, 252); }
+
+.markdown-body .pl-c2::before { content: "^M"; }
+
+.markdown-body .pl-sr .pl-cce { color: rgb(34, 134, 58); font-weight: 700; =
+}
+
+.markdown-body .pl-ml { color: rgb(115, 92, 15); }
+
+.markdown-body .pl-mh, .markdown-body .pl-mh .pl-en, .markdown-body .pl-ms =
+{ color: rgb(0, 92, 197); font-weight: 700; }
+
+.markdown-body .pl-mi { color: rgb(36, 41, 46); font-style: italic; }
+
+.markdown-body .pl-mb { color: rgb(36, 41, 46); font-weight: 700; }
+
+.markdown-body .pl-md { background-color: rgb(255, 238, 240); color: rgb(17=
+9, 29, 40); }
+
+.markdown-body .pl-mi1 { background-color: rgb(240, 255, 244); color: rgb(3=
+4, 134, 58); }
+
+.markdown-body .pl-mc { background-color: rgb(255, 235, 218); color: rgb(22=
+7, 98, 9); }
+
+.markdown-body .pl-mi2 { background-color: rgb(0, 92, 197); color: rgb(246,=
+ 248, 250); }
+
+.markdown-body .pl-mdr { color: rgb(111, 66, 193); font-weight: 700; }
+
+.markdown-body .pl-ba { color: rgb(88, 96, 105); }
+
+.markdown-body .pl-sg { color: rgb(149, 157, 165); }
+
+.markdown-body .pl-corl { color: rgb(3, 47, 98); text-decoration: underline=
+; }
+
+.markdown-body details { display: block; }
+
+.markdown-body summary { display: list-item; }
+
+.markdown-body a { background-color: transparent; }
+
+.markdown-body a:active, .markdown-body a:hover { outline-width: 0px; }
+
+.markdown-body strong { font-weight: bolder; }
+
+.markdown-body h1 { font-size: 2em; margin: 0.67em 0px; }
+
+.markdown-body img { border-style: none; }
+
+.markdown-body code, .markdown-body kbd, .markdown-body pre { font-family: =
+monospace, monospace; font-size: 1em; }
+
+.markdown-body hr { box-sizing: content-box; height: 0px; overflow: visible=
+; }
+
+.markdown-body input { font: inherit; margin: 0px; }
+
+.markdown-body input { overflow: visible; }
+
+.markdown-body [type=3D"checkbox"] { box-sizing: border-box; padding: 0px; =
+}
+
+.markdown-body * { box-sizing: border-box; }
+
+.markdown-body input { font-family: inherit; font-size: inherit; line-heigh=
+t: inherit; }
+
+.markdown-body a { color: rgb(3, 102, 214); text-decoration: none; }
+
+.markdown-body a:hover { text-decoration: underline; }
+
+.markdown-body strong { font-weight: 600; }
+
+.markdown-body hr { background: transparent; border-width: 0px 0px 1px; bor=
+der-top-style: initial; border-right-style: initial; border-left-style: ini=
+tial; border-top-color: initial; border-right-color: initial; border-left-c=
+olor: initial; border-image: initial; border-bottom-style: solid; border-bo=
+ttom-color: rgb(223, 226, 229); height: 0px; margin: 15px 0px; overflow: hi=
+dden; }
+
+.markdown-body hr::before { content: ""; display: table; }
+
+.markdown-body hr::after { clear: both; content: ""; display: table; }
+
+.markdown-body table { border-collapse: collapse; border-spacing: 0px; }
+
+.markdown-body td, .markdown-body th { padding: 0px; }
+
+.markdown-body details summary { cursor: pointer; }
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4,=
+ .markdown-body h5, .markdown-body h6 { margin-bottom: 0px; margin-top: 0px=
+; }
+
+.markdown-body h1 { font-size: 32px; }
+
+.markdown-body h1, .markdown-body h2 { font-weight: 600; }
+
+.markdown-body h2 { font-size: 24px; }
+
+.markdown-body h3 { font-size: 20px; }
+
+.markdown-body h3, .markdown-body h4 { font-weight: 600; }
+
+.markdown-body h4 { font-size: 16px; }
+
+.markdown-body h5 { font-size: 14px; }
+
+.markdown-body h5, .markdown-body h6 { font-weight: 600; }
+
+.markdown-body h6 { font-size: 12px; }
+
+.markdown-body p { margin-bottom: 10px; margin-top: 0px; }
+
+.markdown-body blockquote { margin: 0px; }
+
+.markdown-body ol, .markdown-body ul { margin-bottom: 0px; margin-top: 0px;=
+ padding-left: 0px; }
+
+.markdown-body ol ol, .markdown-body ul ol { list-style-type: lower-roman; =
+}
+
+.markdown-body ol ol ol, .markdown-body ol ul ol, .markdown-body ul ol ol, =
+.markdown-body ul ul ol { list-style-type: lower-alpha; }
+
+.markdown-body dd { margin-left: 0px; }
+
+.markdown-body code, .markdown-body pre { font-family: SFMono-Regular, Cons=
+olas, "Liberation Mono", Menlo, Courier, monospace; font-size: 12px; }
+
+.markdown-body pre { margin-bottom: 0px; margin-top: 0px; }
+
+.markdown-body input::-webkit-inner-spin-button, .markdown-body input::-web=
+kit-outer-spin-button { appearance: none; margin: 0px; }
+
+.markdown-body .border { border: 1px solid rgb(225, 228, 232) !important; }
+
+.markdown-body .border-0 { border: 0px !important; }
+
+.markdown-body .border-bottom { border-bottom: 1px solid rgb(225, 228, 232)=
+ !important; }
+
+.markdown-body .rounded-1 { border-radius: 3px !important; }
+
+.markdown-body .bg-white { background-color: rgb(255, 255, 255) !important;=
+ }
+
+.markdown-body .bg-gray-light { background-color: rgb(250, 251, 252) !impor=
+tant; }
+
+.markdown-body .text-gray-light { color: rgb(106, 115, 125) !important; }
+
+.markdown-body .mb-0 { margin-bottom: 0px !important; }
+
+.markdown-body .my-2 { margin-bottom: 8px !important; margin-top: 8px !impo=
+rtant; }
+
+.markdown-body .pl-0 { padding-left: 0px !important; }
+
+.markdown-body .py-0 { padding-bottom: 0px !important; padding-top: 0px !im=
+portant; }
+
+.markdown-body .pl-1 { padding-left: 4px !important; }
+
+.markdown-body .pl-2 { padding-left: 8px !important; }
+
+.markdown-body .py-2 { padding-bottom: 8px !important; padding-top: 8px !im=
+portant; }
+
+.markdown-body .pl-3, .markdown-body .px-3 { padding-left: 16px !important;=
+ }
+
+.markdown-body .px-3 { padding-right: 16px !important; }
+
+.markdown-body .pl-4 { padding-left: 24px !important; }
+
+.markdown-body .pl-5 { padding-left: 32px !important; }
+
+.markdown-body .pl-6 { padding-left: 40px !important; }
+
+.markdown-body .f6 { font-size: 12px !important; }
+
+.markdown-body .lh-condensed { line-height: 1.25 !important; }
+
+.markdown-body .text-bold { font-weight: 600 !important; }
+
+.markdown-body::before { content: ""; display: table; }
+
+.markdown-body::after { clear: both; content: ""; display: table; }
+
+.markdown-body > :first-child { margin-top: 0px !important; }
+
+.markdown-body > :last-child { margin-bottom: 0px !important; }
+
+.markdown-body a:not([href]) { color: inherit; text-decoration: none; }
+
+.markdown-body blockquote, .markdown-body dl, .markdown-body ol, .markdown-=
+body p, .markdown-body pre, .markdown-body table, .markdown-body ul { margi=
+n-bottom: 16px; margin-top: 0px; }
+
+.markdown-body hr { background-color: rgb(225, 228, 232); border: 0px; heig=
+ht: 0.25em; margin: 24px 0px; padding: 0px; }
+
+.markdown-body blockquote { border-left: 0.25em solid rgb(223, 226, 229); c=
+olor: rgb(106, 115, 125); padding: 0px 1em; }
+
+.markdown-body blockquote > :first-child { margin-top: 0px; }
+
+.markdown-body blockquote > :last-child { margin-bottom: 0px; }
+
+.markdown-body kbd { background-color: rgb(250, 251, 252); border-width: 1p=
+x; border-style: solid; border-color: rgb(198, 203, 209) rgb(198, 203, 209)=
+ rgb(149, 157, 165); border-image: initial; border-radius: 3px; box-shadow:=
+ rgb(149, 157, 165) 0px -1px 0px inset; color: rgb(68, 77, 86); display: in=
+line-block; font-size: 11px; line-height: 10px; padding: 3px 5px; vertical-=
+align: middle; }
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4,=
+ .markdown-body h5, .markdown-body h6 { font-weight: 600; line-height: 1.25=
+; margin-bottom: 16px; margin-top: 24px; }
+
+.markdown-body h1 { font-size: 2em; }
+
+.markdown-body h1, .markdown-body h2 { border-bottom: 1px solid rgb(234, 23=
+6, 239); padding-bottom: 0.3em; }
+
+.markdown-body h2 { font-size: 1.5em; }
+
+.markdown-body h3 { font-size: 1.25em; }
+
+.markdown-body h4 { font-size: 1em; }
+
+.markdown-body h5 { font-size: 0.875em; }
+
+.markdown-body h6 { color: rgb(106, 115, 125); font-size: 0.85em; }
+
+.markdown-body ol, .markdown-body ul { padding-left: 2em; }
+
+.markdown-body ol ol, .markdown-body ol ul, .markdown-body ul ol, .markdown=
+-body ul ul { margin-bottom: 0px; margin-top: 0px; }
+
+.markdown-body li { }
+
+.markdown-body li > p { margin-top: 16px; }
+
+.markdown-body li + li { margin-top: 0.25em; }
+
+.markdown-body dl { padding: 0px; }
+
+.markdown-body dl dt { font-size: 1em; font-style: italic; font-weight: 600=
+; margin-top: 16px; padding: 0px; }
+
+.markdown-body dl dd { margin-bottom: 16px; padding: 0px 16px; }
+
+.markdown-body table { display: block; overflow: auto; width: 100%; }
+
+.markdown-body table th { font-weight: 600; }
+
+.markdown-body table td, .markdown-body table th { border: 1px solid rgb(22=
+3, 226, 229); padding: 6px 13px; }
+
+.markdown-body table tr { background-color: rgb(255, 255, 255); border-top:=
+ 1px solid rgb(198, 203, 209); }
+
+.markdown-body table tr:nth-child(2n) { background-color: rgb(246, 248, 250=
+); }
+
+.markdown-body img { background-color: rgb(255, 255, 255); box-sizing: cont=
+ent-box; max-width: 100%; }
+
+.markdown-body img[align=3D"right"] { padding-left: 20px; }
+
+.markdown-body img[align=3D"left"] { padding-right: 20px; }
+
+.markdown-body code { background-color: rgba(27, 31, 35, 0.05); border-radi=
+us: 3px; font-size: 85%; margin: 0px; padding: 0.2em 0.4em; }
+
+.markdown-body pre { overflow-wrap: normal; }
+
+.markdown-body pre > code { background: transparent; border: 0px; font-size=
+: 100%; margin: 0px; padding: 0px; white-space: pre; word-break: normal; }
+
+.markdown-body .highlight { margin-bottom: 16px; }
+
+.markdown-body .highlight pre { margin-bottom: 0px; word-break: normal; }
+
+.markdown-body .highlight pre, .markdown-body pre { background-color: rgb(2=
+46, 248, 250); border-radius: 3px; font-size: 85%; line-height: 1.45; overf=
+low: auto; padding: 16px; }
+
+.markdown-body pre code { background-color: transparent; border: 0px; displ=
+ay: inline; line-height: inherit; margin: 0px; overflow: visible; padding: =
+0px; overflow-wrap: normal; }
+
+.markdown-body .commit-tease-sha { color: rgb(68, 77, 86); display: inline-=
+block; font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Cou=
+rier, monospace; font-size: 90%; }
+
+.markdown-body .blob-wrapper { border-bottom-left-radius: 3px; border-botto=
+m-right-radius: 3px; overflow: auto hidden; }
+
+.markdown-body .blob-wrapper-embedded { max-height: 240px; overflow-y: auto=
+; }
+
+.markdown-body .blob-num { color: rgba(27, 31, 35, 0.3); cursor: pointer; f=
+ont-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, mo=
+nospace; font-size: 12px; line-height: 20px; min-width: 50px; padding-left:=
+ 10px; padding-right: 10px; text-align: right; user-select: none; vertical-=
+align: top; white-space: nowrap; width: 1%; }
+
+.markdown-body .blob-num:hover { color: rgba(27, 31, 35, 0.6); }
+
+.markdown-body .blob-num::before { content: attr(data-line-number); }
+
+.markdown-body .blob-code { line-height: 20px; padding-left: 10px; padding-=
+right: 10px; position: relative; vertical-align: top; }
+
+.markdown-body .blob-code-inner { color: rgb(36, 41, 46); font-family: SFMo=
+no-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace; font-si=
+ze: 12px; overflow: visible; white-space: pre; overflow-wrap: normal; }
+
+.markdown-body .pl-token.active, .markdown-body .pl-token:hover { backgroun=
+d: rgb(255, 234, 127); cursor: pointer; }
+
+.markdown-body kbd { background-color: rgb(250, 251, 252); border-width: 1p=
+x; border-style: solid; border-color: rgb(209, 213, 218) rgb(209, 213, 218)=
+ rgb(198, 203, 209); border-image: initial; border-radius: 3px; box-shadow:=
+ rgb(198, 203, 209) 0px -1px 0px inset; color: rgb(68, 77, 86); display: in=
+line-block; font: 11px / 10px SFMono-Regular, Consolas, "Liberation Mono", =
+Menlo, Courier, monospace; padding: 3px 5px; vertical-align: middle; }
+
+.markdown-body :checked + .radio-label { border-color: rgb(3, 102, 214); po=
+sition: relative; z-index: 1; }
+
+.markdown-body .tab-size[data-tab-size=3D"1"] { tab-size: 1; }
+
+.markdown-body .tab-size[data-tab-size=3D"2"] { tab-size: 2; }
+
+.markdown-body .tab-size[data-tab-size=3D"3"] { tab-size: 3; }
+
+.markdown-body .tab-size[data-tab-size=3D"4"] { tab-size: 4; }
+
+.markdown-body .tab-size[data-tab-size=3D"5"] { tab-size: 5; }
+
+.markdown-body .tab-size[data-tab-size=3D"6"] { tab-size: 6; }
+
+.markdown-body .tab-size[data-tab-size=3D"7"] { tab-size: 7; }
+
+.markdown-body .tab-size[data-tab-size=3D"8"] { tab-size: 8; }
+
+.markdown-body .tab-size[data-tab-size=3D"9"] { tab-size: 9; }
+
+.markdown-body .tab-size[data-tab-size=3D"10"] { tab-size: 10; }
+
+.markdown-body .tab-size[data-tab-size=3D"11"] { tab-size: 11; }
+
+.markdown-body .tab-size[data-tab-size=3D"12"] { tab-size: 12; }
+
+.markdown-body .task-list-item { list-style-type: none; }
+
+.markdown-body .task-list-item + .task-list-item { margin-top: 3px; }
+
+.markdown-body .task-list-item input { margin: 0px 0.2em 0.25em -1.6em; ver=
+tical-align: middle; }
+
+.markdown-body hr { border-bottom-color: rgb(238, 238, 238); }
+
+.markdown-body .pl-0 { padding-left: 0px !important; }
+
+.markdown-body .pl-1 { padding-left: 4px !important; }
+
+.markdown-body .pl-2 { padding-left: 8px !important; }
+
+.markdown-body .pl-3 { padding-left: 16px !important; }
+
+.markdown-body .pl-4 { padding-left: 24px !important; }
+
+.markdown-body .pl-5 { padding-left: 32px !important; }
+
+.markdown-body .pl-6 { padding-left: 40px !important; }
+
+.markdown-body .pl-7 { padding-left: 48px !important; }
+
+.markdown-body .pl-8 { padding-left: 64px !important; }
+
+.markdown-body .pl-9 { padding-left: 80px !important; }
+
+.markdown-body .pl-10 { padding-left: 96px !important; }
+
+.markdown-body .pl-11 { padding-left: 112px !important; }
+
+.markdown-body .pl-12 { padding-left: 128px !important; }
+------MultipartBoundary--Wt861lkcbT6mc6IhAANbrjHuNpb07hdhjOKDdRYebF----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: chrome-extension://ogleeipbbcokpeabliinildngejmdneg/css/content.css
+
+@charset "utf-8";
+
+.dmx_unselectable { user-select: none !important; }
+
+.dmx_overflow_hidden { overflow: hidden; }
+
+div[mx-name=3D"dream-translation"] { all: initial; }
+
+@font-face { font-family: dmx-icon; src: url("chrome-extension://ogleeipbbc=
+okpeabliinildngejmdneg/css/dmx_icon.woff2") format("woff2"); }
+
+.dmx-icon { font-size: 16px; font-style: normal; -webkit-font-smoothing: an=
+tialiased; user-select: none; font-family: dmx-icon, serif !important; }
+
+.dmx-icon-crop::before { content: "=EE=9B=88"; }
+
+.dmx-icon-logo::before { content: "=EE=9B=87"; }
+
+.dmx-icon-move::before { content: "=EE=9B=86"; }
+
+.dmx-icon-folder::before { content: "=EE=9B=84"; }
+
+.dmx-icon-folder-open::before { content: "=EE=9B=85"; }
+
+.dmx-icon-delete::before { content: "=EE=9B=82"; }
+
+.dmx-icon-edit::before { content: "=EE=9B=83"; }
+
+.dmx-icon-export::before { content: "=EE=9B=80"; }
+
+.dmx-icon-import::before { content: "=EE=9B=81"; }
+
+.dmx-icon-history::before { content: "=EE=9A=BF"; }
+
+.dmx-icon-oxford::before { content: "=EE=9A=BE"; }
+
+.dmx-icon-thefree::before { content: "=EE=9A=BD"; }
+
+.dmx-icon-wikipedia::before { content: "=EE=9A=B0"; }
+
+.dmx-icon-dreye::before { content: "=EE=9A=BC"; }
+
+.dmx-icon-eudic::before { content: "=EE=9A=BB"; }
+
+.dmx-icon-etymonline::before { content: "=EE=9A=B1"; }
+
+.dmx-icon-rrdict::before { content: "=EE=9A=B9"; }
+
+.dmx-icon-lexico::before { content: "=EE=9A=BA"; }
+
+.dmx-icon-urban::before { content: "=EE=9A=B8"; }
+
+.dmx-icon-macmillan::before { content: "=EE=9A=B7"; }
+
+.dmx-icon-vocabulary::before { content: "=EE=9A=B6"; }
+
+.dmx-icon-wordreference::before { content: "=EE=9A=B5"; }
+
+.dmx-icon-collins::before { content: "=EE=9A=B4"; }
+
+.dmx-icon-iciba::before { content: "=EE=9A=B3"; }
+
+.dmx-icon-hjdict::before { content: "=EE=9A=B2"; }
+
+.dmx-icon-dictionary::before { content: "=EE=9A=AF"; }
+
+.dmx-icon-so::before { content: "=EE=9A=AA"; }
+
+.dmx-icon-merriam::before { content: "=EE=9A=AB"; }
+
+.dmx-icon-longman::before { content: "=EE=9A=AC"; }
+
+.dmx-icon-cambridge::before { content: "=EE=9A=AD"; }
+
+.dmx-icon-dictcn::before { content: "=EE=9A=AE"; }
+
+.dmx-icon-sound-us::before { content: "=EE=99=B4"; }
+
+.dmx-icon-sound-zh::before { content: "=EE=99=B5"; }
+
+.dmx-icon-sound-fr::before { content: "=EE=99=B6"; }
+
+.dmx-icon-sound-de::before { content: "=EE=99=B7"; }
+
+.dmx-icon-sound-th::before { content: "=EE=9A=9C"; }
+
+.dmx-icon-sound-ru::before { content: "=EE=9A=9D"; }
+
+.dmx-icon-sound-pt::before { content: "=EE=9A=9E"; }
+
+.dmx-icon-sound-uk::before { content: "=EE=9A=9F"; }
+
+.dmx-icon-sound-jp::before { content: "=EE=9A=A0"; }
+
+.dmx-icon-sound-el::before { content: "=EE=9A=A1"; }
+
+.dmx-icon-sound-cn::before { content: "=EE=9A=A2"; }
+
+.dmx-icon-sound-nl::before { content: "=EE=9A=A3"; }
+
+.dmx-icon-sound-it::before { content: "=EE=9A=A4"; }
+
+.dmx-icon-sound-sp::before { content: "=EE=9A=A5"; }
+
+.dmx-icon-sound-ko::before { content: "=EE=9A=A6"; }
+
+.dmx-icon-sound-ar::before { content: "=EE=9A=A7"; }
+
+.dmx-icon-sound-en::before { content: "=EE=9A=A8"; }
+
+.dmx-icon-sound-pl::before { content: "=EE=9A=A9"; }
+
+.dmx-icon-youdao::before { content: "=EE=9A=93"; }
+
+.dmx-icon-sound-square::before { content: "=EE=9A=9B"; }
+
+.dmx-icon-sound::before { content: "=EE=99=BA"; }
+
+.dmx-icon-user::before { content: "=EE=9A=99"; }
+
+.dmx-icon-angle-double-right::before { content: "=EE=9A=96"; }
+
+.dmx-icon-angle-double-left::before { content: "=EE=9A=97"; }
+
+.dmx-icon-angle-double-up::before { content: "=EE=9A=98"; }
+
+.dmx-icon-angle-double-down::before { content: "=EE=9A=9A"; }
+
+.dmx-icon-youdaonote::before { content: "=EE=9A=91"; }
+
+.dmx-icon-youtube::before { content: "=EE=9A=92"; }
+
+.dmx-icon-windows::before { content: "=EE=9A=94"; }
+
+.dmx-icon-yahoo::before { content: "=EE=9A=95"; }
+
+.dmx-icon-voice-off::before { content: "=EE=9A=8A"; }
+
+.dmx-icon-voice-on::before { content: "=EE=9A=8B"; }
+
+.dmx-icon-voice::before { content: "=EE=9A=8C"; }
+
+.dmx-icon-video::before { content: "=EE=9A=8D"; }
+
+.dmx-icon-vip-crown::before { content: "=EE=9A=8E"; }
+
+.dmx-icon-vip-fill::before { content: "=EE=9A=8F"; }
+
+.dmx-icon-vip-card::before { content: "=EE=9A=90"; }
+
+.dmx-icon-up::before { content: "=EE=9A=88"; }
+
+.dmx-icon-up-circle::before { content: "=EE=9A=89"; }
+
+.dmx-icon-trash::before { content: "=EE=9A=82"; }
+
+.dmx-icon-twitter::before { content: "=EE=9A=83"; }
+
+.dmx-icon-tool::before { content: "=EE=9A=84"; }
+
+.dmx-icon-telegram::before { content: "=EE=9A=85"; }
+
+.dmx-icon-tinder::before { content: "=EE=9A=86"; }
+
+.dmx-icon-twitter-circle::before { content: "=EE=9A=87"; }
+
+.dmx-icon-switch::before { content: "=EE=99=BF"; }
+
+.dmx-icon-switch-on::before { content: "=EE=9A=80"; }
+
+.dmx-icon-switch-off::before { content: "=EE=9A=81"; }
+
+.dmx-icon-success::before { content: "=EE=99=BD"; }
+
+.dmx-icon-suse::before { content: "=EE=99=BE"; }
+
+.dmx-icon-star::before { content: "=EE=99=BB"; }
+
+.dmx-icon-stop::before { content: "=EE=99=BC"; }
+
+.dmx-icon-sound-big::before { content: "=EE=99=B3"; }
+
+.dmx-icon-sound-line::before { content: "=EE=99=B8"; }
+
+.dmx-icon-sound-horn::before { content: "=EE=99=B9"; }
+
+.dmx-icon-sogou::before { content: "=EE=99=AD"; }
+
+.dmx-icon-smile::before { content: "=EE=99=AE"; }
+
+.dmx-icon-skull::before { content: "=EE=99=AF"; }
+
+.dmx-icon-search::before { content: "=EE=99=B0"; }
+
+.dmx-icon-s::before { content: "=EE=99=B1"; }
+
+.dmx-icon-setting::before { content: "=EE=99=B2"; }
+
+.dmx-icon-reply::before { content: "=EE=99=A8"; }
+
+.dmx-icon-redhat::before { content: "=EE=99=A9"; }
+
+.dmx-icon-right::before { content: "=EE=99=AA"; }
+
+.dmx-icon-reload::before { content: "=EE=99=AB"; }
+
+.dmx-icon-refresh::before { content: "=EE=99=AC"; }
+
+.dmx-icon-plus::before { content: "=EE=99=A5"; }
+
+.dmx-icon-play::before { content: "=EE=99=A6"; }
+
+.dmx-icon-qq::before { content: "=EE=99=A7"; }
+
+.dmx-icon-plane-send::before { content: "=EE=99=9C"; }
+
+.dmx-icon-plane-departure::before { content: "=EE=99=9D"; }
+
+.dmx-icon-plane-up::before { content: "=EE=99=9E"; }
+
+.dmx-icon-plane-paper::before { content: "=EE=99=9F"; }
+
+.dmx-icon-plane::before { content: "=EE=99=A0"; }
+
+.dmx-icon-plane-fly::before { content: "=EE=99=A1"; }
+
+.dmx-icon-plane-up-fill::before { content: "=EE=99=A2"; }
+
+.dmx-icon-plane-send-fill::before { content: "=EE=99=A3"; }
+
+.dmx-icon-plane-takeoff::before { content: "=EE=99=A4"; }
+
+.dmx-icon-picture-fill::before { content: "=EE=99=98"; }
+
+.dmx-icon-pin::before { content: "=EE=99=99"; }
+
+.dmx-icon-pin-left::before { content: "=EE=99=9A"; }
+
+.dmx-icon-picture::before { content: "=EE=99=9B"; }
+
+.dmx-icon-microsoft::before { content: "=EE=99=91"; }
+
+.dmx-icon-m::before { content: "=EE=99=92"; }
+
+.dmx-icon-modx::before { content: "=EE=99=93"; }
+
+.dmx-icon-meetup::before { content: "=EE=99=94"; }
+
+.dmx-icon-mule::before { content: "=EE=99=95"; }
+
+.dmx-icon-music::before { content: "=EE=99=96"; }
+
+.dmx-icon-more::before { content: "=EE=99=97"; }
+
+.dmx-icon-loading::before { content: "=EE=99=90"; }
+
+.dmx-icon-l::before { content: "=EE=99=8A"; }
+
+.dmx-icon-itunes::before { content: "=EE=99=8B"; }
+
+.dmx-icon-info::before { content: "=EE=99=8C"; }
+
+.dmx-icon-laugh::before { content: "=EE=99=8D"; }
+
+.dmx-icon-left::before { content: "=EE=99=8E"; }
+
+.dmx-icon-list::before { content: "=EE=99=8F"; }
+
+.dmx-icon-help::before { content: "=EE=99=87"; }
+
+.dmx-icon-horn::before { content: "=EE=99=88"; }
+
+.dmx-icon-home::before { content: "=EE=99=89"; }
+
+.dmx-icon-headset::before { content: "=EE=99=84"; }
+
+.dmx-icon-headset-c::before { content: "=EE=99=85"; }
+
+.dmx-icon-heart::before { content: "=EE=99=86"; }
+
+.dmx-icon-good::before { content: "=EE=99=82"; }
+
+.dmx-icon-google::before { content: "=EE=99=83"; }
+
+.dmx-icon-fullscreen-exit::before { content: "=EE=98=BE"; }
+
+.dmx-icon-fullscreen::before { content: "=EE=98=BF"; }
+
+.dmx-icon-fan::before { content: "=EE=99=80"; }
+
+.dmx-icon-flag::before { content: "=EE=99=81"; }
+
+.dmx-icon-eye-left::before { content: "=EE=98=B9"; }
+
+.dmx-icon-error::before { content: "=EE=98=BA"; }
+
+.dmx-icon-eye-right::before { content: "=EE=98=BB"; }
+
+.dmx-icon-exchange::before { content: "=EE=98=BC"; }
+
+.dmx-icon-edge::before { content: "=EE=98=BD"; }
+
+.dmx-icon-down::before { content: "=EE=98=B4"; }
+
+.dmx-icon-diaspora::before { content: "=EE=98=B5"; }
+
+.dmx-icon-devil::before { content: "=EE=98=B6"; }
+
+.dmx-icon-degree::before { content: "=EE=98=B7"; }
+
+.dmx-icon-d::before { content: "=EE=98=B8"; }
+
+.dmx-icon-close::before { content: "=EE=98=AE"; }
+
+.dmx-icon-circle::before { content: "=EE=98=AF"; }
+
+.dmx-icon-cry-fill::before { content: "=EE=98=B0"; }
+
+.dmx-icon-copy::before { content: "=EE=98=B1"; }
+
+.dmx-icon-cry::before { content: "=EE=98=B2"; }
+
+.dmx-icon-close-bg::before { content: "=EE=98=B3"; }
+
+.dmx-icon-bing::before { content: "=EE=98=AB"; }
+
+.dmx-icon-bell::before { content: "=EE=98=AC"; }
+
+.dmx-icon-baidu::before { content: "=EE=98=AD"; }
+
+.dmx-icon-arrow-right::before { content: "=EE=98=A5"; }
+
+.dmx-icon-arrow-left::before { content: "=EE=98=A6"; }
+
+.dmx-icon-arrow-up::before { content: "=EE=98=A7"; }
+
+.dmx-icon-arrow-down::before { content: "=EE=98=A8"; }
+
+.dmx-icon-arrow-thin-down::before { content: "=EE=98=A9"; }
+
+.dmx-icon-arrow-thin-up::before { content: "=EE=98=AA"; }
+
+.dmx-icon-android::before { content: "=EE=98=A2"; }
+
+.dmx-icon-apple::before { content: "=EE=98=A3"; }
+
+.dmx-icon-angular::before { content: "=EE=98=A4"; }
+
+.dmx-icon-alibaba::before { content: "=EE=98=A1"; }
+------MultipartBoundary--Wt861lkcbT6mc6IhAANbrjHuNpb07hdhjOKDdRYebF----
+Content-Type: text/html
+Content-ID: <frame-D6961604E1E658BFA56390319BED9F0D@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://googleads.g.doubleclick.net/pagead/html/r20241030/r20190131/zrt_lookup_fy2021.html
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"tex=
+t/html; charset=3DUTF-8">
+</head><body></body></html>
+------MultipartBoundary--Wt861lkcbT6mc6IhAANbrjHuNpb07hdhjOKDdRYebF----
+Content-Type: text/html
+Content-ID: <frame-18DBD9D3138F678CB6CDC4FEEFACC0ED@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8"></head><body marginwidth=3D"0" marginheight=3D"0"></body></html>
+------MultipartBoundary--Wt861lkcbT6mc6IhAANbrjHuNpb07hdhjOKDdRYebF----
+Content-Type: text/html
+Content-ID: <frame-EA469282EFEA564052344D214F75427B@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8"></head><body marginwidth=3D"0" marginheight=3D"0"></body></html>
+------MultipartBoundary--Wt861lkcbT6mc6IhAANbrjHuNpb07hdhjOKDdRYebF----
+Content-Type: text/html
+Content-ID: <frame-5B466042B0CF3EBA2BB84FAA2B0FB162@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8"></head><body marginwidth=3D"0" marginheight=3D"0"></body></html>
+------MultipartBoundary--Wt861lkcbT6mc6IhAANbrjHuNpb07hdhjOKDdRYebF------

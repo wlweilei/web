@@ -1,0 +1,3354 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://doc.rust-lang.org/reference/dynamically-sized-types.html
+Subject: Dynamically Sized Types - The Rust Reference
+Date: Thu, 7 Nov 2024 16:12:53 +0800
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--LhY2CUCsjUE5OBnKBRcLcv0Zt5Ictr66HHBMjf3H3k----"
+
+
+------MultipartBoundary--LhY2CUCsjUE5OBnKBRcLcv0Zt5Ictr66HHBMjf3H3k----
+Content-Type: text/html
+Content-ID: <frame-6B18F83E2E10C795AF86DC6FB5BD4D13@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://doc.rust-lang.org/reference/dynamically-sized-types.html
+
+<!DOCTYPE html><html lang=3D"en" class=3D"light" dir=3D"ltr"><head><meta ht=
+tp-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+        <!-- Book generated using mdBook -->
+       =20
+        <title>Dynamically Sized Types - The Rust Reference</title>
+
+
+        <!-- Custom HTML head -->
+       =20
+        <meta name=3D"description" content=3D"">
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1">
+        <meta name=3D"theme-color" content=3D"rgb(255, 255, 255)">
+
+        <link rel=3D"icon" href=3D"https://doc.rust-lang.org/reference/favi=
+con.svg">
+        <link rel=3D"shortcut icon" href=3D"https://doc.rust-lang.org/refer=
+ence/favicon.png">
+        <link rel=3D"stylesheet" href=3D"https://doc.rust-lang.org/referenc=
+e/css/variables.css">
+        <link rel=3D"stylesheet" href=3D"https://doc.rust-lang.org/referenc=
+e/css/general.css">
+        <link rel=3D"stylesheet" href=3D"https://doc.rust-lang.org/referenc=
+e/css/chrome.css">
+        <link rel=3D"stylesheet" href=3D"https://doc.rust-lang.org/referenc=
+e/css/print.css" media=3D"print">
+
+        <!-- Fonts -->
+        <link rel=3D"stylesheet" href=3D"https://doc.rust-lang.org/referenc=
+e/FontAwesome/css/font-awesome.css">
+        <link rel=3D"stylesheet" href=3D"https://doc.rust-lang.org/referenc=
+e/fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel=3D"stylesheet" href=3D"https://doc.rust-lang.org/referenc=
+e/highlight.css">
+       =20
+       =20
+
+        <!-- Custom theme stylesheets -->
+        <link rel=3D"stylesheet" href=3D"https://doc.rust-lang.org/referenc=
+e/theme/reference.css">
+
+    </head>
+    <body class=3D"js sidebar-visible">
+    <div id=3D"body-container">
+        <!-- Provide site root to javascript -->
+       =20
+
+        <!-- Work around some values being stored in localStorage wrapped i=
+n quotes -->
+       =20
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+       =20
+
+        <input type=3D"checkbox" id=3D"sidebar-toggle-anchor" class=3D"hidd=
+en">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+       =20
+
+        <nav id=3D"sidebar" class=3D"sidebar" aria-label=3D"Table of conten=
+ts" aria-hidden=3D"false">
+            <div class=3D"sidebar-scrollbox">
+                <ol class=3D"chapter"><li class=3D"chapter-item expanded af=
+fix "><a href=3D"https://doc.rust-lang.org/reference/introduction.html" tab=
+index=3D"0">Introduction</a></li><li class=3D"chapter-item expanded "><a hr=
+ef=3D"https://doc.rust-lang.org/reference/notation.html" tabindex=3D"0"><st=
+rong aria-hidden=3D"true">1.</strong> Notation</a></li><li class=3D"chapter=
+-item expanded "><a href=3D"https://doc.rust-lang.org/reference/lexical-str=
+ucture.html" tabindex=3D"0"><strong aria-hidden=3D"true">2.</strong> Lexica=
+l structure</a></li><li><ol class=3D"section"><li class=3D"chapter-item exp=
+anded "><a href=3D"https://doc.rust-lang.org/reference/input-format.html" t=
+abindex=3D"0"><strong aria-hidden=3D"true">2.1.</strong> Input format</a></=
+li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.or=
+g/reference/keywords.html" tabindex=3D"0"><strong aria-hidden=3D"true">2.2.=
+</strong> Keywords</a></li><li class=3D"chapter-item expanded "><a href=3D"=
+https://doc.rust-lang.org/reference/identifiers.html" tabindex=3D"0"><stron=
+g aria-hidden=3D"true">2.3.</strong> Identifiers</a></li><li class=3D"chapt=
+er-item expanded "><a href=3D"https://doc.rust-lang.org/reference/comments.=
+html" tabindex=3D"0"><strong aria-hidden=3D"true">2.4.</strong> Comments</a=
+></li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang=
+.org/reference/whitespace.html" tabindex=3D"0"><strong aria-hidden=3D"true"=
+>2.5.</strong> Whitespace</a></li><li class=3D"chapter-item expanded "><a h=
+ref=3D"https://doc.rust-lang.org/reference/tokens.html" tabindex=3D"0"><str=
+ong aria-hidden=3D"true">2.6.</strong> Tokens</a></li></ol></li><li class=
+=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/=
+macros.html" tabindex=3D"0"><strong aria-hidden=3D"true">3.</strong> Macros=
+</a></li><li><ol class=3D"section"><li class=3D"chapter-item expanded "><a =
+href=3D"https://doc.rust-lang.org/reference/macros-by-example.html" tabinde=
+x=3D"0"><strong aria-hidden=3D"true">3.1.</strong> Macros By Example</a></l=
+i><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org=
+/reference/procedural-macros.html" tabindex=3D"0"><strong aria-hidden=3D"tr=
+ue">3.2.</strong> Procedural Macros</a></li></ol></li><li class=3D"chapter-=
+item expanded "><a href=3D"https://doc.rust-lang.org/reference/crates-and-s=
+ource-files.html" tabindex=3D"0"><strong aria-hidden=3D"true">4.</strong> C=
+rates and source files</a></li><li class=3D"chapter-item expanded "><a href=
+=3D"https://doc.rust-lang.org/reference/conditional-compilation.html" tabin=
+dex=3D"0"><strong aria-hidden=3D"true">5.</strong> Conditional compilation<=
+/a></li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-la=
+ng.org/reference/items.html" tabindex=3D"0"><strong aria-hidden=3D"true">6.=
+</strong> Items</a></li><li><ol class=3D"section"><li class=3D"chapter-item=
+ expanded "><a href=3D"https://doc.rust-lang.org/reference/items/modules.ht=
+ml" tabindex=3D"0"><strong aria-hidden=3D"true">6.1.</strong> Modules</a></=
+li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.or=
+g/reference/items/extern-crates.html" tabindex=3D"0"><strong aria-hidden=3D=
+"true">6.2.</strong> Extern crates</a></li><li class=3D"chapter-item expand=
+ed "><a href=3D"https://doc.rust-lang.org/reference/items/use-declarations.=
+html" tabindex=3D"0"><strong aria-hidden=3D"true">6.3.</strong> Use declara=
+tions</a></li><li class=3D"chapter-item expanded "><a href=3D"https://doc.r=
+ust-lang.org/reference/items/functions.html" tabindex=3D"0"><strong aria-hi=
+dden=3D"true">6.4.</strong> Functions</a></li><li class=3D"chapter-item exp=
+anded "><a href=3D"https://doc.rust-lang.org/reference/items/type-aliases.h=
+tml" tabindex=3D"0"><strong aria-hidden=3D"true">6.5.</strong> Type aliases=
+</a></li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-l=
+ang.org/reference/items/structs.html" tabindex=3D"0"><strong aria-hidden=3D=
+"true">6.6.</strong> Structs</a></li><li class=3D"chapter-item expanded "><=
+a href=3D"https://doc.rust-lang.org/reference/items/enumerations.html" tabi=
+ndex=3D"0"><strong aria-hidden=3D"true">6.7.</strong> Enumerations</a></li>=
+<li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/r=
+eference/items/unions.html" tabindex=3D"0"><strong aria-hidden=3D"true">6.8=
+.</strong> Unions</a></li><li class=3D"chapter-item expanded "><a href=3D"h=
+ttps://doc.rust-lang.org/reference/items/constant-items.html" tabindex=3D"0=
+"><strong aria-hidden=3D"true">6.9.</strong> Constant items</a></li><li cla=
+ss=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/referenc=
+e/items/static-items.html" tabindex=3D"0"><strong aria-hidden=3D"true">6.10=
+.</strong> Static items</a></li><li class=3D"chapter-item expanded "><a hre=
+f=3D"https://doc.rust-lang.org/reference/items/traits.html" tabindex=3D"0">=
+<strong aria-hidden=3D"true">6.11.</strong> Traits</a></li><li class=3D"cha=
+pter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/items/i=
+mplementations.html" tabindex=3D"0"><strong aria-hidden=3D"true">6.12.</str=
+ong> Implementations</a></li><li class=3D"chapter-item expanded "><a href=
+=3D"https://doc.rust-lang.org/reference/items/external-blocks.html" tabinde=
+x=3D"0"><strong aria-hidden=3D"true">6.13.</strong> External blocks</a></li=
+><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/=
+reference/items/generics.html" tabindex=3D"0"><strong aria-hidden=3D"true">=
+6.14.</strong> Generic parameters</a></li><li class=3D"chapter-item expande=
+d "><a href=3D"https://doc.rust-lang.org/reference/items/associated-items.h=
+tml" tabindex=3D"0"><strong aria-hidden=3D"true">6.15.</strong> Associated =
+Items</a></li></ol></li><li class=3D"chapter-item expanded "><a href=3D"htt=
+ps://doc.rust-lang.org/reference/attributes.html" tabindex=3D"0"><strong ar=
+ia-hidden=3D"true">7.</strong> Attributes</a></li><li><ol class=3D"section"=
+><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/=
+reference/attributes/testing.html" tabindex=3D"0"><strong aria-hidden=3D"tr=
+ue">7.1.</strong> Testing</a></li><li class=3D"chapter-item expanded "><a h=
+ref=3D"https://doc.rust-lang.org/reference/attributes/derive.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">7.2.</strong> Derive</a></li><li class=
+=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/=
+attributes/diagnostics.html" tabindex=3D"0"><strong aria-hidden=3D"true">7.=
+3.</strong> Diagnostics</a></li><li class=3D"chapter-item expanded "><a hre=
+f=3D"https://doc.rust-lang.org/reference/attributes/codegen.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">7.4.</strong> Code generation</a></li><=
+li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/re=
+ference/attributes/limits.html" tabindex=3D"0"><strong aria-hidden=3D"true"=
+>7.5.</strong> Limits</a></li><li class=3D"chapter-item expanded "><a href=
+=3D"https://doc.rust-lang.org/reference/attributes/type_system.html" tabind=
+ex=3D"0"><strong aria-hidden=3D"true">7.6.</strong> Type System</a></li><li=
+ class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/refe=
+rence/attributes/debugger.html" tabindex=3D"0"><strong aria-hidden=3D"true"=
+>7.7.</strong> Debugger</a></li></ol></li><li class=3D"chapter-item expande=
+d "><a href=3D"https://doc.rust-lang.org/reference/statements-and-expressio=
+ns.html" tabindex=3D"0"><strong aria-hidden=3D"true">8.</strong> Statements=
+ and expressions</a></li><li><ol class=3D"section"><li class=3D"chapter-ite=
+m expanded "><a href=3D"https://doc.rust-lang.org/reference/statements.html=
+" tabindex=3D"0"><strong aria-hidden=3D"true">8.1.</strong> Statements</a><=
+/li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.o=
+rg/reference/expressions.html" tabindex=3D"0"><strong aria-hidden=3D"true">=
+8.2.</strong> Expressions</a></li><li><ol class=3D"section"><li class=3D"ch=
+apter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/expres=
+sions/literal-expr.html" tabindex=3D"0"><strong aria-hidden=3D"true">8.2.1.=
+</strong> Literal expressions</a></li><li class=3D"chapter-item expanded ">=
+<a href=3D"https://doc.rust-lang.org/reference/expressions/path-expr.html" =
+tabindex=3D"0"><strong aria-hidden=3D"true">8.2.2.</strong> Path expression=
+s</a></li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-=
+lang.org/reference/expressions/block-expr.html" tabindex=3D"0"><strong aria=
+-hidden=3D"true">8.2.3.</strong> Block expressions</a></li><li class=3D"cha=
+pter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/express=
+ions/operator-expr.html" tabindex=3D"0"><strong aria-hidden=3D"true">8.2.4.=
+</strong> Operator expressions</a></li><li class=3D"chapter-item expanded "=
+><a href=3D"https://doc.rust-lang.org/reference/expressions/grouped-expr.ht=
+ml" tabindex=3D"0"><strong aria-hidden=3D"true">8.2.5.</strong> Grouped exp=
+ressions</a></li><li class=3D"chapter-item expanded "><a href=3D"https://do=
+c.rust-lang.org/reference/expressions/array-expr.html" tabindex=3D"0"><stro=
+ng aria-hidden=3D"true">8.2.6.</strong> Array and index expressions</a></li=
+><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/=
+reference/expressions/tuple-expr.html" tabindex=3D"0"><strong aria-hidden=
+=3D"true">8.2.7.</strong> Tuple and index expressions</a></li><li class=3D"=
+chapter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/expr=
+essions/struct-expr.html" tabindex=3D"0"><strong aria-hidden=3D"true">8.2.8=
+.</strong> Struct expressions</a></li><li class=3D"chapter-item expanded ">=
+<a href=3D"https://doc.rust-lang.org/reference/expressions/call-expr.html" =
+tabindex=3D"0"><strong aria-hidden=3D"true">8.2.9.</strong> Call expression=
+s</a></li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-=
+lang.org/reference/expressions/method-call-expr.html" tabindex=3D"0"><stron=
+g aria-hidden=3D"true">8.2.10.</strong> Method call expressions</a></li><li=
+ class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/refe=
+rence/expressions/field-expr.html" tabindex=3D"0"><strong aria-hidden=3D"tr=
+ue">8.2.11.</strong> Field access expressions</a></li><li class=3D"chapter-=
+item expanded "><a href=3D"https://doc.rust-lang.org/reference/expressions/=
+closure-expr.html" tabindex=3D"0"><strong aria-hidden=3D"true">8.2.12.</str=
+ong> Closure expressions</a></li><li class=3D"chapter-item expanded "><a hr=
+ef=3D"https://doc.rust-lang.org/reference/expressions/loop-expr.html" tabin=
+dex=3D"0"><strong aria-hidden=3D"true">8.2.13.</strong> Loop expressions</a=
+></li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang=
+.org/reference/expressions/range-expr.html" tabindex=3D"0"><strong aria-hid=
+den=3D"true">8.2.14.</strong> Range expressions</a></li><li class=3D"chapte=
+r-item expanded "><a href=3D"https://doc.rust-lang.org/reference/expression=
+s/if-expr.html" tabindex=3D"0"><strong aria-hidden=3D"true">8.2.15.</strong=
+> If and if let expressions</a></li><li class=3D"chapter-item expanded "><a=
+ href=3D"https://doc.rust-lang.org/reference/expressions/match-expr.html" t=
+abindex=3D"0"><strong aria-hidden=3D"true">8.2.16.</strong> Match expressio=
+ns</a></li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust=
+-lang.org/reference/expressions/return-expr.html" tabindex=3D"0"><strong ar=
+ia-hidden=3D"true">8.2.17.</strong> Return expressions</a></li><li class=3D=
+"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/exp=
+ressions/await-expr.html" tabindex=3D"0"><strong aria-hidden=3D"true">8.2.1=
+8.</strong> Await expressions</a></li><li class=3D"chapter-item expanded ">=
+<a href=3D"https://doc.rust-lang.org/reference/expressions/underscore-expr.=
+html" tabindex=3D"0"><strong aria-hidden=3D"true">8.2.19.</strong> Undersco=
+re expressions</a></li></ol></li></ol></li><li class=3D"chapter-item expand=
+ed "><a href=3D"https://doc.rust-lang.org/reference/patterns.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">9.</strong> Patterns</a></li><li class=
+=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/=
+type-system.html" tabindex=3D"0"><strong aria-hidden=3D"true">10.</strong> =
+Type system</a></li><li><ol class=3D"section"><li class=3D"chapter-item exp=
+anded "><a href=3D"https://doc.rust-lang.org/reference/types.html" tabindex=
+=3D"0"><strong aria-hidden=3D"true">10.1.</strong> Types</a></li><li><ol cl=
+ass=3D"section"><li class=3D"chapter-item expanded "><a href=3D"https://doc=
+.rust-lang.org/reference/types/boolean.html" tabindex=3D"0"><strong aria-hi=
+dden=3D"true">10.1.1.</strong> Boolean type</a></li><li class=3D"chapter-it=
+em expanded "><a href=3D"https://doc.rust-lang.org/reference/types/numeric.=
+html" tabindex=3D"0"><strong aria-hidden=3D"true">10.1.2.</strong> Numeric =
+types</a></li><li class=3D"chapter-item expanded "><a href=3D"https://doc.r=
+ust-lang.org/reference/types/textual.html" tabindex=3D"0"><strong aria-hidd=
+en=3D"true">10.1.3.</strong> Textual types</a></li><li class=3D"chapter-ite=
+m expanded "><a href=3D"https://doc.rust-lang.org/reference/types/never.htm=
+l" tabindex=3D"0"><strong aria-hidden=3D"true">10.1.4.</strong> Never type<=
+/a></li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-la=
+ng.org/reference/types/tuple.html" tabindex=3D"0"><strong aria-hidden=3D"tr=
+ue">10.1.5.</strong> Tuple types</a></li><li class=3D"chapter-item expanded=
+ "><a href=3D"https://doc.rust-lang.org/reference/types/array.html" tabinde=
+x=3D"0"><strong aria-hidden=3D"true">10.1.6.</strong> Array types</a></li><=
+li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/re=
+ference/types/slice.html" tabindex=3D"0"><strong aria-hidden=3D"true">10.1.=
+7.</strong> Slice types</a></li><li class=3D"chapter-item expanded "><a hre=
+f=3D"https://doc.rust-lang.org/reference/types/struct.html" tabindex=3D"0">=
+<strong aria-hidden=3D"true">10.1.8.</strong> Struct types</a></li><li clas=
+s=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/reference=
+/types/enum.html" tabindex=3D"0"><strong aria-hidden=3D"true">10.1.9.</stro=
+ng> Enumerated types</a></li><li class=3D"chapter-item expanded "><a href=
+=3D"https://doc.rust-lang.org/reference/types/union.html" tabindex=3D"0"><s=
+trong aria-hidden=3D"true">10.1.10.</strong> Union types</a></li><li class=
+=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/=
+types/function-item.html" tabindex=3D"0"><strong aria-hidden=3D"true">10.1.=
+11.</strong> Function item types</a></li><li class=3D"chapter-item expanded=
+ "><a href=3D"https://doc.rust-lang.org/reference/types/closure.html" tabin=
+dex=3D"0"><strong aria-hidden=3D"true">10.1.12.</strong> Closure types</a><=
+/li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.o=
+rg/reference/types/pointer.html" tabindex=3D"0"><strong aria-hidden=3D"true=
+">10.1.13.</strong> Pointer types</a></li><li class=3D"chapter-item expande=
+d "><a href=3D"https://doc.rust-lang.org/reference/types/function-pointer.h=
+tml" tabindex=3D"0"><strong aria-hidden=3D"true">10.1.14.</strong> Function=
+ pointer types</a></li><li class=3D"chapter-item expanded "><a href=3D"http=
+s://doc.rust-lang.org/reference/types/trait-object.html" tabindex=3D"0"><st=
+rong aria-hidden=3D"true">10.1.15.</strong> Trait object types</a></li><li =
+class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/refer=
+ence/types/impl-trait.html" tabindex=3D"0"><strong aria-hidden=3D"true">10.=
+1.16.</strong> Impl trait type</a></li><li class=3D"chapter-item expanded "=
+><a href=3D"https://doc.rust-lang.org/reference/types/parameters.html" tabi=
+ndex=3D"0"><strong aria-hidden=3D"true">10.1.17.</strong> Type parameters</=
+a></li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lan=
+g.org/reference/types/inferred.html" tabindex=3D"0"><strong aria-hidden=3D"=
+true">10.1.18.</strong> Inferred type</a></li></ol></li><li class=3D"chapte=
+r-item expanded "><a href=3D"https://doc.rust-lang.org/reference/dynamicall=
+y-sized-types.html" class=3D"active" tabindex=3D"0"><strong aria-hidden=3D"=
+true">10.2.</strong> Dynamically Sized Types</a></li><li class=3D"chapter-i=
+tem expanded "><a href=3D"https://doc.rust-lang.org/reference/type-layout.h=
+tml" tabindex=3D"0"><strong aria-hidden=3D"true">10.3.</strong> Type layout=
+</a></li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-l=
+ang.org/reference/interior-mutability.html" tabindex=3D"0"><strong aria-hid=
+den=3D"true">10.4.</strong> Interior mutability</a></li><li class=3D"chapte=
+r-item expanded "><a href=3D"https://doc.rust-lang.org/reference/subtyping.=
+html" tabindex=3D"0"><strong aria-hidden=3D"true">10.5.</strong> Subtyping =
+and Variance</a></li><li class=3D"chapter-item expanded "><a href=3D"https:=
+//doc.rust-lang.org/reference/trait-bounds.html" tabindex=3D"0"><strong ari=
+a-hidden=3D"true">10.6.</strong> Trait and lifetime bounds</a></li><li clas=
+s=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/reference=
+/type-coercions.html" tabindex=3D"0"><strong aria-hidden=3D"true">10.7.</st=
+rong> Type coercions</a></li><li class=3D"chapter-item expanded "><a href=
+=3D"https://doc.rust-lang.org/reference/destructors.html" tabindex=3D"0"><s=
+trong aria-hidden=3D"true">10.8.</strong> Destructors</a></li><li class=3D"=
+chapter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/life=
+time-elision.html" tabindex=3D"0"><strong aria-hidden=3D"true">10.9.</stron=
+g> Lifetime elision</a></li></ol></li><li class=3D"chapter-item expanded ">=
+<a href=3D"https://doc.rust-lang.org/reference/special-types-and-traits.htm=
+l" tabindex=3D"0"><strong aria-hidden=3D"true">11.</strong> Special types a=
+nd traits</a></li><li class=3D"chapter-item expanded "><a href=3D"https://d=
+oc.rust-lang.org/reference/names.html" tabindex=3D"0"><strong aria-hidden=
+=3D"true">12.</strong> Names</a></li><li><ol class=3D"section"><li class=3D=
+"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/nam=
+es/namespaces.html" tabindex=3D"0"><strong aria-hidden=3D"true">12.1.</stro=
+ng> Namespaces</a></li><li class=3D"chapter-item expanded "><a href=3D"http=
+s://doc.rust-lang.org/reference/names/scopes.html" tabindex=3D"0"><strong a=
+ria-hidden=3D"true">12.2.</strong> Scopes</a></li><li class=3D"chapter-item=
+ expanded "><a href=3D"https://doc.rust-lang.org/reference/names/preludes.h=
+tml" tabindex=3D"0"><strong aria-hidden=3D"true">12.3.</strong> Preludes</a=
+></li><li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang=
+.org/reference/paths.html" tabindex=3D"0"><strong aria-hidden=3D"true">12.4=
+.</strong> Paths</a></li><li class=3D"chapter-item expanded "><a href=3D"ht=
+tps://doc.rust-lang.org/reference/names/name-resolution.html" tabindex=3D"0=
+"><strong aria-hidden=3D"true">12.5.</strong> Name resolution</a></li><li c=
+lass=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/refere=
+nce/visibility-and-privacy.html" tabindex=3D"0"><strong aria-hidden=3D"true=
+">12.6.</strong> Visibility and privacy</a></li></ol></li><li class=3D"chap=
+ter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/memory-m=
+odel.html" tabindex=3D"0"><strong aria-hidden=3D"true">13.</strong> Memory =
+model</a></li><li><ol class=3D"section"><li class=3D"chapter-item expanded =
+"><a href=3D"https://doc.rust-lang.org/reference/memory-allocation-and-life=
+time.html" tabindex=3D"0"><strong aria-hidden=3D"true">13.1.</strong> Memor=
+y allocation and lifetime</a></li><li class=3D"chapter-item expanded "><a h=
+ref=3D"https://doc.rust-lang.org/reference/variables.html" tabindex=3D"0"><=
+strong aria-hidden=3D"true">13.2.</strong> Variables</a></li></ol></li><li =
+class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/refer=
+ence/linkage.html" tabindex=3D"0"><strong aria-hidden=3D"true">14.</strong>=
+ Linkage</a></li><li class=3D"chapter-item expanded "><a href=3D"https://do=
+c.rust-lang.org/reference/inline-assembly.html" tabindex=3D"0"><strong aria=
+-hidden=3D"true">15.</strong> Inline assembly</a></li><li class=3D"chapter-=
+item expanded "><a href=3D"https://doc.rust-lang.org/reference/unsafety.htm=
+l" tabindex=3D"0"><strong aria-hidden=3D"true">16.</strong> Unsafety</a></l=
+i><li><ol class=3D"section"><li class=3D"chapter-item expanded "><a href=3D=
+"https://doc.rust-lang.org/reference/unsafe-keyword.html" tabindex=3D"0"><s=
+trong aria-hidden=3D"true">16.1.</strong> The unsafe keyword</a></li><li cl=
+ass=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/referen=
+ce/behavior-considered-undefined.html" tabindex=3D"0"><strong aria-hidden=
+=3D"true">16.2.</strong> Behavior considered undefined</a></li><li class=3D=
+"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/beh=
+avior-not-considered-unsafe.html" tabindex=3D"0"><strong aria-hidden=3D"tru=
+e">16.3.</strong> Behavior not considered unsafe</a></li></ol></li><li clas=
+s=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/reference=
+/const_eval.html" tabindex=3D"0"><strong aria-hidden=3D"true">17.</strong> =
+Constant Evaluation</a></li><li class=3D"chapter-item expanded "><a href=3D=
+"https://doc.rust-lang.org/reference/abi.html" tabindex=3D"0"><strong aria-=
+hidden=3D"true">18.</strong> Application Binary Interface</a></li><li class=
+=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/reference/=
+runtime.html" tabindex=3D"0"><strong aria-hidden=3D"true">19.</strong> The =
+Rust runtime</a></li><li class=3D"chapter-item expanded "><a href=3D"https:=
+//doc.rust-lang.org/reference/appendices.html" tabindex=3D"0"><strong aria-=
+hidden=3D"true">20.</strong> Appendices</a></li><li><ol class=3D"section"><=
+li class=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/re=
+ference/macro-ambiguity.html" tabindex=3D"0"><strong aria-hidden=3D"true">2=
+0.1.</strong> Macro Follow-Set Ambiguity Formal Specification</a></li><li c=
+lass=3D"chapter-item expanded "><a href=3D"https://doc.rust-lang.org/refere=
+nce/influences.html" tabindex=3D"0"><strong aria-hidden=3D"true">20.2.</str=
+ong> Influences</a></li><li class=3D"chapter-item expanded "><a href=3D"htt=
+ps://doc.rust-lang.org/reference/glossary.html" tabindex=3D"0"><strong aria=
+-hidden=3D"true">20.3.</strong> Glossary</a></li></ol></li></ol>
+            </div>
+            <div id=3D"sidebar-resize-handle" class=3D"sidebar-resize-handl=
+e">
+                <div class=3D"sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+       =20
+
+        <div id=3D"page-wrapper" class=3D"page-wrapper">
+
+            <div class=3D"page">
+                                <div id=3D"menu-bar-hover-placeholder"></di=
+v>
+                <div id=3D"menu-bar" class=3D"menu-bar" style=3D"top: 0px;"=
+>
+                    <div class=3D"left-buttons">
+                        <label id=3D"sidebar-toggle" class=3D"icon-button" =
+for=3D"sidebar-toggle-anchor" title=3D"Toggle Table of Contents" aria-label=
+=3D"Toggle Table of Contents" aria-controls=3D"sidebar" aria-expanded=3D"tr=
+ue">
+                            <i class=3D"fa fa-bars"></i>
+                        </label>
+                        <button id=3D"theme-toggle" class=3D"icon-button" t=
+ype=3D"button" title=3D"Change theme" aria-label=3D"Change theme" aria-hasp=
+opup=3D"true" aria-expanded=3D"false" aria-controls=3D"theme-list">
+                            <i class=3D"fa fa-paint-brush"></i>
+                        </button>
+                        <ul id=3D"theme-list" class=3D"theme-popup" aria-la=
+bel=3D"Themes" role=3D"menu">
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme theme-selected" id=3D"light">Light</button></li>
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"rust">Rust</button></li>
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"coal">Coal</button></li>
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"navy">Navy</button></li>
+                            <li role=3D"none"><button role=3D"menuitem" cla=
+ss=3D"theme" id=3D"ayu">Ayu</button></li>
+                        </ul>
+                        <button id=3D"search-toggle" class=3D"icon-button" =
+type=3D"button" title=3D"Search. (Shortkey: s)" aria-label=3D"Toggle Search=
+bar" aria-expanded=3D"false" aria-keyshortcuts=3D"S" aria-controls=3D"searc=
+hbar">
+                            <i class=3D"fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class=3D"menu-title">The Rust Reference</h1>
+
+                    <div class=3D"right-buttons">
+                        <a href=3D"https://doc.rust-lang.org/reference/prin=
+t.html" title=3D"Print this book" aria-label=3D"Print this book">
+                            <i id=3D"print-button" class=3D"fa fa-print"></=
+i>
+                        </a>
+                        <a href=3D"https://github.com/rust-lang/reference/"=
+ title=3D"Git repository" aria-label=3D"Git repository">
+                            <i id=3D"git-repository-button" class=3D"fa fa-=
+github"></i>
+                        </a>
+                        <a href=3D"https://github.com/rust-lang/reference/e=
+dit/master/src/dynamically-sized-types.md" title=3D"Suggest an edit" aria-l=
+abel=3D"Suggest an edit">
+                            <i id=3D"git-edit-button" class=3D"fa fa-edit">=
+</i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id=3D"search-wrapper" class=3D"hidden">
+                    <form id=3D"searchbar-outer" class=3D"searchbar-outer">
+                        <input type=3D"search" id=3D"searchbar" name=3D"sea=
+rchbar" placeholder=3D"Search this book ..." aria-controls=3D"searchresults=
+-outer" aria-describedby=3D"searchresults-header">
+                    </form>
+                    <div id=3D"searchresults-outer" class=3D"searchresults-=
+outer hidden">
+                        <div id=3D"searchresults-header" class=3D"searchres=
+ults-header"></div>
+                        <ul id=3D"searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sideba=
+r toggle button are added to the DOM -->
+               =20
+
+                <div id=3D"content" class=3D"content">
+                    <main>
+                        <h1 id=3D"dynamically-sized-types"><a class=3D"head=
+er" href=3D"https://doc.rust-lang.org/reference/dynamically-sized-types.htm=
+l#dynamically-sized-types">Dynamically Sized Types</a></h1>
+<p>Most types have a fixed size that is known at compile time and implement=
+ the
+trait <a href=3D"https://doc.rust-lang.org/reference/special-types-and-trai=
+ts.html#sized"><code class=3D"hljs">Sized</code></a>. A type with a size th=
+at is known only at run-time is
+called a <em>dynamically sized type</em> (<em>DST</em>) or, informally, an =
+unsized type.
+<a href=3D"https://doc.rust-lang.org/reference/types/slice.html">Slices</a>=
+ and <a href=3D"https://doc.rust-lang.org/reference/types/trait-object.html=
+">trait objects</a> are two examples of <abbr title=3D"dynamically sized
+types">DSTs</abbr>. Such types can only be used in certain cases:</p>
+<ul>
+<li><a href=3D"https://doc.rust-lang.org/reference/types/pointer.html">Poin=
+ter types</a> to <abbr title=3D"dynamically sized types">DSTs</abbr> are
+sized but have twice the size of pointers to sized types
+<ul>
+<li>Pointers to slices also store the number of elements of the slice.</li>
+<li>Pointers to trait objects also store a pointer to a vtable.</li>
+</ul>
+</li>
+<li><abbr title=3D"dynamically sized types">DSTs</abbr> can be provided as
+type arguments to generic type parameters having the special <code class=3D=
+"hljs">?Sized</code> bound.
+They can also be used for associated type definitions when the correspondin=
+g associated type declaration has a <code class=3D"hljs">?Sized</code> boun=
+d.
+By default, any type parameter or associated type has a <code class=3D"hljs=
+">Sized</code> bound, unless it is relaxed using <code class=3D"hljs">?Size=
+d</code>.</li>
+<li>Traits may be implemented for <abbr title=3D"dynamically sized
+types">DSTs</abbr>.
+Unlike with generic type parameters, <code class=3D"hljs">Self: ?Sized</cod=
+e> is the default in trait definitions.</li>
+<li>Structs may contain a <abbr title=3D"dynamically sized type">DST</abbr>=
+ as the
+last field; this makes the struct itself a
+<abbr title=3D"dynamically sized type">DST</abbr>.</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: <a href=3D"https://doc.rust-lang.org/reference/va=
+riables.html">variables</a>, function parameters, <a href=3D"https://doc.ru=
+st-lang.org/reference/items/constant-items.html">const</a> items, and <a hr=
+ef=3D"https://doc.rust-lang.org/reference/items/static-items.html">static</=
+a> items must be
+<code class=3D"hljs">Sized</code>.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class=3D"nav-wrapper" aria-label=3D"Page navigatio=
+n">
+                        <!-- Mobile navigation buttons -->
+                            <a rel=3D"prev" href=3D"https://doc.rust-lang.o=
+rg/reference/types/inferred.html" class=3D"mobile-nav-chapters previous" ti=
+tle=3D"Previous chapter" aria-label=3D"Previous chapter" aria-keyshortcuts=
+=3D"Left">
+                                <i class=3D"fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel=3D"next prefetch" href=3D"https://doc.ru=
+st-lang.org/reference/type-layout.html" class=3D"mobile-nav-chapters next" =
+title=3D"Next chapter" aria-label=3D"Next chapter" aria-keyshortcuts=3D"Rig=
+ht">
+                                <i class=3D"fa fa-angle-right"></i>
+                            </a>
+
+                        <div style=3D"clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class=3D"nav-wide-wrapper" aria-label=3D"Page navigation">
+                    <a rel=3D"prev" href=3D"https://doc.rust-lang.org/refer=
+ence/types/inferred.html" class=3D"nav-chapters previous" title=3D"Previous=
+ chapter" aria-label=3D"Previous chapter" aria-keyshortcuts=3D"Left">
+                        <i class=3D"fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel=3D"next prefetch" href=3D"https://doc.rust-lang.=
+org/reference/type-layout.html" class=3D"nav-chapters next" title=3D"Next c=
+hapter" aria-label=3D"Next chapter" aria-keyshortcuts=3D"Right">
+                        <i class=3D"fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+       =20
+
+
+       =20
+       =20
+       =20
+
+       =20
+       =20
+       =20
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+   =20
+
+</body><div mx-name=3D"dream-translation"><template shadowmode=3D"closed"><=
+link rel=3D"stylesheet" href=3D"chrome-extension://ogleeipbbcokpeabliinildn=
+gejmdneg/css/content.css">
+
+<div id=3D"dmx_dialog" style=3D"width: 500px; height: 470px; display: none;=
+">
+    <div id=3D"dmx_dialog_title" style=3D"cursor: move;">
+        <div class=3D"dmx_left">
+            <div id=3D"dmx_close"><i class=3D"dmx-icon dmx-icon-close"></i>=
+</div>
+            <div id=3D"dmx_pin" class=3D"dmx-icon"></div>
+            <div id=3D"dmx_fullscreen" class=3D"dmx-icon"></div>
+            <div id=3D"dmx_history">
+                <i class=3D"dmx-icon disabled dmx-icon-left"></i>
+                <i class=3D"dmx-icon disabled dmx-icon-right"></i>
+            </div>
+            <div id=3D"dmx_navigate">
+                <u class=3D"dmx-icon active" action=3D"translate">=E7=BF=BB=
+=E8=AF=91</u>
+                <u class=3D"dmx-icon" action=3D"dictionary">=E8=AF=8D=E5=85=
+=B8</u>
+                <u class=3D"dmx-icon" action=3D"search">=E6=90=9C=E7=B4=A2<=
+/u>
+            </div>
+        </div>
+        <div class=3D"dmx_right">
+            <div id=3D"dmx_setting"><i class=3D"dmx-icon dmx-icon-setting">=
+</i></div>
+            <div id=3D"dmx_more"><i class=3D"dmx-icon dmx-icon-more"></i></=
+div>
+            <div id=3D"dmx_voice" class=3D"dmx_hide"><i class=3D"dmx-icon d=
+mx-icon-voice"></i></div>
+            <div id=3D"dmx_heart" class=3D"dmx_hide"><i class=3D"dmx-icon d=
+mx-icon-heart"></i></div>
+        </div>
+    </div>
+    <div id=3D"dmx_dialog_content"><div class=3D"dmx_main dmx_main_trans">
+    <div class=3D"case" id=3D"translate_input" contenteditable=3D"true"></d=
+iv>
+    <div class=3D"language_box fx">
+        <div id=3D"language_source" class=3D"language_button dmx-icon" valu=
+e=3D"auto">=E8=87=AA=E5=8A=A8=E6=A3=80=E6=B5=8B</div>
+        <div id=3D"language_exchange" class=3D"disabled"><i class=3D"dmx-ic=
+on dmx-icon-exchange"></i></div>
+        <div id=3D"language_target" class=3D"language_button dmx-icon" valu=
+e=3D"zh">=E4=B8=AD=E6=96=87(=E7=AE=80=E4=BD=93)</div>
+        <div id=3D"translate_button">=E7=BF=BB =E8=AF=91</div>
+        <div id=3D"translate_crop"><i class=3D"dmx-icon dmx-icon-crop"></i>=
+</div>
+        <div id=3D"language_dropdown" class=3D"fx"><u value=3D"auto">=E8=87=
+=AA=E5=8A=A8=E6=A3=80=E6=B5=8B</u><u value=3D"zh">=E4=B8=AD=E6=96=87(=E7=AE=
+=80=E4=BD=93)</u><u value=3D"en">=E8=8B=B1=E8=AF=AD</u><u value=3D"jp">=E6=
+=97=A5=E8=AF=AD</u><u value=3D"th">=E6=B3=B0=E8=AF=AD</u><u value=3D"spa">=
+=E8=A5=BF=E7=8F=AD=E7=89=99=E8=AF=AD</u><u value=3D"ara">=E9=98=BF=E6=8B=89=
+=E4=BC=AF=E8=AF=AD</u><u value=3D"fra">=E6=B3=95=E8=AF=AD</u><u value=3D"ko=
+r">=E9=9F=A9=E8=AF=AD</u><u value=3D"ru">=E4=BF=84=E8=AF=AD</u><u value=3D"=
+de">=E5=BE=B7=E8=AF=AD</u><u value=3D"pt">=E8=91=A1=E8=90=84=E7=89=99=E8=AF=
+=AD</u><u value=3D"it">=E6=84=8F=E5=A4=A7=E5=88=A9=E8=AF=AD</u><u value=3D"=
+el">=E5=B8=8C=E8=85=8A=E8=AF=AD</u><u value=3D"nl">=E8=8D=B7=E5=85=B0=E8=AF=
+=AD</u><u value=3D"pl">=E6=B3=A2=E5=85=B0=E8=AF=AD</u><u value=3D"fin">=E8=
+=8A=AC=E5=85=B0=E8=AF=AD</u><u value=3D"cs">=E6=8D=B7=E5=85=8B=E8=AF=AD</u>=
+<u value=3D"bul">=E4=BF=9D=E5=8A=A0=E5=88=A9=E4=BA=9A=E8=AF=AD</u><u value=
+=3D"dan">=E4=B8=B9=E9=BA=A6=E8=AF=AD</u><u value=3D"est">=E7=88=B1=E6=B2=99=
+=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"hu">=E5=8C=88=E7=89=99=E5=88=A9=
+=E8=AF=AD</u><u value=3D"rom">=E7=BD=97=E9=A9=AC=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"slo">=E6=96=AF=E6=B4=9B=E6=96=87=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"swe">=E7=91=9E=E5=85=B8=E8=AF=AD</u><u value=3D"vie">=E8=B6=
+=8A=E5=8D=97=E8=AF=AD</u><u value=3D"yue">=E4=B8=AD=E6=96=87(=E7=B2=A4=E8=
+=AF=AD)</u><u value=3D"cht">=E4=B8=AD=E6=96=87(=E7=B9=81=E4=BD=93)</u><u va=
+lue=3D"wyw">=E4=B8=AD=E6=96=87(=E6=96=87=E8=A8=80=E6=96=87)</u><u value=3D"=
+afr">=E5=8D=97=E9=9D=9E=E8=8D=B7=E5=85=B0=E8=AF=AD</u><u value=3D"alb">=E9=
+=98=BF=E5=B0=94=E5=B7=B4=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"amh">=E9=
+=98=BF=E5=A7=86=E5=93=88=E6=8B=89=E8=AF=AD</u><u value=3D"arm">=E4=BA=9A=E7=
+=BE=8E=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"asm">=E9=98=BF=E8=90=A8=E5=
+=A7=86=E8=AF=AD</u><u value=3D"ast">=E9=98=BF=E6=96=AF=E5=9B=BE=E9=87=8C=E4=
+=BA=9A=E6=96=AF=E8=AF=AD</u><u value=3D"aze">=E9=98=BF=E5=A1=9E=E6=8B=9C=E7=
+=96=86=E8=AF=AD</u><u value=3D"baq">=E5=B7=B4=E6=96=AF=E5=85=8B=E8=AF=AD</u=
+><u value=3D"bel">=E7=99=BD=E4=BF=84=E7=BD=97=E6=96=AF=E8=AF=AD</u><u value=
+=3D"ben">=E5=AD=9F=E5=8A=A0=E6=8B=89=E8=AF=AD</u><u value=3D"bos">=E6=B3=A2=
+=E6=96=AF=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"bur">=E7=BC=85=E7=94=B8=
+=E8=AF=AD</u><u value=3D"cat">=E5=8A=A0=E6=B3=B0=E7=BD=97=E5=B0=BC=E4=BA=9A=
+=E8=AF=AD</u><u value=3D"ceb">=E5=AE=BF=E5=8A=A1=E8=AF=AD</u><u value=3D"hr=
+v">=E5=85=8B=E7=BD=97=E5=9C=B0=E4=BA=9A=E8=AF=AD</u><u value=3D"epo">=E4=B8=
+=96=E7=95=8C=E8=AF=AD</u><u value=3D"fao">=E6=B3=95=E7=BD=97=E8=AF=AD</u><u=
+ value=3D"fil">=E8=8F=B2=E5=BE=8B=E5=AE=BE=E8=AF=AD</u><u value=3D"glg">=E5=
+=8A=A0=E5=88=A9=E8=A5=BF=E4=BA=9A=E8=AF=AD</u><u value=3D"geo">=E6=A0=BC=E9=
+=B2=81=E5=90=89=E4=BA=9A=E8=AF=AD</u><u value=3D"guj">=E5=8F=A4=E5=90=89=E6=
+=8B=89=E7=89=B9=E8=AF=AD</u><u value=3D"hau">=E8=B1=AA=E8=90=A8=E8=AF=AD</u=
+><u value=3D"heb">=E5=B8=8C=E4=BC=AF=E6=9D=A5=E8=AF=AD</u><u value=3D"hi">=
+=E5=8D=B0=E5=9C=B0=E8=AF=AD</u><u value=3D"ice">=E5=86=B0=E5=B2=9B=E8=AF=AD=
+</u><u value=3D"ibo">=E4=BC=8A=E5=8D=9A=E8=AF=AD</u><u value=3D"id">=E5=8D=
+=B0=E5=B0=BC=E8=AF=AD</u><u value=3D"gle">=E7=88=B1=E5=B0=94=E5=85=B0=E8=AF=
+=AD</u><u value=3D"kan">=E5=8D=A1=E7=BA=B3=E8=BE=BE=E8=AF=AD</u><u value=3D=
+"kaz">=E5=93=88=E8=90=A8=E5=85=8B=E8=AF=AD</u><u value=3D"kli">=E5=85=8B=E6=
+=9E=97=E8=B4=A1=E8=AF=AD</u><u value=3D"kur">=E5=BA=93=E5=B0=94=E5=BE=B7=E8=
+=AF=AD</u><u value=3D"lao">=E8=80=81=E6=8C=9D=E8=AF=AD</u><u value=3D"lat">=
+=E6=8B=89=E4=B8=81=E8=AF=AD</u><u value=3D"lav">=E6=8B=89=E8=84=B1=E7=BB=B4=
+=E4=BA=9A=E8=AF=AD</u><u value=3D"lit">=E7=AB=8B=E9=99=B6=E5=AE=9B=E8=AF=AD=
+</u><u value=3D"ltz">=E5=8D=A2=E6=A3=AE=E5=A0=A1=E8=AF=AD</u><u value=3D"ma=
+c">=E9=A9=AC=E5=85=B6=E9=A1=BF=E8=AF=AD</u><u value=3D"mg">=E9=A9=AC=E6=8B=
+=89=E5=8A=A0=E6=96=AF=E8=AF=AD</u><u value=3D"may">=E9=A9=AC=E6=9D=A5=E8=AF=
+=AD</u><u value=3D"mal">=E9=A9=AC=E6=8B=89=E9=9B=85=E6=8B=89=E5=A7=86=E8=AF=
+=AD</u><u value=3D"mlt">=E9=A9=AC=E8=80=B3=E4=BB=96=E8=AF=AD</u><u value=3D=
+"mar">=E9=A9=AC=E6=8B=89=E5=9C=B0=E8=AF=AD</u><u value=3D"nep">=E5=B0=BC=E6=
+=B3=8A=E5=B0=94=E8=AF=AD</u><u value=3D"nno">=E6=96=B0=E6=8C=AA=E5=A8=81=E8=
+=AF=AD</u><u value=3D"per">=E6=B3=A2=E6=96=AF=E8=AF=AD</u><u value=3D"srd">=
+=E8=90=A8=E4=B8=81=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u value=3D"srp">=E5=A1=9E=
+=E5=B0=94=E7=BB=B4=E4=BA=9A=E8=AF=AD(=E6=8B=89=E4=B8=81=E6=96=87)</u><u val=
+ue=3D"sin">=E5=83=A7=E4=BC=BD=E7=BD=97=E8=AF=AD</u><u value=3D"sk">=E6=96=
+=AF=E6=B4=9B=E4=BC=90=E5=85=8B=E8=AF=AD</u><u value=3D"som">=E7=B4=A2=E9=A9=
+=AC=E9=87=8C=E8=AF=AD</u><u value=3D"swa">=E6=96=AF=E7=93=A6=E5=B8=8C=E9=87=
+=8C=E8=AF=AD</u><u value=3D"tgl">=E4=BB=96=E5=8A=A0=E7=A6=84=E8=AF=AD</u><u=
+ value=3D"tgk">=E5=A1=94=E5=90=89=E5=85=8B=E8=AF=AD</u><u value=3D"tam">=E6=
+=B3=B0=E7=B1=B3=E5=B0=94=E8=AF=AD</u><u value=3D"tat">=E9=9E=91=E9=9D=BC=E8=
+=AF=AD</u><u value=3D"tel">=E6=B3=B0=E5=8D=A2=E5=9B=BA=E8=AF=AD</u><u value=
+=3D"tr">=E5=9C=9F=E8=80=B3=E5=85=B6=E8=AF=AD</u><u value=3D"tuk">=E5=9C=9F=
+=E5=BA=93=E6=9B=BC=E8=AF=AD</u><u value=3D"ukr">=E4=B9=8C=E5=85=8B=E5=85=B0=
+=E8=AF=AD</u><u value=3D"urd">=E4=B9=8C=E5=B0=94=E9=83=BD=E8=AF=AD</u><u va=
+lue=3D"uzb">=E4=B9=8C=E5=85=B9=E5=88=AB=E5=85=8B=E8=AF=AD</u><u value=3D"oc=
+i">=E5=A5=A5=E5=85=8B=E8=AF=AD</u><u value=3D"kir">=E5=90=89=E5=B0=94=E5=90=
+=89=E6=96=AF=E8=AF=AD</u><u value=3D"pus">=E6=99=AE=E4=BB=80=E5=9B=BE=E8=AF=
+=AD</u><u value=3D"hkm">=E9=AB=98=E6=A3=89=E8=AF=AD</u><u value=3D"ht">=E6=
+=B5=B7=E5=9C=B0=E8=AF=AD</u><u value=3D"nob">=E4=B9=A6=E9=9D=A2=E6=8C=AA=E5=
+=A8=81=E8=AF=AD</u><u value=3D"pan">=E6=97=81=E9=81=AE=E6=99=AE=E8=AF=AD</u=
+><u value=3D"arq">=E9=98=BF=E5=B0=94=E5=8F=8A=E5=88=A9=E4=BA=9A=E9=98=BF=E6=
+=8B=89=E4=BC=AF=E8=AF=AD</u><u value=3D"bis">=E6=AF=94=E6=96=AF=E6=8B=89=E9=
+=A9=AC=E8=AF=AD</u><u value=3D"frn">=E5=8A=A0=E6=8B=BF=E5=A4=A7=E6=B3=95=E8=
+=AF=AD</u><u value=3D"hak">=E5=93=88=E5=8D=A1=E9=92=A6=E8=AF=AD</u><u value=
+=3D"hup">=E8=83=A1=E5=B8=95=E8=AF=AD</u><u value=3D"ing">=E5=8D=B0=E5=8F=A4=
+=E4=BB=80=E8=AF=AD</u><u value=3D"lag">=E6=8B=89=E7=89=B9=E5=8A=A0=E8=8E=B1=
+=E8=AF=AD</u><u value=3D"mau">=E6=AF=9B=E9=87=8C=E6=B1=82=E6=96=AF=E5=85=8B=
+=E9=87=8C=E5=A5=A5=E5=B0=94=E8=AF=AD</u><u value=3D"mot">=E9=BB=91=E5=B1=B1=
+=E8=AF=AD</u><u value=3D"pot">=E5=B7=B4=E8=A5=BF=E8=91=A1=E8=90=84=E7=89=99=
+=E8=AF=AD</u><u value=3D"ruy">=E5=8D=A2=E6=A3=AE=E5=B0=BC=E4=BA=9A=E8=AF=AD=
+</u><u value=3D"sec">=E5=A1=9E=E5=B0=94=E7=BB=B4=E4=BA=9A-=E5=85=8B=E7=BD=
+=97=E5=9C=B0=E4=BA=9A=E8=AF=AD</u><u value=3D"sil">=E8=A5=BF=E9=87=8C=E8=A5=
+=BF=E4=BA=9A=E8=AF=AD</u><u value=3D"tua">=E7=AA=81=E5=B0=BC=E6=96=AF=E9=98=
+=BF=E6=8B=89=E4=BC=AF=E8=AF=AD</u><u value=3D"ach">=E4=BA=9A=E9=BD=90=E8=AF=
+=AD</u><u value=3D"aka">=E9=98=BF=E8=82=AF=E8=AF=AD</u><u value=3D"arg">=E9=
+=98=BF=E6=8B=89=E8=B4=A1=E8=AF=AD</u><u value=3D"aym">=E8=89=BE=E9=A9=AC=E6=
+=8B=89=E8=AF=AD</u><u value=3D"bal">=E4=BF=BE=E8=B7=AF=E6=94=AF=E8=AF=AD</u=
+><u value=3D"bak">=E5=B7=B4=E4=BB=80=E5=9F=BA=E5=B0=94=E8=AF=AD</u><u value=
+=3D"bem">=E6=9C=AC=E5=B7=B4=E8=AF=AD</u><u value=3D"ber">=E6=9F=8F=E6=9F=8F=
+=E5=B0=94=E8=AF=AD</u><u value=3D"bho">=E5=8D=9A=E6=9D=B0=E6=99=AE=E5=B0=94=
+=E8=AF=AD</u><u value=3D"bli">=E6=AF=94=E6=9E=97=E8=AF=AD</u><u value=3D"br=
+e">=E5=B8=83=E5=88=97=E5=A1=94=E5=B0=BC=E8=AF=AD</u><u value=3D"chr">=E5=88=
+=87=E7=BD=97=E5=9F=BA=E8=AF=AD</u><u value=3D"nya">=E9=BD=90=E5=88=87=E7=93=
+=A6=E8=AF=AD</u><u value=3D"chv">=E6=A5=9A=E7=93=A6=E4=BB=80=E8=AF=AD</u><u=
+ value=3D"cor">=E5=BA=B7=E7=93=A6=E5=B0=94=E8=AF=AD</u><u value=3D"cos">=E7=
+=A7=91=E8=A5=BF=E5=98=89=E8=AF=AD</u><u value=3D"cre">=E5=85=8B=E9=87=8C=E5=
+=85=8B=E8=AF=AD</u><u value=3D"cri">=E5=85=8B=E9=87=8C=E7=B1=B3=E4=BA=9A=E9=
+=9E=91=E9=9D=BC=E8=AF=AD</u><u value=3D"div">=E8=BF=AA=E7=BB=B4=E5=B8=8C=E8=
+=AF=AD</u><u value=3D"eno">=E5=8F=A4=E8=8B=B1=E8=AF=AD</u><u value=3D"frm">=
+=E4=B8=AD=E5=8F=A4=E6=B3=95=E8=AF=AD</u><u value=3D"fri">=E5=BC=97=E7=95=99=
+=E5=88=A9=E8=AF=AD</u><u value=3D"ful">=E5=AF=8C=E6=8B=89=E5=B0=BC=E8=AF=AD=
+</u><u value=3D"gla">=E7=9B=96=E5=B0=94=E8=AF=AD</u><u value=3D"lug">=E5=8D=
+=A2=E5=B9=B2=E8=BE=BE=E8=AF=AD</u><u value=3D"gra">=E5=8F=A4=E5=B8=8C=E8=85=
+=8A=E8=AF=AD</u><u value=3D"grn">=E7=93=9C=E6=8B=89=E5=B0=BC=E8=AF=AD</u><u=
+ value=3D"haw">=E5=A4=8F=E5=A8=81=E5=A4=B7=E8=AF=AD</u><u value=3D"hil">=E5=
+=B8=8C=E5=88=A9=E7=9B=96=E5=86=9C=E8=AF=AD</u><u value=3D"ido">=E4=BC=8A=E5=
+=A4=9A=E8=AF=AD</u><u value=3D"ina">=E5=9B=A0=E7=89=B9=E8=AF=AD</u><u value=
+=3D"iku">=E4=BC=8A=E5=8A=AA=E5=85=8B=E6=8F=90=E5=9B=BE=E7=89=B9=E8=AF=AD</u=
+><u value=3D"jav">=E7=88=AA=E5=93=87=E8=AF=AD</u><u value=3D"kab">=E5=8D=A1=
+=E6=8B=9C=E5=B0=94=E8=AF=AD</u><u value=3D"kal">=E6=A0=BC=E9=99=B5=E5=85=B0=
+=E8=AF=AD</u><u value=3D"kau">=E5=8D=A1=E5=8A=AA=E9=87=8C=E8=AF=AD</u><u va=
+lue=3D"kas">=E5=85=8B=E4=BB=80=E7=B1=B3=E5=B0=94=E8=AF=AD</u><u value=3D"ka=
+h">=E5=8D=A1=E8=88=92=E6=AF=94=E8=AF=AD</u><u value=3D"kin">=E5=8D=A2=E6=97=
+=BA=E8=BE=BE=E8=AF=AD</u><u value=3D"kon">=E5=88=9A=E6=9E=9C=E8=AF=AD</u><u=
+ value=3D"kok">=E5=AD=94=E5=8D=A1=E5=B0=BC=E8=AF=AD</u><u value=3D"lim">=E6=
+=9E=97=E5=A0=A1=E8=AF=AD</u><u value=3D"lin">=E6=9E=97=E5=8A=A0=E6=8B=89=E8=
+=AF=AD</u><u value=3D"loj">=E9=80=BB=E8=BE=91=E8=AF=AD</u><u value=3D"log">=
+=E4=BD=8E=E5=9C=B0=E5=BE=B7=E8=AF=AD</u><u value=3D"los">=E4=B8=8B=E7=B4=A2=
+=E5=B8=83=E8=AF=AD</u><u value=3D"mai">=E8=BF=88=E8=92=82=E5=88=A9=E8=AF=AD=
+</u><u value=3D"glv">=E6=9B=BC=E5=85=8B=E6=96=AF=E8=AF=AD</u><u value=3D"ma=
+o">=E6=AF=9B=E5=88=A9=E8=AF=AD</u><u value=3D"mah">=E9=A9=AC=E7=BB=8D=E5=B0=
+=94=E8=AF=AD</u><u value=3D"nbl">=E5=8D=97=E6=81=A9=E5=BE=B7=E8=B4=9D=E8=8E=
+=B1=E8=AF=AD</u><u value=3D"nea">=E9=82=A3=E4=B8=8D=E5=8B=92=E6=96=AF=E8=AF=
+=AD</u><u value=3D"nqo">=E8=A5=BF=E9=9D=9E=E4=B9=A6=E9=9D=A2=E8=AF=AD</u><u=
+ value=3D"sme">=E5=8C=97=E6=96=B9=E8=90=A8=E7=B1=B3=E8=AF=AD</u><u value=3D=
+"nor">=E6=8C=AA=E5=A8=81=E8=AF=AD</u><u value=3D"oji">=E5=A5=A5=E6=9D=B0=E5=
+=B8=83=E7=93=A6=E8=AF=AD</u><u value=3D"ori">=E5=A5=A5=E9=87=8C=E4=BA=9A=E8=
+=AF=AD</u><u value=3D"orm">=E5=A5=A5=E7=BD=97=E8=8E=AB=E8=AF=AD</u><u value=
+=3D"oss">=E5=A5=A5=E5=A1=9E=E6=A2=AF=E8=AF=AD</u><u value=3D"pam">=E9=82=A6=
+=E6=9D=BF=E7=89=99=E8=AF=AD</u><u value=3D"pap">=E5=B8=95=E7=9A=AE=E9=98=BF=
+=E9=97=A8=E6=89=98=E8=AF=AD</u><u value=3D"ped">=E5=8C=97=E7=B4=A2=E6=89=98=
+=E8=AF=AD</u><u value=3D"que">=E5=85=8B=E4=B8=98=E4=BA=9A=E8=AF=AD</u><u va=
+lue=3D"roh">=E7=BD=97=E6=9B=BC=E4=BB=80=E8=AF=AD</u><u value=3D"ro">=E7=BD=
+=97=E5=A7=86=E8=AF=AD</u><u value=3D"sm">=E8=90=A8=E6=91=A9=E4=BA=9A=E8=AF=
+=AD</u><u value=3D"san">=E6=A2=B5=E8=AF=AD</u><u value=3D"sco">=E8=8B=8F=E6=
+=A0=BC=E5=85=B0=E8=AF=AD</u><u value=3D"sha">=E6=8E=B8=E8=AF=AD</u><u value=
+=3D"sna">=E4=BF=AE=E7=BA=B3=E8=AF=AD</u><u value=3D"snd">=E4=BF=A1=E5=BE=B7=
+=E8=AF=AD</u><u value=3D"sol">=E6=A1=91=E6=B5=B7=E8=AF=AD</u><u value=3D"so=
+t">=E5=8D=97=E7=B4=A2=E6=89=98=E8=AF=AD</u><u value=3D"syr">=E5=8F=99=E5=88=
+=A9=E4=BA=9A=E8=AF=AD</u><u value=3D"tet">=E5=BE=B7=E9=A1=BF=E8=AF=AD</u><u=
+ value=3D"tir">=E6=8F=90=E6=A0=BC=E5=88=A9=E5=B0=BC=E4=BA=9A=E8=AF=AD</u><u=
+ value=3D"tso">=E8=81=AA=E5=8A=A0=E8=AF=AD</u><u value=3D"twi">=E5=A5=91=E7=
+=BB=B4=E8=AF=AD</u><u value=3D"ups">=E9=AB=98=E5=9C=B0=E7=B4=A2=E5=B8=83=E8=
+=AF=AD</u><u value=3D"ven">=E6=96=87=E8=BE=BE=E8=AF=AD</u><u value=3D"wln">=
+=E7=93=A6=E9=9A=86=E8=AF=AD</u><u value=3D"wel">=E5=A8=81=E5=B0=94=E5=A3=AB=
+=E8=AF=AD</u><u value=3D"fry">=E8=A5=BF=E5=BC=97=E9=87=8C=E6=96=AF=E8=AF=AD=
+</u><u value=3D"wol">=E6=B2=83=E6=B4=9B=E5=A4=AB=E8=AF=AD</u><u value=3D"xh=
+o">=E7=A7=91=E8=90=A8=E8=AF=AD</u><u value=3D"yid">=E6=84=8F=E7=AC=AC=E7=BB=
+=AA=E8=AF=AD</u><u value=3D"yor">=E7=BA=A6=E9=B2=81=E5=B7=B4=E8=AF=AD</u><u=
+ value=3D"zaz">=E6=89=8E=E6=89=8E=E5=85=B6=E8=AF=AD</u><u value=3D"zul">=E7=
+=A5=96=E9=B2=81=E8=AF=AD</u><u value=3D"sun">=E5=B7=BD=E4=BB=96=E8=AF=AD</u=
+><u value=3D"hmn">=E8=8B=97=E8=AF=AD</u><u value=3D"src">=E5=A1=9E=E5=B0=94=
+=E7=BB=B4=E4=BA=9A=E8=AF=AD(=E8=A5=BF=E9=87=8C=E5=B0=94=E6=96=87)</u></div>
+    </div>
+</div>
+<div id=3D"case_list" class=3D"dmx_main fx"></div></div>
+    <div id=3D"dmx_dialog_resize_n"></div>
+    <div id=3D"dmx_dialog_resize_e"></div>
+    <div id=3D"dmx_dialog_resize_s"></div>
+    <div id=3D"dmx_dialog_resize_w"></div>
+    <div id=3D"dmx_dialog_resize_nw"></div>
+    <div id=3D"dmx_dialog_resize_ne"></div>
+    <div id=3D"dmx_dialog_resize_sw"></div>
+    <div id=3D"dmx_dialog_resize_se"></div>
+    <div id=3D"dmx_dialog_left"></div>
+</div>
+<div id=3D"dmx_mouse_icon" style=3D"display: none;"></div>
+<div id=3D"dmx_crop_bg"></div>
+<div id=3D"dmx_crop_fg"></div></template></div></html>
+------MultipartBoundary--LhY2CUCsjUE5OBnKBRcLcv0Zt5Ictr66HHBMjf3H3k----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://doc.rust-lang.org/reference/css/variables.css
+
+@charset "utf-8";
+
+:root { --sidebar-width: 300px; --sidebar-resize-indicator-width: 8px; --si=
+debar-resize-indicator-space: 2px; --page-padding: 15px; --content-max-widt=
+h: 750px; --menu-bar-height: 50px; --mono-font: "Source Code Pro", Consolas=
+, "Ubuntu Mono", Menlo, "DejaVu Sans Mono", monospace, monospace; --code-fo=
+nt-size: 0.875em; }
+
+.ayu { --bg: hsl(210, 25%, 8%); --fg: #c5c5c5; --sidebar-bg: #14191f; --sid=
+ebar-fg: #c8c9db; --sidebar-non-existant: #5c6773; --sidebar-active: #ffb45=
+4; --sidebar-spacer: #2d334f; --scrollbar: var(--sidebar-fg); --icons: #737=
+480; --icons-hover: #b7b9cc; --links: #0096cf; --inline-code-color: #ffb454=
+; --theme-popup-bg: #14191f; --theme-popup-border: #5c6773; --theme-hover: =
+#191f26; --quote-bg: hsl(226, 15%, 17%); --quote-border: hsl(226, 15%, 22%)=
+; --warning-border: #ff8e00; --table-border-color: hsl(210, 25%, 13%); --ta=
+ble-header-bg: hsl(210, 25%, 28%); --table-alternate-bg: hsl(210, 25%, 11%)=
+; --searchbar-border-color: #848484; --searchbar-bg: #424242; --searchbar-f=
+g: #fff; --searchbar-shadow-color: #d4c89f; --searchresults-header-fg: #666=
+; --searchresults-border-color: #888; --searchresults-li-bg: #252932; --sea=
+rch-mark-bg: #e3b171; --color-scheme: dark; }
+
+.coal { --bg: hsl(200, 7%, 8%); --fg: #98a3ad; --sidebar-bg: #292c2f; --sid=
+ebar-fg: #a1adb8; --sidebar-non-existant: #505254; --sidebar-active: #3473a=
+d; --sidebar-spacer: #393939; --scrollbar: var(--sidebar-fg); --icons: #434=
+84d; --icons-hover: #b3c0cc; --links: #2b79a2; --inline-code-color: #c5c8c6=
+; --theme-popup-bg: #141617; --theme-popup-border: #43484d; --theme-hover: =
+#1f2124; --quote-bg: hsl(234, 21%, 18%); --quote-border: hsl(234, 21%, 23%)=
+; --warning-border: #ff8e00; --table-border-color: hsl(200, 7%, 13%); --tab=
+le-header-bg: hsl(200, 7%, 28%); --table-alternate-bg: hsl(200, 7%, 11%); -=
+-searchbar-border-color: #aaa; --searchbar-bg: #b7b7b7; --searchbar-fg: #00=
+0; --searchbar-shadow-color: #aaa; --searchresults-header-fg: #666; --searc=
+hresults-border-color: #98a3ad; --searchresults-li-bg: #2b2b2f; --search-ma=
+rk-bg: #355c7d; --color-scheme: dark; }
+
+.light { --bg: hsl(0, 0%, 100%); --fg: hsl(0, 0%, 0%); --sidebar-bg: #fafaf=
+a; --sidebar-fg: hsl(0, 0%, 0%); --sidebar-non-existant: #aaaaaa; --sidebar=
+-active: #1f1fff; --sidebar-spacer: #f4f4f4; --scrollbar: #8F8F8F; --icons:=
+ #747474; --icons-hover: #000000; --links: #20609f; --inline-code-color: #3=
+01900; --theme-popup-bg: #fafafa; --theme-popup-border: #cccccc; --theme-ho=
+ver: #e6e6e6; --quote-bg: hsl(197, 37%, 96%); --quote-border: hsl(197, 37%,=
+ 91%); --warning-border: #ff8e00; --table-border-color: hsl(0, 0%, 95%); --=
+table-header-bg: hsl(0, 0%, 80%); --table-alternate-bg: hsl(0, 0%, 97%); --=
+searchbar-border-color: #aaa; --searchbar-bg: #fafafa; --searchbar-fg: #000=
+; --searchbar-shadow-color: #aaa; --searchresults-header-fg: #666; --search=
+results-border-color: #888; --searchresults-li-bg: #e4f2fe; --search-mark-b=
+g: #a2cff5; --color-scheme: light; }
+
+.navy { --bg: hsl(226, 23%, 11%); --fg: #bcbdd0; --sidebar-bg: #282d3f; --s=
+idebar-fg: #c8c9db; --sidebar-non-existant: #505274; --sidebar-active: #2b7=
+9a2; --sidebar-spacer: #2d334f; --scrollbar: var(--sidebar-fg); --icons: #7=
+37480; --icons-hover: #b7b9cc; --links: #2b79a2; --inline-code-color: #c5c8=
+c6; --theme-popup-bg: #161923; --theme-popup-border: #737480; --theme-hover=
+: #282e40; --quote-bg: hsl(226, 15%, 17%); --quote-border: hsl(226, 15%, 22=
+%); --warning-border: #ff8e00; --table-border-color: hsl(226, 23%, 16%); --=
+table-header-bg: hsl(226, 23%, 31%); --table-alternate-bg: hsl(226, 23%, 14=
+%); --searchbar-border-color: #aaa; --searchbar-bg: #aeaec6; --searchbar-fg=
+: #000; --searchbar-shadow-color: #aaa; --searchresults-header-fg: #5f5f71;=
+ --searchresults-border-color: #5c5c68; --searchresults-li-bg: #242430; --s=
+earch-mark-bg: #a2cff5; --color-scheme: dark; }
+
+.rust { --bg: hsl(60, 9%, 87%); --fg: #262625; --sidebar-bg: #3b2e2a; --sid=
+ebar-fg: #c8c9db; --sidebar-non-existant: #505254; --sidebar-active: #e69f6=
+7; --sidebar-spacer: #45373a; --scrollbar: var(--sidebar-fg); --icons: #737=
+480; --icons-hover: #262625; --links: #2b79a2; --inline-code-color: #6e6b5e=
+; --theme-popup-bg: #e1e1db; --theme-popup-border: #b38f6b; --theme-hover: =
+#99908a; --quote-bg: hsl(60, 5%, 75%); --quote-border: hsl(60, 5%, 70%); --=
+warning-border: #ff8e00; --table-border-color: hsl(60, 9%, 82%); --table-he=
+ader-bg: #b3a497; --table-alternate-bg: hsl(60, 9%, 84%); --searchbar-borde=
+r-color: #aaa; --searchbar-bg: #fafafa; --searchbar-fg: #000; --searchbar-s=
+hadow-color: #aaa; --searchresults-header-fg: #666; --searchresults-border-=
+color: #888; --searchresults-li-bg: #dec2a2; --search-mark-bg: #e69f67; --c=
+olor-scheme: light; }
+
+@media (prefers-color-scheme: dark) {
+  .light.no-js { --bg: hsl(200, 7%, 8%); --fg: #98a3ad; --sidebar-bg: #292c=
+2f; --sidebar-fg: #a1adb8; --sidebar-non-existant: #505254; --sidebar-activ=
+e: #3473ad; --sidebar-spacer: #393939; --scrollbar: var(--sidebar-fg); --ic=
+ons: #43484d; --icons-hover: #b3c0cc; --links: #2b79a2; --inline-code-color=
+: #c5c8c6; --theme-popup-bg: #141617; --theme-popup-border: #43484d; --them=
+e-hover: #1f2124; --quote-bg: hsl(234, 21%, 18%); --quote-border: hsl(234, =
+21%, 23%); --warning-border: #ff8e00; --table-border-color: hsl(200, 7%, 13=
+%); --table-header-bg: hsl(200, 7%, 28%); --table-alternate-bg: hsl(200, 7%=
+, 11%); --searchbar-border-color: #aaa; --searchbar-bg: #b7b7b7; --searchba=
+r-fg: #000; --searchbar-shadow-color: #aaa; --searchresults-header-fg: #666=
+; --searchresults-border-color: #98a3ad; --searchresults-li-bg: #2b2b2f; --=
+search-mark-bg: #355c7d; }
+}
+------MultipartBoundary--LhY2CUCsjUE5OBnKBRcLcv0Zt5Ictr66HHBMjf3H3k----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://doc.rust-lang.org/reference/css/general.css
+
+@charset "utf-8";
+
+:root { font-size: 62.5%; color-scheme: var(--color-scheme); }
+
+html { font-family: "Open Sans", sans-serif; color: var(--fg); background-c=
+olor: var(--bg); text-size-adjust: none; }
+
+body { margin: 0px; font-size: 1.6rem; overflow-x: hidden; }
+
+code { font-size: var(--code-font-size); font-family: var(--mono-font) !imp=
+ortant; direction: ltr !important; }
+
+main { overflow-wrap: break-word; }
+
+.table-wrapper { overflow-x: auto; }
+
+h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: unset; }
+
+.left { float: left; }
+
+.right { float: right; }
+
+.boring { opacity: 0.6; }
+
+.hide-boring .boring { display: none; }
+
+.hidden { display: none !important; }
+
+h2, h3 { margin-block-start: 2.5em; }
+
+h4, h5 { margin-block-start: 2em; }
+
+.header + .header h3, .header + .header h4, .header + .header h5 { margin-b=
+lock-start: 1em; }
+
+h1:target::before, h2:target::before, h3:target::before, h4:target::before,=
+ h5:target::before, h6:target::before { display: inline-block; content: "=
+=C2=BB"; margin-inline-start: -30px; width: 30px; }
+
+:target { scroll-margin-top: calc(var(--menu-bar-height) + 0.5em); }
+
+.page { outline: 0px; padding: 0 var(--page-padding); margin-block-start: c=
+alc(0px - var(--menu-bar-height)); }
+
+.page-wrapper { box-sizing: border-box; background-color: var(--bg); }
+
+.no-js .page-wrapper, .js:not(.sidebar-resizing) .page-wrapper { transition=
+: margin-left 0.3s, transform 0.3s; }
+
+[dir=3D"rtl"] .js:not(.sidebar-resizing) .page-wrapper { transition: margin=
+-right 0.3s, transform 0.3s; }
+
+.content { overflow-y: auto; padding: 0px 5px 50px; }
+
+.content main { margin-inline: auto; max-width: var(--content-max-width); }
+
+.content p { line-height: 1.45em; }
+
+.content ol { line-height: 1.45em; }
+
+.content ul { line-height: 1.45em; }
+
+.content a { text-decoration: none; }
+
+.content a:hover { text-decoration: underline; }
+
+.content img, .content video { max-width: 100%; }
+
+.content .header:link, .content .header:visited { color: var(--fg); }
+
+.content .header:link, .content .header:visited:hover { text-decoration: no=
+ne; }
+
+table { margin: 0px auto; border-collapse: collapse; }
+
+table td { padding: 3px 20px; border: 1px var(--table-border-color) solid; =
+}
+
+table thead { background: var(--table-header-bg); }
+
+table thead td { font-weight: 700; border: none; }
+
+table thead th { padding: 3px 20px; }
+
+table thead tr { border: 1px var(--table-header-bg) solid; }
+
+table tbody tr:nth-child(2n) { background: var(--table-alternate-bg); }
+
+blockquote { margin: 20px 0px; padding: 0px 20px; color: var(--fg); backgro=
+und-color: var(--quote-bg); border-block-start: .1em solid var(--quote-bord=
+er); border-block-end: .1em solid var(--quote-border); }
+
+.warning { margin: 20px; padding: 0px 20px; border-inline-start: 2px solid =
+var(--warning-border); }
+
+.warning::before { position: absolute; width: 3rem; height: 3rem; margin-in=
+line-start: calc(-21px - 1.5rem); content: "=E2=93=98"; text-align: center;=
+ background-color: var(--bg); color: var(--warning-border); font-weight: bo=
+ld; font-size: 2rem; }
+
+blockquote .warning::before { background-color: var(--quote-bg); }
+
+kbd { background-color: var(--table-border-color); border-radius: 4px; bord=
+er: solid 1px var(--theme-popup-border); box-shadow: inset 0 -1px 0 var(--t=
+heme-hover); display: inline-block; font-size: var(--code-font-size); font-=
+family: var(--mono-font); line-height: 10px; padding: 4px 5px; vertical-ali=
+gn: middle; }
+
+:not(.footnote-definition) + .footnote-definition, .footnote-definition + :=
+not(.footnote-definition) { margin-block-start: 2em; }
+
+.footnote-definition { font-size: 0.9em; margin: 0.5em 0px; }
+
+.footnote-definition p { display: inline; }
+
+.tooltiptext { position: absolute; visibility: hidden; color: rgb(255, 255,=
+ 255); background-color: rgb(51, 51, 51); transform: translateX(-50%); left=
+: -8px; top: -35px; font-size: 0.8em; text-align: center; border-radius: 6p=
+x; padding: 5px 8px; margin: 5px; z-index: 1000; }
+
+.tooltipped .tooltiptext { visibility: visible; }
+
+.chapter li.part-title { color: var(--sidebar-fg); margin: 5px 0px; font-we=
+ight: bold; }
+
+.result-no-output { font-style: italic; }
+------MultipartBoundary--LhY2CUCsjUE5OBnKBRcLcv0Zt5Ictr66HHBMjf3H3k----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://doc.rust-lang.org/reference/css/chrome.css
+
+@charset "utf-8";
+
+html { scrollbar-color: var(--scrollbar) var(--bg); }
+
+#searchresults a, .content a:link, a:visited, a > .hljs { color: var(--link=
+s); }
+
+#body-container { overflow-x: clip; }
+
+#menu-bar, #menu-bar-hover-placeholder { z-index: 101; margin: auto calc(0p=
+x - var(--page-padding)); }
+
+#menu-bar { position: relative; display: flex; flex-wrap: wrap; background-=
+color: var(--bg); border-block-end-color: var(--bg); border-block-end-width=
+: 1px; border-block-end-style: solid; }
+
+#menu-bar.sticky, .js #menu-bar-hover-placeholder:hover + #menu-bar, .js #m=
+enu-bar:hover, .js.sidebar-visible #menu-bar { position: sticky; top: 0px !=
+important; }
+
+#menu-bar-hover-placeholder { position: sticky; top: 0px; height: var(--men=
+u-bar-height); }
+
+#menu-bar.bordered { border-block-end-color: var(--table-border-color); }
+
+#menu-bar i, #menu-bar .icon-button { position: relative; padding: 0px 8px;=
+ z-index: 10; line-height: var(--menu-bar-height); cursor: pointer; transit=
+ion: color 0.5s; }
+
+@media only screen and (max-width: 420px) {
+  #menu-bar i, #menu-bar .icon-button { padding: 0px 5px; }
+}
+
+.icon-button { border: none; background: none; padding: 0px; color: inherit=
+; }
+
+.icon-button i { margin: 0px; }
+
+.right-buttons { margin: 0px 15px; }
+
+.right-buttons a { text-decoration: none; }
+
+.left-buttons { display: flex; margin: 0px 5px; }
+
+.no-js .left-buttons button { display: none; }
+
+.menu-title { display: inline-block; font-weight: 200; font-size: 2.4rem; l=
+ine-height: var(--menu-bar-height); text-align: center; margin: 0px; flex: =
+1 1 0%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.js .menu-title { cursor: pointer; }
+
+.menu-bar, .menu-bar:visited, .nav-chapters, .nav-chapters:visited, .mobile=
+-nav-chapters, .mobile-nav-chapters:visited, .menu-bar .icon-button, .menu-=
+bar a i { color: var(--icons); }
+
+.menu-bar i:hover, .menu-bar .icon-button:hover, .nav-chapters:hover, .mobi=
+le-nav-chapters i:hover { color: var(--icons-hover); }
+
+.nav-chapters { font-size: 2.5em; text-align: center; text-decoration: none=
+; position: fixed; top: 0px; bottom: 0px; margin: 0px; max-width: 150px; mi=
+n-width: 90px; display: flex; place-content: center; flex-direction: column=
+; transition: color 0.5s, background-color 0.5s; }
+
+.nav-chapters:hover { text-decoration: none; background-color: var(--theme-=
+hover); transition: background-color 0.15s, color 0.15s; }
+
+.nav-wrapper { margin-block-start: 50px; display: none; }
+
+.mobile-nav-chapters { font-size: 2.5em; text-align: center; text-decoratio=
+n: none; width: 90px; border-radius: 5px; background-color: var(--sidebar-b=
+g); }
+
+.previous { float: left; }
+
+[dir=3D"rtl"] .previous { float: right; }
+
+.next { float: right; right: var(--page-padding); }
+
+[dir=3D"rtl"] .next { float: left; right: unset; left: var(--page-padding);=
+ }
+
+[dir=3D"rtl"] .previous i.fa-angle-left::before { content: "=EF=84=85"; }
+
+[dir=3D"rtl"] .next i.fa-angle-right::before { content: "=EF=84=84"; }
+
+@media only screen and (max-width: 1080px) {
+  .nav-wide-wrapper { display: none; }
+  .nav-wrapper { display: block; }
+}
+
+@media only screen and (max-width: 1380px) {
+  #sidebar-toggle-anchor:checked ~ .page-wrapper .nav-wide-wrapper { displa=
+y: none; }
+  #sidebar-toggle-anchor:checked ~ .page-wrapper .nav-wrapper { display: bl=
+ock; }
+}
+
+:not(pre) > .hljs { display: inline; padding: 0.1em 0.3em; border-radius: 3=
+px; }
+
+:not(pre):not(a) > .hljs { color: var(--inline-code-color); overflow-x: ini=
+tial; }
+
+a:hover > .hljs { text-decoration: underline; }
+
+pre { position: relative; }
+
+pre > .buttons { position: absolute; z-index: 100; right: 0px; top: 2px; ma=
+rgin: 0px; padding: 2px 0px; color: var(--sidebar-fg); cursor: pointer; vis=
+ibility: hidden; opacity: 0; transition: visibility 0.1s linear, opacity 0.=
+1s linear; }
+
+pre:hover > .buttons { visibility: visible; opacity: 1; }
+
+pre > .buttons :hover { color: var(--sidebar-active); border-color: var(--i=
+cons-hover); background-color: var(--theme-hover); }
+
+pre > .buttons i { margin-inline-start: 8px; }
+
+pre > .buttons button { cursor: inherit; margin: 0px 5px; padding: 3px 5px;=
+ font-size: 14px; border-style: solid; border-width: 1px; border-radius: 4p=
+x; border-color: var(--icons); background-color: var(--theme-popup-bg); tra=
+nsition: color 100ms, border-color, background-color; color: var(--icons); =
+}
+
+@media (pointer: coarse) {
+  pre > .buttons button { padding: 0.3rem 1rem; }
+  .sidebar-resize-indicator { display: none; }
+}
+
+pre > code { display: block; padding: 1rem; }
+
+.hljs.ace_editor { padding: 0rem; }
+
+pre > .result { margin-block-start: 10px; }
+
+#searchresults a { text-decoration: none; }
+
+mark { border-radius: 2px; padding-block: 0px 1px; padding-inline: 3px; mar=
+gin-block: 0px -1px; margin-inline: -3px; background-color: var(--search-ma=
+rk-bg); transition: background-color 300ms linear; cursor: pointer; }
+
+mark.fade-out { background-color: rgba(0, 0, 0, 0) !important; cursor: auto=
+; }
+
+.searchbar-outer { margin-inline: auto; max-width: var(--content-max-width)=
+; }
+
+#searchbar { width: 100%; margin-block: 5px 0px; margin-inline: auto; paddi=
+ng: 10px 16px; transition: box-shadow 300ms ease-in-out; border: 1px solid =
+var(--searchbar-border-color); border-radius: 3px; background-color: var(--=
+searchbar-bg); color: var(--searchbar-fg); }
+
+#searchbar:focus, #searchbar.active { box-shadow: 0 0 3px var(--searchbar-s=
+hadow-color); }
+
+.searchresults-header { font-weight: bold; font-size: 1em; padding-block: 1=
+8px 0px; padding-inline: 5px 0px; color: var(--searchresults-header-fg); }
+
+.searchresults-outer { margin-inline: auto; max-width: var(--content-max-wi=
+dth); border-block-end: 1px dashed var(--searchresults-border-color); }
+
+ul#searchresults { list-style: none; padding-inline-start: 20px; }
+
+ul#searchresults li { margin: 10px 0px; padding: 2px; border-radius: 2px; }
+
+ul#searchresults li.focus { background-color: var(--searchresults-li-bg); }
+
+ul#searchresults span.teaser { display: block; clear: both; margin-block: 5=
+px 0px; margin-inline: 20px 0px; font-size: 0.8em; }
+
+ul#searchresults span.teaser em { font-weight: bold; font-style: normal; }
+
+.sidebar { position: fixed; left: 0px; top: 0px; bottom: 0px; width: var(--=
+sidebar-width); font-size: 0.875em; box-sizing: border-box; overscroll-beha=
+vior-y: contain; background-color: var(--sidebar-bg); color: var(--sidebar-=
+fg); }
+
+[dir=3D"rtl"] .sidebar { left: unset; right: 0px; }
+
+.sidebar-resizing { user-select: none; }
+
+.no-js .sidebar, .js:not(.sidebar-resizing) .sidebar { transition: transfor=
+m 0.3s; }
+
+.sidebar code { line-height: 2em; }
+
+.sidebar .sidebar-scrollbox { overflow-y: auto; position: absolute; inset: =
+0px; padding: 10px; }
+
+.sidebar .sidebar-resize-handle { position: absolute; cursor: col-resize; w=
+idth: 0px; right: calc(var(--sidebar-resize-indicator-width) * -1); top: 0p=
+x; bottom: 0px; display: flex; align-items: center; }
+
+.sidebar-resize-handle .sidebar-resize-indicator { width: 100%; height: 12p=
+x; background-color: var(--icons); margin-inline-start: var(--sidebar-resiz=
+e-indicator-space); }
+
+[dir=3D"rtl"] .sidebar .sidebar-resize-handle { left: calc(var(--sidebar-re=
+size-indicator-width) * -1); right: unset; }
+
+.js .sidebar .sidebar-resize-handle { cursor: col-resize; width: calc(var(-=
+-sidebar-resize-indicator-width) - var(--sidebar-resize-indicator-space)); =
+}
+
+#sidebar-toggle-anchor:not(:checked) ~ .sidebar { transform: translateX(cal=
+c(0px - var(--sidebar-width) - var(--sidebar-resize-indicator-width))); z-i=
+ndex: -1; }
+
+[dir=3D"rtl"] #sidebar-toggle-anchor:not(:checked) ~ .sidebar { transform: =
+translateX(calc(var(--sidebar-width) + var(--sidebar-resize-indicator-width=
+))); }
+
+.sidebar::-webkit-scrollbar { background: var(--sidebar-bg); }
+
+.sidebar::-webkit-scrollbar-thumb { background: var(--scrollbar); }
+
+#sidebar-toggle-anchor:checked ~ .page-wrapper { transform: translateX(calc=
+(var(--sidebar-width) + var(--sidebar-resize-indicator-width))); }
+
+[dir=3D"rtl"] #sidebar-toggle-anchor:checked ~ .page-wrapper { transform: t=
+ranslateX(calc(0px - var(--sidebar-width) - var(--sidebar-resize-indicator-=
+width))); }
+
+@media only screen and (min-width: 620px) {
+  #sidebar-toggle-anchor:checked ~ .page-wrapper { transform: none; margin-=
+inline-start: calc(var(--sidebar-width) + var(--sidebar-resize-indicator-wi=
+dth)); }
+  [dir=3D"rtl"] #sidebar-toggle-anchor:checked ~ .page-wrapper { transform:=
+ none; }
+}
+
+.chapter { list-style: outside none none; padding-inline-start: 0px; line-h=
+eight: 2.2em; }
+
+.chapter ol { width: 100%; }
+
+.chapter li { display: flex; color: var(--sidebar-non-existant); }
+
+.chapter li a { display: block; padding: 0px; text-decoration: none; color:=
+ var(--sidebar-fg); }
+
+.chapter li a:hover { color: var(--sidebar-active); }
+
+.chapter li a.active { color: var(--sidebar-active); }
+
+.chapter li > a.toggle { cursor: pointer; display: block; margin-inline-sta=
+rt: auto; padding: 0px 10px; user-select: none; opacity: 0.68; }
+
+.chapter li > a.toggle div { transition: transform 0.5s; }
+
+.chapter li:not(.expanded) + li > ol { display: none; }
+
+.chapter li.chapter-item { line-height: 1.5em; margin-block-start: 0.6em; }
+
+.chapter li.expanded > a.toggle div { transform: rotate(90deg); }
+
+.spacer { width: 100%; height: 3px; margin: 5px 0px; }
+
+.chapter .spacer { background-color: var(--sidebar-spacer); }
+
+@media (-moz-touch-enabled: 1), (pointer: coarse) {
+  .chapter li a { padding: 5px 0px; }
+  .spacer { margin: 10px 0px; }
+}
+
+.section { list-style: outside none none; padding-inline-start: 20px; line-=
+height: 1.9em; }
+
+.theme-popup { position: absolute; left: 10px; top: var(--menu-bar-height);=
+ z-index: 1000; border-radius: 4px; font-size: 0.7em; color: var(--fg); bac=
+kground: var(--theme-popup-bg); border: 1px solid var(--theme-popup-border)=
+; margin: 0px; padding: 0px; list-style: none; display: none; overflow: hid=
+den; }
+
+[dir=3D"rtl"] .theme-popup { left: unset; right: 10px; }
+
+.theme-popup .default { color: var(--icons); }
+
+.theme-popup .theme { width: 100%; border: 0px; margin: 0px; padding: 2px 2=
+0px; line-height: 25px; white-space: nowrap; text-align: start; cursor: poi=
+nter; color: inherit; background: inherit; font-size: inherit; }
+
+.theme-popup .theme:hover { background-color: var(--theme-hover); }
+
+.theme-selected::before { display: inline-block; content: "=E2=9C=93"; marg=
+in-inline-start: -14px; width: 14px; }
+------MultipartBoundary--LhY2CUCsjUE5OBnKBRcLcv0Zt5Ictr66HHBMjf3H3k----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://doc.rust-lang.org/reference/css/print.css
+
+@charset "utf-8";
+
+#sidebar, #menu-bar, .nav-chapters, .mobile-nav-chapters { display: none; }
+
+#page-wrapper.page-wrapper { margin-inline-start: 0px; overflow-y: initial;=
+ transform: none !important; }
+
+#content { max-width: none; margin: 0px; padding: 0px; }
+
+.page { overflow-y: initial; }
+
+code { direction: ltr !important; }
+
+pre > .buttons { z-index: 2; }
+
+a, a:visited, a:active, a:hover { color: rgb(65, 131, 196); text-decoration=
+: none; }
+
+h1, h2, h3, h4, h5, h6 { break-inside: avoid; break-after: avoid; }
+
+pre, code { break-inside: avoid; white-space: pre-wrap; }
+
+.fa { display: none !important; }
+------MultipartBoundary--LhY2CUCsjUE5OBnKBRcLcv0Zt5Ictr66HHBMjf3H3k----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://doc.rust-lang.org/reference/FontAwesome/css/font-awesome.css
+
+@charset "utf-8";
+
+@font-face { font-family: FontAwesome; src: url("../fonts/fontawesome-webfo=
+nt.woff2?v=3D4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.wof=
+f?v=3D4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=3D4.7=
+.0") format("truetype"); font-weight: normal; font-style: normal; }
+
+.fa { display: inline-block; font-style: normal; font-variant: normal; font=
+-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; font-fea=
+ture-settings: normal; font-variation-settings: normal; font-weight: normal=
+; font-stretch: normal; line-height: 1; font-family: FontAwesome; font-size=
+: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; }
+
+.fa-lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -15%; }
+
+.fa-2x { font-size: 2em; }
+
+.fa-3x { font-size: 3em; }
+
+.fa-4x { font-size: 4em; }
+
+.fa-5x { font-size: 5em; }
+
+.fa-fw { width: 1.28571em; text-align: center; }
+
+.fa-ul { padding-left: 0px; margin-left: 2.14286em; list-style-type: none; =
+}
+
+.fa-ul > li { position: relative; }
+
+.fa-li { position: absolute; left: -2.14286em; width: 2.14286em; top: 0.142=
+857em; text-align: center; }
+
+.fa-li.fa-lg { left: -1.85714em; }
+
+.fa-border { padding: 0.2em 0.25em 0.15em; border: 0.08em solid rgb(238, 23=
+8, 238); border-radius: 0.1em; }
+
+.fa-pull-left { float: left; }
+
+.fa-pull-right { float: right; }
+
+.fa.fa-pull-left { margin-right: 0.3em; }
+
+.fa.fa-pull-right { margin-left: 0.3em; }
+
+.pull-right { float: right; }
+
+.pull-left { float: left; }
+
+.fa.pull-left { margin-right: 0.3em; }
+
+.fa.pull-right { margin-left: 0.3em; }
+
+.fa-spin { animation: 2s linear 0s infinite normal none running fa-spin; }
+
+.fa-pulse { animation: 1s steps(8) 0s infinite normal none running fa-spin;=
+ }
+
+@-webkit-keyframes fa-spin {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+@keyframes fa-spin {=20
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+.fa-rotate-90 { transform: rotate(90deg); }
+
+.fa-rotate-180 { transform: rotate(180deg); }
+
+.fa-rotate-270 { transform: rotate(270deg); }
+
+.fa-flip-horizontal { transform: scale(-1, 1); }
+
+.fa-flip-vertical { transform: scale(1, -1); }
+
+:root .fa-rotate-90, :root .fa-rotate-180, :root .fa-rotate-270, :root .fa-=
+flip-horizontal, :root .fa-flip-vertical { filter: none; }
+
+.fa-stack { position: relative; display: inline-block; width: 2em; height: =
+2em; line-height: 2em; vertical-align: middle; }
+
+.fa-stack-1x, .fa-stack-2x { position: absolute; left: 0px; width: 100%; te=
+xt-align: center; }
+
+.fa-stack-1x { line-height: inherit; }
+
+.fa-stack-2x { font-size: 2em; }
+
+.fa-inverse { color: rgb(255, 255, 255); }
+
+.fa-glass::before { content: "=EF=80=80"; }
+
+.fa-music::before { content: "=EF=80=81"; }
+
+.fa-search::before { content: "=EF=80=82"; }
+
+.fa-envelope-o::before { content: "=EF=80=83"; }
+
+.fa-heart::before { content: "=EF=80=84"; }
+
+.fa-star::before { content: "=EF=80=85"; }
+
+.fa-star-o::before { content: "=EF=80=86"; }
+
+.fa-user::before { content: "=EF=80=87"; }
+
+.fa-film::before { content: "=EF=80=88"; }
+
+.fa-th-large::before { content: "=EF=80=89"; }
+
+.fa-th::before { content: "=EF=80=8A"; }
+
+.fa-th-list::before { content: "=EF=80=8B"; }
+
+.fa-check::before { content: "=EF=80=8C"; }
+
+.fa-remove::before, .fa-close::before, .fa-times::before { content: "=EF=80=
+=8D"; }
+
+.fa-search-plus::before { content: "=EF=80=8E"; }
+
+.fa-search-minus::before { content: "=EF=80=90"; }
+
+.fa-power-off::before { content: "=EF=80=91"; }
+
+.fa-signal::before { content: "=EF=80=92"; }
+
+.fa-gear::before, .fa-cog::before { content: "=EF=80=93"; }
+
+.fa-trash-o::before { content: "=EF=80=94"; }
+
+.fa-home::before { content: "=EF=80=95"; }
+
+.fa-file-o::before { content: "=EF=80=96"; }
+
+.fa-clock-o::before { content: "=EF=80=97"; }
+
+.fa-road::before { content: "=EF=80=98"; }
+
+.fa-download::before { content: "=EF=80=99"; }
+
+.fa-arrow-circle-o-down::before { content: "=EF=80=9A"; }
+
+.fa-arrow-circle-o-up::before { content: "=EF=80=9B"; }
+
+.fa-inbox::before { content: "=EF=80=9C"; }
+
+.fa-play-circle-o::before { content: "=EF=80=9D"; }
+
+.fa-rotate-right::before, .fa-repeat::before { content: "=EF=80=9E"; }
+
+.fa-refresh::before { content: "=EF=80=A1"; }
+
+.fa-list-alt::before { content: "=EF=80=A2"; }
+
+.fa-lock::before { content: "=EF=80=A3"; }
+
+.fa-flag::before { content: "=EF=80=A4"; }
+
+.fa-headphones::before { content: "=EF=80=A5"; }
+
+.fa-volume-off::before { content: "=EF=80=A6"; }
+
+.fa-volume-down::before { content: "=EF=80=A7"; }
+
+.fa-volume-up::before { content: "=EF=80=A8"; }
+
+.fa-qrcode::before { content: "=EF=80=A9"; }
+
+.fa-barcode::before { content: "=EF=80=AA"; }
+
+.fa-tag::before { content: "=EF=80=AB"; }
+
+.fa-tags::before { content: "=EF=80=AC"; }
+
+.fa-book::before { content: "=EF=80=AD"; }
+
+.fa-bookmark::before { content: "=EF=80=AE"; }
+
+.fa-print::before { content: "=EF=80=AF"; }
+
+.fa-camera::before { content: "=EF=80=B0"; }
+
+.fa-font::before { content: "=EF=80=B1"; }
+
+.fa-bold::before { content: "=EF=80=B2"; }
+
+.fa-italic::before { content: "=EF=80=B3"; }
+
+.fa-text-height::before { content: "=EF=80=B4"; }
+
+.fa-text-width::before { content: "=EF=80=B5"; }
+
+.fa-align-left::before { content: "=EF=80=B6"; }
+
+.fa-align-center::before { content: "=EF=80=B7"; }
+
+.fa-align-right::before { content: "=EF=80=B8"; }
+
+.fa-align-justify::before { content: "=EF=80=B9"; }
+
+.fa-list::before { content: "=EF=80=BA"; }
+
+.fa-dedent::before, .fa-outdent::before { content: "=EF=80=BB"; }
+
+.fa-indent::before { content: "=EF=80=BC"; }
+
+.fa-video-camera::before { content: "=EF=80=BD"; }
+
+.fa-photo::before, .fa-image::before, .fa-picture-o::before { content: "=EF=
+=80=BE"; }
+
+.fa-pencil::before { content: "=EF=81=80"; }
+
+.fa-map-marker::before { content: "=EF=81=81"; }
+
+.fa-adjust::before { content: "=EF=81=82"; }
+
+.fa-tint::before { content: "=EF=81=83"; }
+
+.fa-edit::before, .fa-pencil-square-o::before { content: "=EF=81=84"; }
+
+.fa-share-square-o::before { content: "=EF=81=85"; }
+
+.fa-check-square-o::before { content: "=EF=81=86"; }
+
+.fa-arrows::before { content: "=EF=81=87"; }
+
+.fa-step-backward::before { content: "=EF=81=88"; }
+
+.fa-fast-backward::before { content: "=EF=81=89"; }
+
+.fa-backward::before { content: "=EF=81=8A"; }
+
+.fa-play::before { content: "=EF=81=8B"; }
+
+.fa-pause::before { content: "=EF=81=8C"; }
+
+.fa-stop::before { content: "=EF=81=8D"; }
+
+.fa-forward::before { content: "=EF=81=8E"; }
+
+.fa-fast-forward::before { content: "=EF=81=90"; }
+
+.fa-step-forward::before { content: "=EF=81=91"; }
+
+.fa-eject::before { content: "=EF=81=92"; }
+
+.fa-chevron-left::before { content: "=EF=81=93"; }
+
+.fa-chevron-right::before { content: "=EF=81=94"; }
+
+.fa-plus-circle::before { content: "=EF=81=95"; }
+
+.fa-minus-circle::before { content: "=EF=81=96"; }
+
+.fa-times-circle::before { content: "=EF=81=97"; }
+
+.fa-check-circle::before { content: "=EF=81=98"; }
+
+.fa-question-circle::before { content: "=EF=81=99"; }
+
+.fa-info-circle::before { content: "=EF=81=9A"; }
+
+.fa-crosshairs::before { content: "=EF=81=9B"; }
+
+.fa-times-circle-o::before { content: "=EF=81=9C"; }
+
+.fa-check-circle-o::before { content: "=EF=81=9D"; }
+
+.fa-ban::before { content: "=EF=81=9E"; }
+
+.fa-arrow-left::before { content: "=EF=81=A0"; }
+
+.fa-arrow-right::before { content: "=EF=81=A1"; }
+
+.fa-arrow-up::before { content: "=EF=81=A2"; }
+
+.fa-arrow-down::before { content: "=EF=81=A3"; }
+
+.fa-mail-forward::before, .fa-share::before { content: "=EF=81=A4"; }
+
+.fa-expand::before { content: "=EF=81=A5"; }
+
+.fa-compress::before { content: "=EF=81=A6"; }
+
+.fa-plus::before { content: "=EF=81=A7"; }
+
+.fa-minus::before { content: "=EF=81=A8"; }
+
+.fa-asterisk::before { content: "=EF=81=A9"; }
+
+.fa-exclamation-circle::before { content: "=EF=81=AA"; }
+
+.fa-gift::before { content: "=EF=81=AB"; }
+
+.fa-leaf::before { content: "=EF=81=AC"; }
+
+.fa-fire::before { content: "=EF=81=AD"; }
+
+.fa-eye::before { content: "=EF=81=AE"; }
+
+.fa-eye-slash::before { content: "=EF=81=B0"; }
+
+.fa-warning::before, .fa-exclamation-triangle::before { content: "=EF=81=B1=
+"; }
+
+.fa-plane::before { content: "=EF=81=B2"; }
+
+.fa-calendar::before { content: "=EF=81=B3"; }
+
+.fa-random::before { content: "=EF=81=B4"; }
+
+.fa-comment::before { content: "=EF=81=B5"; }
+
+.fa-magnet::before { content: "=EF=81=B6"; }
+
+.fa-chevron-up::before { content: "=EF=81=B7"; }
+
+.fa-chevron-down::before { content: "=EF=81=B8"; }
+
+.fa-retweet::before { content: "=EF=81=B9"; }
+
+.fa-shopping-cart::before { content: "=EF=81=BA"; }
+
+.fa-folder::before { content: "=EF=81=BB"; }
+
+.fa-folder-open::before { content: "=EF=81=BC"; }
+
+.fa-arrows-v::before { content: "=EF=81=BD"; }
+
+.fa-arrows-h::before { content: "=EF=81=BE"; }
+
+.fa-bar-chart-o::before, .fa-bar-chart::before { content: "=EF=82=80"; }
+
+.fa-twitter-square::before { content: "=EF=82=81"; }
+
+.fa-facebook-square::before { content: "=EF=82=82"; }
+
+.fa-camera-retro::before { content: "=EF=82=83"; }
+
+.fa-key::before { content: "=EF=82=84"; }
+
+.fa-gears::before, .fa-cogs::before { content: "=EF=82=85"; }
+
+.fa-comments::before { content: "=EF=82=86"; }
+
+.fa-thumbs-o-up::before { content: "=EF=82=87"; }
+
+.fa-thumbs-o-down::before { content: "=EF=82=88"; }
+
+.fa-star-half::before { content: "=EF=82=89"; }
+
+.fa-heart-o::before { content: "=EF=82=8A"; }
+
+.fa-sign-out::before { content: "=EF=82=8B"; }
+
+.fa-linkedin-square::before { content: "=EF=82=8C"; }
+
+.fa-thumb-tack::before { content: "=EF=82=8D"; }
+
+.fa-external-link::before { content: "=EF=82=8E"; }
+
+.fa-sign-in::before { content: "=EF=82=90"; }
+
+.fa-trophy::before { content: "=EF=82=91"; }
+
+.fa-github-square::before { content: "=EF=82=92"; }
+
+.fa-upload::before { content: "=EF=82=93"; }
+
+.fa-lemon-o::before { content: "=EF=82=94"; }
+
+.fa-phone::before { content: "=EF=82=95"; }
+
+.fa-square-o::before { content: "=EF=82=96"; }
+
+.fa-bookmark-o::before { content: "=EF=82=97"; }
+
+.fa-phone-square::before { content: "=EF=82=98"; }
+
+.fa-twitter::before { content: "=EF=82=99"; }
+
+.fa-facebook-f::before, .fa-facebook::before { content: "=EF=82=9A"; }
+
+.fa-github::before { content: "=EF=82=9B"; }
+
+.fa-unlock::before { content: "=EF=82=9C"; }
+
+.fa-credit-card::before { content: "=EF=82=9D"; }
+
+.fa-feed::before, .fa-rss::before { content: "=EF=82=9E"; }
+
+.fa-hdd-o::before { content: "=EF=82=A0"; }
+
+.fa-bullhorn::before { content: "=EF=82=A1"; }
+
+.fa-bell::before { content: "=EF=83=B3"; }
+
+.fa-certificate::before { content: "=EF=82=A3"; }
+
+.fa-hand-o-right::before { content: "=EF=82=A4"; }
+
+.fa-hand-o-left::before { content: "=EF=82=A5"; }
+
+.fa-hand-o-up::before { content: "=EF=82=A6"; }
+
+.fa-hand-o-down::before { content: "=EF=82=A7"; }
+
+.fa-arrow-circle-left::before { content: "=EF=82=A8"; }
+
+.fa-arrow-circle-right::before { content: "=EF=82=A9"; }
+
+.fa-arrow-circle-up::before { content: "=EF=82=AA"; }
+
+.fa-arrow-circle-down::before { content: "=EF=82=AB"; }
+
+.fa-globe::before { content: "=EF=82=AC"; }
+
+.fa-wrench::before { content: "=EF=82=AD"; }
+
+.fa-tasks::before { content: "=EF=82=AE"; }
+
+.fa-filter::before { content: "=EF=82=B0"; }
+
+.fa-briefcase::before { content: "=EF=82=B1"; }
+
+.fa-arrows-alt::before { content: "=EF=82=B2"; }
+
+.fa-group::before, .fa-users::before { content: "=EF=83=80"; }
+
+.fa-chain::before, .fa-link::before { content: "=EF=83=81"; }
+
+.fa-cloud::before { content: "=EF=83=82"; }
+
+.fa-flask::before { content: "=EF=83=83"; }
+
+.fa-cut::before, .fa-scissors::before { content: "=EF=83=84"; }
+
+.fa-copy::before, .fa-files-o::before { content: "=EF=83=85"; }
+
+.fa-paperclip::before { content: "=EF=83=86"; }
+
+.fa-save::before, .fa-floppy-o::before { content: "=EF=83=87"; }
+
+.fa-square::before { content: "=EF=83=88"; }
+
+.fa-navicon::before, .fa-reorder::before, .fa-bars::before { content: "=EF=
+=83=89"; }
+
+.fa-list-ul::before { content: "=EF=83=8A"; }
+
+.fa-list-ol::before { content: "=EF=83=8B"; }
+
+.fa-strikethrough::before { content: "=EF=83=8C"; }
+
+.fa-underline::before { content: "=EF=83=8D"; }
+
+.fa-table::before { content: "=EF=83=8E"; }
+
+.fa-magic::before { content: "=EF=83=90"; }
+
+.fa-truck::before { content: "=EF=83=91"; }
+
+.fa-pinterest::before { content: "=EF=83=92"; }
+
+.fa-pinterest-square::before { content: "=EF=83=93"; }
+
+.fa-google-plus-square::before { content: "=EF=83=94"; }
+
+.fa-google-plus::before { content: "=EF=83=95"; }
+
+.fa-money::before { content: "=EF=83=96"; }
+
+.fa-caret-down::before { content: "=EF=83=97"; }
+
+.fa-caret-up::before { content: "=EF=83=98"; }
+
+.fa-caret-left::before { content: "=EF=83=99"; }
+
+.fa-caret-right::before { content: "=EF=83=9A"; }
+
+.fa-columns::before { content: "=EF=83=9B"; }
+
+.fa-unsorted::before, .fa-sort::before { content: "=EF=83=9C"; }
+
+.fa-sort-down::before, .fa-sort-desc::before { content: "=EF=83=9D"; }
+
+.fa-sort-up::before, .fa-sort-asc::before { content: "=EF=83=9E"; }
+
+.fa-envelope::before { content: "=EF=83=A0"; }
+
+.fa-linkedin::before { content: "=EF=83=A1"; }
+
+.fa-rotate-left::before, .fa-undo::before { content: "=EF=83=A2"; }
+
+.fa-legal::before, .fa-gavel::before { content: "=EF=83=A3"; }
+
+.fa-dashboard::before, .fa-tachometer::before { content: "=EF=83=A4"; }
+
+.fa-comment-o::before { content: "=EF=83=A5"; }
+
+.fa-comments-o::before { content: "=EF=83=A6"; }
+
+.fa-flash::before, .fa-bolt::before { content: "=EF=83=A7"; }
+
+.fa-sitemap::before { content: "=EF=83=A8"; }
+
+.fa-umbrella::before { content: "=EF=83=A9"; }
+
+.fa-paste::before, .fa-clipboard::before { content: "=EF=83=AA"; }
+
+.fa-lightbulb-o::before { content: "=EF=83=AB"; }
+
+.fa-exchange::before { content: "=EF=83=AC"; }
+
+.fa-cloud-download::before { content: "=EF=83=AD"; }
+
+.fa-cloud-upload::before { content: "=EF=83=AE"; }
+
+.fa-user-md::before { content: "=EF=83=B0"; }
+
+.fa-stethoscope::before { content: "=EF=83=B1"; }
+
+.fa-suitcase::before { content: "=EF=83=B2"; }
+
+.fa-bell-o::before { content: "=EF=82=A2"; }
+
+.fa-coffee::before { content: "=EF=83=B4"; }
+
+.fa-cutlery::before { content: "=EF=83=B5"; }
+
+.fa-file-text-o::before { content: "=EF=83=B6"; }
+
+.fa-building-o::before { content: "=EF=83=B7"; }
+
+.fa-hospital-o::before { content: "=EF=83=B8"; }
+
+.fa-ambulance::before { content: "=EF=83=B9"; }
+
+.fa-medkit::before { content: "=EF=83=BA"; }
+
+.fa-fighter-jet::before { content: "=EF=83=BB"; }
+
+.fa-beer::before { content: "=EF=83=BC"; }
+
+.fa-h-square::before { content: "=EF=83=BD"; }
+
+.fa-plus-square::before { content: "=EF=83=BE"; }
+
+.fa-angle-double-left::before { content: "=EF=84=80"; }
+
+.fa-angle-double-right::before { content: "=EF=84=81"; }
+
+.fa-angle-double-up::before { content: "=EF=84=82"; }
+
+.fa-angle-double-down::before { content: "=EF=84=83"; }
+
+.fa-angle-left::before { content: "=EF=84=84"; }
+
+.fa-angle-right::before { content: "=EF=84=85"; }
+
+.fa-angle-up::before { content: "=EF=84=86"; }
+
+.fa-angle-down::before { content: "=EF=84=87"; }
+
+.fa-desktop::before { content: "=EF=84=88"; }
+
+.fa-laptop::before { content: "=EF=84=89"; }
+
+.fa-tablet::before { content: "=EF=84=8A"; }
+
+.fa-mobile-phone::before, .fa-mobile::before { content: "=EF=84=8B"; }
+
+.fa-circle-o::before { content: "=EF=84=8C"; }
+
+.fa-quote-left::before { content: "=EF=84=8D"; }
+
+.fa-quote-right::before { content: "=EF=84=8E"; }
+
+.fa-spinner::before { content: "=EF=84=90"; }
+
+.fa-circle::before { content: "=EF=84=91"; }
+
+.fa-mail-reply::before, .fa-reply::before { content: "=EF=84=92"; }
+
+.fa-github-alt::before { content: "=EF=84=93"; }
+
+.fa-folder-o::before { content: "=EF=84=94"; }
+
+.fa-folder-open-o::before { content: "=EF=84=95"; }
+
+.fa-smile-o::before { content: "=EF=84=98"; }
+
+.fa-frown-o::before { content: "=EF=84=99"; }
+
+.fa-meh-o::before { content: "=EF=84=9A"; }
+
+.fa-gamepad::before { content: "=EF=84=9B"; }
+
+.fa-keyboard-o::before { content: "=EF=84=9C"; }
+
+.fa-flag-o::before { content: "=EF=84=9D"; }
+
+.fa-flag-checkered::before { content: "=EF=84=9E"; }
+
+.fa-terminal::before { content: "=EF=84=A0"; }
+
+.fa-code::before { content: "=EF=84=A1"; }
+
+.fa-mail-reply-all::before, .fa-reply-all::before { content: "=EF=84=A2"; }
+
+.fa-star-half-empty::before, .fa-star-half-full::before, .fa-star-half-o::b=
+efore { content: "=EF=84=A3"; }
+
+.fa-location-arrow::before { content: "=EF=84=A4"; }
+
+.fa-crop::before { content: "=EF=84=A5"; }
+
+.fa-code-fork::before { content: "=EF=84=A6"; }
+
+.fa-unlink::before, .fa-chain-broken::before { content: "=EF=84=A7"; }
+
+.fa-question::before { content: "=EF=84=A8"; }
+
+.fa-info::before { content: "=EF=84=A9"; }
+
+.fa-exclamation::before { content: "=EF=84=AA"; }
+
+.fa-superscript::before { content: "=EF=84=AB"; }
+
+.fa-subscript::before { content: "=EF=84=AC"; }
+
+.fa-eraser::before { content: "=EF=84=AD"; }
+
+.fa-puzzle-piece::before { content: "=EF=84=AE"; }
+
+.fa-microphone::before { content: "=EF=84=B0"; }
+
+.fa-microphone-slash::before { content: "=EF=84=B1"; }
+
+.fa-shield::before { content: "=EF=84=B2"; }
+
+.fa-calendar-o::before { content: "=EF=84=B3"; }
+
+.fa-fire-extinguisher::before { content: "=EF=84=B4"; }
+
+.fa-rocket::before { content: "=EF=84=B5"; }
+
+.fa-maxcdn::before { content: "=EF=84=B6"; }
+
+.fa-chevron-circle-left::before { content: "=EF=84=B7"; }
+
+.fa-chevron-circle-right::before { content: "=EF=84=B8"; }
+
+.fa-chevron-circle-up::before { content: "=EF=84=B9"; }
+
+.fa-chevron-circle-down::before { content: "=EF=84=BA"; }
+
+.fa-html5::before { content: "=EF=84=BB"; }
+
+.fa-css3::before { content: "=EF=84=BC"; }
+
+.fa-anchor::before { content: "=EF=84=BD"; }
+
+.fa-unlock-alt::before { content: "=EF=84=BE"; }
+
+.fa-bullseye::before { content: "=EF=85=80"; }
+
+.fa-ellipsis-h::before { content: "=EF=85=81"; }
+
+.fa-ellipsis-v::before { content: "=EF=85=82"; }
+
+.fa-rss-square::before { content: "=EF=85=83"; }
+
+.fa-play-circle::before { content: "=EF=85=84"; }
+
+.fa-ticket::before { content: "=EF=85=85"; }
+
+.fa-minus-square::before { content: "=EF=85=86"; }
+
+.fa-minus-square-o::before { content: "=EF=85=87"; }
+
+.fa-level-up::before { content: "=EF=85=88"; }
+
+.fa-level-down::before { content: "=EF=85=89"; }
+
+.fa-check-square::before { content: "=EF=85=8A"; }
+
+.fa-pencil-square::before { content: "=EF=85=8B"; }
+
+.fa-external-link-square::before { content: "=EF=85=8C"; }
+
+.fa-share-square::before { content: "=EF=85=8D"; }
+
+.fa-compass::before { content: "=EF=85=8E"; }
+
+.fa-toggle-down::before, .fa-caret-square-o-down::before { content: "=EF=85=
+=90"; }
+
+.fa-toggle-up::before, .fa-caret-square-o-up::before { content: "=EF=85=91"=
+; }
+
+.fa-toggle-right::before, .fa-caret-square-o-right::before { content: "=EF=
+=85=92"; }
+
+.fa-euro::before, .fa-eur::before { content: "=EF=85=93"; }
+
+.fa-gbp::before { content: "=EF=85=94"; }
+
+.fa-dollar::before, .fa-usd::before { content: "=EF=85=95"; }
+
+.fa-rupee::before, .fa-inr::before { content: "=EF=85=96"; }
+
+.fa-cny::before, .fa-rmb::before, .fa-yen::before, .fa-jpy::before { conten=
+t: "=EF=85=97"; }
+
+.fa-ruble::before, .fa-rouble::before, .fa-rub::before { content: "=EF=85=
+=98"; }
+
+.fa-won::before, .fa-krw::before { content: "=EF=85=99"; }
+
+.fa-bitcoin::before, .fa-btc::before { content: "=EF=85=9A"; }
+
+.fa-file::before { content: "=EF=85=9B"; }
+
+.fa-file-text::before { content: "=EF=85=9C"; }
+
+.fa-sort-alpha-asc::before { content: "=EF=85=9D"; }
+
+.fa-sort-alpha-desc::before { content: "=EF=85=9E"; }
+
+.fa-sort-amount-asc::before { content: "=EF=85=A0"; }
+
+.fa-sort-amount-desc::before { content: "=EF=85=A1"; }
+
+.fa-sort-numeric-asc::before { content: "=EF=85=A2"; }
+
+.fa-sort-numeric-desc::before { content: "=EF=85=A3"; }
+
+.fa-thumbs-up::before { content: "=EF=85=A4"; }
+
+.fa-thumbs-down::before { content: "=EF=85=A5"; }
+
+.fa-youtube-square::before { content: "=EF=85=A6"; }
+
+.fa-youtube::before { content: "=EF=85=A7"; }
+
+.fa-xing::before { content: "=EF=85=A8"; }
+
+.fa-xing-square::before { content: "=EF=85=A9"; }
+
+.fa-youtube-play::before { content: "=EF=85=AA"; }
+
+.fa-dropbox::before { content: "=EF=85=AB"; }
+
+.fa-stack-overflow::before { content: "=EF=85=AC"; }
+
+.fa-instagram::before { content: "=EF=85=AD"; }
+
+.fa-flickr::before { content: "=EF=85=AE"; }
+
+.fa-adn::before { content: "=EF=85=B0"; }
+
+.fa-bitbucket::before { content: "=EF=85=B1"; }
+
+.fa-bitbucket-square::before { content: "=EF=85=B2"; }
+
+.fa-tumblr::before { content: "=EF=85=B3"; }
+
+.fa-tumblr-square::before { content: "=EF=85=B4"; }
+
+.fa-long-arrow-down::before { content: "=EF=85=B5"; }
+
+.fa-long-arrow-up::before { content: "=EF=85=B6"; }
+
+.fa-long-arrow-left::before { content: "=EF=85=B7"; }
+
+.fa-long-arrow-right::before { content: "=EF=85=B8"; }
+
+.fa-apple::before { content: "=EF=85=B9"; }
+
+.fa-windows::before { content: "=EF=85=BA"; }
+
+.fa-android::before { content: "=EF=85=BB"; }
+
+.fa-linux::before { content: "=EF=85=BC"; }
+
+.fa-dribbble::before { content: "=EF=85=BD"; }
+
+.fa-skype::before { content: "=EF=85=BE"; }
+
+.fa-foursquare::before { content: "=EF=86=80"; }
+
+.fa-trello::before { content: "=EF=86=81"; }
+
+.fa-female::before { content: "=EF=86=82"; }
+
+.fa-male::before { content: "=EF=86=83"; }
+
+.fa-gittip::before, .fa-gratipay::before { content: "=EF=86=84"; }
+
+.fa-sun-o::before { content: "=EF=86=85"; }
+
+.fa-moon-o::before { content: "=EF=86=86"; }
+
+.fa-archive::before { content: "=EF=86=87"; }
+
+.fa-bug::before { content: "=EF=86=88"; }
+
+.fa-vk::before { content: "=EF=86=89"; }
+
+.fa-weibo::before { content: "=EF=86=8A"; }
+
+.fa-renren::before { content: "=EF=86=8B"; }
+
+.fa-pagelines::before { content: "=EF=86=8C"; }
+
+.fa-stack-exchange::before { content: "=EF=86=8D"; }
+
+.fa-arrow-circle-o-right::before { content: "=EF=86=8E"; }
+
+.fa-arrow-circle-o-left::before { content: "=EF=86=90"; }
+
+.fa-toggle-left::before, .fa-caret-square-o-left::before { content: "=EF=86=
+=91"; }
+
+.fa-dot-circle-o::before { content: "=EF=86=92"; }
+
+.fa-wheelchair::before { content: "=EF=86=93"; }
+
+.fa-vimeo-square::before { content: "=EF=86=94"; }
+
+.fa-turkish-lira::before, .fa-try::before { content: "=EF=86=95"; }
+
+.fa-plus-square-o::before { content: "=EF=86=96"; }
+
+.fa-space-shuttle::before { content: "=EF=86=97"; }
+
+.fa-slack::before { content: "=EF=86=98"; }
+
+.fa-envelope-square::before { content: "=EF=86=99"; }
+
+.fa-wordpress::before { content: "=EF=86=9A"; }
+
+.fa-openid::before { content: "=EF=86=9B"; }
+
+.fa-institution::before, .fa-bank::before, .fa-university::before { content=
+: "=EF=86=9C"; }
+
+.fa-mortar-board::before, .fa-graduation-cap::before { content: "=EF=86=9D"=
+; }
+
+.fa-yahoo::before { content: "=EF=86=9E"; }
+
+.fa-google::before { content: "=EF=86=A0"; }
+
+.fa-reddit::before { content: "=EF=86=A1"; }
+
+.fa-reddit-square::before { content: "=EF=86=A2"; }
+
+.fa-stumbleupon-circle::before { content: "=EF=86=A3"; }
+
+.fa-stumbleupon::before { content: "=EF=86=A4"; }
+
+.fa-delicious::before { content: "=EF=86=A5"; }
+
+.fa-digg::before { content: "=EF=86=A6"; }
+
+.fa-pied-piper-pp::before { content: "=EF=86=A7"; }
+
+.fa-pied-piper-alt::before { content: "=EF=86=A8"; }
+
+.fa-drupal::before { content: "=EF=86=A9"; }
+
+.fa-joomla::before { content: "=EF=86=AA"; }
+
+.fa-language::before { content: "=EF=86=AB"; }
+
+.fa-fax::before { content: "=EF=86=AC"; }
+
+.fa-building::before { content: "=EF=86=AD"; }
+
+.fa-child::before { content: "=EF=86=AE"; }
+
+.fa-paw::before { content: "=EF=86=B0"; }
+
+.fa-spoon::before { content: "=EF=86=B1"; }
+
+.fa-cube::before { content: "=EF=86=B2"; }
+
+.fa-cubes::before { content: "=EF=86=B3"; }
+
+.fa-behance::before { content: "=EF=86=B4"; }
+
+.fa-behance-square::before { content: "=EF=86=B5"; }
+
+.fa-steam::before { content: "=EF=86=B6"; }
+
+.fa-steam-square::before { content: "=EF=86=B7"; }
+
+.fa-recycle::before { content: "=EF=86=B8"; }
+
+.fa-automobile::before, .fa-car::before { content: "=EF=86=B9"; }
+
+.fa-cab::before, .fa-taxi::before { content: "=EF=86=BA"; }
+
+.fa-tree::before { content: "=EF=86=BB"; }
+
+.fa-spotify::before { content: "=EF=86=BC"; }
+
+.fa-deviantart::before { content: "=EF=86=BD"; }
+
+.fa-soundcloud::before { content: "=EF=86=BE"; }
+
+.fa-database::before { content: "=EF=87=80"; }
+
+.fa-file-pdf-o::before { content: "=EF=87=81"; }
+
+.fa-file-word-o::before { content: "=EF=87=82"; }
+
+.fa-file-excel-o::before { content: "=EF=87=83"; }
+
+.fa-file-powerpoint-o::before { content: "=EF=87=84"; }
+
+.fa-file-photo-o::before, .fa-file-picture-o::before, .fa-file-image-o::bef=
+ore { content: "=EF=87=85"; }
+
+.fa-file-zip-o::before, .fa-file-archive-o::before { content: "=EF=87=86"; =
+}
+
+.fa-file-sound-o::before, .fa-file-audio-o::before { content: "=EF=87=87"; =
+}
+
+.fa-file-movie-o::before, .fa-file-video-o::before { content: "=EF=87=88"; =
+}
+
+.fa-file-code-o::before { content: "=EF=87=89"; }
+
+.fa-vine::before { content: "=EF=87=8A"; }
+
+.fa-codepen::before { content: "=EF=87=8B"; }
+
+.fa-jsfiddle::before { content: "=EF=87=8C"; }
+
+.fa-life-bouy::before, .fa-life-buoy::before, .fa-life-saver::before, .fa-s=
+upport::before, .fa-life-ring::before { content: "=EF=87=8D"; }
+
+.fa-circle-o-notch::before { content: "=EF=87=8E"; }
+
+.fa-ra::before, .fa-resistance::before, .fa-rebel::before { content: "=EF=
+=87=90"; }
+
+.fa-ge::before, .fa-empire::before { content: "=EF=87=91"; }
+
+.fa-git-square::before { content: "=EF=87=92"; }
+
+.fa-git::before { content: "=EF=87=93"; }
+
+.fa-y-combinator-square::before, .fa-yc-square::before, .fa-hacker-news::be=
+fore { content: "=EF=87=94"; }
+
+.fa-tencent-weibo::before { content: "=EF=87=95"; }
+
+.fa-qq::before { content: "=EF=87=96"; }
+
+.fa-wechat::before, .fa-weixin::before { content: "=EF=87=97"; }
+
+.fa-send::before, .fa-paper-plane::before { content: "=EF=87=98"; }
+
+.fa-send-o::before, .fa-paper-plane-o::before { content: "=EF=87=99"; }
+
+.fa-history::before { content: "=EF=87=9A"; }
+
+.fa-circle-thin::before { content: "=EF=87=9B"; }
+
+.fa-header::before { content: "=EF=87=9C"; }
+
+.fa-paragraph::before { content: "=EF=87=9D"; }
+
+.fa-sliders::before { content: "=EF=87=9E"; }
+
+.fa-share-alt::before { content: "=EF=87=A0"; }
+
+.fa-share-alt-square::before { content: "=EF=87=A1"; }
+
+.fa-bomb::before { content: "=EF=87=A2"; }
+
+.fa-soccer-ball-o::before, .fa-futbol-o::before { content: "=EF=87=A3"; }
+
+.fa-tty::before { content: "=EF=87=A4"; }
+
+.fa-binoculars::before { content: "=EF=87=A5"; }
+
+.fa-plug::before { content: "=EF=87=A6"; }
+
+.fa-slideshare::before { content: "=EF=87=A7"; }
+
+.fa-twitch::before { content: "=EF=87=A8"; }
+
+.fa-yelp::before { content: "=EF=87=A9"; }
+
+.fa-newspaper-o::before { content: "=EF=87=AA"; }
+
+.fa-wifi::before { content: "=EF=87=AB"; }
+
+.fa-calculator::before { content: "=EF=87=AC"; }
+
+.fa-paypal::before { content: "=EF=87=AD"; }
+
+.fa-google-wallet::before { content: "=EF=87=AE"; }
+
+.fa-cc-visa::before { content: "=EF=87=B0"; }
+
+.fa-cc-mastercard::before { content: "=EF=87=B1"; }
+
+.fa-cc-discover::before { content: "=EF=87=B2"; }
+
+.fa-cc-amex::before { content: "=EF=87=B3"; }
+
+.fa-cc-paypal::before { content: "=EF=87=B4"; }
+
+.fa-cc-stripe::before { content: "=EF=87=B5"; }
+
+.fa-bell-slash::before { content: "=EF=87=B6"; }
+
+.fa-bell-slash-o::before { content: "=EF=87=B7"; }
+
+.fa-trash::before { content: "=EF=87=B8"; }
+
+.fa-copyright::before { content: "=EF=87=B9"; }
+
+.fa-at::before { content: "=EF=87=BA"; }
+
+.fa-eyedropper::before { content: "=EF=87=BB"; }
+
+.fa-paint-brush::before { content: "=EF=87=BC"; }
+
+.fa-birthday-cake::before { content: "=EF=87=BD"; }
+
+.fa-area-chart::before { content: "=EF=87=BE"; }
+
+.fa-pie-chart::before { content: "=EF=88=80"; }
+
+.fa-line-chart::before { content: "=EF=88=81"; }
+
+.fa-lastfm::before { content: "=EF=88=82"; }
+
+.fa-lastfm-square::before { content: "=EF=88=83"; }
+
+.fa-toggle-off::before { content: "=EF=88=84"; }
+
+.fa-toggle-on::before { content: "=EF=88=85"; }
+
+.fa-bicycle::before { content: "=EF=88=86"; }
+
+.fa-bus::before { content: "=EF=88=87"; }
+
+.fa-ioxhost::before { content: "=EF=88=88"; }
+
+.fa-angellist::before { content: "=EF=88=89"; }
+
+.fa-cc::before { content: "=EF=88=8A"; }
+
+.fa-shekel::before, .fa-sheqel::before, .fa-ils::before { content: "=EF=88=
+=8B"; }
+
+.fa-meanpath::before { content: "=EF=88=8C"; }
+
+.fa-buysellads::before { content: "=EF=88=8D"; }
+
+.fa-connectdevelop::before { content: "=EF=88=8E"; }
+
+.fa-dashcube::before { content: "=EF=88=90"; }
+
+.fa-forumbee::before { content: "=EF=88=91"; }
+
+.fa-leanpub::before { content: "=EF=88=92"; }
+
+.fa-sellsy::before { content: "=EF=88=93"; }
+
+.fa-shirtsinbulk::before { content: "=EF=88=94"; }
+
+.fa-simplybuilt::before { content: "=EF=88=95"; }
+
+.fa-skyatlas::before { content: "=EF=88=96"; }
+
+.fa-cart-plus::before { content: "=EF=88=97"; }
+
+.fa-cart-arrow-down::before { content: "=EF=88=98"; }
+
+.fa-diamond::before { content: "=EF=88=99"; }
+
+.fa-ship::before { content: "=EF=88=9A"; }
+
+.fa-user-secret::before { content: "=EF=88=9B"; }
+
+.fa-motorcycle::before { content: "=EF=88=9C"; }
+
+.fa-street-view::before { content: "=EF=88=9D"; }
+
+.fa-heartbeat::before { content: "=EF=88=9E"; }
+
+.fa-venus::before { content: "=EF=88=A1"; }
+
+.fa-mars::before { content: "=EF=88=A2"; }
+
+.fa-mercury::before { content: "=EF=88=A3"; }
+
+.fa-intersex::before, .fa-transgender::before { content: "=EF=88=A4"; }
+
+.fa-transgender-alt::before { content: "=EF=88=A5"; }
+
+.fa-venus-double::before { content: "=EF=88=A6"; }
+
+.fa-mars-double::before { content: "=EF=88=A7"; }
+
+.fa-venus-mars::before { content: "=EF=88=A8"; }
+
+.fa-mars-stroke::before { content: "=EF=88=A9"; }
+
+.fa-mars-stroke-v::before { content: "=EF=88=AA"; }
+
+.fa-mars-stroke-h::before { content: "=EF=88=AB"; }
+
+.fa-neuter::before { content: "=EF=88=AC"; }
+
+.fa-genderless::before { content: "=EF=88=AD"; }
+
+.fa-facebook-official::before { content: "=EF=88=B0"; }
+
+.fa-pinterest-p::before { content: "=EF=88=B1"; }
+
+.fa-whatsapp::before { content: "=EF=88=B2"; }
+
+.fa-server::before { content: "=EF=88=B3"; }
+
+.fa-user-plus::before { content: "=EF=88=B4"; }
+
+.fa-user-times::before { content: "=EF=88=B5"; }
+
+.fa-hotel::before, .fa-bed::before { content: "=EF=88=B6"; }
+
+.fa-viacoin::before { content: "=EF=88=B7"; }
+
+.fa-train::before { content: "=EF=88=B8"; }
+
+.fa-subway::before { content: "=EF=88=B9"; }
+
+.fa-medium::before { content: "=EF=88=BA"; }
+
+.fa-yc::before, .fa-y-combinator::before { content: "=EF=88=BB"; }
+
+.fa-optin-monster::before { content: "=EF=88=BC"; }
+
+.fa-opencart::before { content: "=EF=88=BD"; }
+
+.fa-expeditedssl::before { content: "=EF=88=BE"; }
+
+.fa-battery-4::before, .fa-battery::before, .fa-battery-full::before { cont=
+ent: "=EF=89=80"; }
+
+.fa-battery-3::before, .fa-battery-three-quarters::before { content: "=EF=
+=89=81"; }
+
+.fa-battery-2::before, .fa-battery-half::before { content: "=EF=89=82"; }
+
+.fa-battery-1::before, .fa-battery-quarter::before { content: "=EF=89=83"; =
+}
+
+.fa-battery-0::before, .fa-battery-empty::before { content: "=EF=89=84"; }
+
+.fa-mouse-pointer::before { content: "=EF=89=85"; }
+
+.fa-i-cursor::before { content: "=EF=89=86"; }
+
+.fa-object-group::before { content: "=EF=89=87"; }
+
+.fa-object-ungroup::before { content: "=EF=89=88"; }
+
+.fa-sticky-note::before { content: "=EF=89=89"; }
+
+.fa-sticky-note-o::before { content: "=EF=89=8A"; }
+
+.fa-cc-jcb::before { content: "=EF=89=8B"; }
+
+.fa-cc-diners-club::before { content: "=EF=89=8C"; }
+
+.fa-clone::before { content: "=EF=89=8D"; }
+
+.fa-balance-scale::before { content: "=EF=89=8E"; }
+
+.fa-hourglass-o::before { content: "=EF=89=90"; }
+
+.fa-hourglass-1::before, .fa-hourglass-start::before { content: "=EF=89=91"=
+; }
+
+.fa-hourglass-2::before, .fa-hourglass-half::before { content: "=EF=89=92";=
+ }
+
+.fa-hourglass-3::before, .fa-hourglass-end::before { content: "=EF=89=93"; =
+}
+
+.fa-hourglass::before { content: "=EF=89=94"; }
+
+.fa-hand-grab-o::before, .fa-hand-rock-o::before { content: "=EF=89=95"; }
+
+.fa-hand-stop-o::before, .fa-hand-paper-o::before { content: "=EF=89=96"; }
+
+.fa-hand-scissors-o::before { content: "=EF=89=97"; }
+
+.fa-hand-lizard-o::before { content: "=EF=89=98"; }
+
+.fa-hand-spock-o::before { content: "=EF=89=99"; }
+
+.fa-hand-pointer-o::before { content: "=EF=89=9A"; }
+
+.fa-hand-peace-o::before { content: "=EF=89=9B"; }
+
+.fa-trademark::before { content: "=EF=89=9C"; }
+
+.fa-registered::before { content: "=EF=89=9D"; }
+
+.fa-creative-commons::before { content: "=EF=89=9E"; }
+
+.fa-gg::before { content: "=EF=89=A0"; }
+
+.fa-gg-circle::before { content: "=EF=89=A1"; }
+
+.fa-tripadvisor::before { content: "=EF=89=A2"; }
+
+.fa-odnoklassniki::before { content: "=EF=89=A3"; }
+
+.fa-odnoklassniki-square::before { content: "=EF=89=A4"; }
+
+.fa-get-pocket::before { content: "=EF=89=A5"; }
+
+.fa-wikipedia-w::before { content: "=EF=89=A6"; }
+
+.fa-safari::before { content: "=EF=89=A7"; }
+
+.fa-chrome::before { content: "=EF=89=A8"; }
+
+.fa-firefox::before { content: "=EF=89=A9"; }
+
+.fa-opera::before { content: "=EF=89=AA"; }
+
+.fa-internet-explorer::before { content: "=EF=89=AB"; }
+
+.fa-tv::before, .fa-television::before { content: "=EF=89=AC"; }
+
+.fa-contao::before { content: "=EF=89=AD"; }
+
+.fa-500px::before { content: "=EF=89=AE"; }
+
+.fa-amazon::before { content: "=EF=89=B0"; }
+
+.fa-calendar-plus-o::before { content: "=EF=89=B1"; }
+
+.fa-calendar-minus-o::before { content: "=EF=89=B2"; }
+
+.fa-calendar-times-o::before { content: "=EF=89=B3"; }
+
+.fa-calendar-check-o::before { content: "=EF=89=B4"; }
+
+.fa-industry::before { content: "=EF=89=B5"; }
+
+.fa-map-pin::before { content: "=EF=89=B6"; }
+
+.fa-map-signs::before { content: "=EF=89=B7"; }
+
+.fa-map-o::before { content: "=EF=89=B8"; }
+
+.fa-map::before { content: "=EF=89=B9"; }
+
+.fa-commenting::before { content: "=EF=89=BA"; }
+
+.fa-commenting-o::before { content: "=EF=89=BB"; }
+
+.fa-houzz::before { content: "=EF=89=BC"; }
+
+.fa-vimeo::before { content: "=EF=89=BD"; }
+
+.fa-black-tie::before { content: "=EF=89=BE"; }
+
+.fa-fonticons::before { content: "=EF=8A=80"; }
+
+.fa-reddit-alien::before { content: "=EF=8A=81"; }
+
+.fa-edge::before { content: "=EF=8A=82"; }
+
+.fa-credit-card-alt::before { content: "=EF=8A=83"; }
+
+.fa-codiepie::before { content: "=EF=8A=84"; }
+
+.fa-modx::before { content: "=EF=8A=85"; }
+
+.fa-fort-awesome::before { content: "=EF=8A=86"; }
+
+.fa-usb::before { content: "=EF=8A=87"; }
+
+.fa-product-hunt::before { content: "=EF=8A=88"; }
+
+.fa-mixcloud::before { content: "=EF=8A=89"; }
+
+.fa-scribd::before { content: "=EF=8A=8A"; }
+
+.fa-pause-circle::before { content: "=EF=8A=8B"; }
+
+.fa-pause-circle-o::before { content: "=EF=8A=8C"; }
+
+.fa-stop-circle::before { content: "=EF=8A=8D"; }
+
+.fa-stop-circle-o::before { content: "=EF=8A=8E"; }
+
+.fa-shopping-bag::before { content: "=EF=8A=90"; }
+
+.fa-shopping-basket::before { content: "=EF=8A=91"; }
+
+.fa-hashtag::before { content: "=EF=8A=92"; }
+
+.fa-bluetooth::before { content: "=EF=8A=93"; }
+
+.fa-bluetooth-b::before { content: "=EF=8A=94"; }
+
+.fa-percent::before { content: "=EF=8A=95"; }
+
+.fa-gitlab::before { content: "=EF=8A=96"; }
+
+.fa-wpbeginner::before { content: "=EF=8A=97"; }
+
+.fa-wpforms::before { content: "=EF=8A=98"; }
+
+.fa-envira::before { content: "=EF=8A=99"; }
+
+.fa-universal-access::before { content: "=EF=8A=9A"; }
+
+.fa-wheelchair-alt::before { content: "=EF=8A=9B"; }
+
+.fa-question-circle-o::before { content: "=EF=8A=9C"; }
+
+.fa-blind::before { content: "=EF=8A=9D"; }
+
+.fa-audio-description::before { content: "=EF=8A=9E"; }
+
+.fa-volume-control-phone::before { content: "=EF=8A=A0"; }
+
+.fa-braille::before { content: "=EF=8A=A1"; }
+
+.fa-assistive-listening-systems::before { content: "=EF=8A=A2"; }
+
+.fa-asl-interpreting::before, .fa-american-sign-language-interpreting::befo=
+re { content: "=EF=8A=A3"; }
+
+.fa-deafness::before, .fa-hard-of-hearing::before, .fa-deaf::before { conte=
+nt: "=EF=8A=A4"; }
+
+.fa-glide::before { content: "=EF=8A=A5"; }
+
+.fa-glide-g::before { content: "=EF=8A=A6"; }
+
+.fa-signing::before, .fa-sign-language::before { content: "=EF=8A=A7"; }
+
+.fa-low-vision::before { content: "=EF=8A=A8"; }
+
+.fa-viadeo::before { content: "=EF=8A=A9"; }
+
+.fa-viadeo-square::before { content: "=EF=8A=AA"; }
+
+.fa-snapchat::before { content: "=EF=8A=AB"; }
+
+.fa-snapchat-ghost::before { content: "=EF=8A=AC"; }
+
+.fa-snapchat-square::before { content: "=EF=8A=AD"; }
+
+.fa-pied-piper::before { content: "=EF=8A=AE"; }
+
+.fa-first-order::before { content: "=EF=8A=B0"; }
+
+.fa-yoast::before { content: "=EF=8A=B1"; }
+
+.fa-themeisle::before { content: "=EF=8A=B2"; }
+
+.fa-google-plus-circle::before, .fa-google-plus-official::before { content:=
+ "=EF=8A=B3"; }
+
+.fa-fa::before, .fa-font-awesome::before { content: "=EF=8A=B4"; }
+
+.fa-handshake-o::before { content: "=EF=8A=B5"; }
+
+.fa-envelope-open::before { content: "=EF=8A=B6"; }
+
+.fa-envelope-open-o::before { content: "=EF=8A=B7"; }
+
+.fa-linode::before { content: "=EF=8A=B8"; }
+
+.fa-address-book::before { content: "=EF=8A=B9"; }
+
+.fa-address-book-o::before { content: "=EF=8A=BA"; }
+
+.fa-vcard::before, .fa-address-card::before { content: "=EF=8A=BB"; }
+
+.fa-vcard-o::before, .fa-address-card-o::before { content: "=EF=8A=BC"; }
+
+.fa-user-circle::before { content: "=EF=8A=BD"; }
+
+.fa-user-circle-o::before { content: "=EF=8A=BE"; }
+
+.fa-user-o::before { content: "=EF=8B=80"; }
+
+.fa-id-badge::before { content: "=EF=8B=81"; }
+
+.fa-drivers-license::before, .fa-id-card::before { content: "=EF=8B=82"; }
+
+.fa-drivers-license-o::before, .fa-id-card-o::before { content: "=EF=8B=83"=
+; }
+
+.fa-quora::before { content: "=EF=8B=84"; }
+
+.fa-free-code-camp::before { content: "=EF=8B=85"; }
+
+.fa-telegram::before { content: "=EF=8B=86"; }
+
+.fa-thermometer-4::before, .fa-thermometer::before, .fa-thermometer-full::b=
+efore { content: "=EF=8B=87"; }
+
+.fa-thermometer-3::before, .fa-thermometer-three-quarters::before { content=
+: "=EF=8B=88"; }
+
+.fa-thermometer-2::before, .fa-thermometer-half::before { content: "=EF=8B=
+=89"; }
+
+.fa-thermometer-1::before, .fa-thermometer-quarter::before { content: "=EF=
+=8B=8A"; }
+
+.fa-thermometer-0::before, .fa-thermometer-empty::before { content: "=EF=8B=
+=8B"; }
+
+.fa-shower::before { content: "=EF=8B=8C"; }
+
+.fa-bathtub::before, .fa-s15::before, .fa-bath::before { content: "=EF=8B=
+=8D"; }
+
+.fa-podcast::before { content: "=EF=8B=8E"; }
+
+.fa-window-maximize::before { content: "=EF=8B=90"; }
+
+.fa-window-minimize::before { content: "=EF=8B=91"; }
+
+.fa-window-restore::before { content: "=EF=8B=92"; }
+
+.fa-times-rectangle::before, .fa-window-close::before { content: "=EF=8B=93=
+"; }
+
+.fa-times-rectangle-o::before, .fa-window-close-o::before { content: "=EF=
+=8B=94"; }
+
+.fa-bandcamp::before { content: "=EF=8B=95"; }
+
+.fa-grav::before { content: "=EF=8B=96"; }
+
+.fa-etsy::before { content: "=EF=8B=97"; }
+
+.fa-imdb::before { content: "=EF=8B=98"; }
+
+.fa-ravelry::before { content: "=EF=8B=99"; }
+
+.fa-eercast::before { content: "=EF=8B=9A"; }
+
+.fa-microchip::before { content: "=EF=8B=9B"; }
+
+.fa-snowflake-o::before { content: "=EF=8B=9C"; }
+
+.fa-superpowers::before { content: "=EF=8B=9D"; }
+
+.fa-wpexplorer::before { content: "=EF=8B=9E"; }
+
+.fa-meetup::before { content: "=EF=8B=A0"; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0px; margi=
+n: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); border: 0px; }
+
+.sr-only-focusable:active, .sr-only-focusable:focus { position: static; wid=
+th: auto; height: auto; margin: 0px; overflow: visible; clip: auto; }
+------MultipartBoundary--LhY2CUCsjUE5OBnKBRcLcv0Zt5Ictr66HHBMjf3H3k----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://doc.rust-lang.org/reference/fonts/fonts.css
+
+@charset "utf-8";
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 300=
+; src: local("Open Sans Light"), local("OpenSans-Light"), url("open-sans-v1=
+7-all-charsets-300.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 300=
+; src: local("Open Sans Light Italic"), local("OpenSans-LightItalic"), url(=
+"open-sans-v17-all-charsets-300italic.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400=
+; src: local("Open Sans Regular"), local("OpenSans-Regular"), url("open-san=
+s-v17-all-charsets-regular.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 400=
+; src: local("Open Sans Italic"), local("OpenSans-Italic"), url("open-sans-=
+v17-all-charsets-italic.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 600=
+; src: local("Open Sans SemiBold"), local("OpenSans-SemiBold"), url("open-s=
+ans-v17-all-charsets-600.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 600=
+; src: local("Open Sans SemiBold Italic"), local("OpenSans-SemiBoldItalic")=
+, url("open-sans-v17-all-charsets-600italic.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700=
+; src: local("Open Sans Bold"), local("OpenSans-Bold"), url("open-sans-v17-=
+all-charsets-700.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 700=
+; src: local("Open Sans Bold Italic"), local("OpenSans-BoldItalic"), url("o=
+pen-sans-v17-all-charsets-700italic.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 800=
+; src: local("Open Sans ExtraBold"), local("OpenSans-ExtraBold"), url("open=
+-sans-v17-all-charsets-800.woff2") format("woff2"); }
+
+@font-face { font-family: "Open Sans"; font-style: italic; font-weight: 800=
+; src: local("Open Sans ExtraBold Italic"), local("OpenSans-ExtraBoldItalic=
+"), url("open-sans-v17-all-charsets-800italic.woff2") format("woff2"); }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 500; src: url("source-code-pro-v11-all-charsets-500.woff2") format("woff=
+2"); }
+------MultipartBoundary--LhY2CUCsjUE5OBnKBRcLcv0Zt5Ictr66HHBMjf3H3k----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://doc.rust-lang.org/reference/highlight.css
+
+@charset "utf-8";
+
+.hljs-comment, .hljs-quote { color: rgb(87, 87, 87); }
+
+.hljs-variable, .hljs-template-variable, .hljs-attribute, .hljs-tag, .hljs-=
+name, .hljs-regexp, .hljs-link, .hljs-name, .hljs-selector-id, .hljs-select=
+or-class { color: rgb(215, 0, 37); }
+
+.hljs-number, .hljs-meta, .hljs-built_in, .hljs-builtin-name, .hljs-literal=
+, .hljs-type, .hljs-params { color: rgb(178, 30, 0); }
+
+.hljs-string, .hljs-symbol, .hljs-bullet { color: rgb(0, 130, 0); }
+
+.hljs-title, .hljs-section { color: rgb(0, 48, 242); }
+
+.hljs-keyword, .hljs-selector-tag { color: rgb(157, 0, 236); }
+
+.hljs { display: block; overflow-x: auto; background: rgb(246, 247, 246); c=
+olor: rgb(0, 0, 0); }
+
+.hljs-emphasis { font-style: italic; }
+
+.hljs-strong { font-weight: bold; }
+
+.hljs-addition { color: rgb(34, 134, 58); background-color: rgb(240, 255, 2=
+44); }
+
+.hljs-deletion { color: rgb(179, 29, 40); background-color: rgb(255, 238, 2=
+40); }
+------MultipartBoundary--LhY2CUCsjUE5OBnKBRcLcv0Zt5Ictr66HHBMjf3H3k----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://doc.rust-lang.org/reference/theme/reference.css
+
+@charset "utf-8";
+
+.parenthetical { white-space: nowrap; }
+
+main .warning p { padding: 10px 20px; margin: 20px 0px; }
+
+main .warning p::before { content: "=E2=9A=A0=EF=B8=8F "; }
+
+.light main .warning p, .rust main .warning p { border: 2px solid red; back=
+ground: rgb(255, 206, 206); }
+
+.rust main .warning p { border-color: rgb(150, 23, 23); }
+
+.coal main .warning p, .navy main .warning p, .ayu main .warning p { backgr=
+ound: rgb(84, 38, 38); }
+
+.coal main .warning p a, .navy main .warning p a, .ayu main .warning p a { =
+color: rgb(128, 208, 208); }
+
+kbd { border: 1px solid rgb(153, 153, 153); display: inline-block; border-r=
+adius: 3px; padding: 0px 0.6ex; background: rgb(238, 238, 238); box-shadow:=
+ rgb(153, 153, 153) -1px -1px 0px inset; vertical-align: baseline; color: r=
+gb(0, 0, 0); height: 1.55em; font-style: normal; font-weight: bold; font-fa=
+mily: inherit; font-size: revert; line-height: revert; }
+
+kbd.optional { border-style: dashed; background: rgb(255, 255, 255); }
+
+var.optional { border-style: dashed; }
+
+var { border: 1px solid rgb(153, 204, 153); box-shadow: rgb(153, 204, 153) =
+-1px -1px 0px inset; font-style: normal; display: inline-block; vertical-al=
+ign: baseline; border-radius: 7px; padding: 0px 4px; background: rgb(221, 2=
+55, 221); margin: 2px; }
+
+var.type { box-shadow: rgb(204, 153, 153) -1px -1px 0px inset; border-color=
+: rgb(204, 153, 153); background: rgb(255, 221, 221); }
+
+span.repeat { position: relative; border: 1px dashed rgb(51, 153, 51); bord=
+er-radius: 10px; display: inline-block; padding: 6px; margin-left: 0.5ex; m=
+argin-top: 1em; margin-bottom: 0.5ex; min-width: 3.8em; text-align: center;=
+ }
+
+span.repeat::before { content: "zero or more"; white-space: nowrap; display=
+: block; text-align: center; font-size: 0.75em; position: absolute; left: 0=
+px; right: 0px; top: -1.4em; color: rgb(51, 153, 51); }
+
+var > span { display: inline-block; border-right: 1px dotted green; padding=
+-right: 0.5ex; margin-right: 0.5ex; font-style: italic; }
+
+span.version { float: right; margin-left: 1em; margin-bottom: 1em; backgrou=
+nd: rgb(247, 192, 235); padding: 0.2ex 0.5ex; border-radius: 5px; display: =
+block; box-shadow: rgb(160, 104, 148) -1px -1px 0px inset; font-size: 0.9em=
+; }
+
+dfn { font-style: italic; text-decoration: underline; }
+
+.content main { padding-left: 4em; }
+
+.rule { position: relative; left: -4em; color: rgb(153, 153, 153); font-siz=
+e: 0.8em; }
+
+.rule ~ p { margin-top: 0px; }
+
+.sidebar-visible .rule { left: -1em; }
+
+.sidebar-visible .content main { padding-left: 1em; }
+
+.rule-link { color: rgb(153, 153, 153) !important; }
+
+.rule:target::before { display: inline-block; content: "=C2=BB"; margin-inl=
+ine-start: -20px; width: 20px; }
+
+.history > blockquote { background: rgb(247, 192, 235); }
+------MultipartBoundary--LhY2CUCsjUE5OBnKBRcLcv0Zt5Ictr66HHBMjf3H3k----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: chrome-extension://ogleeipbbcokpeabliinildngejmdneg/css/content.css
+
+@charset "utf-8";
+
+.dmx_unselectable { user-select: none !important; }
+
+.dmx_overflow_hidden { overflow: hidden; }
+
+div[mx-name=3D"dream-translation"] { all: initial; }
+
+@font-face { font-family: dmx-icon; src: url("chrome-extension://ogleeipbbc=
+okpeabliinildngejmdneg/css/dmx_icon.woff2") format("woff2"); }
+
+.dmx-icon { font-size: 16px; font-style: normal; -webkit-font-smoothing: an=
+tialiased; user-select: none; font-family: dmx-icon, serif !important; }
+
+.dmx-icon-crop::before { content: "=EE=9B=88"; }
+
+.dmx-icon-logo::before { content: "=EE=9B=87"; }
+
+.dmx-icon-move::before { content: "=EE=9B=86"; }
+
+.dmx-icon-folder::before { content: "=EE=9B=84"; }
+
+.dmx-icon-folder-open::before { content: "=EE=9B=85"; }
+
+.dmx-icon-delete::before { content: "=EE=9B=82"; }
+
+.dmx-icon-edit::before { content: "=EE=9B=83"; }
+
+.dmx-icon-export::before { content: "=EE=9B=80"; }
+
+.dmx-icon-import::before { content: "=EE=9B=81"; }
+
+.dmx-icon-history::before { content: "=EE=9A=BF"; }
+
+.dmx-icon-oxford::before { content: "=EE=9A=BE"; }
+
+.dmx-icon-thefree::before { content: "=EE=9A=BD"; }
+
+.dmx-icon-wikipedia::before { content: "=EE=9A=B0"; }
+
+.dmx-icon-dreye::before { content: "=EE=9A=BC"; }
+
+.dmx-icon-eudic::before { content: "=EE=9A=BB"; }
+
+.dmx-icon-etymonline::before { content: "=EE=9A=B1"; }
+
+.dmx-icon-rrdict::before { content: "=EE=9A=B9"; }
+
+.dmx-icon-lexico::before { content: "=EE=9A=BA"; }
+
+.dmx-icon-urban::before { content: "=EE=9A=B8"; }
+
+.dmx-icon-macmillan::before { content: "=EE=9A=B7"; }
+
+.dmx-icon-vocabulary::before { content: "=EE=9A=B6"; }
+
+.dmx-icon-wordreference::before { content: "=EE=9A=B5"; }
+
+.dmx-icon-collins::before { content: "=EE=9A=B4"; }
+
+.dmx-icon-iciba::before { content: "=EE=9A=B3"; }
+
+.dmx-icon-hjdict::before { content: "=EE=9A=B2"; }
+
+.dmx-icon-dictionary::before { content: "=EE=9A=AF"; }
+
+.dmx-icon-so::before { content: "=EE=9A=AA"; }
+
+.dmx-icon-merriam::before { content: "=EE=9A=AB"; }
+
+.dmx-icon-longman::before { content: "=EE=9A=AC"; }
+
+.dmx-icon-cambridge::before { content: "=EE=9A=AD"; }
+
+.dmx-icon-dictcn::before { content: "=EE=9A=AE"; }
+
+.dmx-icon-sound-us::before { content: "=EE=99=B4"; }
+
+.dmx-icon-sound-zh::before { content: "=EE=99=B5"; }
+
+.dmx-icon-sound-fr::before { content: "=EE=99=B6"; }
+
+.dmx-icon-sound-de::before { content: "=EE=99=B7"; }
+
+.dmx-icon-sound-th::before { content: "=EE=9A=9C"; }
+
+.dmx-icon-sound-ru::before { content: "=EE=9A=9D"; }
+
+.dmx-icon-sound-pt::before { content: "=EE=9A=9E"; }
+
+.dmx-icon-sound-uk::before { content: "=EE=9A=9F"; }
+
+.dmx-icon-sound-jp::before { content: "=EE=9A=A0"; }
+
+.dmx-icon-sound-el::before { content: "=EE=9A=A1"; }
+
+.dmx-icon-sound-cn::before { content: "=EE=9A=A2"; }
+
+.dmx-icon-sound-nl::before { content: "=EE=9A=A3"; }
+
+.dmx-icon-sound-it::before { content: "=EE=9A=A4"; }
+
+.dmx-icon-sound-sp::before { content: "=EE=9A=A5"; }
+
+.dmx-icon-sound-ko::before { content: "=EE=9A=A6"; }
+
+.dmx-icon-sound-ar::before { content: "=EE=9A=A7"; }
+
+.dmx-icon-sound-en::before { content: "=EE=9A=A8"; }
+
+.dmx-icon-sound-pl::before { content: "=EE=9A=A9"; }
+
+.dmx-icon-youdao::before { content: "=EE=9A=93"; }
+
+.dmx-icon-sound-square::before { content: "=EE=9A=9B"; }
+
+.dmx-icon-sound::before { content: "=EE=99=BA"; }
+
+.dmx-icon-user::before { content: "=EE=9A=99"; }
+
+.dmx-icon-angle-double-right::before { content: "=EE=9A=96"; }
+
+.dmx-icon-angle-double-left::before { content: "=EE=9A=97"; }
+
+.dmx-icon-angle-double-up::before { content: "=EE=9A=98"; }
+
+.dmx-icon-angle-double-down::before { content: "=EE=9A=9A"; }
+
+.dmx-icon-youdaonote::before { content: "=EE=9A=91"; }
+
+.dmx-icon-youtube::before { content: "=EE=9A=92"; }
+
+.dmx-icon-windows::before { content: "=EE=9A=94"; }
+
+.dmx-icon-yahoo::before { content: "=EE=9A=95"; }
+
+.dmx-icon-voice-off::before { content: "=EE=9A=8A"; }
+
+.dmx-icon-voice-on::before { content: "=EE=9A=8B"; }
+
+.dmx-icon-voice::before { content: "=EE=9A=8C"; }
+
+.dmx-icon-video::before { content: "=EE=9A=8D"; }
+
+.dmx-icon-vip-crown::before { content: "=EE=9A=8E"; }
+
+.dmx-icon-vip-fill::before { content: "=EE=9A=8F"; }
+
+.dmx-icon-vip-card::before { content: "=EE=9A=90"; }
+
+.dmx-icon-up::before { content: "=EE=9A=88"; }
+
+.dmx-icon-up-circle::before { content: "=EE=9A=89"; }
+
+.dmx-icon-trash::before { content: "=EE=9A=82"; }
+
+.dmx-icon-twitter::before { content: "=EE=9A=83"; }
+
+.dmx-icon-tool::before { content: "=EE=9A=84"; }
+
+.dmx-icon-telegram::before { content: "=EE=9A=85"; }
+
+.dmx-icon-tinder::before { content: "=EE=9A=86"; }
+
+.dmx-icon-twitter-circle::before { content: "=EE=9A=87"; }
+
+.dmx-icon-switch::before { content: "=EE=99=BF"; }
+
+.dmx-icon-switch-on::before { content: "=EE=9A=80"; }
+
+.dmx-icon-switch-off::before { content: "=EE=9A=81"; }
+
+.dmx-icon-success::before { content: "=EE=99=BD"; }
+
+.dmx-icon-suse::before { content: "=EE=99=BE"; }
+
+.dmx-icon-star::before { content: "=EE=99=BB"; }
+
+.dmx-icon-stop::before { content: "=EE=99=BC"; }
+
+.dmx-icon-sound-big::before { content: "=EE=99=B3"; }
+
+.dmx-icon-sound-line::before { content: "=EE=99=B8"; }
+
+.dmx-icon-sound-horn::before { content: "=EE=99=B9"; }
+
+.dmx-icon-sogou::before { content: "=EE=99=AD"; }
+
+.dmx-icon-smile::before { content: "=EE=99=AE"; }
+
+.dmx-icon-skull::before { content: "=EE=99=AF"; }
+
+.dmx-icon-search::before { content: "=EE=99=B0"; }
+
+.dmx-icon-s::before { content: "=EE=99=B1"; }
+
+.dmx-icon-setting::before { content: "=EE=99=B2"; }
+
+.dmx-icon-reply::before { content: "=EE=99=A8"; }
+
+.dmx-icon-redhat::before { content: "=EE=99=A9"; }
+
+.dmx-icon-right::before { content: "=EE=99=AA"; }
+
+.dmx-icon-reload::before { content: "=EE=99=AB"; }
+
+.dmx-icon-refresh::before { content: "=EE=99=AC"; }
+
+.dmx-icon-plus::before { content: "=EE=99=A5"; }
+
+.dmx-icon-play::before { content: "=EE=99=A6"; }
+
+.dmx-icon-qq::before { content: "=EE=99=A7"; }
+
+.dmx-icon-plane-send::before { content: "=EE=99=9C"; }
+
+.dmx-icon-plane-departure::before { content: "=EE=99=9D"; }
+
+.dmx-icon-plane-up::before { content: "=EE=99=9E"; }
+
+.dmx-icon-plane-paper::before { content: "=EE=99=9F"; }
+
+.dmx-icon-plane::before { content: "=EE=99=A0"; }
+
+.dmx-icon-plane-fly::before { content: "=EE=99=A1"; }
+
+.dmx-icon-plane-up-fill::before { content: "=EE=99=A2"; }
+
+.dmx-icon-plane-send-fill::before { content: "=EE=99=A3"; }
+
+.dmx-icon-plane-takeoff::before { content: "=EE=99=A4"; }
+
+.dmx-icon-picture-fill::before { content: "=EE=99=98"; }
+
+.dmx-icon-pin::before { content: "=EE=99=99"; }
+
+.dmx-icon-pin-left::before { content: "=EE=99=9A"; }
+
+.dmx-icon-picture::before { content: "=EE=99=9B"; }
+
+.dmx-icon-microsoft::before { content: "=EE=99=91"; }
+
+.dmx-icon-m::before { content: "=EE=99=92"; }
+
+.dmx-icon-modx::before { content: "=EE=99=93"; }
+
+.dmx-icon-meetup::before { content: "=EE=99=94"; }
+
+.dmx-icon-mule::before { content: "=EE=99=95"; }
+
+.dmx-icon-music::before { content: "=EE=99=96"; }
+
+.dmx-icon-more::before { content: "=EE=99=97"; }
+
+.dmx-icon-loading::before { content: "=EE=99=90"; }
+
+.dmx-icon-l::before { content: "=EE=99=8A"; }
+
+.dmx-icon-itunes::before { content: "=EE=99=8B"; }
+
+.dmx-icon-info::before { content: "=EE=99=8C"; }
+
+.dmx-icon-laugh::before { content: "=EE=99=8D"; }
+
+.dmx-icon-left::before { content: "=EE=99=8E"; }
+
+.dmx-icon-list::before { content: "=EE=99=8F"; }
+
+.dmx-icon-help::before { content: "=EE=99=87"; }
+
+.dmx-icon-horn::before { content: "=EE=99=88"; }
+
+.dmx-icon-home::before { content: "=EE=99=89"; }
+
+.dmx-icon-headset::before { content: "=EE=99=84"; }
+
+.dmx-icon-headset-c::before { content: "=EE=99=85"; }
+
+.dmx-icon-heart::before { content: "=EE=99=86"; }
+
+.dmx-icon-good::before { content: "=EE=99=82"; }
+
+.dmx-icon-google::before { content: "=EE=99=83"; }
+
+.dmx-icon-fullscreen-exit::before { content: "=EE=98=BE"; }
+
+.dmx-icon-fullscreen::before { content: "=EE=98=BF"; }
+
+.dmx-icon-fan::before { content: "=EE=99=80"; }
+
+.dmx-icon-flag::before { content: "=EE=99=81"; }
+
+.dmx-icon-eye-left::before { content: "=EE=98=B9"; }
+
+.dmx-icon-error::before { content: "=EE=98=BA"; }
+
+.dmx-icon-eye-right::before { content: "=EE=98=BB"; }
+
+.dmx-icon-exchange::before { content: "=EE=98=BC"; }
+
+.dmx-icon-edge::before { content: "=EE=98=BD"; }
+
+.dmx-icon-down::before { content: "=EE=98=B4"; }
+
+.dmx-icon-diaspora::before { content: "=EE=98=B5"; }
+
+.dmx-icon-devil::before { content: "=EE=98=B6"; }
+
+.dmx-icon-degree::before { content: "=EE=98=B7"; }
+
+.dmx-icon-d::before { content: "=EE=98=B8"; }
+
+.dmx-icon-close::before { content: "=EE=98=AE"; }
+
+.dmx-icon-circle::before { content: "=EE=98=AF"; }
+
+.dmx-icon-cry-fill::before { content: "=EE=98=B0"; }
+
+.dmx-icon-copy::before { content: "=EE=98=B1"; }
+
+.dmx-icon-cry::before { content: "=EE=98=B2"; }
+
+.dmx-icon-close-bg::before { content: "=EE=98=B3"; }
+
+.dmx-icon-bing::before { content: "=EE=98=AB"; }
+
+.dmx-icon-bell::before { content: "=EE=98=AC"; }
+
+.dmx-icon-baidu::before { content: "=EE=98=AD"; }
+
+.dmx-icon-arrow-right::before { content: "=EE=98=A5"; }
+
+.dmx-icon-arrow-left::before { content: "=EE=98=A6"; }
+
+.dmx-icon-arrow-up::before { content: "=EE=98=A7"; }
+
+.dmx-icon-arrow-down::before { content: "=EE=98=A8"; }
+
+.dmx-icon-arrow-thin-down::before { content: "=EE=98=A9"; }
+
+.dmx-icon-arrow-thin-up::before { content: "=EE=98=AA"; }
+
+.dmx-icon-android::before { content: "=EE=98=A2"; }
+
+.dmx-icon-apple::before { content: "=EE=98=A3"; }
+
+.dmx-icon-angular::before { content: "=EE=98=A4"; }
+
+.dmx-icon-alibaba::before { content: "=EE=98=A1"; }
+------MultipartBoundary--LhY2CUCsjUE5OBnKBRcLcv0Zt5Ictr66HHBMjf3H3k------
